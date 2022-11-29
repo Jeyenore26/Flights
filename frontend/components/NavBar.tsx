@@ -11,15 +11,15 @@ export default function NavBar() {
       <ul className=" space-x-5 lg:space-x-10 flex mr-3 md:mr-[5rem] font-light text-md md:text-lg">
         <Link href="/" className="space-x-1 flex">
           <p>icon1</p>
-          <li className="navBtn hidden sm:block"> الرحلات </li>
+          <li className="navBtn hidden sm:block cairo_semibold_title"> الرحلات </li>
         </Link>
         <Link href="/" className="space-x-1 flex">
           <p>icon2</p>
-          <li className="navBtn hidden sm:block"> الاشعارات </li>
+          <li className="navBtn hidden sm:block cairo_semibold_title"> الاشعارات </li>
         </Link>
         <Link href="/" className="flex space-x-1">
           <p>icon3</p>
-          <li className="navBtn hidden sm:block"> تسجيل الدخول </li>
+          <li className="navBtn hidden sm:block cairo_semibold_title"> تسجيل الدخول </li>
         </Link>
       </ul>
     </div>
