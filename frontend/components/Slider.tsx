@@ -9,7 +9,7 @@ export default () => {
     <Swiper
       slidesPerView={1}
       autoplay={{
-        delay: 3000,
+        delay: 5000,
       }}
       loop={true}
     >

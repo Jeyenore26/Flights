@@ -6,21 +6,23 @@ import { BsPersonCircle } from "react-icons/bs";
 
 export default function NavBar() {
   return (
-    <div className="border-b-2 py-3 flex justify-between">
+    <div className="bg-[#41729F] border-b-2 py-3 flex justify-between">
       <div className=" flex items-center ml-3 md:ml-[5rem]">
         <img
           className=" w-[4rem] sm:w-[5rem] mt-1"
           alt="synjat"
           src="https://media.discordapp.net/attachments/1046764038723481640/1046764097489866843/LOGO3.png"
         ></img>
-        <h1 className="text-lg sm:text-xl font-medium">Book n'Fly!</h1>
+        <h1 className="text-lg sm:text-xl font-medium text-white">
+          Book n'Fly!
+        </h1>
       </div>
       <ul className=" space-x-10 lg:space-x-10  flex items-center mr-3 md:mr-[5rem] font-light text-md md:text-lg">
         <Link href="/" className="space-x-1  flex items-center">
           <p className="text-lg sm:text-xl mt-[27%] sm:mt-[6%] ">
             <FaPlaneDeparture />
           </p>
-          <li className="navBtn hidden sm:block cairo_semibold_title">
+          <li className="Havar hidden sm:block cairo_semibold_title text-white">
             {" "}
             الرحلات{" "}
           </li>
@@ -29,7 +31,7 @@ export default function NavBar() {
           <p className="text-lg sm:text-xll mt-[27%] sm:mt-[6%]">
             <BsFillBellFill />
           </p>
-          <li className="navBtn hidden sm:block cairo_semibold_title">
+          <li className="Havar hidden sm:block cairo_semibold_title text-white">
             {" "}
             الاشعارات{" "}
           </li>
@@ -38,7 +40,7 @@ export default function NavBar() {
           <p className="text-lg sm:text-xl mt-[27%] sm:mt-[4%]">
             <BsPersonCircle />
           </p>
-          <li className="navBtn hidden sm:block cairo_semibold_title">
+          <li className="Havar hidden sm:block cairo_semibold_title text-white">
             {" "}
             تسجيل الدخول{" "}
           </li>

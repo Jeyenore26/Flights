@@ -59,7 +59,7 @@
 }
 
 @layer components {
-  .navBtn:hover {
+  .Havar:hover {
     color: red;
     transition-duration: 0.2s;
   }
@@ -67,9 +67,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .icon {
-    font-size: 24px;
-    margin-top: 2%;
   }
 }

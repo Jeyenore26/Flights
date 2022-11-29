@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import NavBar from "../components/NavBar";
 import Slider from "../components/Slider";
+import Buttons from "../components/Buttons";
+import Corona from "../components/Corona";
 const Home: NextPage = () => {
   return (
     <div>
@@ -14,6 +16,8 @@ const Home: NextPage = () => {
         <NavBar />
       </nav>
       <Slider />
+      <Buttons />
+      <Corona />
     </div>
   );
 };
