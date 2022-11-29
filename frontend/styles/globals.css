@@ -67,6 +67,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: red;
+  }
+  .icon {
+    font-size: 24px;
+    margin-top: 2%;
   }
 }

@@ -9,7 +9,7 @@ export default () => {
     <Swiper
       slidesPerView={1}
       autoplay={{
-        delay: 10000,
+        delay: 3000,
       }}
       loop={true}
     >
@@ -18,8 +18,9 @@ export default () => {
           name="فرنسا"
           sub="باريس"
           parag="            ما هذا يا ذها ارض الجمال ارض خضراء الظيبطه الورا ظيبطه ما هذا يا ذها
-            ارض الجمال ارض خضراء الظيبطه الورا ظيبطه ما هذا يا ذها ارض الجمال
+            ارض الجمال ارض  ارض الجمال
             ارض خضراء الظيبطه الورا ظيبطه"
+          imageLink="https://images.hdqwalls.com/wallpapers/eiffel-tower-paris-4k-wide.jpg"
         />
       </SwiperSlide>
     </Swiper>
