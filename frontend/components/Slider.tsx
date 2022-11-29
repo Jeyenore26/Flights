@@ -22,9 +22,6 @@ export default () => {
             ارض خضراء الظيبطه الورا ظيبطه"
         />
       </SwiperSlide>
-      <SwiperSlide className="slides">Slide 2</SwiperSlide>
-      <SwiperSlide className="slides">Slide 3</SwiperSlide>
-      <SwiperSlide className="slides">Slide 4</SwiperSlide>
     </Swiper>
   );
 };
