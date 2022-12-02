@@ -68,4 +68,13 @@
     align-items: center;
     justify-content: center;
   }
+  #problems {
+    border: white solid 1px;
+    @apply flex items-center flex-col sm:flex-row w-[80%] m-auto;
+  }
+}
+
+body,
+html {
+  height: 100%;
 }

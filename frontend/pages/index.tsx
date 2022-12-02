@@ -2,9 +2,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import NavBar from "../components/NavBar";
-import Slider from "../components/Slider";
-import Buttons from "../components/Buttons";
-import Corona from "../components/Corona";
+import SideText from "../components/SideText";
+import Problems from "../components/Problems";
+import Goals from "../components/Goals";
+import Join from "../components/Join";
+import Footer from "../components/Footer";
 const Home: NextPage = () => {
   return (
     <div>
@@ -15,9 +17,13 @@ const Home: NextPage = () => {
       <nav>
         <NavBar />
       </nav>
-      <Slider />
-      <Buttons />
-      <Corona />
+      <SideText />
+      <Problems />
+      <Goals />
+      <Join />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
