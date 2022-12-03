@@ -12,15 +12,6 @@ import northamerica from '../public/northamerica.png'
 import europe from '../public/europe.png'
 import Link from 'next/link'
 export default function TopSection() {
-    const [value, _setValue] = useState(true)
-    const valueRef = useRef(false)
-
-    valueRef.current = value
-    const setValue = (arg) => {
-        valueRef.current = arg
-        _setValue(arg)
-    }
-
     return (
         <>
                 <div className=' bg-teal-300/[0.2] w-full h-full flex-col absolute z-10 mx-auto  top-0 bottom-0 justify-center flex align-center'>

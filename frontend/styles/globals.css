@@ -63,14 +63,16 @@
     color: red;
     transition-duration: 0.2s;
   }
+
   .slides {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   #problems {
     border: white solid 1px;
-    @apply flex items-center flex-col sm:flex-row w-[80%] m-auto;
+    @apply flex items-center flex-col flex-row w-[80%] m-auto;
   }
 }
 

@@ -4,12 +4,12 @@ import { BsArrowDownCircle } from "react-icons/bs";
 
 function problems() {
   return (
-    <div>
-      <div dir="rtl" id="problems">
+    <div >
+      <div dir="rtl" className="flex items-center flex-col sm:flex-row 2xl:w-[80%] lg:w-[80%] xl:w-[80%] md:w-[100%] xs:w-[100%]  mx-auto border-2 border-white border-solid border-white">
         <img
           src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
           alt="problem1"
-          className="w-[25%] ml-4"
+          className="2xl:w-[25%] sm:w-[50%] 2xl:ml-4"
         />
         <p className="text-white font-light text-sm md:text-lg break-words">
           من المخاطر التي تهددها ، هو حماية للحياة بكل اشكالها ، حياة الانسان
@@ -21,11 +21,13 @@ function problems() {
           لكل الاحياء.اء.
         </p>
       </div>
-      <div
-        dir="rtl"
-        className="flex items-center flex-col sm:flex-row w-[80%] m-auto border-[1px] mt-8"
-      >
-        <p className="text-white font-light text-sm md:text-lg break-words mr-1">
+      <div dir="ltr" className="flex items-center flex-col sm:flex-row 2xl:w-[80%] lg:w-[80%] xl:w-[80%] md:w-[100%] xs:w-[100%]  mx-auto border-2 border-white border-solid border-white">
+        <img
+          src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
+          alt="problem1"
+          className="2xl:w-[25%] sm:w-[50%] 2xl:mr-4"
+        />
+        <p className="text-white font-light text-sm md:text-lg break-words">
           من المخاطر التي تهددها ، هو حماية للحياة بكل اشكالها ، حياة الانسان
           والحيوان والنبات. وهذا واجب على كل المجتمعات والدول ومنظمة الامم
           المتحدة ، والطباطس التعبانه نفسيا ميتينك لضمان حياة هانئة طويلة لكل
@@ -34,11 +36,6 @@ function problems() {
           الامم المتحدة ، والطباطس التعبانه نفسيا ميتينك لضمان حياة هانئة طويلة
           لكل الاحياء.اء.
         </p>
-        <img
-          src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
-          alt="problem1"
-          className="w-[25%] mr-4"
-        />
       </div>
       <Link
         to="intrstd"

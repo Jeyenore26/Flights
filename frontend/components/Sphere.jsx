@@ -3,7 +3,7 @@ import { useLoader, useFrame } from "@react-three/fiber";
 import { Clock, TextureLoader } from "three";
 import * as THREE from 'three'
 import { Stars } from '@react-three/drei'
-function Sphere(props) {
+function Sphere() {
   const [texture, bump, cloud] = useLoader(TextureLoader, ["/earth.jpg", '/bump.jpg', '/specular.jpg']);
   const [colorMap, normalMap, cloudMap, specularMap] = useLoader(TextureLoader, ['/8k_earth_daymap.jpg', '/8k_earth_normal_map.jpg', '/8k_earth_clouds.jpg', '/8k_earth_specular_map.jpg'])
   const bumpscale = 10
@@ -17,11 +17,12 @@ function Sphere(props) {
 
 
   })
+
   return (
     <>
       <pointLight color='#f6f3ea' position={[20, 0, 20]} intensity={1.2} />
 
-      <Stars radius={300} depth={60} count={20000} factor={7} saturation={0} fade={true} />
+      <Stars radius={300} depth={60} count={20000} factor={9} saturation={0} fade={true} />
       <mesh
         ref={cloudRef}
         scale={2}
@@ -29,7 +30,7 @@ function Sphere(props) {
       >
 
         <sphereGeometry args={[1, 32, 32]} />
-        <meshPhongMaterial map={cloudMap} opacity={0.4} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
+        <meshPhongMaterial map={cloudMap} opacity={0.4} depthWrite={true} transparent={true} />
       </mesh>
       <mesh
         ref={earthRef}

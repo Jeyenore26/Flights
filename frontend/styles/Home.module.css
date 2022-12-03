@@ -4,48 +4,49 @@
 
 @font-face {
   font-family: "CairoBlack";
-  src: local("CairoBlack"), url("../fonts/Cairo/Cairo-Black.ttf") format("truetype");
+  src: local("CairoBlack"), url("../fonts/cairo/Cairo-Black.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CairoBold";
-  src: local("CairoBold"), url("../fonts/Cairo/Cairo-Bold.ttf") format("truetype");
+  src: local("CairoBold"), url("../fonts/cairo/Cairo-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CairoExtraBold";
-  src: local("CairoExtraBold"), url("../fonts/Cairo/Cairo-ExtraBold.ttf") format("truetype");
+  src: local("CairoExtraBold"), url("../fonts/cairo/Cairo-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CairoExtraLight";
-  src: local("CairoExtraLight"), url("../fonts/Cairo/Cairo-ExtraLight.ttf") format("truetype");
+  src: local("CairoExtraLight"), url("../fonts/cairo/Cairo-ExtraLight.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CairoLight";
-  src: local("CairoLight"), url("../fonts/Cairo/Cairo-Light.ttf") format("truetype");
+  src: local("CairoLight"), url("../fonts/cairo/Cairo-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CairoMedium";
-  src: local("CairoMedium"), url("../fonts/Cairo/Cairo-Medium.ttf") format("truetype");
+  src: local("CairoMedium"), url("../fonts/cairo/Cairo-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CairoRegular";
-  src: local("CairoRegular"), url("../fonts/Cairo/Cairo-Regular.ttf") format("truetype");
+  src: local("CairoRegular"), url("../fonts/cairo/Cairo-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "CairoSemiBold";
-  src: local("CairoSemiBold"), url("../fonts/Cairo/Cairo-SemiBold.ttf") format("truetype");
+  src: local("CairoSemiBold"), url("../fonts/cairo/Cairo-SemiBold.ttf") format("truetype");
 }
 
 
 .cairo_semibold_title {
   font-family: "CairoSemiBold", sans-serif;
   font-size: 1.5rem;
+  color: white;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -54,6 +55,7 @@
 
 .cairo_black_title {
   font-family: "CairoBlack", sans-serif;
+  color: white;
   font-size: 2rem;
   justify-content: center;
   align-items: center;
@@ -292,22 +294,6 @@
 @media (max-width: 600px) {
   .scene {
     width: 100%;
-    height: 50vh;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-
-  .card,
-  .footer {
-    border-color: #222;
-  }
-
-  .code {
-    background: #111;
-  }
-
-  .logo img {
-    filter: invert(1);
+    height: 100vh;
   }
 }

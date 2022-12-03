@@ -1,6 +1,6 @@
 import React from "react";
 
-function Light(props) {
+function Light(props : any) {
   return (
     <mesh {...props} >
       <pointLight castShadow />
