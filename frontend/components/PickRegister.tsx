@@ -17,7 +17,7 @@ function PickRegister({
                 <Dialog.Trigger>{children}</Dialog.Trigger>
                 <Dialog.Portal>
                     <motion.div>
-                        <Dialog.Overlay className="bg-white/25 z-50 fixed inset-0 grid place-items-center flex justify-center">
+                        <Dialog.Overlay className="bg-white/25 z-50 fixed inset-0  flex justify-center  items-center">
                             <motion.div
                                 className="max-w-lg w-full"
                                 initial={{ scale: 0 }}
@@ -28,9 +28,18 @@ function PickRegister({
                                     duration: 0.5,
                                 }}
                             >
-                                <Dialog.Content className="bg-base p-6 rounded-md max-w-lg w-full space-y-4">
-                                    <div className="bg-white p-12 rounded-lg border-2">
-                                        <Dialog.Close className="btn-outline px-6 flex justify-end items-end">
+                                <Dialog.Content className="bg-white p-6 rounded-md max-w-lg w-full space-y-4 ">
+                                    <div dir="rtl" className=" flex justify-start">
+                                        <div>
+                                            <Dialog.Title className="font-bold text-2xl">
+                                                اختار نوع الحساب
+                                            </Dialog.Title>
+
+                                        </div>
+
+                                    </div>
+                                    <div className="flex justify-end">
+                                        <Dialog.Close className="border-black border-2 rounded-full px-6 hover:bg-black/10 active:bg-black/20">
                                             الغاء
                                         </Dialog.Close>
                                     </div>
