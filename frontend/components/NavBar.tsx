@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { FaPlaneDeparture } from "react-icons/Fa";
 import { BsFillBellFill } from "react-icons/bs";
+import PickRegister from "./PickRegister";
 
 export default function NavBar() {
   return (
@@ -13,12 +14,13 @@ export default function NavBar() {
       />
       <div className="py-4 flex items-center justify-between">
         <div className=" ml-3 md:ml-[5rem]">
-          <Link
-            href="/"
-            className="text-sm sm:text-lg font-medium bg-white rounded-2xl px-[10px] py-[4px] hover:brightness-95 active:brightness-75"
-          >
-            انضم لنا
-          </Link>
+          <PickRegister>
+            <button className="rounded-xl bg-white text-black px-3 py-1">
+              <h1>
+                انضم لنا
+              </h1>
+            </button>
+          </PickRegister>
         </div>
         <ul className=" space-x-3 sm:space-x-10  flex items-center mr-3 md:mr-[5rem] font-light text-md md:text-lg">
           <Link href="/" className="space-x-1  flex items-center">
