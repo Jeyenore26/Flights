@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLoader, useFrame } from "@react-three/fiber";
-import { Clock, TextureLoader } from "three";
+import { TextureLoader } from "three";
 import * as THREE from 'three'
 import { Stars } from '@react-three/drei'
 function Sphere() {
