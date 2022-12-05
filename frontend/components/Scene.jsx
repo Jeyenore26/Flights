@@ -1,7 +1,6 @@
 import css from "../styles/Home.module.css";
 import { Canvas } from "@react-three/fiber";
 import Sphere from "./Sphere";
-import OrbitControls from "./OrbitControls";
 import { Suspense } from "react";
 import TopSection from './TopSection';
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
           <Suspense fallback={null}>
             <Sphere />
           </Suspense>
-          <OrbitControls />
         </Canvas>
 
       </div>

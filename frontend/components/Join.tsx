@@ -19,7 +19,6 @@ function Join() {
             بطاطasasdasdasaasaس صوشسهخاهخشسايهخساشعهشسايعهاسشعايهسابع
           </p>
           <Link href="/">
-            {" "}
             <p className="text-black">بوتون</p>
           </Link>
         </div>
@@ -32,7 +31,6 @@ function Join() {
             بطاطasasdasdasaasaس صوشسهخاهخشسايهخساشعهشسايعهاسشعايهسابع
           </p>
           <Link href="/">
-            {" "}
             <p className="text-black">بوتون</p>
           </Link>
         </div>

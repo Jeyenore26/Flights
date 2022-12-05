@@ -36,7 +36,11 @@ function PickRegister({
                                             </Dialog.Title>
 
                                         </div>
-
+                                        <Link href={'./registergroup'}>
+                                            <button>
+                                                click me
+                                            </button>
+                                        </Link>
                                     </div>
                                     <div className="flex justify-end">
                                         <Dialog.Close className="border-black border-2 rounded-full px-6 hover:bg-black/10 active:bg-black/20">
