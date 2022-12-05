@@ -13,7 +13,7 @@ module.exports = {
       // => @media (min-width: 400px) { ... }
       'sm': '620px',
       // => @media (min-width: 640px) { ... }
-
+      
       'md': '768px',
       // => @media (min-width: 768px) { ... }
 
