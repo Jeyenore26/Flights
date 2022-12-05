@@ -5,7 +5,7 @@ import { BsArrowDownCircle } from "react-icons/bs";
 function problems() {
   return (
     <div >
-      <div dir="rtl" className="flex items-center flex-col sm:flex-row 2xl:w-[80%] lg:w-[80%] xl:w-[80%] md:w-[100%] xs:w-[100%]  mx-auto border-2 border-white border-solid border-white">
+      <div dir="rtl" className="flex items-center flex-col sm:flex-row 2xl:w-[80%] lg:w-[80%] xl:w-[80%] md:w-[100%] xs:w-[100%]  mx-auto border-2 border-white border-solid ">
         <img
           src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
           alt="problem1"
@@ -21,7 +21,7 @@ function problems() {
           لكل الاحياء.اء.
         </p>
       </div>
-      <div dir="ltr" className="flex items-center flex-col sm:flex-row 2xl:w-[80%] lg:w-[80%] xl:w-[80%] md:w-[100%] xs:w-[100%]  mx-auto border-2 border-white border-solid border-white">
+      <div dir="ltr" className="flex items-center flex-col sm:flex-row 2xl:w-[80%] lg:w-[80%] xl:w-[80%] md:w-[100%] xs:w-[100%]  mx-auto border-2  border-solid border-white">
         <img
           src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
           alt="problem1"

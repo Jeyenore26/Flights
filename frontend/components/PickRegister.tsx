@@ -31,7 +31,7 @@ function PickRegister({
                                 <Dialog.Content className="bg-white p-6 rounded-md max-w-lg w-full space-y-4 ">
                                     <div dir="rtl" className=" flex justify-start">
                                         <div>
-                                            <Dialog.Title className="font-bold text-2xl">
+                                            <Dialog.Title className="font-bold text-2xl flex">
                                                 اختار نوع الحساب
                                             </Dialog.Title>
 
