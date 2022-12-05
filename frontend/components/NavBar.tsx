@@ -3,22 +3,15 @@ import React from "react";
 import { FaPlaneDeparture } from "react-icons/Fa";
 import { BsFillBellFill } from "react-icons/bs";
 import PickRegister from "./PickRegister";
-import wallpaper from '../public/earthwallpaper.png'
+import wallpaper from "../public/earthwallpaper.png";
 export default function NavBar() {
   return (
     <div>
-      <img
-        src="./earthwallpaper.png"
-        alt="earth"
-        className="w-full h-full fixed z-[-1] brightness-50 bg-black "
-      />
       <div className="py-4 flex items-center justify-between">
         <div className=" ml-3 md:ml-[5rem]">
           <PickRegister>
             <button className="rounded-xl bg-white text-black px-3 py-1">
-              <h1>
-                انضم لنا
-              </h1>
+              <h1>انضم لنا</h1>
             </button>
           </PickRegister>
         </div>
@@ -28,7 +21,6 @@ export default function NavBar() {
               <FaPlaneDeparture />
             </p>
             <li className="Havar hidden sm:block cairo_semibold_title text-white">
-
               كيف تساعد الارض
             </li>
           </Link>
@@ -37,7 +29,6 @@ export default function NavBar() {
               <BsFillBellFill />
             </p>
             <li className="Havar hidden sm:block cairo_semibold_title text-white">
-
               الاستفسارات
             </li>
           </Link>
