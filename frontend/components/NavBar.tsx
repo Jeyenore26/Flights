@@ -7,9 +7,9 @@ import wallpaper from "../public/earthwallpaper.png";
 export default function NavBar() {
   return (
     <div>
-      <div className="py-4 flex items-center justify-between">
+      <div className="py-4 flex items-center justify-between relative z-[1] ">
         <div className=" ml-3 md:ml-[5rem]">
-          <Link href={'/register'}>
+          <Link href={"/register"}>
             <button className="rounded-xl bg-white text-black px-3 py-1">
               <h1>انضم لنا</h1>
             </button>

@@ -63,15 +63,7 @@
     color: red;
     transition-duration: 0.2s;
   }
-
-  .slides {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
-
 body {
-  background-image: linear-gradient(#525451, #cabaa0, #3d3832);
-  min-height: 100vh;
+  background-image: linear-gradient(#383c3f, #c0c7cf);
 }

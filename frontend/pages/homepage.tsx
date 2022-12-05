@@ -7,6 +7,8 @@ import Problems from "../components/Problems";
 import Goals from "../components/Goals";
 import Join from "../components/Join";
 import Footer from "../components/Footer";
+import EarthImg from "../components/EarthImg";
+
 const homepage: NextPage = () => {
   return (
     <div>
@@ -14,10 +16,13 @@ const homepage: NextPage = () => {
         <title className="cairo_black_title">الصفحة الرئيسية</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+      <EarthImg />
       <nav>
         <NavBar />
       </nav>
-      <SideText />
+      <section>
+        <SideText />
+      </section>
       <Problems />
       <Goals />
       <Join />
