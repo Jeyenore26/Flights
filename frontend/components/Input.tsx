@@ -13,6 +13,7 @@ function Input({
     iclassName,
     lclassName,
     disabled,
+
 }: {
     required?: boolean;
     disabled?: boolean;
@@ -56,8 +57,9 @@ function Input({
                 placeholder={placeholder}
                 onChange={onChange}
                 disabled={disabled}
-                className={`border-gray-400  text-right border-2 border-solid w-[100%] h-12 focus:outline-none ${error ? "border-red-600 focus:border-red-600" : ""
-                    } focus:border-primary focus:border-dashed py-1 px-2 rounded-md transition ${iclassName}`}
+
+                className={` bg-transparent	border-b-2	 text-right w-[100%] h-12 focus:outline-none ${error ? "border-red-600 focus:border-red-600" : ""
+                    }  ease-in-out text-green text-white/30 focus:text-white focus:border-blue-600 focus:outline-none focus:border-primary focus:border-dashed py-1 px-2 rounded-md transition ${iclassName}`}
             />
         </div>
     );
