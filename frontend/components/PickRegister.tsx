@@ -36,7 +36,7 @@ function PickRegister({
                                             </Dialog.Title>
 
                                         </div>
-                                        <Link href={'./registergroup'}>
+                                        <Link href={'./signin'}>
                                             <button>
                                                 click me
                                             </button>
