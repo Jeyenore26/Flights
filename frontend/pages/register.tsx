@@ -1,10 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
+import Head from "next/head";
+
 import Link from 'next/link'
 import Input from '../components/Input'
 export default function registermember() {
   return (
     <>
+      <Head>
+        <title className="cairo_black_title">انضم لنا</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className='overflow-y-hidden'>
         <div className='w-screen h-full fixed z-[-1]'>
 

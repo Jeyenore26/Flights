@@ -2,9 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Input from '../components/Input'
+import Head from "next/head";
+
 export default function signin() {
     return (
         <>
+            <Head>
+                <title className="cairo_black_title"> تسجيل الدخول</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <div className='overflow-y-hidden'>
                 <div className='w-screen h-full fixed z-[-1]'>
 
