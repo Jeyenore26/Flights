@@ -9,11 +9,11 @@ export default function NavBar() {
     <div>
       <div className="py-4 flex items-center justify-between">
         <div className=" ml-3 md:ml-[5rem]">
-          <PickRegister>
+          <Link href={'/register'}>
             <button className="rounded-xl bg-white text-black px-3 py-1">
               <h1>انضم لنا</h1>
             </button>
-          </PickRegister>
+          </Link>
         </div>
         <ul className=" space-x-3 sm:space-x-10  flex items-center mr-3 md:mr-[5rem] font-light text-md md:text-lg">
           <Link href="/" className="space-x-1  flex items-center">
