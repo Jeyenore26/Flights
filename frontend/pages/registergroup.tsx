@@ -34,7 +34,7 @@ export default function registergroup() {
             <Input type={'email'} required label='الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem]' />
             <Input type={'password'} required label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem]' />
             <div className='flex justify-end my-3'>
-              <button className='text-white cairo_semibold_title border-2 text-md border-white py-2 px-6 hover:text-black hover:bg-white active:text-white/100 active:bg-black/100 rounded-2xl'>
+              <button className='text-black cairo_semibold_title border-2 text-md border-black bg-white py-2 px-6 hover:text-white hover:bg-black active:text-black/100 active:bg-white/100 rounded-xl'>
                 اهلا بك
               </button>
             </div>
