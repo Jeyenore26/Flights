@@ -7,7 +7,7 @@ function SideText() {
   return (
     <div
       dir="rtl"
-      className=" font-2xl text-[15px] md:text-[20px] lg:text-2xl text-white w-[40rem] md:w-[50rem] mt-[130px] sm:mt-[170px] xl:mt-[250px] relative z-[1] mx-auto"
+      className=" font-2xl text-[15px] md:text-[20px] lg:text-2xl text-white w-[20rem] md:w-[50rem] mt-[130px] sm:mt-[170px] xl:mt-[200px] relative z-[1] mx-auto"
     >
       <div className=" flex-col items-center">
         <p className=" cairo_bold_title ">

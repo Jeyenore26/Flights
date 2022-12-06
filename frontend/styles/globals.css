@@ -80,14 +80,13 @@
     height: 100%;
   }
   #img1 {
-    z-index: 1;
     width: 50%;
     min-width: 50%;
-    transition: ease 1s;
   }
+
   #img2 {
-    z-index: -1;
-    width: 100%;
+    width: 50%;
+    min-width: 50%;
   }
 }
 

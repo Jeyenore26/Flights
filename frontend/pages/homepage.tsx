@@ -19,13 +19,13 @@ const homepage: NextPage = () => {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-        <Earthing></Earthing>
+        <Earthing />
         <nav className="mx-[1rem] sm:mx-[4rem]">
           <NavBar />
         </nav>
-        <section className="flex justify-end mx-[1rem] sm:mx-[4rem]">
-          <SideText />
-        </section>
+
+        <SideText />
+
         <Problems />
         <Goals />
         <Join />
