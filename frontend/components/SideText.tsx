@@ -7,21 +7,22 @@ function SideText() {
   return (
     <div
       dir="rtl"
-      className=" text-[15px] sm:text-xl text-white w-[20rem] md:w-[50rem] mt-[130px] sm:mt-[200px] text-right flexs  items-center space-y-8 justify-end relative z-[1]"
+      className=" font-2xl text-[15px] md:text-[20px] lg:text-2xl text-white w-[40rem] md:w-[50rem] mt-[130px] sm:mt-[170px] xl:mt-[250px] relative z-[1] mx-auto"
     >
-      <div className="flex justify-end">
-        <p className=" break-words cairo_bold_title ">
-          لقد حان الوقت لحماية بيتنا من التلوث إن الاستخدام الصحيح للعلم ليس
-          لغزو الطبيعة بل للعيش فيها واستخدامه من أجل حياة أكثر استدامةً لقد حان
-          الوقت لحماية بيتنا من التلوث إن الاستخدام الصحيح للعلم ليس لغزو
-          الطبيعة بل للعيش فيها واستخدامه من أجل حياة أكثر استدامةً لقد حان
-          الوقت لحماية بيتنا من التلوث إن الاستخدام الصحيح للعلم ليس لغزو
-          الطبيعة بل للعيش فيها واستخدامه من أجل حياة أكثر استدامةً لقد حان
-          الوقت لحماية بيتنا من التلوث إن الاستخدام الصحيح للعلم ليس لغزو
-          الطبيعة بل للعيش فيها واستخدامه من أجل حياة أكثر استدامةً
+      <div className=" flex-col items-center">
+        <p className=" cairo_bold_title ">
+          لقد حان الوقت لحماية بيتنا مان الوقت لحماية بيتنا من التلوث إن
+          الاستخدام الصحيحان الوقت لحماية بيتنا من التلوث إن الصحيحان الوقت
+          لحماية بيتنا من التلوث إن الاستخدام الصحيحن التلوث إن الاستخدام
         </p>
-        <Link to="problems" offset={-100} smooth={true}>
-          <BsArrowDownCircle className="text-3xl animate-pulse hover:animate-none hover:brightness-90 active:brightness-75 mt-12 mr-12 cursor-pointer" />
+        <Link
+          to="problems"
+          offset={-100}
+          smooth={true}
+          className="flex justify-center"
+          duration={2000}
+        >
+          <BsArrowDownCircle className="  mt-[1rem] text-2xl sm:text-3xl animate-pulse hover:animate-none hover:brightness-90 active:brightness-75 cursor-pointer " />
         </Link>
       </div>
     </div>

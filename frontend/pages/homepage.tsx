@@ -20,10 +20,10 @@ const homepage: NextPage = () => {
           />
         </Head>
         <Earthing></Earthing>
-        <nav className="mx-[8rem]">
+        <nav className="mx-[1rem] sm:mx-[4rem]">
           <NavBar />
         </nav>
-        <section className="flex justify-end mx-[8rem]">
+        <section className="flex justify-end mx-[1rem] sm:mx-[4rem]">
           <SideText />
         </section>
         <Problems />

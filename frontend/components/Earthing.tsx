@@ -8,31 +8,35 @@ export default function Earthing() {
   useEffect(() => {
     let img1 = document.getElementById("img1");
     let img2 = document.getElementById("img2");
-    let img3 = document.getElementById("img3");
     window.addEventListener("scroll", () => {
       let value = window.scrollY;
-      img1!.style.top = String(value * 0.25 + "px");
-      img2!.style.left = String(value * 0.5 + "px");
-      img3!.style.left = String(value * -0.5 + "px");
+      function widther() {
+        if (value === 0) {
+          img1!.style.width = String(50 + "%");
+          console.log("width is " + img1!.style.width);
+          console.log(value + " value");
+        } else {
+          img1!.style.width = value * 1 + "rem";
+        }
+      }
+      widther();
     });
   });
 
   return (
     <section className="absolute w-[100%] h-screen p-[100px] overflow-hidden">
       <img
-        src="https://www.freepnglogos.com/uploads/tree-png/home-tree-images-vector-clip-34.png"
-        alt="s"
-        id="img3"
-      />
-      <img
-        src="https://www.freepnglogos.com/uploads/tree-png/home-tree-images-vector-clip-34.png"
+        src="https://cdn.wallpapersafari.com/34/39/mKGeuZ.jpg"
         alt="s"
         id="img2"
+        className="brightness-[0.80]"
       />
+
       <img
-        src="https://4kwallpapers.com/images/walls/thumbs_2t/6355.jpg"
+        src="https://wallpapershome.com/images/wallpapers/tuscany-3840x2160-5k-4k-wallpaper-8k-italy-landscape-village-field-558.jpg"
         alt="s"
         id="img1"
+        className="brightness-[0.60]"
       />
     </section>
   );
