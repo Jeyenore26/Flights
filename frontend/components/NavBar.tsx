@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import { FaPlaneDeparture } from "react-icons/Fa";
 import { BsFillBellFill } from "react-icons/bs";
-import PickRegister from "./PickRegister";
 import wallpaper from "../public/earthwallpaper.png";
 export default function NavBar() {
   return (

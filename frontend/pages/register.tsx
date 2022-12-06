@@ -22,15 +22,15 @@ export default function registermember() {
         <div className="py-4 flex mt-1A items-center justify-between 2xl:mx-[8rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
           <div>
             <Link href={'/signin'}>
-              <button className='text-white border-[1px] border-dashed border-white cairo_semibold_title py-2 px-6 text-lg bg-transperant hover:text-white/90 hover:bg-black/20 active:text-white/100 active:bg-black/40 rounded-xl'>
+              <button className='text-white border-[1px] border-dashed border-white cairo_semibold_title py-1 px-3 text-md bg-transperant hover:text-white/90 hover:bg-black/20 active:text-white/100 active:bg-black/40 rounded-xl'>
                 لديك حساب؟
               </button>
             </Link>
           </div>
           <div>
-            <h1 className='text-[#fff] cairo_semibold_title text-2xl'>
+            <p className='cairo_semibold_title text-white'>
               ساعد الارض
-            </h1>
+            </p>
           </div>
         </div>
         <div className='flex  justify-center mt-[8%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]'>
