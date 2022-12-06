@@ -7,29 +7,33 @@ import Problems from "../components/Problems";
 import Goals from "../components/Goals";
 import Join from "../components/Join";
 import Footer from "../components/Footer";
-import Earthing from "../components/Earthing"
-
+import Earthing from "../components/Earthing";
 const homepage: NextPage = () => {
   return (
-    <div>
-      <Head>
-        <title className="cairo_black_title">الصفحة الرئيسية</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <Earthing/>
-      <nav>
-        <NavBar />
-      </nav>
-      <section>
-        <SideText />
-      </section>
-      <Problems />
-      <Goals />
-      <Join />
+    <>
+      <div>
+        <Head>
+          <title className="cairo_black_title">الصفحة الرئيسية</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
+        <Earthing></Earthing>
+        <nav className="mx-[8rem]">
+          <NavBar />
+        </nav>
+        <section className="flex justify-end mx-[8rem]">
+          <SideText />
+        </section>
+        <Problems />
+        <Goals />
+        <Join />
+      </div>
       <footer>
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 

@@ -7,14 +7,14 @@ export default function NavBar() {
   return (
     <div>
       <div className="py-4 flex items-center justify-between relative z-[1] ">
-        <div className=" ml-3 md:ml-[5rem]">
+        <div>
           <Link href={"/register"}>
-            <button className="rounded-xl bg-white text-black px-3 py-1">
+            <button className="rounded-xl bg-white hover:bg-black/30 hover:text-white/60 active:bg-black/40 hover:text-white/80 text-black px-3 py-1">
               <h1>انضم لنا</h1>
             </button>
           </Link>
         </div>
-        <ul className=" space-x-3 sm:space-x-10  flex items-center mr-3 md:mr-[5rem] font-light text-md md:text-lg">
+        <ul className=" space-x-3 sm:space-x-10  flex items-center font-light text-md md:text-lg">
           <Link href="/" className="space-x-1  flex items-center">
             <p className="text-lg sm:text-xl mt-[27%] sm:mt-[6%] text-white ">
               <FaPlaneDeparture />
