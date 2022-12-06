@@ -33,7 +33,10 @@ export default function NavBar() {
           </Link>
           <div className=" flex items-center space-x-1">
             <p className="cairo_semibold_title text-white"> ساعد الارض</p>
-            <p className="text-white text-xl">logo</p>
+            <img
+            src="./LogoIcon.png"
+            className="w-10 h-10 mt-1"
+            />
           </div>
         </ul>
       </div>

@@ -10,7 +10,7 @@ function SideText() {
       className=" text-[15px] sm:text-xl text-white font-medium m-auto w-[20rem] md:w-[50rem] mt-[130px] sm:mt-[200px] text-center flex flex-col items-center space-y-8 relative z-[1] "
     >
       <p className="break-words">
-        من المخاطر التي تهددها ، هو حماية للحياة بكل اشكالها ، حياة الانسان
+        من المخاطر التي تهددها ، هو حماية  بكل اشكالها ، حياة الانسان
         والحيوان والنبات. وهذا واجب على كل المجتمعات والدول ومنظمة الامم المتحدة
         ، والطباطس التعبانه نفسيا ميتينك لضمان حياة هانئة طويلة تعرف عليهاء.
       </p>

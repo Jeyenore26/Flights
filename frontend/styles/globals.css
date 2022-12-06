@@ -60,8 +60,8 @@
 
 @layer components {
   .Havar:hover {
-    color: red;
-    transition-duration: 0.2s;
+    color: #0493AC;
+    transition-duration: 0.3s;
   }
 }
 body {

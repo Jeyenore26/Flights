@@ -7,6 +7,7 @@ import Problems from "../components/Problems";
 import Goals from "../components/Goals";
 import Join from "../components/Join";
 import Footer from "../components/Footer";
+import Earthing from "../components/Earthing"
 
 const homepage: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const homepage: NextPage = () => {
         <title className="cairo_black_title">الصفحة الرئيسية</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+      <Earthing/>
       <nav>
         <NavBar />
       </nav>
