@@ -33,7 +33,7 @@ export default function registermember() {
             </p>
           </div>
         </div>
-        <div className='flex  justify-center mt-[8%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]'>
+        <div className='flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]'>
 
           <div className=' py-4 px-[1%]   bg-black/30 rounded-xl'>
             <div dir='rtl' className='my-8 flex justify-center'>
