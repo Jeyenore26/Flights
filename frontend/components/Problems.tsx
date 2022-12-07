@@ -4,17 +4,17 @@ import { BsArrowDownCircle } from "react-icons/bs";
 
 function problems() {
   return (
-    <div id="problems" className="translate-y-[41rem] mx-[8rem]">
+    <div id="problems" className="translate-y-[81rem] mx-[1rem] flex-col justify-center">
       <div
         dir="rtl"
-        className=" flex items-center flex-col sm:flex-row 2xl:w-[100%] lg:w-[100%] xl:w-[100%] md:w-[100%] xs:w-[100%]   border-2 border-white border-solid "
+        className=" flex items-center flex-col sm:flex-row w-[80%] mx-auto sm:w-[90%] border-white bg-white rounded-2xl mb-[2rem] "
       >
         <img
           src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
           alt="problem1"
-          className="2xl:w-[25%] sm:w-[50%] 2xl:ml-4"
+          className="2xl:w-[25%] sm:w-[20rem] w-[100%] 2xl:ml-4 rounded-2xl  md:rounded-l-none rounded-b-none sm:rounded-b-2xl"
         />
-        <p className="text-white font-light text-sm md:text-lg break-words">
+        <p className="text-black font-medium text-sm xl:text-xl break-words mr-2 sm:ml-2 md:mr-6 my-7">
           من المخاطر التي تهددها ، هو حماية للحياة بكل اشكالها ، حياة الانسان
           والحيوان والنبات. وهذا واجب على كل المجتمعات والدول ومنظمة الامم
           المتحدة ، والطباطس التعبانه نفسيا ميتينك لضمان حياة هانئة طويلة لكل
@@ -26,14 +26,14 @@ function problems() {
       </div>
       <div
         dir="ltr"
-        className="flex items-center flex-col sm:flex-row 2xl:w-[100%] lg:w-[100%] xl:w-[100%] md:w-[100%] xs:w-[100%]   border-2  border-solid border-white"
+        className="flex items-center flex-col sm:flex-row w-[80%] mx-auto sm:w-[90%] border-white bg-white rounded-2xl"
       >
         <img
           src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
           alt="problem1"
-          className="2xl:w-[25%] sm:w-[50%] 2xl:mr-4"
+          className="2xl:w-[25%] sm:w-[20rem] w-[100%] 2xl:mr-4 rounded-2xl  md:rounded-r-none rounded-b-none sm:rounded-b-2xl"
         />
-        <p className="text-white font-light text-sm md:text-lg break-words">
+        <p dir ="rtl" className="text-black font-medium text-sm xl:text-xl break-words mr-2 md:mr-6 my-7">
           من المخاطر التي تهددها ، هو حماية للحياة بكل اشكالها ، حياة الانسان
           والحيوان والنبات. وهذا واجب على كل المجتمعات والدول ومنظمة الامم
           المتحدة ، والطباطس التعبانه نفسيا ميتينك لضمان حياة هانئة طويلة لكل

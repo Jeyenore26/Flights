@@ -21,18 +21,18 @@ export default function Earthing() {
   });
 
   return (
-    <section className="absolute w-[100%] h-screen p-[100px] overflow-hidden">
+    <section className="absolute w-[100%] h-screen overflow-none">
       <img
-        src="https://cdn.wallpapersafari.com/34/39/mKGeuZ.jpg"
-        alt="s"
+        src="R.jpg"
+        alt="d"
         id="img2"
-        className="brightness-[0.80] ml-[50%]"
+        className="brightness-[0.90]"
       />
       <img
-        src="https://wallpapershome.com/images/wallpapers/tuscany-3840x2160-5k-4k-wallpaper-8k-italy-landscape-village-field-558.jpg"
+        src="trees.png"
         alt="s"
         id="img1"
-        className="brightness-[0.60]"
+        
       />
     </section>
   );
