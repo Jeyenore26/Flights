@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className=" bg-black pb-[10rem] text-white mt-[60rem]">Footer</div>
+    <div className=" bg-black pb-[10rem] text-white mt-[100rem]">Footer</div>
   );
 }
 
