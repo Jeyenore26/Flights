@@ -94,15 +94,19 @@
     transition: ease 1s;
     cursor: default;
   }
-  #problems {
-    transition: ease 1s;
-    visibility: hidden;
-    width: 0;
+  #prob1 {
+    opacity: 0;
+    transition: ease 3s;
+    transform: translateX(100rem);
+  }
+  #prob2 {
+    opacity: 0;
+    transition: ease 4s;
+    transform: translateX(-100rem);
   }
 }
 
 body {
   background-image: linear-gradient(to top, #0068be, #000981, #000000, #000000);
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }

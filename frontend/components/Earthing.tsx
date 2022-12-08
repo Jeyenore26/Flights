@@ -6,19 +6,24 @@ export default function Earthing() {
   useEffect(() => {
     let img1 = document.getElementById("img1");
     let img2 = document.getElementById("img2");
-    let problems = document.getElementById("problems");
+    let prob1 = document.getElementById("prob1");
+    let prob2 = document.getElementById("prob2");
 
     window.addEventListener("scroll", () => {
       let value = window.scrollY;
-
+      console.log(value + " value");
       if (value < 600) {
         img2!.style.top = String(value * 0.5 + "px");
       } else {
         window.removeEventListener;
       }
-      if (value > 1450) {
-        problems!.style.visibility = String("visible");
-        problems!.style.width = String(100 + "%");
+      if (value > 1050) {
+        console.log("done");
+        prob1!.style.opacity = String(1);
+      }
+      if (value > 1150) {
+        console.log("done2");
+        prob2!.style.opacity = String(1);
       }
     });
   });

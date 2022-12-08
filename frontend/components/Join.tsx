@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Join() {
   return (
-    <div className="pb-[10rem] translate-y-[85rem]">
+    <div className="pb-[10rem] translate-y-[105rem]">
       <div className="flex items-center justify-center mb-[5rem] mt-[10rem]">
         <p className="text-2xl text-white text-center">icon</p>
         <h1 className="text-2xl text-white text-center">تريد المساعدة؟</h1>

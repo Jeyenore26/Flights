@@ -2,7 +2,7 @@ import React from "react";
 
 function Goals() {
   return (
-    <div className="translate-y-[90rem]">
+    <div className="translate-y-[110rem]">
       {" "}
       <p className="text-2xl text-white text-center mb-[5rem]">اهدافنا</p>
       <div className="flex flex-col md:flex-row items-center justify-evenly space-y-10 md:space-y-0">

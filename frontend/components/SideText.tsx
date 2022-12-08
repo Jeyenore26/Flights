@@ -16,7 +16,7 @@ function SideText() {
           لحماية بيتنا من التلوث إن الاستخدام الصحيحن التلوث إن الاستخدام
         </p>
         <Link
-          to="problems"
+          to="prob1"
           offset={-100}
           smooth={true}
           className="flex justify-center"
