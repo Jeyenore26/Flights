@@ -30,7 +30,7 @@ function problems() {
           src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
           alt="problem2"
           id="imagur2"
-          className="2xl:w-[25%] sm:w-[20rem] w-[100%] 2xl:mr-4 rounded-2xl  sm:rounded-r-none rounded-b-none sm:rounded-b-2xl"
+          className="2xl:w-[25%] sm:w-[20rem] w-[100%] 2xl:mr-4 2xl:rounded-2xl xl:rounded-2xl lg:rounded-2xl md:rounded-2xl  xs:rounded-2xl xxs:rounded-2xl sm:rounded-b-2xl"
         />
         <p
           dir="rtl"
