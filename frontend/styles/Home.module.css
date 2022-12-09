@@ -43,25 +43,6 @@
 }
 
 
-.cairo_semibold_title {
-  font-family: "CairoSemiBold", sans-serif;
-  font-size: 1.5rem;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin-top: 12px;
-}
-
-.cairo_black_title {
-  font-family: "CairoBlack", sans-serif;
-  color: white;
-  font-size: 2rem;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
 .button_text_title {
   font-family: "CairoMedium", sans-serif;
   font-size: 1rem;
