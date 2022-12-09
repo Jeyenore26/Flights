@@ -108,3 +108,28 @@ body {
   background-image: linear-gradient(to top, #0068be, #000981, #000000, #000000);
   overflow-x: hidden;
 }
+.rounded2 { 
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+}
+.rounded1 { 
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+
+}
+@media (max-width : 619px) {
+  .rounded2 { 
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    
+
+}
+.rounded1 { 
+  border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 0rem;
+
+}
+}
