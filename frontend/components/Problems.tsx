@@ -2,7 +2,7 @@ import React from "react";
 
 function problems() {
   return (
-    <div id="problems" className="translate-y-[81rem] flex-col justify-center">
+    <div id="problems" className="translate-y-[81rem] space-y-[3%] flex-col justify-center">
       <div
         dir="rtl"
         id="prob1"
