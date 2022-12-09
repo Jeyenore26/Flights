@@ -12,7 +12,7 @@ function problems() {
           src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
           alt="problem1"
           id="imagur1"
-          className="2xl:w-[25%] sm:w-[20rem] w-[100%] 2xl:ml-4 rounded-r-2xl "
+          className="2xl:w-[25%] sm:w-[20rem] w-[100%] 2xl:ml-4 rounded-2xl  sm:rounded-l-none rounded-b-none sm:rounded-b-2xl"
         />
         <p className="text-black font-medium text-sm xl:text-xl break-words mr-2 sm:ml-2 md:mr-6 my-7">
           من المخاطر التي تهددها ، هو حماية للحياة بكل اشكالها ، حياة الانسان
@@ -30,7 +30,7 @@ function problems() {
           src="https://media.discordapp.net/attachments/1046740126467887104/1047945297818558524/cleanwater.png"
           alt="problem2"
           id="imagur2"
-          className="2xl:w-[25%] sm:w-[20rem] w-[100%] 2xl:mr-4 rounded-l-2xl"
+          className="2xl:w-[25%] sm:w-[20rem] w-[100%] 2xl:mr-4 rounded-2xl  sm:rounded-r-none rounded-b-none sm:rounded-b-2xl"
         />
         <p
           dir="rtl"
