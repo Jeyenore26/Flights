@@ -2,7 +2,10 @@ import React from "react";
 
 function problems() {
   return (
-    <div id="problems" className="translate-y-[81rem] space-y-[3%] flex-col justify-center">
+    <div
+      id="problems"
+      className="translate-y-[81rem] space-y-[1%] 2xl:space-y-[4%] flex-col justify-center mb-[5rem] 2xl:mb-[30rem]"
+    >
       <div
         dir="rtl"
         id="prob1"

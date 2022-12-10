@@ -104,36 +104,58 @@
   }
   #prob2 {
     opacity: 0;
-    transition: ease 4s;
+    transition: ease 3s;
+  }
+  #goaltxt1,
+  #goaltxt2,
+  #goaltxt3 {
+    transition: ease 1.5s;
+    opacity: 0;
+    height: 0rem;
+  }
+  #line1,
+  #line2 {
+    transition: ease 1s;
+    visibility: hidden;
+  }
+  #goalY {
+    transition: ease 2s;
+  }
+  #join1,
+  #join2 {
+    transition: ease 2s;
   }
 }
 
 body {
-  background-image: linear-gradient(to top, #0068be, #000981, #000000, #000000);
+  background-image: linear-gradient(
+    to top,
+    #010101,
+    #2359d3,
+    #92a4cc,
+    #0f2e9a,
+    #010009,
+    #000000
+  );
   overflow-x: hidden;
 }
-.rounded2 { 
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-
+.rounded2 {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
-.rounded1 { 
+.rounded1 {
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
-
 }
-@media (max-width : 619px) {
-  .rounded2 { 
+@media (max-width: 619px) {
+  .rounded2 {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 0rem;
-    
-
-}
-.rounded1 { 
-  border-top-right-radius: 1rem;
+  }
+  .rounded1 {
+    border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 0rem;
-
-}
+  }
 }
