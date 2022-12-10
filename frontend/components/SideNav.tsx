@@ -10,7 +10,7 @@ import wallpaper from "../public/LogoIcon.png";
 export default function SideNav() {
   return (
     <div className="rounded-l-md bg-gray-800 h-full w-[13rem] flex   sidenavhidden  z-0 fixed right-0 ">
-        <div className="z-50 text-white mt-4 space-y-12  ">
+        <div className="z-50 text-white mt-4 space-y-12 mr-2 ">
         <div>
           <span className="flex justify-center">
         <img src = './LogoIcon.png' className="w-14 h-14 flex justify-center" />
