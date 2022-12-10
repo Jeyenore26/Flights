@@ -134,11 +134,17 @@
   display: block;
 
 } 
+.sidenavshow{
+  display: none;
+}
 @media (max-width : 700px) {
   .sidenavhidden{
     display: none;
 
   } 
+  .sidenavshow{
+    display: block;
+  }
 }
 body {
   background-image: linear-gradient(
