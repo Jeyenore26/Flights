@@ -4,7 +4,6 @@ import React from "react";
 export default function Earthing() {
   /**not just the images js**/
   useEffect(() => {
-    let img1 = document.getElementById("img1");
     let img2 = document.getElementById("img2");
     let prob1 = document.getElementById("prob1");
     let prob2 = document.getElementById("prob2");
