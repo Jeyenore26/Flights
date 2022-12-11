@@ -13,8 +13,6 @@ export default function Earthing() {
     let line1 = document.getElementById("line1");
     let line2 = document.getElementById("line2");
     let goalY = document.getElementById("goalY");
-    let join1 = document.getElementById("join1");
-    let join2 = document.getElementById("join2");
 
     window.addEventListener("scroll", () => {
       let value = window.scrollY;
@@ -56,10 +54,6 @@ export default function Earthing() {
           goaltxt2!.style.height = String(12 + "rem");
           goaltxt3!.style.height = String(12 + "rem");
         }, 1400);
-      }
-      if (value > 2300) {
-        join1!.style.width = String(16 + "rem");
-        join2!.style.width = String(16 + "rem");
       }
     });
   });

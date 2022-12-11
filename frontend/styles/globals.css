@@ -63,9 +63,8 @@
 .cairo_extrabold_title {
   font-family: "CairoExtraBold", sans-serif;
 }
-.cairo_regular_title{
+.cairo_regular_title {
   font-family: "CairoRegular", sans-serif;
-
 }
 
 @layer components {
@@ -107,7 +106,7 @@
     opacity: 0;
     transition: ease 3s;
   }
-  .animationside{
+  .animationside {
     color: #fff;
     height: 100vh;
     width: 100%;
@@ -132,37 +131,29 @@
   #goalY {
     transition: ease 2s;
   }
-  #join1,
-  #join2 {
-    transition: ease 2s;
+  .boba {
+    background-image: url(https://thumbs.dreamstime.com/b/blurred-blue-bright-gradient-blue-light-gradient-purple-background-violet-purple-gradient-soft-light-wallpaper-blurred-blue-125220733.jpg);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 2rem;
   }
 }
-.sidenavhidden{
+.sidenavhidden {
   display: block;
-
-} 
-.sidenavshow{
+}
+.sidenavshow {
   display: none;
 }
-@media (max-width : 700px) {
-  .sidenavhidden{
+@media (max-width: 700px) {
+  .sidenavhidden {
     display: none;
-
-  } 
-  .sidenavshow{
+  }
+  .sidenavshow {
     display: block;
   }
 }
 body {
-  background-image: linear-gradient(
-    to top,
-    #010101,
-    #2359d3,
-    #92a4cc,
-    #0f2e9a,
-    #010009,
-    #000000
-  );
+  background-image: linear-gradient(to top, #003fbd, #00229c, #000000, #000000);
   overflow-x: hidden;
 }
 .rounded2 {

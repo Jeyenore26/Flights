@@ -17,17 +17,17 @@ function Goals() {
 
       <p className="text-3xl text-white text-center mb-[5rem] ">اهدافنا</p>
       <div className="translate-y-[8rem]" id="goalY">
-        <div className="flex flex-col md:flex-row items-center justify-evenly space-y-10 md:space-y-0">
-          <div className="text-white flex flex-col drop-shadow-xl bg-[#14151d] rounded-2xl  ">
+        <div className="flex flex-col md:flex-row items-center justify-evenly space-y-10 md:space-y-0 space-x-0 md:space-x-4">
+          <div className="text-white flex flex-col drop-shadow-xl bg-[#14151d] rounded-2xl w-[15rem] lg:w-[17rem]">
             <h1
               dir="rtl"
-              className=" w-[15.8rem] text-lg md:text-xl p-1 md:p-2 rounded-t-xl m-2"
+              className=" w-[13.8rem] lg:w-[15.8rem] text-lg md:text-xl p-1 md:p-2 rounded-t-xl m-2"
             >
               قطع الخلف
             </h1>
             <p
               dir="rtl"
-              className=" text-md md:text-lg max-w-[15rem] break-words mt-4 ml-[0.8rem]"
+              className=" text-md md:text-lg max-w-[13rem] lg:max-w-[15rem] break-words mt-4 ml-[0.8rem]"
               id="goaltxt1"
             >
               الاستخدام الصحيحان الوقت لحماية بيتنا من التلوث إن الصحيحان الوقت
@@ -39,16 +39,16 @@ function Goals() {
               className="absolute h-full rounded-2xl bg-cover opacity-0 ease duration-300 hover:opacity-100"
             />
           </div>
-          <div className="text-white flex flex-col drop-shadow-xl bg-[#14151d] rounded-2xl ">
+          <div className="text-white flex flex-col drop-shadow-xl bg-[#14151d] rounded-2xl w-[15rem] lg:w-[17rem]">
             <h1
               dir="rtl"
-              className=" w-[15.8rem] text-lg md:text-xl p-1 md:p-2 rounded-t-xl m-2"
+              className=" w-[13.8rem] lg:w-[15.8rem] text-lg md:text-xl p-1 md:p-2 rounded-t-xl m-2"
             >
               قطع الخلف
             </h1>
             <p
               dir="rtl"
-              className=" text-md md:text-lg max-w-[15rem] break-words mt-4 ml-[0.8rem]"
+              className=" text-md md:text-lg max-w-[13rem] lg:max-w-[15rem] break-words mt-4 ml-[0.8rem]"
               id="goaltxt2"
             >
               الاستخدام الصحيحان الوقت لحماية بيتنا من التلوث إن الصحيحان الوقت
@@ -60,16 +60,16 @@ function Goals() {
               className="absolute h-full rounded-2xl bg-cover opacity-0 ease duration-300 hover:opacity-100"
             />
           </div>
-          <div className="text-white flex flex-col drop-shadow-xl bg-[#14151d] rounded-2xl">
+          <div className="text-white flex flex-col drop-shadow-xl bg-[#14151d] rounded-2xl w-[15rem] lg:w-[17rem]">
             <h1
               dir="rtl"
-              className=" w-[15.8rem] text-lg md:text-xl p-1 md:p-2 rounded-t-xl m-2"
+              className=" w-[13.8rem] lg:w-[15.8rem] text-lg md:text-xl p-1 md:p-2 rounded-t-xl m-2"
             >
               dont hover me
             </h1>
             <p
               dir="rtl"
-              className=" text-md md:text-lg max-w-[15rem] break-words mt-4 ml-[0.8rem]"
+              className=" text-md md:text-lg max-w-[13rem] lg:max-w-[15rem] break-words mt-4 ml-[0.8rem]"
               id="goaltxt3"
             >
               الاستخدام الصحيحان الوقت لحماية بيتنا من التلوث إن الصحيحان الوقت
