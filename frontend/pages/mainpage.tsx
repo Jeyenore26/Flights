@@ -1,5 +1,6 @@
  import React from 'react'
 import BottomPick from '../components/BottomPick'
+import NavBar from '../components/NavBar'
  import SideNav from '../components/SideNav'
  export default function mainpage() {
    return (

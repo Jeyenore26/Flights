@@ -27,6 +27,11 @@ export default function SideNav() {
   
   return (
    <>
+    <div style={{display: open ? "none" : "block"}} className ='fixed z-0 right-0 sidenavhidden cursor-pointer hover:text-black/40'>
+      <section className="flex justify-end p-5 ">
+        <MdOutlineMenu className="h-10 w-10" onClick={()=>{setopen(!open)}}/>
+      </section>
+  </div>
     <div className="rounded-l-md bg-gray-800 h-full w-[13rem] flex overflow-auto sidenav  sidenavhidden  z-0 absolute right-0 ">
         <div className="z-50 text-white mt-4 space-y-12 mr-2 ">
         <div>
@@ -35,12 +40,12 @@ export default function SideNav() {
         </span>
         <div className="space-y-12  ">
          
-          <button className="flex justify-end w-full py-1  mr-10 mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+          <button className="flex justify-end w-full py-1 cursor-pointer  mr-10 mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
           <HiOutlineMagnifyingGlass className="mx-2 w-8 h-8"/>
 
-            <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">ابحث</h1>
+            <h1 className="mx-3 mt-1 cairo_semibold_title text-xl pointer-">ابحث</h1>
           </button>
-          <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+          <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
           <FcAddImage className="mx-2 w-8 h-8"/>
 
             <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">اصنع مجموعة</h1>
@@ -54,17 +59,17 @@ export default function SideNav() {
             
           </div>
             <div className="mt-12">
-            <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+            <button className="flex justify-end w-full cursor-pointer py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
           <BsWater className="mx-2 w-8 h-8"/>
 
             <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">ساعد المحيط</h1>
           </button>
-            <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+            <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
           <GiFruitTree className="mx-2 w-8 h-8"/>
 
             <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">ساعد الاشجار</h1>
           </button>
-          <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+          <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
           <GiPlantsAndAnimals className="mx-6 w-8 h-8"/>
 
             <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">ساعد البيئة</h1>
@@ -81,13 +86,13 @@ export default function SideNav() {
             
             
           </div>
-        <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+        <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
           <AiFillSetting className="mx-2 w-8 h-8"/>
 
             <h1 className="mx-3 mt-1 cairo_semibold_title text-lg">ألاعادادت</h1>
           </button>
           <Link href={'/homepage'}>
-       <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+       <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
           <GiExitDoor className="mx-2 w-8 h-8"/>
 
             <h1 className="mx-3 mt-1 cairo_semibold_title text-lg">تسجيل الخروج</h1>
@@ -98,16 +103,10 @@ export default function SideNav() {
        
        
     </div>
-    <div style={{display: open ? "none" : "block" , transition : open ? '0ms' : '100s'}} className ='absolute right-0	'>
-        <>
-        <section className="flex justify-end p-5">
-          <MdOutlineMenu className="h-10 w-10" onClick={()=>{setopen(!open)}}/>
-        </section>
-        </>
-    </div>
-       <section  className="flex justify-end animationside" id="animationside">
+     
+       <section  className="flex justify-end animationside z-50" id="animationside">
           
-       <div className=" bg-gray-800 h-screen  overflow-auto animationside" style={{width: open ? "100%" : "0"}} id="animationside">
+       <div className=" bg-gray-800 h-screen  overflow-auto animationside z-50" style={{width: open ? "100%" : "0"}} id="animationside">
      <div className="z-50 text-white mt-4 space-y-12 mr-2 " >
      <div style={{display: open ? "block" : "none"}}>
        <span className="flex justify-between">
@@ -118,12 +117,12 @@ export default function SideNav() {
      </span>
      <div className="space-y-12  " style={{display: open ? "block" : "none"}}>
       
-       <button className="flex justify-end w-full py-1  mr-10 mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+       <button className="flex justify-end w-full py-1 cursor-pointer mr-10 mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
        <HiOutlineMagnifyingGlass className="mx-2 w-8 h-8"/>
 
          <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">ابحث</h1>
        </button>
-       <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+       <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
        <FcAddImage className="mx-2 w-8 h-8"/>
 
          <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">اصنع مجموعة</h1>
@@ -137,17 +136,17 @@ export default function SideNav() {
          
        </div>
          <div className="mt-12">
-         <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+         <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
        <BsWater className="mx-2 w-8 h-8"/>
 
          <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">ساعد المحيط</h1>
        </button>
-         <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+         <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
        <GiFruitTree className="mx-2 w-8 h-8"/>
 
          <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">ساعد الاشجار</h1>
        </button>
-       <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+       <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
        <GiPlantsAndAnimals className="mx-6 w-8 h-8"/>
 
          <h1 className="mx-3 mt-1 cairo_semibold_title text-xl">ساعد البيئة</h1>
@@ -165,13 +164,13 @@ export default function SideNav() {
          
        </div>
     <div style={{display: open ? "block" : "none"}}>
-    <button  className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+    <button  className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
        <AiFillSetting className="mx-2 w-8 h-8"/>
 
          <h1 className="mx-3 mt-1 cairo_semibold_title text-lg">ألاعادادت</h1>
        </button>
     <Link href={'/homepage'}>
-    <button className="flex justify-end w-full py-1 mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
+    <button className="flex justify-end w-full py-1 cursor-pointer mx-auto mt-12 hover:bg-slate-500 rounded-lg border-white sidenav focus:bg-white/20 focus:rounded-r-none focus:border-r-[2px] ">
        <GiExitDoor className="mx-2 w-8 h-8"/>
 
          <h1 className="mx-3 mt-1 cairo_semibold_title text-lg">تسجيل الخروج</h1>
