@@ -131,12 +131,7 @@
   #goalY {
     transition: ease 2s;
   }
-  .boba {
-    background-image: url(https://thumbs.dreamstime.com/b/blurred-blue-bright-gradient-blue-light-gradient-purple-background-violet-purple-gradient-soft-light-wallpaper-blurred-blue-125220733.jpg);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 2rem;
-  }
+
 }
 .sidenavhidden {
   display: block;
@@ -152,8 +147,16 @@
     display: block;
   }
 }
+.eye{
+  width: 30%;
+  height: 30%;
+  background-color: black;
+  border-radius: 100%;
+  border-width: 2px;
+  border-color: white;  
+}
 body {
-  background-image: linear-gradient(to top, #003fbd, #00229c, #000000, #000000);
+  background-image: linear-gradient(to top, #00186d, #000000, #000000);
   overflow-x: hidden;
 }
 .rounded2 {

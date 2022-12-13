@@ -3,46 +3,95 @@ import { GiRamProfile } from "react-icons/gi";
 import Link from "next/link";
 
 function Groups() {
+  /*Limit 3 per Page */
   return (
     <div
       dir="rtl"
-      className="mx-[8rem] border-[#2F3436] border-2 rounded-2xl my-[3.5rem] h-[80vh] z-20"
+      className="2xl:mx-[8rem] xl:mx-[8rem] lg:mx-[7rem] md:mx-[6rem] border-[#2F3436] border-2 rounded-2xl my-[3.5rem] h-[80vh] overflow-y-auto overflow-hidden z-20"
     >
       <div className="flex justify-end">
-        <span className="relative -top-9 z-10">
+        <span className="relative  z-10 2xl:block xl:block lg:hidden md:hidden sm:hidden xs:hidden xxs:hidden">
+         <div className="flex absolute z-20 top-1 h-20">
+         <span className="eye "><></></span>
+          <span className="eye"><></></span>
+         </div>
+
           <img src="leaf.png" className="w-20 h-20 rotate-45" />
         </span>
       </div>
-      <div className="mx-[8rem] flex items-center border-2 border-black z-20 -mt-10 pb-10">
-        <GiRamProfile className="h-[12rem] w-[15rem] " />
-        <div className="flex-col space-y-4 mr-2">
+
+      
+      <section className="2xL:mx-[8rem] xl:mx-[8rem] lg:mx-[7rem] md:mx-[5rem] sm:mx-[3rem] xs:mx-[2rem] xxs:mx-[1rem] z-20 2xl:-mt-10 xl:-mt-10 rounded-md pb-14">
+      <div className=" flex items-center border-b-2 border-[#c2c2c2] ">
+        <GiRamProfile className="h-[12rem] w-[22rem] 2xl:block xl:block lg:hidden md:hidden sm:hidden xs:hidden xxs:hidden" />
+        <div className="flex-col space-y-4 2xl:mr-2 xl:mr-2 lg:mr-2 md:mr-0 sm:mr-0 xs:mr-0 xxs:mr-0">
           <h1 className="font-bold text-3xl">زا جوووت.</h1>
-          <p className="font-light text-lg">
+          <p className="font-light 2xl:text-lg xl:text-lg lg:text-lg md:text-lg ">
             الماعز واحد المعز، أحد أنواع جنس الوعل، وهو من الحيوانات القوية التي
             يمكنها تحمل العيش في بيئات مختلفة، فهي تعيش في أعالي الجبال وفي
             السهول وحتى يمكنها في الواحات والصحاري. جسم الماعز رشيق وقوي ومغطى
             بالشعر وذلك مكنها من إيجاد طعامها بسهولة على الأرض وحتى في تسلقها
             الشجيرات لأكل الأوراق والبراعم.
           </p>
-          <div className="flex justify-between">
-            <span className="flex">
-              <p className="ml-10">التايب</p>
-            </span>
-            <Link href="/">
-              <button className="bg-[#2F3436] rounded-xl text-white cairo_blod_title px-8 py-1  justify-center">
+          <div className="flex items-center justify-between">
+            
+              <p className=" bg-[#2F3436] text-white p-1 2xl:w-[12%] xs:w-[30%] xxs:w-[30%] rounded-lg sm:px-7 xs:px-7 xxs:px-2">500 عضو</p>
+            <Link href="/" className="cursor-default">
+              <button className="border-[#2F3436] border-2 rounded-xl cairo_blod_title px-14 xxs:px-10 xxs:text-sm py-2 hover:bg-[#c4c4c4] active:bg-[#a8a8a8]">
                 القي نظرة
               </button>
             </Link>
-            <div>
-              <img
-                src="https://caupo.ee/blog/wp-content/uploads/2019/12/caupo-768x1024.jpg"
-                alt="s"
-                className="w-[4rem] h-[4rem]"
-              />
-            </div>
           </div>
         </div>
       </div>
+      <div className=" flex items-center border-b-2 border-[#c2c2c2] ">
+        <GiRamProfile className="h-[12rem] w-[22rem] 2xl:block xl:block lg:hidden md:hidden sm:hidden xs:hidden xxs:hidden" />
+        <div className="flex-col space-y-4 2xl:mr-2 xl:mr-2 lg:mr-2 md:mr-0 sm:mr-0 xs:mr-0 xxs:mr-0">
+          <h1 className="font-bold text-3xl">زا جوووت.</h1>
+          <p className="font-light 2xl:text-lg xl:text-lg lg:text-lg md:text-lg ">
+            الماعز واحد المعز، أحد أنواع جنس الوعل، وهو من الحيوانات القوية التي
+            يمكنها تحمل العيش في بيئات مختلفة، فهي تعيش في أعالي الجبال وفي
+            السهول وحتى يمكنها في الواحات والصحاري. جسم الماعز رشيق وقوي ومغطى
+            بالشعر وذلك مكنها من إيجاد طعامها بسهولة على الأرض وحتى في تسلقها
+            الشجيرات لأكل الأوراق والبراعم.
+          </p>
+          <div className="flex items-center justify-between">
+            
+              <p className=" bg-[#2F3436] text-white p-1 2xl:w-[12%] xs:w-[30%] xxs:w-[30%] rounded-lg sm:px-7 xs:px-7 xxs:px-2">500 عضو</p>
+            <Link href="/" className="cursor-default">
+              <button className="border-[#2F3436] border-2 rounded-xl cairo_blod_title px-14 xxs:px-10 xxs:text-sm py-2 hover:bg-[#c4c4c4] active:bg-[#a8a8a8]">
+                القي نظرة
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className=" flex items-center border-b-2 border-[#c2c2c2] ">
+        <GiRamProfile className="h-[12rem] w-[22rem] 2xl:block xl:block lg:hidden md:hidden sm:hidden xs:hidden xxs:hidden" />
+        <div className="flex-col space-y-4 2xl:mr-2 xl:mr-2 lg:mr-2 md:mr-0 sm:mr-0 xs:mr-0 xxs:mr-0">
+          <h1 className="font-bold text-3xl">زا جوووت.</h1>
+          <p className="font-light 2xl:text-lg xl:text-lg lg:text-lg md:text-lg ">
+            الماعز واحد المعز، أحد أنواع جنس الوعل، وهو من الحيوانات القوية التي
+            يمكنها تحمل العيش في بيئات مختلفة، فهي تعيش في أعالي الجبال وفي
+            السهول وحتى يمكنها في الواحات والصحاري. جسم الماعز رشيق وقوي ومغطى
+            بالشعر وذلك مكنها من إيجاد طعامها بسهولة على الأرض وحتى في تسلقها
+            الشجيرات لأكل الأوراق والبراعم.
+          </p>
+          <div className="flex items-center justify-between">
+            
+              <p className=" bg-[#2F3436] text-white p-1 2xl:w-[12%] xs:w-[30%] xxs:w-[30%] rounded-lg sm:px-7 xs:px-7 xxs:px-2">500 عضو</p>
+            <Link href="/" className="cursor-default">
+              <button className="border-[#2F3436] border-2 rounded-xl cairo_blod_title px-14 xxs:px-10 xxs:text-sm py-2 hover:bg-[#c4c4c4] active:bg-[#a8a8a8]">
+                القي نظرة
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+      
+      </section>
+      
+      
     </div>
   );
 }

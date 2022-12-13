@@ -5,7 +5,6 @@ import NavBar from "../components/NavBar";
 import SideText from "../components/SideText";
 import Problems from "../components/Problems";
 import Goals from "../components/Goals";
-import Join from "../components/Join";
 import Footer from "../components/Footer";
 import Earthing from "../components/Earthing";
 const homepage: NextPage = () => {
@@ -28,7 +27,6 @@ const homepage: NextPage = () => {
 
         <Problems />
         <Goals />
-        <Join />
       </div>
       <footer>
         <Footer />
