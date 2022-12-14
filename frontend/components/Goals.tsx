@@ -1,7 +1,6 @@
 import React from "react";
 
 function Goals() {
-  /*h-[13.1rem] w-[50rem] p-8*/
   return (
     <div className="translate-y-[110rem]">
       <div className="hidden md:block">

@@ -131,7 +131,29 @@
   #goalY {
     transition: ease 2s;
   }
+  #wotah,
+  #twee,
+  #trashxd,
+  #folag {
+    transition: ease 5s;
+  }
 
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(rgb(47, 89, 255), rgb(255, 0, 0));
+    border-radius: 2rem;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(to top, rgb(47, 89, 255), rgb(255, 0, 0));
+  }
 }
 .sidenavhidden {
   display: block;
@@ -147,13 +169,13 @@
     display: block;
   }
 }
-.eye{
+.eye {
   width: 30%;
   height: 30%;
   background-color: black;
   border-radius: 100%;
   border-width: 2px;
-  border-color: white;  
+  border-color: white;
 }
 body {
   background-image: linear-gradient(to top, #00186d, #000000, #000000);
