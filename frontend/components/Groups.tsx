@@ -9,22 +9,9 @@ function Groups() {
       dir="rtl"
       className=" 2xl:mx-[8rem] xl:mx-[8rem] lg:mx-[7rem] md:mx-[6rem] rounded-2xl my-[3.5rem] h-[70vh] 2xl:h-[80vh] overflow-y-auto overflow-hidden z-20"
     >
-      <div className="flex justify-end">
-        <span className="relative  z-10 2xl:block xl:block hidden">
-          <div className="flex absolute z-20 top-1 h-20">
-            <span className="eye ">
-              <></>
-            </span>
-            <span className="eye">
-              <></>
-            </span>
-          </div>
 
-          <img src="leaf.png" className="w-20 h-20 rotate-45" />
-        </span>
-      </div>
 
-      <section className="2xL:mx-[8rem] xl:mx-[8rem] lg:mx-[7rem] md:mx-[5rem] sm:mx-[3rem] xs:mx-[2rem] xxs:mx-[1rem] z-20 2xl:-mt-10 xl:-mt-10 rounded-md pb-14">
+      <section className="2xL:mx-[8rem] xl:mx-[8rem] lg:mx-[7rem] md:mx-[5rem] sm:mx-[3rem] xs:mx-[2rem] xxs:mx-[1rem] z-20 2xl:-mt-5 xl:-mt-5 rounded-md pb-14">
         <div className=" flex items-center border-b-2 border-[#c2c2c2] mt-5 pb-10 mb-10">
           <GiRamProfile className="h-[12rem] w-[22rem] 2xl:block xl:block lg:hidden md:hidden sm:hidden xs:hidden xxs:hidden" />
           <div className="flex-col space-y-4 2xl:mr-2 xl:mr-2 lg:mr-2 md:mr-0 sm:mr-0 xs:mr-0 xxs:mr-0">
