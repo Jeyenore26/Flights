@@ -1,76 +1,65 @@
 import React from 'react'
-import { GiRamProfile } from "react-icons/gi";
-import NavBar from '../components/NavBar';
+import Image from 'next/image'
+import Head from "next/head";
+
 import Link from 'next/link'
-import { MdCancel } from 'react-icons/md';
-import {AiFillPicture} from 'react-icons/ai'
-import Input from '../components/Input';
-import CreateInput from '../components/CreateInput';
+import GroupInput from '../components/GroupInput';
 export default function creategroup() {
   return (
     <>
-      <div  className='bg-white h-screen text-black'>
-       <nav className='mx-[4rem]'>
-       <div>
-      <div className="py-4 flex items-center justify-between relative z-[1] ">
-        <Link href={"/mainpage"}>
-          <button className="rounded-xl flex border-2 bg-white hover:brightness-75 active:brightness-50  text-black px-3 py-1">
-          <MdCancel className='w-4 mx-2 mt-[4px] h-4'/>
+      <Head>
+        <title className="cairo_black_title">انضم لنا</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className='overflow-y-hidden'>
+        <div className='w-screen h-full fixed z-[-1]'>
 
-            <h1 className='cairo_semibold_title'>الغاء</h1>
-          </button>
-        </Link>
-        <ul className=" space-x-3 sm:space-x-10  flex items-center font-light text-md md:text-lg">
-          
-          
-         <Link href={'/homepage'}>
-         <div className=" flex items-center space-x-1">
-            <p className="cairo_semibold_title text-black"> ساعد الارض</p>
-            <img src="./LogoIcon.png" className="w-10 h-10 mt-1" />
+        </div>
+        <img
+          src='./signin5.png'
+          className='w-screen h-full fixed z-[-1] brightness-100 blur-lg cover'
+        />
+        <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
+          <div>
+            <Link href={'/mainpage'}>
+              <button className='text-white border-[1px] border-dashed border-white cairo_semibold_title py-1 px-3 text-md bg-transperant hover:text-white/90 hover:bg-black/20 active:text-white/100 active:bg-black/40 rounded-xl'>
+                  ألرجوع
+              </button>
+            </Link>
           </div>
-         </Link>
-        </ul>
+          <div>
+            <p className='cairo_semibold_title text-white'>
+              ساعد الارض
+            </p>
+          </div>
+        </div>
+        <div className='flex  justify-center mt-[1%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]'>
+
+          <div className=' py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[10%]  overflow-x-auto bg-black/30 rounded-xl'>
+            <div dir='rtl' className='my-8 flex justify-center'>
+              <h1 className='text-white cairo_semibold_title text-2xl'>
+                انشاء مجموعة
+              </h1>
+            </div>
+
+        <GroupInput type={'email'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]'/>
+        <GroupInput type={'email'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]'/>
+        <GroupInput type={'email'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]'/>
+        <GroupInput type={'email'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]'/>
+
+            <div className='flex justify-center my-5'>
+              <button className='text-black cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] text-lg bg-green-400 py-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl'>
+                اهلا بك
+              </button>
+            </div>
+          </div>
+
+        </div>
+
       </div>
-    </div>
-       </nav>
-     <section className='mx-[14rem] mt-[5rem]'>
-     <div>
-     <div dir='rtl' className='flex justify-center'>
-      <GiRamProfile className=' hover:text-black/40 active:text-black/80 w-[12rem] h-[12rem] outline'/>
-      
-      </div>
-      <div className='flex my-12 justify-evenly'>
-        <div>
-        <CreateInput iclassName='px-12' placeholder='اسم المجموعة' required  type={'text'} max = {30} min = {10}/>
 
-        </div>
-        <div>
-        <CreateInput iclassName='px-12' placeholder='اسم المجموعة' required  type={'text'} max = {30} min = {10}/>
-
-        </div>
-        <div>
-        <CreateInput iclassName='px-12' placeholder='اسم المجموعة' required  type={'text'} max = {30} min = {10}/>
-
-        </div>
-        </div> 
-        <div className='flex my-12 justify-evenly'>
-        <div>
-        <CreateInput iclassName='px-12' placeholder='اسم المجموعة' required  type={'text'} max = {30} min = {10}/>
-
-        </div>
-        <div>
-        <CreateInput iclassName='px-12' placeholder='اسم المجموعة' required  type={'text'} max = {30} min = {10}/>
-
-        </div>
-        <div>
-        <CreateInput iclassName='px-12' placeholder='اسم المجموعة' required  type={'text'} max = {30} min = {10}/>
-
-        </div>
-        </div>
-     </div>
-     
-     </section>
-      </div>
     </>
   )
 }
+  
+
