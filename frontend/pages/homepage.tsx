@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import NavBar from "../components/NavBar";
+import HomeNavBar from "../components/HomeNavBar";
 import SideText from "../components/SideText";
 import Problems from "../components/Problems";
 import Goals from "../components/Goals";
@@ -20,7 +20,7 @@ const homepage: NextPage = () => {
         </Head>
         <Earthing />
         <nav className="mx-[1rem] sm:mx-[4rem]">
-          <NavBar />
+          <HomeNavBar />
         </nav>
 
         <SideText />
