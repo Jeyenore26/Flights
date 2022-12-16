@@ -37,7 +37,7 @@ function GroupInput({
             <div className="flex flex-col">
                 {label && (
                     <label
-                        className={`font-semibold cairo_regular_title mt-4 mr-3 text-lg text-white ${lclassName}`}
+                        className={`font-semibold cairo_regular_title mt-4 text-lg text-white ${lclassName}`}
                     >
                         {label}
                     </label>
@@ -62,8 +62,8 @@ function GroupInput({
                 disabled={disabled}
                 minLength={min}
                 maxLength={max}
-                className={` bg-transparent	border-4 rounded-3xl	 text-right w-[100%] h-12 focus:outline-none ${error ? "border-red-600 focus:border-red-600" : ""
-                    }  ease-in-out text-green text-white/80 focus:text-white focus:border-blue-600 focus:outline-none focus:border-primary focus:border-dashed py-1 px-2 rounded-md transition ${iclassName}`}
+                className={` bg-transparent	border-2 rounded-md	 text-right w-[100%] h-12 focus:outline-none ${error ? "border-red-600 focus:border-red-600" : ""
+                    }  ease-in-out text-green text-black/80 focus:text-black focus:border-blue-600 focus:outline-none focus:border-primary focus:border-dashed py-1 px-2 rounded-md transition ${iclassName}`}
             />
         </div>
     );
