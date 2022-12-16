@@ -36,7 +36,7 @@ export default function () {
              </span>
               <div className="flex flex-wrap mx-auto">
                 
-                <a className={page === 1 ? 'pageon sm:px-6 sm:w-auto sm:justify-start cairo_regular_title' : 'pageoff sm:px-6 sm:w-auto sm:justify-start hover:text-gray-900 cairo_regular_title'}>
+                <a className={page === 1 ? 'pageon block sm:px-6 sm:w-auto sm:justify-start cairo_regular_title' : 'pageoff sm:px-6 sm:w-auto sm:justify-start hover:text-gray-900 cairo_regular_title'}>
                     الخطوة الاولى
                 </a>
                 <a className={page === 2 ? 'pageon sm:px-6 sm:w-auto sm:justify-start cairo_regular_title' : 'pageoff sm:px-6 sm:w-auto sm:justify-start hover:text-gray-900 cairo_regular_title'}>
@@ -47,53 +47,53 @@ export default function () {
                 </a>
               </div>
                 {/* First Page*/}
-               {page === 1 && (
-                 <section>
-                 <div className="mt-4 mb-4">
-                <GroupInput label='اسم المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
-               </div>
-               <div className="mb-4">
-               <GroupInput label='ايميل المجموعة' required type={'email'} placeholder ='ايميل المجموعة' lclassName='text-black'/>
- 
-               </div>
-               <div className="mb-4">
-               <GroupInput label='رقم المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
- 
-               </div>
-                 </section>
-               )}
-                 {/* Second Page*/}
-                {page === 2 && (
-                     <section>
-                     <div className="mt-4 mb-4">
-                    <GroupInput label='اسم2 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
-                   </div>
-                   <div className="mb-4">
-                   <GroupInput label='ايميل2 المجموعة' required type={'email'} placeholder ='ايميل المجموعة' lclassName='text-black'/>
-     
-                   </div>
-                   <div className="mb-4">
-                   <GroupInput label='رقم2 المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
-     
-                   </div>
-                     </section>
-                )}
-                 {/* Last Page*/}
-                {page === 3 && (
-                         <section>
-                         <div className="mt-4 mb-4">
-                        <GroupInput label='اسم3 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
+                <section style={{width: page === 1 ? "100%" : "0"}} className = 'PageContent'>
+                         <div style={{display: page === 1 ? "block" : "none"}}  className = 'PageContent '>
+                        <GroupInput  label='اسم3 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
                        </div>
-                       <div className="mb-4">
+                       <div style={{display: page === 1 ? "block" : "none"}} className="PageContent" >
                        <GroupInput label='ايميل3 المجموعة' required type={'email'} placeholder ='ايميل المجموعة' lclassName='text-black'/>
          
                        </div>
-                       <div className="mb-4">
+                       <div style={{display: page === 1 ? "block" : "none"}} className="PageContent" >
                        <GroupInput label='رقم3 المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
          
                        </div>
                          </section>
-                )}
+                 {/* Second Page*/}
+                 <section style={{width: page === 2 ? "100%" : "0"}} className = 'PageContent'>
+                        {page === 2 && (
+                            <>
+                             <div   className = 'PageContent'>
+                        <GroupInput  label='اسم2 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
+                       </div>
+                       <div className="PageContent" >
+                       <GroupInput label='ايميل3 المجموعة' required type={'email'} placeholder ='ايميل المجموعة' lclassName='text-black'/>
+         
+                       </div>
+                       <div className="PageContent" >
+                       <GroupInput label='رقم3 المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
+         
+                       </div>
+                            </>
+                        )}
+                         </section>
+                 {/* Last Page*/}
+                
+                         <section style={{width: page === 3 ? "100%" : "0"}} className = 'PageContent'>
+                         <div  style={{display: page === 3 ? "block" : "none"}} className = 'PageContent'>
+                        <GroupInput  label='اسم3 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
+                       </div>
+                       <div className="PageContent" style={{display: page === 3 ? "block" : "none"}}>
+                       <GroupInput label='ايميل3 المجموعة' required type={'email'} placeholder ='ايميل المجموعة' lclassName='text-black'/>
+         
+                       </div>
+                       <div className="PageContent" style={{display: page === 3 ? "block" : "none"}}>
+                       <GroupInput label='رقم3 المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
+         
+                       </div>
+                         </section>
+                
               <div className="flex justify-start">
                
                  <button
