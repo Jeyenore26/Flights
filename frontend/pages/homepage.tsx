@@ -18,7 +18,6 @@ const homepage: NextPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <HomeTopSection />
-      <HomeExplanation />
 
       {/* <Problems /> 
         <Goals />
