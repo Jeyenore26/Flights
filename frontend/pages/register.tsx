@@ -28,10 +28,16 @@ export default function registermember() {
               </button>
             </Link>
           </div>
-          <div>
-            <p className='cairo_semibold_title text-white'>
+          <div className='flex'>
+          <Link href={'/homepage'} className="cursor-default">
+          <div className=" flex items-center space-x-1">
+          <button className='cairo_semibold_title text-white hover:text-white/50 active:text-white/20 mt-1 mr-1 text-lg'>
               ساعد الارض
-            </p>
+            </button>
+                  <img src="./LogoIcon.png" className="w-10 h-10 mt-1" />
+                </div>
+           
+           </Link>
           </div>
         </div>
         <div className='flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem] max-h-[45rem]'>
