@@ -55,25 +55,25 @@ function Eyes() {
             transform: `rotate(${calcAngle(eyeLeft)}deg)`,
           }}
           id ='eye'
-        ></div>
+        >
+          
+        </div>
         <div
           ref={eyeRight}
           style={{
             transform: `rotate(${calcAngle(eyeRight)}deg)`,
           }}
           id ='eye2'
-        ></div>
+        >
+
+        </div>
        
       </div>
       
 
      </div>
-     <div id="hand1" className="right">
-            
-      </div>
-      <div id="hand2" className="right">
-            
-      </div>
+    
+      
     </div>
   );
 }

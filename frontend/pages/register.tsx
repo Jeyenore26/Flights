@@ -4,6 +4,7 @@ import Head from "next/head";
 import Eyes from '../components/Eyes'
 import Link from 'next/link'
 import Input from '../components/Input'
+
 export default function registermember() {
   return (
     <div className='w-full h-screen'>
@@ -16,8 +17,8 @@ export default function registermember() {
 
         </div>
         <img
-          src='./signin5.png'
-          className='w-screen h-full fixed z-[-1] brightness-100 blur-lg cover'
+          src='./signinbg5.png'
+          className='w-screen h-full fixed z-[-1] brightness-100 cover'
         />
         <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
           <div>

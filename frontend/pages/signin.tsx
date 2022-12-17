@@ -17,24 +17,12 @@ export default function registermember() {
   
   })
   function closeeye() {
-    document.getElementById('hand1')!.style.width = String(90 + "px");
-    document.getElementById('hand1')!.style.marginLeft = String(4 + "rem");
-    document.getElementById('hand1')!.style.top = String(7 + "rem");
-
-    document.getElementById('hand2')!.style.width = String(90 + "px");
-    document.getElementById('hand2')!.style.marginRight = String(4 + "rem");
-    document.getElementById('hand2')!.style.top = String(7 + "rem");
+   
 
 
 }
 function openeye() {
-  document.getElementById('hand1')!.style.width = String(50 + "px");
-  document.getElementById('hand1')!.style.marginLeft = String(2.5 + "rem");
-  document.getElementById('hand1')!.style.top = String(8.7 + "rem");
-
-  document.getElementById('hand2')!.style.width = String(50 + "px");
-  document.getElementById('hand2')!.style.marginRight = String(2.5 + "rem");
-  document.getElementById('hand2')!.style.top = String(8.7 + "rem");
+  
 
 
 }
@@ -42,12 +30,12 @@ function openeye() {
     <div className='w-full h-screen'>
       <Head>
         <title className="cairo_black_title">انضم لنا</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className='overflow-y-hidden'>
         <img
-          src='./signin5.png'
-          className='w-screen h-full fixed z-[-1] brightness-100 blur-lg cover'
+          src='./signinbg5.png'
+          className='w-screen h-full fixed z-[-1] brightness-100 cover'
         />
         <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
           <div>
