@@ -7,30 +7,24 @@ import Problems from "../components/Problems";
 import Goals from "../components/Goals";
 import Footer from "../components/Footer";
 import Earthing from "../components/Earthing";
+import HomeTopSection from "../components/HomeTopSection";
+import HomeExplanation from "../components/HomeExplanation";
+
 const homepage: NextPage = () => {
   return (
     <>
-      <div>
-        <Head>
-          <title className="cairo_black_title">الصفحة الرئيسية</title>
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-        </Head>
-        <Earthing />
-        <nav className="mx-[1rem] sm:mx-[4rem]">
-          <HomeNavBar />
-        </nav>
-
-        <SideText />
-
-        <Problems />
+      <Head>
+        <title className="cairo_black_title">الصفحة الرئيسية</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <HomeTopSection />
+      <HomeExplanation />{" "}
+      {/* <Problems /> 
         <Goals />
-      </div>
+
       <footer>
         <Footer />
-      </footer>
+      </footer>  */}
     </>
   );
 };
