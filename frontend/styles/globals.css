@@ -72,6 +72,17 @@
     color: #0493ac;
     transition-duration: 0.3s;
   }
+  .container1 {
+    @apply max-w-[1320px] xl:mx-auto;
+  }
+
+  .topImg {
+    background-image: linear-gradient(#0000003e, #0000003e),
+      url(https://wallpapers.com/images/file/4k-minimalist-blue-mountain-ndma0rs4nsj9xoh4.jpg);
+  }
+  .imagea {
+    @apply xl:w-[30rem] xl:h-[22rem] lg:w-[22rem] lg:h-[21rem] w-[19rem] h-[19rem];
+  }
   #img1,
   #img2 {
     position: absolute;
@@ -87,7 +98,7 @@
     z-index: 10;
     @apply lg:translate-y-[28rem] 2xl:translate-y-[35rem] translate-y-[21rem];
   }
-  .pageon{
+  .pageon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -98,49 +109,47 @@
     font-weight: 500;
     line-height: 1;
     letter-spacing: 0.05em;
-    border-bottom-width:2px;
+    border-bottom-width: 2px;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     --tw-bg-opacity: 1;
-    
+
     color: rgb(99 102 241 / var(--tw-bg-opacity));
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
     border-color: rgb(99 102 241 / var(--tw-border-opacity));
-
   }
-  .PageContent{
+  .PageContent {
     color: #fff;
-      width: 100%;
-      transition: all 0.5s;
+    width: 100%;
+    transition: all 0.5s;
   }
-  .App{
+  .App {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  .eyebrow_container{
+  .eyebrow_container {
     display: flex;
     gap: 550px;
   }
-  .eye_brow{
+  .eye_brow {
     width: 25px;
     height: 5px;
-        border-radius: 10px;
-        background-color: rgb(90, 90, 90);
+    border-radius: 10px;
+    background-color: rgb(90, 90, 90);
   }
-  .left{
+  .left {
     rotate: -20deg;
     border-bottom-left-radius: 90px;
     border-top-left-radius: 90px;
   }
-  .right{
-    
+  .right {
     rotate: 20deg;
-        border-bottom-right-radius: 90px;
-        border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+    border-top-right-radius: 90px;
   }
-  .mouth{
+  .mouth {
     position: relative;
     background-color: white;
     border-color: #000;
@@ -164,17 +173,17 @@
     box-shadow: inset 0 0 0.4px rgb(0, 0, 0);
     transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
   }
-  #eye::after{
+  #eye::after {
     content: " ";
-          position: absolute;
-          bottom: 5%;
-          right: 20%;
-          width: 6px;
-          height: 6px;
-          background: #fff;
-          border-radius: 50%;
-          pointer-events: none;
-          transition: 0.5s;
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.5s;
   }
   #eye2 {
     position: relative;
@@ -189,29 +198,29 @@
     box-shadow: inset 0 0 0.4px rgb(0, 0, 0);
     transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
   }
-  #eye2::after{
+  #eye2::after {
     content: " ";
-          position: absolute;
-          bottom: 5%;
-          right: 20%;
-          width: 6px;
-          height: 6px;
-          background: #fff;
-          border-radius: 50%;
-          pointer-events: none;
-          transition: 0.5s;
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.5s;
   }
-  .pageoff{
+  .pageoff {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width:50%;
+    width: 50%;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     font-weight: 500;
     line-height: 1;
     letter-spacing: 0.05em;
-    border-bottom-width:2px ;
+    border-bottom-width: 2px;
     --tw-border-opacity: 1;
     border-color: rgb(229 231 235 / var(--tw-border-opacity));
   }
@@ -274,12 +283,11 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(rgb(47, 89, 255), rgb(255, 0, 0));
-    border-radius: 2rem;
+    background: #000;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-image: linear-gradient(to top, rgb(47, 89, 255), rgb(255, 0, 0));
+    background: rgb(29, 29, 29);
   }
 }
 .sidenavhidden {
@@ -296,34 +304,33 @@
     display: block;
   }
 }
-.box{
+.box {
   display: flex;
-  }
-  .box .eye{
-    position: relative;
-    width: 20px;
-    height: 20px;
-    display: block;
-    background-color: #fff;
-    margin: 0 4px;
-    border-radius: 50%;
-    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2);
-    inset: 0 0 15px green;
-    inset: 0 0 25px green;
-  }
-  .box .eye::before{
-    content: '';
-    position: absolute;
-    left: 10px;
-    transform: translate(-50% , 50%);
-    top: 0%;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #000000;
-  }
+}
+.box .eye {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: #fff;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2);
+  inset: 0 0 15px green;
+  inset: 0 0 25px green;
+}
+.box .eye::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  transform: translate(-50%, 50%);
+  top: 0%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000000;
+}
 body {
-  background-image: linear-gradient(to top, #00186d, #000000, #000000);
   overflow-x: hidden;
 }
 .rounded2 {
