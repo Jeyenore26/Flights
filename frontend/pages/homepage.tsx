@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import HomeNavBar from "../components/HomeNavBar";
-import SideText from "../components/SideText";
-import Problems from "../components/Problems";
-import Goals from "../components/Goals";
-import Footer from "../components/Footer";
-import Earthing from "../components/Earthing";
-import HomeTopSection from "../components/HomeTopSection";
-import HomeExplanation from "../components/HomeExplanation";
+import HomeNavBar from "../components/HomePage/HomeNavBar";
+import SideText from "../components/HomePage/SideText";
+import Problems from "../components/HomePage/Problems";
+import Goals from "../components/HomePage/Goals";
+import Footer from "../components/HomePage/Footer";
+import Earthing from "../components/HomePage/Earthing";
+import HomeTopSection from "../components/HomePage/HomeTopSection";
+import HomeExplanation from "../components/HomePage/HomeExplanation";
 
 const homepage: NextPage = () => {
   return (
