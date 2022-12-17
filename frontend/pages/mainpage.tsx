@@ -1,8 +1,8 @@
 import React from "react";
-import BottomPick from "../components/BottomPick";
-import Groups from "../components/Groups";
-import Leaf from "../components/Leaf";
-import MainNav from "../components/MainNav";
+import BottomPick from "../components/MainPage/BottomPick";
+import Groups from "../components/MainPage/Groups";
+import Leaf from "../components/MainPage/Leaf";
+import MainNav from "../components/MainPage/MainNav";
 export default function mainpage() {
   return (
     <>
@@ -10,7 +10,7 @@ export default function mainpage() {
         <MainNav />
         <Groups />
         <BottomPick />
-        <Leaf/>
+        <Leaf />
       </section>
     </>
   );
