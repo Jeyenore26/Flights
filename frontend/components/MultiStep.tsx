@@ -47,7 +47,7 @@ export default function () {
                 </a>
               </div>
                 {/* First Page*/}
-                <section style={{width: page === 1 ? "100%" : "0"}} className = 'PageContent'>
+                <section style={{width: page === 1 ? "100%" : "30%"}} className = 'PageContent'>
                          <div style={{display: page === 1 ? "block" : "none"}}  className = 'PageContent '>
                         <GroupInput  label='اسم3 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
                        </div>
@@ -61,7 +61,7 @@ export default function () {
                        </div>
                          </section>
                  {/* Second Page*/}
-                 <section style={{width: page === 2 ? "100%" : "0"}} className = 'PageContent'>
+                 <section style={{width: page === 2 ? "100%" : "27%"}} className = 'PageContent'>
                         {page === 2 && (
                             <>
                              <div   className = 'PageContent'>
@@ -80,7 +80,7 @@ export default function () {
                          </section>
                  {/* Last Page*/}
                 
-                         <section style={{width: page === 3 ? "100%" : "0"}} className = 'PageContent'>
+                         <section style={{width: page === 3 ? "100%" : "27%"}} className = 'PageContent'>
                          <div  style={{display: page === 3 ? "block" : "none"}} className = 'PageContent'>
                         <GroupInput  label='اسم3 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
                        </div>

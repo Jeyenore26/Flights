@@ -91,7 +91,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width:50%;
+    width: 100%;
+    transition: all 0.5s;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     font-weight: 500;
@@ -101,11 +102,16 @@
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     --tw-bg-opacity: 1;
-
+    
     color: rgb(99 102 241 / var(--tw-bg-opacity));
     background-color: rgb(243 244 246 / var(--tw-bg-opacity));
     border-color: rgb(99 102 241 / var(--tw-border-opacity));
 
+  }
+  .PageContent{
+    color: #fff;
+      width: 100%;
+      transition: all 0.5s;
   }
   .pageoff{
     display: inline-flex;
