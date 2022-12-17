@@ -9,14 +9,33 @@ import Input from '../components/Input'
 
 export default function registermember() {
   useEffect(()=>{
-    document.addEventListener("keydown", changeeye );
+    document.addEventListener("closeeye", closeeye );
+    document.addEventListener("openeye", closeeye );
+
    
   
   
   })
-  function changeeye() {
-    document.getElementById('eye')!.style.height = String(10 + "rem");
-    document.getElementById('eye2')!.style.height = String(10 + "rem");
+  function closeeye() {
+    document.getElementById('hand1')!.style.width = String(90 + "px");
+    document.getElementById('hand1')!.style.marginLeft = String(4 + "rem");
+    document.getElementById('hand1')!.style.top = String(7 + "rem");
+
+    document.getElementById('hand2')!.style.width = String(90 + "px");
+    document.getElementById('hand2')!.style.marginRight = String(4 + "rem");
+    document.getElementById('hand2')!.style.top = String(7 + "rem");
+
+
+}
+function openeye() {
+  document.getElementById('hand1')!.style.width = String(50 + "px");
+  document.getElementById('hand1')!.style.marginLeft = String(2.5 + "rem");
+  document.getElementById('hand1')!.style.top = String(8.7 + "rem");
+
+  document.getElementById('hand2')!.style.width = String(50 + "px");
+  document.getElementById('hand2')!.style.marginRight = String(2.5 + "rem");
+  document.getElementById('hand2')!.style.top = String(8.7 + "rem");
+
 
 }
   return (
@@ -63,7 +82,7 @@ export default function registermember() {
             <Input type={'text'}   required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='الاسم' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
             <Input type={'email'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
 
-            <Input type={'password'} onkeyd = {changeeye}  required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
+            <Input type={'password'} onkeyd = {closeeye} onkeyu = {openeye}  required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
 
 
             <div className='flex justify-center my-5'>

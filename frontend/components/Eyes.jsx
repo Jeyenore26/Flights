@@ -47,6 +47,7 @@ function Eyes() {
        </div>
       </div>
      <div>
+      
      <div className="eye_container mb-6 mt-1 ">
      <div
           ref={eyeLeft}
@@ -65,7 +66,14 @@ function Eyes() {
        
       </div>
       
+
      </div>
+     <div id="hand1" className="right">
+            
+      </div>
+      <div id="hand2" className="right">
+            
+      </div>
     </div>
   );
 }

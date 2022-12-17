@@ -173,6 +173,31 @@
     box-shadow: inset 0 0 0.4px rgb(0, 0, 0);
     transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
   }
+  #hand1{
+    position: absolute;
+    top: 8.7rem;
+    display: inline-block;
+    background-color: #000;
+    height: 30px;
+    width: 50px;
+    transform: rotate(214deg);
+    transition: 0.5s;
+    margin-left: 2.5rem;
+
+  }
+  #hand2{
+    position: absolute;
+    top: 8.7rem;
+    display: inline-block;
+    background-color: #000;
+    height: 30px;
+    width: 50px;
+    transform: rotate(289deg);
+    border-bottom-left-radius: 100%;
+    transition: 0.5s;
+    margin-right: 2.5rem;
+
+  }
   #eye::after {
     content: " ";
     position: absolute;

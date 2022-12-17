@@ -59,9 +59,11 @@ function Input({
                 type={type}
                 placeholder={placeholder}
                 onChange={onChange}
-                onKeyDown={onkeyd}
-                onKeyUp={onkeyu}
+                
+                onFocus={onkeyd}
+                onMouseLeave = {onkeyu}
                 disabled={disabled}
+                
                 className={` bg-transparent	border-b-2	 text-right w-[100%] h-12 focus:outline-none ${error ? "border-red-600 focus:border-red-600" : ""
                     }  ease-in-out text-green text-white/30 focus:text-white focus:border-blue-600 focus:outline-none focus:border-primary focus:border-dashed py-1 px-2 rounded-md transition ${iclassName}`}
             />
