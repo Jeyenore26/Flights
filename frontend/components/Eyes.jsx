@@ -25,9 +25,7 @@ function Eyes() {
     setMouseCoordinates({ x: event.clientX, y: event.clientY });
 
     eyeBrowLeft.current.style.transform = `translateY(${event.clientY / 50}px)`;
-    eyeBrowRight.current.style.transform = `translateY(${
-      event.clientY / 50
-    }px)`;
+    eyeBrowRight.current.style.transform = `translateY(${event.clientY / 50}px)`;
   };
 
   useEffect(() => {
@@ -40,33 +38,31 @@ function Eyes() {
 
   return (
     <div className="App  -mt-5">
-                <img src='./LogoIcon.png' className='w-[10rem] h-[10rem] absolute z-0 brightness-75 xxs:hidden 2xl:block xl:blocl lg:block md:block xs:hidden'/>
+                <img src='./3507796.png' className='w-[10rem] h-[10rem] absolute z-0 brightness-100 xxs:hidden 2xl:block xl:blocl lg:block md:block xs:hidden'/>
 
-      <div className="eyebrow_container mb-2">
+      <div className="eyebrow_container">
        <div className="flex ">
        <div ref={eyeBrowLeft} ></div>
         <div ref={eyeBrowRight}></div>
        </div>
       </div>
      <div>
-     <div className="eye_container">
-        <div
+     <div className="eye_container mb-6 mt-1 ">
+     <div
           ref={eyeLeft}
           style={{
             transform: `rotate(${calcAngle(eyeLeft)}deg)`,
           }}
-          className="eye"
+          id ='eye'
         ></div>
         <div
           ref={eyeRight}
           style={{
             transform: `rotate(${calcAngle(eyeRight)}deg)`,
           }}
-          className="eye"
+          id ='eye2'
         ></div>
-        <div className="mouth mx-auto">
-           
-           </div>
+       
       </div>
       
      </div>

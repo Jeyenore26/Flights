@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Input from '../components/Input'
 export default function registermember() {
   return (
-    <>
+    <div className='w-full h-screen'>
       <Head>
         <title className="cairo_black_title">انضم لنا</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -33,7 +33,7 @@ export default function registermember() {
             </p>
           </div>
         </div>
-        <div className='flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]'>
+        <div className='flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem] max-h-[45rem]'>
 
           <div className=' py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[5%] overflow-x-auto  bg-black/30 rounded-xl'>
           <div className='flex justify-center '>
@@ -68,6 +68,6 @@ export default function registermember() {
 
       </div>
 
-    </>
+    </div>
   )
 }
