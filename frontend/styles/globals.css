@@ -140,6 +140,17 @@
         border-bottom-right-radius: 90px;
         border-top-right-radius: 90px;
   }
+  .mouth{
+    position: relative;
+    background-color: white;
+    border-color: #000;
+    border-width: 3px;
+    border-style: solid;
+    width: 25px;
+    height: 25px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
   .eye {
     position: relative;
     border: 2px solid #000;

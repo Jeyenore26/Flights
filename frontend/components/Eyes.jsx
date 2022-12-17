@@ -42,14 +42,14 @@ function Eyes() {
     <div className="App  -mt-5">
                 <img src='./LogoIcon.png' className='w-[10rem] h-[10rem] absolute z-0 brightness-75 xxs:hidden 2xl:block xl:blocl lg:block md:block xs:hidden'/>
 
-      <div className="eyebrow_container  mb-5">
-       <div className="flex">
-       <div ref={eyeBrowLeft} className="eye_brow left mx-3"></div>
-        <div ref={eyeBrowRight} className="eye_brow right mx-3"></div>
+      <div className="eyebrow_container mb-2">
+       <div className="flex ">
+       <div ref={eyeBrowLeft} ></div>
+        <div ref={eyeBrowRight}></div>
        </div>
       </div>
      <div>
-     <div className="eye_container  mb-10">
+     <div className="eye_container">
         <div
           ref={eyeLeft}
           style={{
@@ -64,7 +64,11 @@ function Eyes() {
           }}
           className="eye"
         ></div>
+        <div className="mouth mx-auto">
+           
+           </div>
       </div>
+      
      </div>
     </div>
   );
