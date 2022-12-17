@@ -113,6 +113,57 @@
       width: 100%;
       transition: all 0.5s;
   }
+  .App{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .eyebrow_container{
+    display: flex;
+    gap: 550px;
+  }
+  .eye_brow{
+    width: 25px;
+    height: 5px;
+        border-radius: 10px;
+        background-color: rgb(90, 90, 90);
+  }
+  .left{
+    rotate: -20deg;
+    border-bottom-left-radius: 90px;
+    border-top-left-radius: 90px;
+  }
+  .right{
+    
+    rotate: 20deg;
+        border-bottom-right-radius: 90px;
+        border-top-right-radius: 90px;
+  }
+  .eye {
+    position: relative;
+    border: 2px solid #000;
+
+    display: inline-block;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    background: #fff;
+    box-shadow: inset 0 0 5px rgb(0, 0, 0);
+    transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+  }
+  .eye::after{
+    content: " ";
+          position: absolute;
+          bottom: 5%;
+          right: 20%;
+          width: 18px;
+          height: 18px;
+          background: #000;
+          border-radius: 50%;
+          pointer-events: none;
+          transition: 0.5s;
+  }
   .pageoff{
     display: inline-flex;
     align-items: center;

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Head from "next/head";
-
+import Eyes from '../components/Eyes'
 import Link from 'next/link'
 import Input from '../components/Input'
 export default function registermember() {
@@ -36,7 +36,14 @@ export default function registermember() {
         <div className='flex  justify-center mt-[1%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]'>
 
           <div className=' py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[10%]  overflow-x-auto bg-black/30 rounded-xl'>
-            <div dir='rtl' className='my-8 flex justify-center'>
+          <div className='flex justify-center '>
+          <div className=' xxs:hidden 2xl:block xl:blocl lg:block md:block xs:hidden'>
+          <Eyes/>
+          </div>
+
+          </div>
+
+            <div dir='rtl' className='mt-12 flex justify-center'>
               <h1 className='text-white cairo_semibold_title text-2xl'>
                 انشاء حساب
               </h1>
