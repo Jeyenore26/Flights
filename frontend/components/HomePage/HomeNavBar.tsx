@@ -5,6 +5,6 @@ import { ImEarth } from "react-icons/im";
 import wallpaper from "../public/earthwallpaper.png";
 export default function HomeNavBar() {
   return (
-    
+    <></>
   );
 }

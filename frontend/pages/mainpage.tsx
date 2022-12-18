@@ -3,17 +3,15 @@ import BottomPick from "../components/MainPage/BottomPick";
 import Groups from "../components/MainPage/Groups";
 import Leaf from "../components/MainPage/Leaf";
 import MainNav from "../components/MainPage/MainNav";
-import MainPageTopSection from "../components/MainPage/MainPageTopSection";
 export default function mainpage() {
   return (
     <>
-      <div>
-        <MainPageTopSection />
-        {/* <MainNav />
+      <section className="w-[100%] h-screen bg-slate-200">
+        <MainNav />
         <Groups />
         <BottomPick />
-        <Leaf /> */}
-      </div>
+        <Leaf/>
+      </section>
     </>
   );
 }
