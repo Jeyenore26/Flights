@@ -13,27 +13,28 @@ export default function mainpage() {
     { name: "مام6ا", desc: "محمد لحم6ه" },
     { name: "مام7ا", desc: "محمد لحم7ه" },
   ];
+  let count = 0;
+  let timeInSeconds = 1000;
+  function cycleArray() {
+    let continent = tarray[count];
+    console.log(continent);
+    count++;
+    if (count == tarray.length) {
+      count = 0;
+    }
+  }
 
-  setInterval(function momafun(): any {
-    tarray.some(({ name, desc }, index) => {
-      for (let i = 0; i < 1; i + 1) {
-        setTimeout(() => {
-          console.log(i);
-        }, 3000);
-      }
-    });
-  }, 1000);
+  setInterval(cycleArray, timeInSeconds);
 
   return (
     <>
-<<<<<<< Updated upstream
       <section className="w-[100%] h-screen bg-slate-200">
         <MainNav />
         <Groups />
         <BottomPick />
-        <Leaf/>
+        <Leaf />
       </section>
-=======
+
       <div>
         {/* <MainPageTopSection
           img="./africa.jpg"
@@ -41,7 +42,6 @@ export default function mainpage() {
           desc="عبارات و كلام عن أفريقيا من اقتباسات و كلمات المشاهير و الحكماء قمنا بجمعها بعناية . تحتوي الصفحة على 369 حكمة و قول مأثور عن أفريقيا."
         /> */}
       </div>
->>>>>>> Stashed changes
     </>
   );
 }
