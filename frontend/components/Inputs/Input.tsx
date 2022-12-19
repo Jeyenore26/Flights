@@ -13,14 +13,10 @@ function Input({
     iclassName,
     lclassName,
     disabled,
-    onkeyd,
-    onkeyu,
 
 }: {
     required?: boolean;
     disabled?: boolean;
-    onkeyd?:(e: any) => any;
-    onkeyu?:(e: any) => any;
     iref?: any;
     label?: string;
     placeholder?: string;
@@ -59,9 +55,6 @@ function Input({
                 type={type}
                 placeholder={placeholder}
                 onChange={onChange}
-                
-                onFocus={onkeyd}
-                onMouseLeave = {onkeyu}
                 disabled={disabled}
                 
                 className={` bg-transparent	border-b-2	 text-right w-[100%] h-12 focus:outline-none ${error ? "border-red-600 focus:border-red-600" : ""
