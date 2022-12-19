@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className=" w-full p-[2rem] text-white mt-[145rem] bg-[#14151d] flex flex-col-reverse md:flex-row items-center justify-between">
+    <div className=" w-full p-[2rem] text-white mt-[10rem] bg-[#14151d] flex flex-col-reverse md:flex-row items-center justify-between">
       <div dir="rtl">
         <h1 className="text-lg">تواصل معنا : </h1>
         <p className="font-bold">iiakku1812@gmail.com</p>

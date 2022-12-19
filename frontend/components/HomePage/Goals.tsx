@@ -9,10 +9,8 @@ function Goals() {
 
                 <div dir="rtl" className="relative text-right opacity-60 mx-2 my-2 py-16 bg-white">
                 <div className="flex">
-                    <h1 className="cairo_regular_title text-green-900 mt-[-50px] text-[5rem]">
-                      3
-                    </h1>
-                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] ">
+                   
+                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] mr-3 ">
                       غير عاداتك
                     </p>
                   
@@ -25,10 +23,8 @@ function Goals() {
                 </div>
                 <div dir="rtl" className="relative text-right opacity-60 mx-2 my-2 py-16 bg-white">
                 <div className="flex">
-                    <h1 className="cairo_regular_title text-green-900 mt-[-50px] text-[5rem]">
-                      2
-                    </h1>
-                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] ">
+                  
+                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] mr-3 ">
                       غير عاداتك
                     </p>
                   
@@ -41,10 +37,8 @@ function Goals() {
                 </div>
                 <div dir="rtl" className="relative text-right opacity-60 mx-2 my-2 py-16 bg-white">
                 <div className="flex">
-                    <h1 className="cairo_regular_title text-green-900 mt-[-50px] text-[5rem]">
-                      1
-                    </h1>
-                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] ">
+                  
+                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] mr-3 ">
                       غير عاداتك
                     </p>
                   
@@ -60,10 +54,8 @@ function Goals() {
                 {/* DOwn three from left to right */}
                 <div dir="rtl" className="relative text-right opacity-60 mx-2 my-2 py-16 bg-white">
                 <div className="flex">
-                    <h1 className="cairo_regular_title text-green-900 mt-[-50px] text-[5rem]">
-                      6
-                    </h1>
-                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] ">
+                  
+                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] mr-3 ">
                       غير عاداتك
                     </p>
                   
@@ -76,10 +68,8 @@ function Goals() {
                 </div>
                 <div dir="rtl" className="relative text-right opacity-60 mx-2 my-2 py-16 bg-white">
                 <div className="flex">
-                    <h1 className="cairo_regular_title text-green-900 mt-[-50px] text-[5rem]">
-                      5
-                    </h1>
-                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] ">
+                
+                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] mr-3 ">
                       غير عاداتك
                     </p>
                   
@@ -92,10 +82,8 @@ function Goals() {
                 </div>
                 <div dir="rtl" className="relative text-right opacity-60 mx-2 my-2 py-16 bg-white">
                 <div className="flex">
-                    <h1 className="cairo_regular_title text-green-900 mt-[-50px] text-[5rem]">
-                      4
-                    </h1>
-                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] ">
+                 
+                    <p className="cairo_semibold_title text-[2rem] mt-[-10px] mr-3">
                       غير عاداتك
                     </p>
                   
@@ -108,6 +96,7 @@ function Goals() {
                 </div>
               </div>
             </div>
+            
     </section>    
   );
 }
