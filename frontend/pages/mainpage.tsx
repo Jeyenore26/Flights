@@ -28,13 +28,6 @@ export default function mainpage() {
 
   return (
     <>
-      <section className="w-[100%] h-screen bg-slate-200">
-        <MainNav />
-        <Groups />
-        <BottomPick />
-        <Leaf />
-      </section>
-
       <div>
         {/* <MainPageTopSection
           img="./africa.jpg"
