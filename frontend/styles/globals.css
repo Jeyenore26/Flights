@@ -292,8 +292,8 @@
     background: rgb(29, 29, 29);
   }
 
-  .desctxt {
-    max-width: 30rem !important;
+  #navbor {
+    transition: ease 0.5s;
   }
 }
 body {

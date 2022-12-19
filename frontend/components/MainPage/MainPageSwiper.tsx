@@ -10,7 +10,7 @@ function MainPageSwiper() {
       <Swiper
         slidesPerView={1}
         autoplay={{
-          delay: 8000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         loop={true}

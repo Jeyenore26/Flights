@@ -10,6 +10,12 @@ export default function mainpage() {
     <>
       <div>
         <MainPageTopSection />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+          alias voluptatem incidunt asperiores voluptas harum veritatis vel,
+          corrupti expedita at cumque maiores! Animi cum tempore numquam cumque
+          repellendus adipisci doloribus.
+        </p>
       </div>
     </>
   );
