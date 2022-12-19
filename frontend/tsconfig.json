@@ -19,9 +19,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/Scene.jsx",
-    "components/Scene.jsx",
-    "components/Sphere.jsx",
+    "components/3dEarth/Scene.jsxcene.jsx",
+    "components/3dEarth/Scene.jsxcene.jsx",
+    "components/3dEarth/Sphere.jsxhere.jsx",
     "components/Earthing.tsx",
     "components/Earthing.tsx"
   ],

@@ -3,7 +3,7 @@ import css from "../styles/Home.module.css";
 import { Canvas } from "@react-three/fiber";
 import Sphere from "./Sphere";
 import { Suspense , useState } from "react";
-import TopSection from './TopSection';
+import TopSection from '../TopSection';
 import { PerformanceMonitor , Html, useProgress } from "@react-three/drei";
 export default function Home() {
   const [dpr, setDpr] = useState(1.5)
