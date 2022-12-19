@@ -1,31 +1,13 @@
 import React , {useEffect} from 'react'
 import Image from 'next/image'
 import Head from "next/head";
-import Eyes from '../components/Eyes'
+import Eyes from '../components/Sign&Register/Eyes'
 import Link from 'next/link'
-import Input from '../components/Input'
+import Input from '../components/Inputs/Input'
 
 
 
 export default function registermember() {
-  useEffect(()=>{
-    document.addEventListener("closeeye", closeeye );
-    document.addEventListener("openeye", closeeye );
-
-   
-  
-  
-  })
-  function closeeye() {
-   
-
-
-}
-function openeye() {
-  
-
-
-}
   return (
     <div className='w-full h-screen'>
       <Head>
@@ -34,8 +16,8 @@ function openeye() {
       </Head>
       <div className='overflow-y-hidden'>
         <img
-          src='./signinbg5.png'
-          className='w-screen h-full fixed z-[-1] brightness-100 cover'
+          src='./signinbg6.png'
+          className='w-screen h-full fixed z-[-1] brightness-75 cover'
         />
         <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
           <div>
@@ -76,7 +58,7 @@ function openeye() {
             <Input type={'text'}   required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='الاسم' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
             <Input type={'email'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
 
-            <Input type={'password'} onkeyd = {closeeye} onkeyu = {openeye}  required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
+            <Input type={'password'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
 
 
             <div className='flex justify-center my-5'>

@@ -51,7 +51,7 @@ function HomeTopSection() {
         >
           <div className="box1 w-20 h-20 absolute"></div>
 
-          <div className=" flex-col items-center bg-[#74ae2d28] p-[6rem] shadow-2xl ">
+          <div className=" flex-col items-center bg-[#74ae2d28] p-[4rem] shadow-2xl ">
            <div className=" ">
 
            </div>

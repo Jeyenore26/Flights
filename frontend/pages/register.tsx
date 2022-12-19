@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import Head from "next/head";
-import Eyes from '../components/Eyes'
+import Eyes from '../components/Sign&Register/Eyes'
 import Link from 'next/link'
-import Input from '../components/Input'
+import Input from '../components/Inputs/Input'
 
 export default function registermember() {
   return (
@@ -17,8 +17,8 @@ export default function registermember() {
 
         </div>
         <img
-          src='./signinbg5.png'
-          className='w-screen h-full fixed z-[-1] brightness-100 cover'
+          src='./signinbg6.png'
+          className='w-screen h-full fixed z-[-1] brightness-75 cover'
         />
         <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
           <div>

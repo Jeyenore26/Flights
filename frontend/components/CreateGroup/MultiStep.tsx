@@ -1,5 +1,5 @@
 import React , {useState , useEffect} from 'react'
-import GroupInput from './GroupInput'
+import GroupInput from '../Inputs/GroupInput'
 import { MdGroupAdd } from 'react-icons/md'
 import Link from 'next/link'
 export default function () {
