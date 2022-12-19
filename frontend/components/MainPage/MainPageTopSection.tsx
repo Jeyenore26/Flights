@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React from "react";
+import MainPageSwiper from "./MainPageSwiper";
 
-function MainPageTopSection(props: any) {
+function MainPageTopSection() {
   return (
     <div>
       {/* nav */}
 
-      <div className="mx-[1rem] sm:mx-[2rem] fixed w-screen max-w-[90%]">
+      <div className="mx-[1rem] sm:mx-[2rem] fixed z-[100] w-screen max-w-[90%]">
         <div className="py-4 flex items-center justify-between">
           <Link href={"/register"}>
             <button className="rounded-xl bg-white hover:brightness-75 active:brightness-50 text-black px-3 py-1">
@@ -42,28 +43,9 @@ function MainPageTopSection(props: any) {
           </ul>
         </div>
       </div>
-      {/* africa */}
-      <div id="africa">
-        <img
-          src={props.img}
-          alt=""
-          className="w-full h-screen bg-cover brightness-75 z-[-100] relative"
-        />
-        <div className="container1 ">
-          <div className="flex flex-col items-end space-y-5 mt-[-25rem] mr-[35px] lg:mr-[90px]">
-            <p className="text-4xl md:text-6xl text-white font-bold">
-              {props.name}
-            </p>
-            <p
-              dir="rtl"
-              className="w-[15rem] md:w-[30rem] text-white font-sm text-sm md:text-lg"
-            >
-              {props.desc}
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* end of africa */}
+      {/* swiper */}
+      <MainPageSwiper />
+      {/* end of swiper */}
     </div>
   );
 }
