@@ -22,7 +22,7 @@ function MainPageTopSection() {
         <div className=" fixed z-[100] w-full">
           <div
             id="navbor"
-            className="py-4 flex items-center justify-between px-[4rem]"
+            className="py-4 flex items-center justify-between px-[1rem] md:px-[4rem]"
           >
             <Link href={"/register"}>
               <button className="rounded-xl bg-white hover:brightness-75 active:brightness-50 text-black px-3 py-1">

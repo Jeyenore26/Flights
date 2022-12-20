@@ -69,7 +69,7 @@
 
 @layer components {
   .Havar:hover {
-    color: #0493ac;
+    color: #04ac04;
     transition-duration: 0.3s;
   }
   .container1 {
@@ -80,9 +80,7 @@
     background-image: linear-gradient(#0000003e, #0000003e),
       url("../public/leaf2.png");
   }
-  .imagea {
-    @apply xl:w-[30rem] xl:h-[22rem] lg:w-[22rem] lg:h-[21rem] w-[19rem] h-[19rem];
-  }
+
   .text-right {
     text-align: right;
   }
@@ -258,38 +256,26 @@
     transition: all 0.5s;
   }
 
-  #goaltxt1,
-  #goaltxt2,
-  #goaltxt3 {
-    transition: ease 1.5s;
-    opacity: 0;
-    height: 0rem;
-  }
-
-  #goalY {
-    transition: ease 2s;
-  }
-  #wotah,
-  #twee,
-  #trashxd,
-  #folag {
-    transition: ease 5s;
-  }
-
   ::-webkit-scrollbar {
-    width: 10px;
+    background-color: #f5f5f5;
+    width: 8px;
+    @apply hidden sm:block;
   }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
   ::-webkit-scrollbar-thumb {
-    background: #000;
+    border-radius: 10px;
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.44, rgb(122, 217, 127)),
+      color-stop(0.72, rgb(73, 189, 73)),
+      color-stop(0.86, rgb(50, 148, 28))
+    );
   }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(29, 29, 29);
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+    border-radius: 10px;
   }
 
   #navbor {
