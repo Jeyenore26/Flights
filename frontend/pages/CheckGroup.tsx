@@ -1,74 +1,78 @@
-import React from 'react'
-import {GiPlantsAndAnimals ,GiCancel} from 'react-icons/gi'
-import GroupInput from '../components/Inputs/GroupInput'
-import {FaDonate, FaHandsHelping} from 'react-icons/fa'
-import Input from '../components/Inputs/Input'
-import Link from 'next/link'
+import React , {useState} from 'react'
+import NavBar from '../components/CheckGroup/NavBar'
+import {FaDonate , FaHandsHelping} from 'react-icons/fa'
+import Members from '../components/CheckGroup/Members'
+import Proves from '../components/CheckGroup/Proves'
+import Group from '../components/CheckGroup/Group'
+import Activity from '../components/CheckGroup/Activity'
+import Donate from '../components/CheckGroup/Donate'
 export default function CheckGroup() {
+    const [page , setpage] = useState(1)
   return (
     <>
-    <section dir='rtl' className='flex  mx-[15rem] mt-10 overflow-hidden  '>
-        <div>
-            <GiPlantsAndAnimals className='w-40 h-40'/>
-            <div dir='rtl' className='mt-8 flex justify-center'>
-            <span className='cairo_bold_title text-1xl p-3 bg-[#39C2BC] rounded-3xl text-white '>اسم المجموعة</span>
+    <section className='bg-[#18191B] h-full w-full'>
+        <NavBar/>
+        <div className=' bg-gradient-to-b from-black to-[#242527] w-full h-max'>
             
+            <section className='xl:mx-[29rem]'>
+            <img src='./asia.jpg' className='h-[22.8rem] w-full' />
+            <div className='bg-[#8A3451] w-full h-10 rounded-b-lg flex justify-end '>
+                <span className='cairo_regular_title flex mt-1 mr-5 text-white justify-center'><span className='text-white/80 mx-1'>The Tree </span> مجموعة تتم إدارتها بواسطة </span>
             </div>
-            
+            <div className='mx-[2rem] mt-4'>
+                <div dir='rtl' className='flex justify-between '>
+                    <div>
+                    <h1 className='text-white cairo_bold_title text-[20px]'>ذا كوك</h1>
+                    <div dir='rtl' className='flex justify-start mt-1'>
+                <h1 className='text-white/60 cairo_bold_title text-[15px] ml-3 '>  المكان مصر </h1>
+                <h1 className='text-white cairo_bold_title text-[15px]'>.</h1>
+                <h1 className='text-white/60 cairo_bold_title text-[13px] mt-1 mr-2'> 4444 عضو </h1>
+
+                </div>
+                    </div>
+                    <button className='bg-[#8A3451] hover:bg-[#6e2b41] active:bg-[#4d1f2e] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-4 py-2 xxs:text-[12px] md:text-[17px] mb-10 text-white rounded-lg'>انضم للمجموعة</button>
+                </div>
+               
+            </div>
+            <div className='flex justify-center'>
+            <p  className="lg:w-full xxs:w-10 mx-[2rem]  my-[1rem] border-t-[1px] border-[#fff] "></p>
+
+            </div>
+            </section>
+            <section className='md:mx-[31rem] '>
+                <div dir='rtl' className='flex justify-center '>
+                    <span onClick={()=>{setpage(1)}} className ={page === 1 ? 'text-[#754b5a] transition-1  cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2' : 'text-[#fff] hover:text-white/40 active:text-white/80 cairo_regular_title border-b-2 border-[#232426] cursor-pointer text-[15px] py-1 mr-5 mb-2'} >المجموعة</span>
+
+                    <span onClick = {()=>{setpage(3)}} className ={page === 3 ? 'text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2' : 'text-[#fff] hover:text-white/40 active:text-white/80 cairo_regular_title border-b-2 border-[#232426] cursor-pointer text-[15px] py-1 mr-5 mb-2'} >الوسائط</span>
+                    <span onClick = {()=>{setpage(2)}} className ={page === 2 ? 'text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2' : 'text-[#fff] hover:text-white/40 active:text-white/80 cairo_regular_title border-b-2 border-[#232426] cursor-pointer text-[15px] py-1 mr-5 mb-2'} >ساعدنا</span>
+
+
+                </div>
+            </section>
+
+
         </div>
-        
-        <div className='mt-14 mr-[11rem]'>
-            <h1 className='cairo_black_title text-2xl'>معلومات عن الاشخاص</h1>
-            <div className='flex mt-10 mr-[-2rem] '>
-                    <div className='mx-10'>
-                    <GroupInput type={'text'}  label ='أسم مالك المجموعة ' lclassName='text-black cairo_regular_title ' value={'محمد'} iclassName ='text-black focus:text-black bg-black/10 rounded-xl' disabled />
-
-                    </div>
-                    <div className='mx-10'>
-                    <GroupInput type={'text'}  label ='أسم  مساعد المجموعة' lclassName='text-black cairo_regular_title' value={'محمد'} iclassName ='text-black focus:text-black bg-black/10 rounded-xl' disabled />
-
-                    </div>
-                    <div className='mx-10' >
-                    <GroupInput type={'text'}  label ='أسم  اكبر المتبرعين' lclassName='text-black cairo_regular_title' value={'محمد'} iclassName ='text-black focus:text-black bg-black/10 rounded-xl' disabled />
-
-                    </div>
-                    <div className='mx-10' >
-                    <GroupInput type={'number'}  label ='رقم المجموعة   ' lclassName='text-black cairo_regular_title' value={'0125485102'} iclassName ='text-black focus:text-black bg-black/10 rounded-xl' disabled />
-
-                    </div>
-                    
-            </div>
-            <h1 className='cairo_black_title text-2xl mt-10'>معلومات المجموعة</h1>
-            <div className='flex mt-10 mr-[-2rem] '>
-                    <div className='mx-10'>
-                    <GroupInput type={'text'}  label ='ماذا يساعدوا    ' lclassName='text-black cairo_regular_title ' value={'محمد'} iclassName ='text-black focus:text-black bg-black/10 rounded-xl ' disabled />
-
-                    </div>
-                    <div className='mx-10'>
-                    <GroupInput type={'text'}  label ='اين يساعدوا' lclassName='text-black cairo_regular_title' value={'محمد'} iclassName ='text-black focus:text-black bg-black/10 rounded-xl' disabled />
-
-                    </div>
-                    
-            </div>
-            <h1 className='cairo_black_title text-2xl mr-1 mt-5'>اثبا تات</h1>
-            <div className='flex mt-10 mr-[-2rem] mb-5'>
-                        <div className='flex justify-evenly'>
-                            <img src='./cert.png' className='border-2 border-black mx-12 rounded-sm w-[11rem] h-[11rem]'/>
-                            <img src='./cert.png' className='border-2 border-black mx-12 rounded-sm w-[11rem] h-[11rem]'/>
-                            <img src='./cert.png' className='border-2 border-black mx-12 rounded-sm w-[11rem] h-[11rem]'/>
-
-                            <img src='./cert.png' className='border-2 border-black mx-12 rounded-sm w-[11rem] h-[11rem]'/>
+        {page === 1 && (
+                       <> <Group/>
+                       <Members/>
+                       <Activity/>
+                       </>
 
 
+        )}
+          {page === 2 && (
+                       <>
+                       <Donate/>
+                       </>
 
-                        </div>
-        
-            </div>
-        </div>
-       
-       
+
+        )}
+
+        {page === 3 && (
+                        <Proves/>
+
+        )}
     </section>
-   
     </>
   )
 }

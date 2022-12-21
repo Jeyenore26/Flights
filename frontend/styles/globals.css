@@ -93,6 +93,9 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
+  .transition-1{
+    transition: all 0.7s;
+  }
   .griid {
     display: grid;
     grid-template-columns: repeat(3, 33.33333333%);
