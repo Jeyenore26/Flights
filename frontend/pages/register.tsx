@@ -17,7 +17,7 @@ export default function registermember() {
 
         </div>
         <img
-          src='./signinbg6.png'
+          src='./greenhills.png'
           className='w-screen h-full fixed z-[-1] brightness-75 cover'
         />
         <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
@@ -44,7 +44,7 @@ export default function registermember() {
 
           <div className=' py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[5%] overflow-x-auto  bg-black/30 rounded-xl'>
           <div className='flex justify-center '>
-          <div className=' xxs:hidden 2xl:block  xl:blocl lg:block md:block xs:hidden z-10'>
+          <div className=' lg:block xxs:hidden z-10'>
           <Eyes/>
           </div>
 
@@ -56,13 +56,31 @@ export default function registermember() {
                 انشاء حساب
               </h1>
             </div>
+            <div dir='rtl' className='flex lg:flex-row xxs:flex-col'>
+            <Input type={'text'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='الاسم الاول' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 ' />
+            <Input type={'text'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='الاسم الاخير' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4' />
 
-            <Input type={'text'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='الاسم' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
-            <Input type={'email'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
 
-            <Input type={'password'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
-            <Input type={'password'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label=' تاكيد كلمة السر ' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
+            </div>
+            <div dir='rtl' className='flex lg:flex-row xxs:flex-col'>
+            <Input type={'password'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 ' />
+            <Input type={'password'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='تاكيد كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4' />
 
+
+            </div>
+            <div className='mx-4'>
+            <Input type={'email'} required lclassName='flex xs:justify-start xxs:justify-center' label='الايميل' iclassName=' sm:w-full xs:w-[25rem] xxs:w-[25rem] ' />
+
+            </div>
+            <div dir='rtl' className='flex lg:flex-row xxs:flex-col'>
+            <Input required type={'date'} lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='يوم الميلاد' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 ' />
+            <Input required type={'tel'} lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='رقم الهاتف' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4' />
+
+
+            </div>
+
+
+           
 
             <div className='flex justify-center my-5'>
               <button className='text-black cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] text-lg bg-green-400 py-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl'>
