@@ -93,7 +93,7 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
-  .transition-1{
+  .transition-1 {
     transition: all 0.7s;
   }
   .griid {
@@ -258,35 +258,13 @@
     width: 100%;
     transition: all 0.5s;
   }
-
   ::-webkit-scrollbar {
-    background-color: #f5f5f5;
-    width: 8px;
-    @apply hidden sm:block;
-  }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-image: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0.44, rgb(122, 217, 127)),
-      color-stop(0.72, rgb(73, 189, 73)),
-      color-stop(0.86, rgb(50, 148, 28))
-    );
-  }
-  ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #f5f5f5;
-    border-radius: 10px;
-  }
-
-  #navbor {
-    transition: ease 0.5s;
+    display: none;
   }
 }
 body {
   overflow-x: hidden;
+  background-color: #f6f7fc;
 }
 .rounded2 {
   border-top-left-radius: 1rem;
@@ -307,4 +285,17 @@ body {
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 0rem;
   }
+}
+#selected {
+  border-right: 2px solid rgb(0, 0, 0);
+  color: #000;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  @apply sm:pr-[1rem] pr-[2px] sm:bg-[#f1f1f1];
+}
+#selected2 {
+  border-right: 2px solid #000;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  @apply sm:pr-[1rem] pr-[2px];
 }
