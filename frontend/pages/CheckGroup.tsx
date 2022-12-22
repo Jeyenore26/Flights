@@ -6,7 +6,7 @@ import Proves from "../components/CheckGroup/Proves";
 import Group from "../components/CheckGroup/Group";
 import Activity from "../components/CheckGroup/Activity";
 import Donate from "../components/CheckGroup/Donate";
-export default function CheckGroup() {
+export default function checkgroup() {
   const [page, setpage] = useState(1);
   return (
     <>
