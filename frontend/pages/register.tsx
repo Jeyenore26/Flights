@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useState} from 'react'
 import Image from 'next/image'
 import Head from "next/head";
 import Eyes from '../components/Sign&Register/Eyes'
@@ -6,6 +6,23 @@ import Link from 'next/link'
 import Input from '../components/Inputs/Input'
 
 export default function registermember() {
+  const [name , setname] = useState('')
+  const [email , setemail] = useState('')
+
+  const [password , setpassword] = useState('')
+
+  const [confirmpass , setconfirmpass] = useState('')
+
+
+  function register () {
+    event?.preventDefault()
+
+      console.log(name)
+      console.log(email)
+      console.log(password)
+      console.log(confirmpass)
+
+  }
   return (
     <div className='w-full h-screen'>
       <Head>
@@ -40,7 +57,7 @@ export default function registermember() {
            </Link>
           </div>
         </div>
-        <form className='flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem] max-h-[45rem]'>
+        <form onSubmit={register} className='flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem] max-h-[45rem]'>
 
           <div className=' py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[5%] overflow-x-auto  bg-black/30 rounded-xl'>
           <div className='flex justify-center '>
@@ -56,34 +73,22 @@ export default function registermember() {
                 انشاء حساب
               </h1>
             </div>
-            <div dir='rtl' className='flex lg:flex-row xxs:flex-col'>
-            <Input type={'text'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='الاسم الاول' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 ' />
-            <Input type={'text'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='الاسم الاخير' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4' />
+            <Input onChange={(e) => setname(e.target.value)} type={'text'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='الاسم ' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 ' />
+            <Input onChange={(e) => setemail(e.target.value)} type={'email'} required lclassName='flex xs:justify-start xxs:justify-center' label='الايميل' iclassName='2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 ' />
 
 
-            </div>
-            <div dir='rtl' className='flex lg:flex-row xxs:flex-col'>
-            <Input type={'password'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 ' />
-            <Input type={'password'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='تاكيد كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4' />
+            <Input onChange={(e) => setpassword(e.target.value)}  type={'password'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 ' />
+            <Input onChange={(e) => setconfirmpass(e.target.value)} type={'password'} required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='تاكيد كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4' />
 
 
-            </div>
-            <div className='mx-4'>
-            <Input type={'email'} required lclassName='flex xs:justify-start xxs:justify-center' label='الايميل' iclassName=' sm:w-full xs:w-[25rem] xxs:w-[25rem] ' />
+           
 
-            </div>
-            <div dir='rtl' className='flex lg:flex-row xxs:flex-col'>
-            <Input required type={'date'} lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='يوم الميلاد' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 ' />
-            <Input required type={'tel'} lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='رقم الهاتف' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4' />
-
-
-            </div>
 
 
            
 
             <div className='flex justify-center my-5'>
-              <button value={'submit'} className='text-black cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] text-lg bg-green-400 py-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl'>
+              <button  value={'submit'} className='text-black cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] text-lg bg-green-400 py-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl'>
                 نورتنا
               </button>
             </div>
