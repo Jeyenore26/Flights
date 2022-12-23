@@ -16,7 +16,7 @@ export default function () {
     const pagecolor = {color : 'blue'}
   return (
   <>
-  <div className="flex items-center min-h-screen bg-gray-50">
+  <div className="flex items-center min-h-screen bg-gray-50 "  id="animate32">
       <div
         className="flex-1 h-full max-w-5xl mx-auto bg-white rounded-lg shadow-xl"
       >

@@ -4,7 +4,7 @@ import {MdGroup} from 'react-icons/md'
 import {IoCreateOutline} from 'react-icons/io5'
 export default function Activity() {
   return (
-    <section className='flex justify-center mt-5'>
+    <section className='flex justify-center mt-5' id="animate32">
         <div className='w-[40rem] bg-[#242527] h-full rounded-lg mb-10'>
                 <div className='text-white flex justify-end cairo_semibold_title my-3 mr-8'>النشاط</div>
                 <div className='flex justify-center mb-3'>

@@ -19,7 +19,7 @@ export default function profile() {
         <title className="cairo_black_title">حسابك الشخصي</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <section dir='rtl' className='bg-[#18191B] py-full'>
+      <section dir='rtl' className='bg-[#18191B] py-full' id='animate33'>
         <div className='text-black flex justify-start px-20  my-10'>
           <div>
             <img src='./avater2.png' className=' rounded-lg w-80 h-80' />

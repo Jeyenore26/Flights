@@ -10,7 +10,7 @@ export default function checkgroup() {
   const [page, setpage] = useState(1);
   return (
     <>
-      <section className="bg-[#18191B] h-full w-full">
+      <section className="bg-[#18191B] h-full w-full" >
         <NavBar />
         <div className=" bg-gradient-to-b from-black to-[#242527] w-full h-max">
           <section className="xl:mx-[29rem]">
@@ -21,7 +21,7 @@ export default function checkgroup() {
                 إدارتها بواسطة
               </span>
             </div>
-            <div className="mx-[2rem] mt-4">
+            <div className="mx-[2rem] mt-4" >
               <div dir="rtl" className="flex justify-between ">
                 <div>
                   <h1 className="text-white cairo_bold_title text-[20px]">
