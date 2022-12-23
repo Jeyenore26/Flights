@@ -10,9 +10,9 @@ export default function checkgroup() {
   const [page, setpage] = useState(1);
   return (
     <>
-      <section className="bg-[#18191B] h-full w-full" >
+      <section className="bg-white h-full w-full" >
         <NavBar />
-        <div className=" bg-gradient-to-b from-black to-[#242527] w-full h-max">
+        <div className=" bg-gradient-to-b from-[#b5b7b9] to-white w-full h-max">
           <section className="xl:mx-[29rem]">
             <img src="./asia.jpg" className="h-[22.8rem] w-full" />
             <div className="bg-[#8A3451] w-full h-10 rounded-b-lg flex justify-end ">
@@ -24,17 +24,17 @@ export default function checkgroup() {
             <div className="mx-[2rem] mt-4" >
               <div dir="rtl" className="flex justify-between ">
                 <div>
-                  <h1 className="text-white cairo_bold_title text-[20px]">
+                  <h1 className="text-black cairo_bold_title text-[20px]">
                     ذا كوك
                   </h1>
                   <div dir="rtl" className="flex justify-start mt-1">
-                    <h1 className="text-white/60 cairo_bold_title text-[15px] ml-3 ">
+                    <h1 className="text-black/60 cairo_bold_title text-[15px] ml-3 ">
                       المكان مصر
                     </h1>
-                    <h1 className="text-white cairo_bold_title text-[15px]">
+                    <h1 className="text-black cairo_bold_title text-[15px]">
                       .
                     </h1>
-                    <h1 className="text-white/60 cairo_bold_title text-[13px] mt-1 mr-2">
+                    <h1 className="text-black/60 cairo_bold_title text-[13px] mt-1 mr-2">
                       4444 عضو
                     </h1>
                   </div>
@@ -57,7 +57,7 @@ export default function checkgroup() {
                 className={
                   page === 1
                     ? "text-[#754b5a] transition-1  cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2"
-                    : "text-[#fff] hover:text-white/40 active:text-white/80 cairo_regular_title border-b-2 border-[#232426] cursor-pointer text-[15px] py-1 mr-5 mb-2"
+                    : "text-black hover:text-black/40 active:text-black/80 cairo_regular_title border-b-2 border-white cursor-pointer text-[15px] py-1 mr-5 mb-2"
                 }
               >
                 المجموعة
@@ -70,7 +70,7 @@ export default function checkgroup() {
                 className={
                   page === 3
                     ? "text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2"
-                    : "text-[#fff] hover:text-white/40 active:text-white/80 cairo_regular_title border-b-2 border-[#232426] cursor-pointer text-[15px] py-1 mr-5 mb-2"
+                    : "text-black hover:text-black/40 active:text-black/80 cairo_regular_title border-b-2 border-white cursor-pointer text-[15px] py-1 mr-5 mb-2"
                 }
               >
                 الوسائط
@@ -82,7 +82,7 @@ export default function checkgroup() {
                 className={
                   page === 2
                     ? "text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2"
-                    : "text-[#fff] hover:text-white/40 active:text-white/80 cairo_regular_title border-b-2 border-[#232426] cursor-pointer text-[15px] py-1 mr-5 mb-2"
+                    : "text-black hover:text-black/40 active:text-black/80 cairo_regular_title border-b-2 border-white cursor-pointer text-[15px] py-1 mr-5 mb-2"
                 }
               >
                 ساعدنا
