@@ -39,7 +39,7 @@ export default function registermember() {
            </Link>
           </div>
         </div>
-        <div className='flex  justify-center mt-[1%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]'>
+        <form className='flex  justify-center mt-[1%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]'>
 
           <div className=' py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[10%]  overflow-x-auto bg-black/30 rounded-xl'>
           <div className='flex justify-center '>
@@ -68,7 +68,7 @@ export default function registermember() {
             </div>
           </div>
 
-        </div>
+        </form>
 
       </div>
 
