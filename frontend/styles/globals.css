@@ -286,16 +286,81 @@ body {
     border-bottom-right-radius: 0rem;
   }
 }
-#selected {
-  border-right: 2px solid rgb(0, 0, 0);
-  color: #000;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  @apply sm:pr-[1rem] pr-[2px] sm:bg-[#f1f1f1];
-}
+
 #selected2 {
-  border-right: 2px solid #000;
+  border-right: 2px solid;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   @apply sm:pr-[1rem] pr-[2px];
+}
+
+@keyframes Animate1 {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes Animate2 {
+  from {
+    width: 0rem;
+  }
+  to {
+    width: 10rem;
+  }
+}
+@keyframes Animate3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes Animate4 {
+  from {
+    height: 0;
+  }
+  to {
+    height: 6rem;
+  }
+}
+
+#animate1 {
+  animation: Animate1 500ms ease-out;
+  animation-fill-mode: backwards;
+}
+#animate2 {
+  animation: Animate2 1000ms ease-out;
+  animation-fill-mode: backwards;
+}
+#animate3 {
+  animation: Animate3 2000ms ease-out;
+  animation-fill-mode: backwards;
+}
+#animate4 {
+  animation: Animate4 500ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+#animate12 {
+  animation: Animate1 500ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 250ms;
+}
+#animate13 {
+  animation: Animate1 500ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 500ms;
+}
+#animate32 {
+  animation: Animate3 500ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 500ms;
+}
+#animate33 {
+  animation: Animate3 500ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 200ms;
 }
