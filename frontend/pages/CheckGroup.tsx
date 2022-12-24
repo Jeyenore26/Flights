@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import NavBar from "../components/CheckGroup/NavBar";
-import { FaDonate, FaHandsHelping } from "react-icons/fa";
-import Members from "../components/CheckGroup/Members";
-import Proves from "../components/CheckGroup/Proves";
-import Group from "../components/CheckGroup/Group";
-import Activity from "../components/CheckGroup/Activity";
-import Donate from "../components/CheckGroup/Donate";
+import dynamic from "next/dynamic";
+const Members = dynamic(()=>import("../components/CheckGroup/Members"))
+const Proves = dynamic(()=>import("../components/CheckGroup/Proves"))
+const Group = dynamic(()=>import("../components/CheckGroup/Group"))
+const Activity = dynamic(()=>import("../components/CheckGroup/Activity"))
+const Donate = dynamic(()=>import("../components/CheckGroup/Donate"))
+
 export default function checkgroup() {
   const [page, setpage] = useState(1);
   return (
@@ -15,7 +16,7 @@ export default function checkgroup() {
         <div className=" bg-gradient-to-b from-[#b5b7b9] to-white w-full h-max">
           <section className="xl:mx-[29rem]">
             <img src="./asia.jpg" className="h-[22.8rem] w-full" />
-            <div className="bg-[#8A3451] w-full h-10 rounded-b-lg flex justify-end ">
+            <div className="bg-[#39A059] w-full h-10 rounded-b-lg flex justify-end ">
               <span className="cairo_regular_title flex mt-1 mr-5 text-white justify-center">
                 <span className="text-white/80 mx-1">The Tree </span> مجموعة تتم
                 إدارتها بواسطة
@@ -39,7 +40,7 @@ export default function checkgroup() {
                     </h1>
                   </div>
                 </div>
-                <button className="bg-[#8A3451] hover:bg-[#6e2b41] active:bg-[#4d1f2e] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-4 py-2 xxs:text-[12px] md:text-[17px] mb-10 text-white rounded-lg">
+                <button className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-4 py-2 xxs:text-[12px] md:text-[17px] mb-10 text-white rounded-lg">
                   انضم للمجموعة
                 </button>
               </div>

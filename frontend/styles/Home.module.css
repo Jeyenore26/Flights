@@ -5,36 +5,43 @@
 @font-face {
   font-family: "CairoBlack";
   src: local("CairoBlack"), url("../fonts/cairo/Cairo-Black.ttf") format("truetype");
+
 }
 
 @font-face {
   font-family: "CairoBold";
   src: local("CairoBold"), url("../fonts/cairo/Cairo-Bold.ttf") format("truetype");
+
 }
 
 @font-face {
   font-family: "CairoExtraBold";
   src: local("CairoExtraBold"), url("../fonts/cairo/Cairo-ExtraBold.ttf") format("truetype");
+
 }
 
 @font-face {
   font-family: "CairoExtraLight";
   src: local("CairoExtraLight"), url("../fonts/cairo/Cairo-ExtraLight.ttf") format("truetype");
+
 }
 
 @font-face {
   font-family: "CairoLight";
   src: local("CairoLight"), url("../fonts/cairo/Cairo-Light.ttf") format("truetype");
+
 }
 
 @font-face {
   font-family: "CairoMedium";
   src: local("CairoMedium"), url("../fonts/cairo/Cairo-Medium.ttf") format("truetype");
+
 }
 
 @font-face {
   font-family: "CairoRegular";
   src: local("CairoRegular"), url("../fonts/cairo/Cairo-Regular.ttf") format("truetype");
+
 }
 
 @font-face {
