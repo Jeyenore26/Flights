@@ -59,7 +59,7 @@ export const typeDefs = gql`
   }
 
   input LoginInput {
-    email: String!
+    emailOrName: String!
     password: String!
   }
   input CreateGroupInput {

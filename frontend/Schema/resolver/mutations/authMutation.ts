@@ -1,13 +1,16 @@
 import { user } from "../../../database/schema/user";
 import { checkUser } from "../../../Middlewares/auth/registerValidation";
-import { gql, UserInputError } from "apollo-server-micro";
+import { UserInputError } from "apollo-server-micro";
 import * as bcrypt from "bcrypt";
 import { generateAccessToken } from "../../../Middlewares/token/generateTokens";
 
 export const authenticationMutation = {
   Mutation: {
-    async login(_, { loginInput: { email, password } }) {
-      const olduser = await user.findOne({ email: email });
+    async login(_, { loginInput: { emailOrName, password } }) {
+      console.log("this", emailOrName, password);
+      const olduser =
+        (await user.findOne({ email: emailOrName })) ||
+        (await user.findOne({ name: emailOrName }));
       if (!user)
         return new UserInputError(
           "there is no user with this email , check your email and try again"

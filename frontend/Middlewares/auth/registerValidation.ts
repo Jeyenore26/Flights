@@ -22,6 +22,11 @@ export const checkUser = async ({ password, confirmPassword, email, name }) => {
     return { success: false, msg: "Name is taken already" };
   if (await user.findOne({ email: email }))
     return { success: false, msg: "Email is taken already" };
+  if (password !== confirmPassword)
+    return {
+      success: false,
+      msg: "password and confirm password must be the same",
+    };
   const results = userValidate.safeParse(newUser);
   if (!results.success)
     return { msg: results.error.format(), success: !results.success };
