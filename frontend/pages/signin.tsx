@@ -53,7 +53,7 @@ export default function registermember() {
            </Link>
           </div>
         </div>
-        <form onSubmit = {signin}   className='flex  justify-center mt-[1%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]'>
+        <form onSubmit = {signin}   className='flex  justify-center mt-[8%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]'>
 
           <div className=' py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[10%]  overflow-x-auto bg-black/30 rounded-xl'>
           <div className='flex justify-center '>
@@ -69,8 +69,7 @@ export default function registermember() {
               </h1>
             </div>
 
-            <Input 							onChange={(e) => setname(e.target.value)} type={'text'}   required lclassName='flex  xs:justify-start mx-1 xxs:justify-center' label='الاسم' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
-            <Input  onChange={(e) => setemail(e.target.value)} type={'email'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
+            <Input  onChange={(e) => setemail(e.target.value)} type={'email'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='الاسم او الايميل' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
 
             <Input onChange={(e) => setpassword(e.target.value)} type={'password'} required lclassName='flex xs:justify-start mx-1 xxs:justify-center' label='كلمة السر' iclassName=' 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]' />
 
