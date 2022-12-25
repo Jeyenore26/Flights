@@ -1,11 +1,18 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { RiArticleLine } from "react-icons/ri";
-import { BsChatDots, BsPersonCircle, BsFillMoonFill } from "react-icons/bs";
+import {
+  BsChatDots,
+  BsPersonCircle,
+  BsFillMoonFill,
+  BsSunFill,
+} from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
 import { HiUserGroup } from "react-icons/hi";
-import { BiChevronDown, BiLogOut } from "react-icons/bi";
-
+import { BiArrowBack, BiChevronDown, BiLogOut } from "react-icons/bi";
+import MainPageComments from "./MainPageComments";
+import MainPageSchedules from "./MainPageSchedules";
+import { BiPlusCircle } from "react-icons/bi";
 function MainPageContent() {
   const [page, setpage] = useState(0);
   const [show, setshow] = useState(false);
@@ -15,7 +22,9 @@ function MainPageContent() {
     <div className="h-screen overflow-hidden">
       {/* nav */}
       <div
-        className={`w-full ${dark ? "bg-[#1d1d1d]" : "bg-white"} absolute`}
+        className={`w-full ${
+          dark ? "bg-[#1d1d1d]" : "bg-white"
+        } absolute z-[1000] origin-right`}
         id="animate1"
       >
         <div className="grid grid-cols-6" id="animate32">
@@ -39,13 +48,23 @@ function MainPageContent() {
                     }}
                   />
                 </button>
-                <button className="text-xl ml-5">
-                  <BsFillMoonFill
-                    onClick={() => {
-                      setdark(!dark);
-                    }}
-                    className={`${dark ? "text-[#e2e2e2]" : ""}`}
-                  />
+                <button className="text-xl ml-5 z-[10000]">
+                  {!dark && (
+                    <BsFillMoonFill
+                      onClick={() => {
+                        setdark(!dark);
+                      }}
+                      className={`${dark ? "text-[#e2e2e2]" : ""}`}
+                    />
+                  )}
+                  {dark && (
+                    <BsSunFill
+                      onClick={() => {
+                        setdark(!dark);
+                      }}
+                      className={`${dark ? "text-[#e2e2e2]" : ""}`}
+                    />
+                  )}
                 </button>
               </div>
               {show && (
@@ -132,49 +151,62 @@ function MainPageContent() {
               dark ? "bg-[#161616]" : "bg-[#f6f7fc]"
             }`}
           >
-            <div>
-              <div
-                className={`rounded flex flex-col items-end  ${
-                  dark ? "bg-[#242424] text-[#e2e2e2]" : "bg-[#fff]"
-                }`}
-                id={page === 1 ? "animate1" : ""}
-              >
-                <div className="flex items-center">
-                  <p className="text-xl font-semibold mb-1">عمر زفارة</p>
-
-                  <div className="h-20 w-20 bg-slate-400 rounded-[40px] m-2 "></div>
-                </div>
-                <div
-                  dir="rtl"
-                  className="p-4 break-all xs:break-normal lg:w-[80%]"
-                >
-                  فتح علبة هاتف Xiaomi Redmi Note 10 :- هاتف Xiaomi Redmi Note
-                  10 مع اسكرينة تم وضعها بشكل مسبق – رأس الشاحن بقوة 33 واط –
-                  سلك USB من نوع Type C – جراب ظهر لحماية الهاتف – دبوس معدني –
-                  كتيبات دليل بدء الاستخدام السريع – ضمان الهاتف .
-                </div>
-                <div className="flex space-x-2 m-2">
-                  <p className="text-xs bg-[#11111b] text-[#e2e2e2] rounded p-1">
-                    منذ سبعة ايام
-                  </p>
-                  <p className="text-xs bg-[#11111b] text-[#e2e2e2] rounded p-1">
-                    عضو
-                  </p>
-                </div>
-              </div>
-              <div
-                className={`border-b-2 ${
-                  dark ? "border-[#e2e2e2]" : "border-black"
-                } w-[10rem] mx-auto translate-y-[1rem]`}
-                id={page === 1 ? "animate2" : ""}
-              ></div>
+            <MainPageComments
+              darker={dark}
+              name="عمر زفارة"
+              desc="لماذالماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جي عمر جي"
+              time="منذ القرن العشرين"
+              role="ابن كلب"
+            />
+             <div id="animate33" className="fixed bottom-0 left-0 m-10">
+            <div className=" bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 text-white w-14 cursor-pointer h-14 rounded-full">
+<BiPlusCircle className="w-10 h-10 fixed mt-2 ml-[0.47rem]"/>
             </div>
+          </div>
+          </div>
+        )}
+        {page === 2 && (
+          <div
+            className={`h-full w-full col-span-5 p-2 pt-[4rem] overflow-y-auto ${
+              dark ? "bg-[#161616]" : "bg-[#f6f7fc]"
+            }`}
+          > 
+            <MainPageSchedules
+              darker={dark}
+              title="تنظيف  تنظيف من عمر تنظيف من اشكال عمر
+              ssssالارض من  عمر"
+              details="جسم عمر رشيق وقوي ومغطى بالشعر وذلك مكنه من إيجاد طعامه بسهولة
+              على الأرض وحتى في تسلقه الشجيرات لأكل الأوراق والبراعم. ويسمى
+               عمر التيس او انثى المعزة"
+              place="بين جبلين"
+              time="2020/12/2 2:00pm"
+              participants="5 مشاركين"
+            />
+            <MainPageSchedules
+              darker={dark}
+              title="2 تنظيف ssssssssssssssss تنظيف من اشكال عمر تنظيف من اشكال عمر
+              ssssالارض من اشكال عمر"
+              details="2جسم عمر رشيق وقوي ومغطى بالشعر وذلك مكنه من إيجاد طعامه بسهولة
+              على الأرض وحتى في تسلقه الشجيرات لأكل الأوراق والبراعم. ويسمى
+              ذكر عمر التيس والأنثى معزة"
+              place="2بين جبلين"
+              time="22020/12/2 2:00pm"
+              participants="2 5 مشاركين"
+            />
+          <div id="animate33" className="fixed bottom-0 left-0 m-10">
+            <div className=" bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 text-white w-14 cursor-pointer h-14 rounded-full">
+<BiPlusCircle className="w-10 h-10 fixed mt-2 ml-[0.47rem]"/>
+            </div>
+          </div>
+
+           
+
           </div>
         )}
         {/* side nav */}
         <div
           dir="rtl"
-          className={`h-full w-full p-2 z-[1000] ${
+          className={`h-full w-full p-2 z-[1000] origin-bottom ${
             dark
               ? "bg-[#1d1d1d] text-[#e2e2e2] border-white"
               : "bg-white border-black"
