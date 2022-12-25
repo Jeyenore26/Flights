@@ -4,9 +4,39 @@ import { MdGroupAdd } from 'react-icons/md'
 import Link from 'next/link'
 export default function () {
   const [image , setimage] = useState('')
+    /* page one*/ 
+
+  const [groupname , setgroupname] = useState('')
+  const [groupnumber , setgroupnumber] = useState('')
+  const [groupprovide , setgroupprovide] = useState('')
+   /* page two*/ 
+
+   const [groupplace , setgroupplace] = useState('')
+   const [paypal , setpaypal] = useState('')
+   const [bank , setbank] = useState('')
+    /* page three*/ 
+
+  const [proveimage , setproveimage] = useState('')
+  const [bgimage , setbgimage] = useState('')
+
   function pageone(){
     event?.preventDefault()
-
+    setpage(2)
+  }
+  function pagetwo(){
+    event?.preventDefault()
+    setpage(3)
+   
+  }
+  
+  function pagethree(){
+    event?.preventDefault()
+    console.log(groupname)    
+    console.log(groupnumber)
+    console.log(groupprovide)
+    console.log(groupplace)    
+    console.log(paypal)
+    console.log(bank)
     console.log(image)
   }
     const [page , setpage] = useState(1)
@@ -53,56 +83,27 @@ export default function () {
                 </a>
               </div>
                 {/* First Page*/}
-                <form style={{width: page === 1 ? "100%" : "30%"}} className = 'PageContent'>
+                <form onSubmit={pageone} style={{width: page === 1 ? "100%" : "30%"}} className = 'PageContent'>
                          <div style={{display: page === 1 ? "block" : "none"}}  className = 'PageContent '>
-                        <GroupInput  label='اسم المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
+                        <GroupInput onChange={(e) => setgroupname(e.target.value)}   label='اسم المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
                        </div>
                        
                        <div style={{display: page === 1 ? "block" : "none"}} className="PageContent" >
-                       <GroupInput label='رقم المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
+                       <GroupInput onChange={(e) => setgroupnumber(e.target.value)} label='رقم المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
          
                        </div>
                        <div style={{display: page === 1 ? "block" : "none"}} className="PageContent" >
-                       <GroupInput label='ماذا تقدم المجموعة' required type={'email'} placeholder ='ماذا تقدم المجموعة' lclassName='text-black'/>
+                       <GroupInput onChange={(e) => setgroupprovide(e.target.value)} label='ماذا تقدم المجموعة' required type={'text'} placeholder ='ماذا تقدم المجموعة' lclassName='text-black'/>
          
                        </div>
-                         </form>
-                 {/* Second Page*/}
-                 <section style={{width: page === 2 ? "100%" : "35%"}} className = 'PageContent'>
-                        {page === 2 && (
-                            <>
-                             <div   className = 'PageContent'>
-                        <GroupInput  label='موقع العمل' required type={'text'} placeholder ='مثال: مصر -شمال سيناء' lclassName='text-black focus:text-black'/>
-                       </div>
-                       <div className="PageContent" >
-                       <GroupInput label=' حساب البنك للتبرعات' required type={'email'} placeholder ="حساب البنك للتبرعات" lclassName='text-black'/>
-         
-                       </div>
-                       <div className="PageContent" >
-                       <GroupInput label='حساب البايبال للتبرعات' required type={'number'} placeholder = ' حساب البايبال للتبرعات' lclassName='text-black'/>
-         
-                       </div>
-                            </>
-                        )}
-                         </section>
-                 {/* Last Page*/}
-                
-                         <form onSubmit={pageone} style={{width: page === 3 ? "100%" : "35%"}} className = 'PageContent'>
-                         <div  style={{display: page === 3 ? "block" : "none"}} className = 'PageContent'>
-                        <GroupInput onChange={(e) => setimage(e.target.value)} type ={'file'}  label='صورة المجموعة' required  placeholder ='اسم المجموعة' lclassName='text-black focus:text-black h-full'/>
-                       </div>
-                       <div  style={{display: page === 3 ? "block" : "none"}} className = 'PageContent'>
-                        <GroupInput type ={'file'}  label=' اثباتات المجموعة ' required  placeholder ='اسم المجموعة' lclassName='text-black focus:text-black h-full'/>
-                       </div>
-                          
-              <div className="flex justify-start">
+                       <div className="flex justify-start">
                
                <button
-               onClick={()=>{
+               onSubmit={()=>{
                 setpage(page +1)
                }}
                 type='submit'
-                onSubmit={pageone}
+                style={{display: page === 1 ? "block" : "none"}}
                className = {disable ? 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-black transition-colors duration-150 bg-gray-300 border border-transparent rounded-lg focus:outline-none cairo_regular_title' : 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] border border-transparent rounded-lg focus:outline-none cairo_regular_title'}
                 
               >
@@ -110,6 +111,65 @@ export default function () {
               </button>
             </div>
                          </form>
+                 {/* Second Page*/}
+                 <form onSubmit={pagetwo} style={{width: page === 2 ? "100%" : "35%"}} className = 'PageContent'>
+                        {page === 2 && (
+                            <>
+                             <div   className = 'PageContent'>
+                        <GroupInput onChange={(e) => setgroupplace(e.target.value)}  label='موقع العمل' required type={'text'} placeholder ='مثال: مصر -شمال سيناء' lclassName='text-black focus:text-black'/>
+                       </div>
+                       <div className="PageContent" >
+                       <GroupInput onChange={(e) => setbank(e.target.value)} label=' حساب البنك للتبرعات' required type={'number'} placeholder ="حساب البنك للتبرعات" lclassName='text-black'/>
+         
+                       </div>
+                       <div className="PageContent" >
+                       <GroupInput onChange={(e) => setpaypal(e.target.value)} label='حساب البايبال للتبرعات' required type={'number'} placeholder = ' حساب البايبال للتبرعات' lclassName='text-black'/>
+         
+                       </div>
+                       <div className="flex justify-start">
+               
+               <button
+               onSubmit={()=>{
+                setpage(page +1)
+               }}
+                type='submit'
+                style={{display: page === 2 ? "block" : "none"}}
+               className = {disable ? 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-black transition-colors duration-150 bg-gray-300 border border-transparent rounded-lg focus:outline-none cairo_regular_title' : 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] border border-transparent rounded-lg focus:outline-none cairo_regular_title'}
+                
+              >
+                الخطوة القادمة
+              </button>
+            </div>
+                            </>
+                        )}
+                         </form>
+                 {/* Last Page*/}
+                
+                       {page === 3 && (
+                          <form onSubmit={pagethree} style={{width: page === 3 ? "100%" : "35%"}} className = 'PageContent'>
+                          <div  style={{display: page === 3 ? "block" : "none"}} className = 'PageContent'>
+                         <GroupInput onChange={(e) => setimage(e.target.value)} type ={'file'}  label='صورة المجموعة' required  placeholder ='اسم المجموعة' lclassName='text-black focus:text-black h-full'/>
+                        </div>
+                        <div  style={{display: page === 3 ? "block" : "none"}} className = 'PageContent'>
+                         <GroupInput type ={'file'}  label=' اثباتات المجموعة ' required  placeholder ='اسم المجموعة' lclassName='text-black focus:text-black h-full'/>
+                        </div>
+                           
+               <div className="flex justify-start">
+                
+                <button
+                onSubmit={()=>{
+                 setpage(page +1)
+                }}
+                 type='submit'
+                 style={{display: page === 3 ? "block" : "none"}}
+                className = {disable ? 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-black transition-colors duration-150 bg-gray-300 border border-transparent rounded-lg focus:outline-none cairo_regular_title' : 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] border border-transparent rounded-lg focus:outline-none cairo_regular_title'}
+                 
+               >
+                 الخطوة القادمة
+               </button>
+             </div>
+                          </form>
+                       )}
              
              {/* get back ztn*/ }
             </div>
