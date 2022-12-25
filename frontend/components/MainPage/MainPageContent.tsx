@@ -19,7 +19,7 @@ function MainPageContent() {
   const [dark, setdark] = useState(false);
 
   return (
-    <div className="h-screen overflow-y-auto">
+    <div className="h-screen overflow-hidden">
       {/* nav */}
       <div
         className={`w-full ${
@@ -162,7 +162,7 @@ function MainPageContent() {
         )}
         {page === 2 && (
           <div
-            className={`h-full w-full col-span-5 p-2 pt-[4rem]  ${
+            className={`h-full w-full col-span-5 p-2 pt-[4rem] overflow-y-auto ${
               dark ? "bg-[#161616]" : "bg-[#f6f7fc]"
             }`}
           >
