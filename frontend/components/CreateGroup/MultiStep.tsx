@@ -3,6 +3,12 @@ import GroupInput from '../Inputs/GroupInput'
 import { MdGroupAdd } from 'react-icons/md'
 import Link from 'next/link'
 export default function () {
+  const [image , setimage] = useState('')
+  function pageone(){
+    event?.preventDefault()
+
+    console.log(image)
+  }
     const [page , setpage] = useState(1)
     const [disable , setdis] = useState(false)
    useEffect(()=>{
@@ -21,9 +27,9 @@ export default function () {
         className="flex-1 h-full max-w-5xl mx-auto bg-white rounded-lg shadow-xl"
       >
         <div className="flex flex-col md:flex-row">
-          <div className="h-32 md:h-auto md:w-1/2">
+          <div className="h-32  object-cover md:h-auto md:w-1/2">
             <img
-              className="object-cover w-full h-full brightness-90"
+              className="object-cover xxs:hidden md:block w-full h-full brightness-90"
               src="./group1.jpg"
               alt="img"
             />
@@ -47,32 +53,33 @@ export default function () {
                 </a>
               </div>
                 {/* First Page*/}
-                <section style={{width: page === 1 ? "100%" : "30%"}} className = 'PageContent'>
+                <form style={{width: page === 1 ? "100%" : "30%"}} className = 'PageContent'>
                          <div style={{display: page === 1 ? "block" : "none"}}  className = 'PageContent '>
-                        <GroupInput  label='اسم3 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
+                        <GroupInput  label='اسم المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
                        </div>
+                       
                        <div style={{display: page === 1 ? "block" : "none"}} className="PageContent" >
-                       <GroupInput label='ايميل3 المجموعة' required type={'email'} placeholder ='ايميل المجموعة' lclassName='text-black'/>
+                       <GroupInput label='رقم المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
          
                        </div>
                        <div style={{display: page === 1 ? "block" : "none"}} className="PageContent" >
-                       <GroupInput label='رقم3 المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
+                       <GroupInput label='ماذا تقدم المجموعة' required type={'email'} placeholder ='ماذا تقدم المجموعة' lclassName='text-black'/>
          
                        </div>
-                         </section>
+                         </form>
                  {/* Second Page*/}
-                 <section style={{width: page === 2 ? "100%" : "27%"}} className = 'PageContent'>
+                 <section style={{width: page === 2 ? "100%" : "35%"}} className = 'PageContent'>
                         {page === 2 && (
                             <>
                              <div   className = 'PageContent'>
-                        <GroupInput  label='اسم2 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
+                        <GroupInput  label='موقع العمل' required type={'text'} placeholder ='مثال: مصر -شمال سيناء' lclassName='text-black focus:text-black'/>
                        </div>
                        <div className="PageContent" >
-                       <GroupInput label='ايميل3 المجموعة' required type={'email'} placeholder ='ايميل المجموعة' lclassName='text-black'/>
+                       <GroupInput label=' حساب البنك للتبرعات' required type={'email'} placeholder ="حساب البنك للتبرعات" lclassName='text-black'/>
          
                        </div>
                        <div className="PageContent" >
-                       <GroupInput label='رقم3 المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
+                       <GroupInput label='حساب البايبال للتبرعات' required type={'number'} placeholder = ' حساب البايبال للتبرعات' lclassName='text-black'/>
          
                        </div>
                             </>
@@ -80,33 +87,30 @@ export default function () {
                          </section>
                  {/* Last Page*/}
                 
-                         <section style={{width: page === 3 ? "100%" : "27%"}} className = 'PageContent'>
+                         <form onSubmit={pageone} style={{width: page === 3 ? "100%" : "35%"}} className = 'PageContent'>
                          <div  style={{display: page === 3 ? "block" : "none"}} className = 'PageContent'>
-                        <GroupInput  label='اسم3 المجموعة' required type={'text'} placeholder ='اسم المجموعة' lclassName='text-black focus:text-black'/>
+                        <GroupInput onChange={(e) => setimage(e.target.value)} type ={'file'}  label='صورة المجموعة' required  placeholder ='اسم المجموعة' lclassName='text-black focus:text-black h-full'/>
                        </div>
-                       <div className="PageContent" style={{display: page === 3 ? "block" : "none"}}>
-                       <GroupInput label='ايميل3 المجموعة' required type={'email'} placeholder ='ايميل المجموعة' lclassName='text-black'/>
-         
+                       <div  style={{display: page === 3 ? "block" : "none"}} className = 'PageContent'>
+                        <GroupInput type ={'file'}  label=' اثباتات المجموعة ' required  placeholder ='اسم المجموعة' lclassName='text-black focus:text-black h-full'/>
                        </div>
-                       <div className="PageContent" style={{display: page === 3 ? "block" : "none"}}>
-                       <GroupInput label='رقم3 المجموعة' required type={'number'} placeholder ='رقم المجموعة' lclassName='text-black'/>
-         
-                       </div>
-                         </section>
-                
+                          
               <div className="flex justify-start">
                
-                 <button
-                 onClick = {()=>{
-                    setpage(page +1)
-                 }} 
-                 disabled = {disable}
-                 className = {disable ? 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-black transition-colors duration-150 bg-gray-300 border border-transparent rounded-lg focus:outline-none cairo_regular_title' : 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 active:bg-blue-900 focus:outline-none cairo_regular_title'}
-                  
-                >
-                  الخطوة القادمة
-                </button>
-              </div>
+               <button
+               onClick={()=>{
+                setpage(page +1)
+               }}
+                type='submit'
+                onSubmit={pageone}
+               className = {disable ? 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-black transition-colors duration-150 bg-gray-300 border border-transparent rounded-lg focus:outline-none cairo_regular_title' : 'px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] border border-transparent rounded-lg focus:outline-none cairo_regular_title'}
+                
+              >
+                الخطوة القادمة
+              </button>
+            </div>
+                         </form>
+             
              {/* get back ztn*/ }
             </div>
           </div>

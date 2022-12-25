@@ -14,7 +14,7 @@ export default function checkgroup() {
       <section className="bg-white h-full w-full" >
         <NavBar />
         <div className=" bg-gradient-to-b from-[#b5b7b9] to-white w-full h-max">
-          <section className="xl:mx-[29rem]">
+          <section className="xl:mx-[20rem]">
             <img src="./asia.jpg" className="h-[22.8rem] w-full" />
             <div className="bg-[#39A059] w-full h-10 rounded-b-lg flex justify-end ">
               <span className="cairo_regular_title flex mt-1 mr-5 text-white justify-center">
@@ -40,7 +40,7 @@ export default function checkgroup() {
                     </h1>
                   </div>
                 </div>
-                <button className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-4 py-2 xxs:text-[12px] md:text-[17px] mb-10 text-white rounded-lg">
+                <button className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-2 py-2 xxs:px-4  md:text-[17px] mb-10 text-white rounded-lg">
                   انضم للمجموعة
                 </button>
               </div>

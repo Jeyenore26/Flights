@@ -76,7 +76,7 @@ export default function registermember() {
             e.preventDefault();
             regiserInput();
           }}
-          className="flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem] max-h-[45rem]"
+          className="flex  justify-center  2xl:mx-[12rem] md:mx-[2rem]  sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem] h-fill"
         >
           <div className=" py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[5%] overflow-x-auto  bg-black/30 rounded-xl">
             <div className="flex justify-center ">
@@ -107,24 +107,26 @@ export default function registermember() {
               iclassName="2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 "
             />
 
-            <Input
+           <div className="md:flex flex-row-reverse">
+           <Input
               onChange={(e) => setpassword(e.target.value)}
               type={"password"}
               required
-              lclassName="flex  xs:justify-start mx-1 xxs:justify-center"
+              lclassName="flex  xs:justify-start mr-1 xxs:justify-center"
               label="كلمة السر"
-              iclassName=" 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 "
+              iclassName=" 2xl:w-[15rem] md:w-[15rem] sm:w-[15rem] xs:w-[12.5rem] xxs:w-[12.5rem] mr-4 ml-1"
             />
             <Input
               onChange={(e) => setconfirmpass(e.target.value)}
               type={"password"}
               required
-              lclassName="flex  xs:justify-start mx-1 xxs:justify-center"
+              lclassName="flex  xs:justify-start xxs:justify-center"
               label="تاكيد كلمة السر"
-              iclassName=" 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4"
+              iclassName=" 2xl:w-[15rem] md:w-[15rem] sm:w-[15rem] xs:w-[12.5rem] xxs:w-[12.5rem] ml-3 mr-1"
             />
+           </div>
 
-            <div className="flex justify-center my-5">
+            <div className="flex justify-center my-3">
               <button
                 value={"submit"}
                 className="text-black cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] text-lg bg-green-400 py-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl"
