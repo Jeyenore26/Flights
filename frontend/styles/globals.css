@@ -48,7 +48,6 @@
   font-family: "CairoBlack";
   src: local("CairoSemiBold"),
     url("../fonts/cairo/Cairo-Black.ttf") format("truetype");
-    
 }
 
 .cairo_semibold_title {
