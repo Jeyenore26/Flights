@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function MainPageComments(props: any) {
   return (
@@ -20,7 +20,7 @@ function MainPageComments(props: any) {
           </div>
           <div className="flex space-x-2 m-2">
             <p className="text-xs bg-[#11111b] text-[#e2e2e2] rounded p-1">
-              {props.time}{" "}
+              {props.time}
             </p>
             <p className="text-xs bg-[#11111b] text-[#e2e2e2] rounded p-1">
               {props.role}

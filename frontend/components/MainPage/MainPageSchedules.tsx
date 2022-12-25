@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  BiArrowBack,
-  BiBuildingHouse,
-  BiChevronDown,
-  BiTimeFive,
-} from "react-icons/bi";
+import { BiBuildingHouse, BiChevronDown, BiTimeFive } from "react-icons/bi";
 import { BsInfo } from "react-icons/bs";
 import { IoIosPeople } from "react-icons/io";
 const MainPageSchedules = (props: any) => {
@@ -26,7 +21,7 @@ const MainPageSchedules = (props: any) => {
           }}
         >
           <div className="flex items-center justify-between">
-            {/* limit input letters' number of title*/}
+            {/* limit input letters of title*/}
             <p className="text-[17px] max-w-[90%]">{props.title}</p>
             <BiChevronDown
               className={`text-2xl ease-out duration-[0.2s] ${
@@ -36,7 +31,7 @@ const MainPageSchedules = (props: any) => {
           </div>
         </button>
         <div
-          className={`overflow-auto w-[95%] sm:w-[80%] mb-[2rem] sm:mb-[1rem] mx-auto rounded-b-md ease-out duration-[1s] ${
+          className={`overflow-auto w-[95%] sm:w-[80%] mb-[2rem] sm:mb-[1rem] mx-auto rounded-b-md ease-out duration-[0.3s] ${
             accordian ? "h-[24rem]" : "h-0"
           } ${props.darker ? "text-[#e2e2e2] " : "text-black "}`}
         >
