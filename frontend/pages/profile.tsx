@@ -14,7 +14,7 @@ export default function profile() {
     <>
       <NavBar />
 
-      <div className="bg-white justify-center md:h-screen xxs:h-full w-full flex items-center">
+      <div className="bg-white hidden xxs:block justify-center md:h-screen xxs:h-full w-full xxs:flex items-center">
         <Head>
           <title className="cairo_black_title">حسابك الشخصي</title>
           <meta
