@@ -9,10 +9,10 @@ import {
 } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
 import { HiUserGroup } from "react-icons/hi";
-import { BiArrowBack, BiChevronDown, BiLogOut } from "react-icons/bi";
+import { BiArrowBack, BiChevronDown, BiLogOut, BiPlus } from "react-icons/bi";
 import MainPageComments from "./MainPageComments";
 import MainPageSchedules from "./MainPageSchedules";
-import { BiPlusCircle } from "react-icons/bi";
+import MainPageMembers from "./MainPageMembers";
 function MainPageContent() {
   const [page, setpage] = useState(0);
   const [show, setshow] = useState(false);
@@ -158,11 +158,6 @@ function MainPageContent() {
               time="منذ القرن العشرين"
               role="ابن كلب"
             />
-             <div id="animate33" className="fixed bottom-0 left-0 m-10">
-            <div className=" bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 text-white w-14 cursor-pointer h-14 rounded-full">
-<BiPlusCircle className="w-10 h-10 fixed mt-2 ml-[0.47rem]"/>
-            </div>
-          </div>
           </div>
         )}
         {page === 2 && (
@@ -170,7 +165,7 @@ function MainPageContent() {
             className={`h-full w-full col-span-5 p-2 pt-[4rem] overflow-y-auto ${
               dark ? "bg-[#161616]" : "bg-[#f6f7fc]"
             }`}
-          > 
+          >
             <MainPageSchedules
               darker={dark}
               title="تنظيف  تنظيف من عمر تنظيف من اشكال عمر
@@ -193,14 +188,27 @@ function MainPageContent() {
               time="22020/12/2 2:00pm"
               participants="2 5 مشاركين"
             />
-          <div id="animate33" className="fixed bottom-0 left-0 m-10">
-            <div className=" bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 text-white w-14 cursor-pointer h-14 rounded-full">
-<BiPlusCircle className="w-10 h-10 fixed mt-2 ml-[0.47rem]"/>
-            </div>
           </div>
-
-           
-
+        )}
+        {page == 3 && (
+          <div
+            className={`h-full w-full col-span-5 p-2 pt-[4rem] overflow-y-auto ${
+              dark ? "bg-[#161616]" : "bg-[#f6f7fc]"
+            }`}
+          >
+            <MainPageMembers darker={dark} />
+          </div>
+        )}
+        {(page == 2 || page == 1) && (
+          <div
+            id="animate33"
+            className="fixed bottom-0 left-0 my-[2rem] hidden min-[655px]:flex lg:mx-6 bg-[#39A059] active:brightness-[1.1] hover:brightness-90 p-2 ml-2 rounded-full items-center justify-center"
+          >
+            <BiPlus
+              className={` text-4xl cursor-pointer text-white ${
+                dark ? "" : ""
+              }`}
+            />
           </div>
         )}
         {/* side nav */}
@@ -251,11 +259,11 @@ function MainPageContent() {
                   }
                  ${
                    dark && page === 1
-                     ? "border-r-2 text-[#e2e2e2] rounded-br-none rounded-tr-none sm:pr-[1rem] pr-[2px] sm:bg-[#2a2a2a]"
+                     ? "border-r-2 text-[#e2e2e2] rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#2a2a2a]"
                      : ""
                  } ${
                     !dark && page === 1
-                      ? "border-r-2 text-black border-black rounded-br-none rounded-tr-none sm:pr-[1rem] pr-[2px] sm:bg-[#f0f0f0]"
+                      ? "border-r-2 text-black border-black rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#f0f0f0]"
                       : ""
                   } rounded my-6 sm:my-4 cursor-pointer`}
                   style={{ transition: "ease 0.2s" }}
@@ -279,11 +287,11 @@ function MainPageContent() {
                   }
                  ${
                    dark && page === 2
-                     ? "border-r-2 text-[#e2e2e2] rounded-br-none rounded-tr-none sm:pr-[1rem] pr-[2px] sm:bg-[#2a2a2a]"
+                     ? "border-r-2 text-[#e2e2e2] rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#2a2a2a]"
                      : ""
                  } ${
                     !dark && page === 2
-                      ? "border-r-2 text-black border-black rounded-br-none rounded-tr-none sm:pr-[1rem] pr-[2px] sm:bg-[#f0f0f0]"
+                      ? "border-r-2 text-black border-black rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#f0f0f0]"
                       : ""
                   } rounded my-6 sm:my-4 cursor-pointer`}
                   onClick={() => {
@@ -307,11 +315,11 @@ function MainPageContent() {
                   }
                ${
                  dark && page === 3
-                   ? "border-r-2 text-[#e2e2e2] rounded-br-none rounded-tr-none sm:pr-[1rem] pr-[2px] sm:bg-[#2a2a2a]"
+                   ? "border-r-2 text-[#e2e2e2] rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#2a2a2a]"
                    : ""
                } ${
                     !dark && page === 3
-                      ? "border-r-2 text-black border-black rounded-br-none rounded-tr-none sm:pr-[1rem] pr-[2px] sm:bg-[#f0f0f0]"
+                      ? "border-r-2 text-black border-black rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#f0f0f0]"
                       : ""
                   } rounded my-6 sm:my-4 cursor-pointer`}
                   style={{ transition: "ease 0.2s" }}
@@ -324,6 +332,22 @@ function MainPageContent() {
                   </p>
                   <p className="mr-1 text-sm md:text-lg hidden sm:block">
                     الاعضاء
+                  </p>
+                </div>
+                <div
+                  className={`flex items-center min-[655px]:hidden ${
+                    dark
+                      ? "hover:bg-[#2a2a2a] hover:text-[#e2e2e2]"
+                      : "hover:bg-[#f0f0f0] hover:text-black"
+                  }`}
+                  style={{ transition: "ease 0.2s" }}
+                  onClick={() => {}}
+                >
+                  <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
+                    <BiPlus />
+                  </p>
+                  <p className="mr-1 text-sm md:text-lg hidden sm:block">
+                    اضافة
                   </p>
                 </div>
               </div>
