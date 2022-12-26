@@ -14,7 +14,7 @@ export default function profile() {
     <>
       <NavBar />
 
-      <div className="bg-white justify-center h-screen w-full flex items-center">
+      <div className="bg-white justify-center h-full w-full flex items-center">
         <Head>
           <title className="cairo_black_title">حسابك الشخصي</title>
           <meta
@@ -23,32 +23,33 @@ export default function profile() {
           />
         </Head>
         <section dir="rtl" className="bg-white py-full" id="animate33">
-          <div className="flex md:flex-row xxs:flex-col">
-            <div className="md:mt-0 xxs:mt-[17rem] flex justify-center">
+          <div className="flex md:flex-row xxs:flex-col justify-items-center">
+            <div className="profile flex justify-center">
               <div className="flex flex-col-reverse items-center">
                 <div className="flex xxs:flex-col md:flex-row  justify-center mt-5 md:mb-0 xxs:mb-4">
-                  <span className="flex justify-center cursor-pointer hover:text-slate-300 px-4 py-1 active:text-slate-400">
+                <button className="rounded-md w-80  cairo_regular_title shadow-lg lg:py-1 xxs:py-2 cursor-pointer md:px-4 hover:bg-[#2b7543] active:bg-[#1a4929] text-sm  bg-[#39A059] text-white hover:text-white/60 active:text-white/40">
+                    غير الصورة
+                  </button>
+                  <span className="flex justify-center cursor-pointer w-80 hover:text-slate-300 px-4 py-1 active:text-slate-400">
                     <AiOutlineEdit className="mt-1" />
                     <button
                       dir="rtl"
-                      className="cairo_regular_title cursor-pointer"
+                      className="cairo_regular_title cursor-pointer "
                     >
                       تعديل
                     </button>
                   </span>
-                  <button className="rounded-md cairo_regular_title shadow-lg lg:py-1 xxs:py-2 cursor-pointer px-4 hover:bg-[#2b7543] active:bg-[#1a4929] text-sm  bg-[#39A059] text-white hover:text-white/60 active:text-white/40">
-                    غير الصورة
-                  </button>
+                 
                 </div>
                 <img
                   src="./avater2.png"
                   className="w-80 h-80 bg-cover rounded-md"
                 />
               </div>
+              
             </div>
-
-            <div className="xxs:ml-[-3rem] md:mr-10 ">
-              <span className="flex  justify-center">
+            <div className=" md:mr-10 mt-5 xxs:ml-[-5.5rem]">
+              <span className="flex justify-center">
                 <BInputOutline
                   value={"محمد اسامة"}
                   label="الاسم"
@@ -77,16 +78,18 @@ export default function profile() {
                   disabled
                 />
               </span>
-              <span className="flex justify-start ">
+              <span className="flex justify-center xxs:ml-12 md:ml-0">
                 <BInputOutline
                   value={"amakku123141@gmail.com"}
-                  iclassName="w-[200%]"
+                  iclassName="w-[200%] xxs:mr-[-3rem] md:mr-0"
                   label="بريد التوصل"
                   type={"text"}
                   disabled
                 />
               </span>
             </div>
+
+          
           </div>
         </section>
       </div>

@@ -249,6 +249,14 @@
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+  .profile{
+    margin-top: 0;
+  }
+  @media (max-height:600px ) and (max-width:767px) {
+    .profile{
+      margin-top: 30%;
+    }
+  }
   @media (max-height:600px) {
     .secondarytext{
       font-size: 0.875rem;
