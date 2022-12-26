@@ -6,7 +6,7 @@ import {BsPaypal} from 'react-icons/bs'
 export default function Proves() {
   return (
     <section className='flex justify-center mt-5' id="animate33">
-        <div className='w-[50rem] bg-[#eaebec] h-full rounded-lg'>
+        <div className='w-[50rem] bg-[#eaebec] h-full mb-7 rounded-lg'>
                 <div className='text-black flex justify-end cairo_semibold_title my-3 mr-8'>صور المجموعة </div>
                 <div className='flex justify-center mb-3'>
                 <p  className="w-full mx-[2rem]  my-[5px] border-t-[1px] border-black"></p>

@@ -33,7 +33,7 @@ function Input({
             <div className="flex flex-col">
                 {label && (
                     <label
-                        className={`font-semibold mt-4 text-lg text-white ${lclassName}`}
+                        className={` font-semibold mt-4  text-white ${lclassName}`}
                     >
                         {label}
                     </label>

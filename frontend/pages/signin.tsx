@@ -72,14 +72,15 @@ export default function registermember() {
           className="flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]"
         >
           <div className=" py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[10%]  overflow-x-auto bg-black/30 rounded-xl">
-            <div className="flex justify-center ">
-              <div className=" xxs:hidden 2xl:block xl:blocl lg:block md:block xs:hidden">
+          <div className="flex justify-center ">
+              <div className=" lg:block  z-10">
                 <Eyes />
               </div>
             </div>
 
+
             <div dir="rtl" className="mt-12 flex justify-center">
-              <h1 className="text-white cairo_semibold_title text-2xl">
+              <h1 className="text-white cairo_semibold_title text-2xl maintitle">
                 انشاء حساب
               </h1>
             </div>
@@ -88,21 +89,21 @@ export default function registermember() {
               onChange={(e) => setemail(e.target.value)}
               type={"text"}
               required
-              lclassName="flex xs:justify-start mx-1 xxs:justify-center"
+              lclassName="flex secondarytext xs:justify-start lg:mx-1 xxs:mx-0 xxs:justify-center"
               label="الاسم او الايميل"
-              iclassName=" 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]"
+              iclassName=" 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xxs:w-full"
             />
 
             <Input
               onChange={(e) => setpassword(e.target.value)}
               type={"password"}
               required
-              lclassName="flex xs:justify-start mx-1 xxs:justify-center"
+              lclassName="flex secondarytext xs:justify-start lg:mx-1 xxs:mx-0 xxs:justify-center"
               label="كلمة السر"
-              iclassName=" 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem]"
+              iclassName=" 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem]  xxs:w-full"
             />
 
-            <div className="flex justify-center my-5">
+            <div className="flex secondarytext justify-center my-5">
               <button className="text-black cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] text-lg bg-green-400 py-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl">
                 اهلا بك
               </button>

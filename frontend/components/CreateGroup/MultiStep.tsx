@@ -28,7 +28,7 @@ export default function () {
     setpage(3)
    
   }
-  
+
   function pagethree(){
     event?.preventDefault()
     console.log(groupname)    
@@ -54,17 +54,17 @@ export default function () {
   <>
   <div className="flex items-center min-h-screen bg-gray-50 "  id="animate32">
       <div
-        className="flex-1 h-full max-w-5xl mx-auto bg-white rounded-lg shadow-xl"
+        className="flex-1 h-full mt-20 max-w-5xl mx-auto bg-white rounded-lg shadow-xl"
       >
         <div className="flex flex-col md:flex-row">
-          <div className="h-32  object-cover md:h-auto md:w-1/2">
+          <div className="h-32 xxs:h-10 xxs:mt-0 md:mt-8  object-cover md:h-auto md:w-1/2">
             <img
-              className="object-cover xxs:hidden md:block w-full h-full brightness-90"
+              className="object-cover xxs:h-0  md:block w-full md:h-full brightness-90"
               src="./group1.jpg"
               alt="img"
             />
           </div>
-          <div dir='rtl' className="flex items-center justify-center p-6 sm:p-12 md:w-2/3">
+          <div dir='rtl' className="flex xxs:mt-[-20px] md:mt-8 items-center justify-center p-6 sm:p-12 md:w-2/3">
             <div className="w-full">
              <span className='flex'> 
              <h3 className="mb-4 text-xl cairo_semibold_title font-bold text-blue-600">انشاء مجموعة</h3>
@@ -72,7 +72,7 @@ export default function () {
              </span>
               <div className="flex flex-wrap mx-auto">
                 
-                <a className={page === 1 ? 'pageon block sm:px-6 sm:w-auto sm:justify-start cairo_regular_title' : 'pageoff sm:px-6 sm:w-auto sm:justify-start hover:text-gray-900 cairo_regular_title'}>
+                <a className={page === 1 ? 'pageon  sm:px-6 sm:w-auto flex xxs:justify-center md:justify-start cairo_regular_title' : 'pageoff sm:px-6 sm:w-auto xxs:justify-center hover:text-gray-900 cairo_regular_title'}>
                     الخطوة الاولى
                 </a>
                 <a className={page === 2 ? 'pageon sm:px-6 sm:w-auto sm:justify-start cairo_regular_title' : 'pageoff sm:px-6 sm:w-auto sm:justify-start hover:text-gray-900 cairo_regular_title'}>

@@ -5,8 +5,8 @@ import {TbHeartHandshake} from 'react-icons/tb'
 import {BsPaypal} from 'react-icons/bs'
 export default function Donate() {
   return (
-    <section className='flex justify-center mt-5 mb-7' id="animate33">
-        <div className='w-[40rem] bg-[#eaebec] h-full rounded-lg'>
+    <section className='flex justify-center mt-5' id="animate33">
+        <div className='w-[40rem] bg-[#eaebec] h-[100%] mb-7 rounded-lg'>
                 <div className='text-black flex justify-end cairo_semibold_title my-3 mr-8'>ساعد المجموعة </div>
                 <div className='flex justify-center mb-3'>
                 <p  className="w-full mx-[2rem]  my-[5px] border-t-[1px] border-black"></p>
@@ -49,9 +49,10 @@ export default function Donate() {
                 <div className='text-black flex justify-end cairo_semibold_title mt-1 mb-3 mr-8' > <GiCrownedHeart className='mt-1 h-5 w-5'/> شكرا لكم لمساعدة المجموعة  <GiCrownedHeart className='mt-1 h-5 w-5'/></div>
 
                 </div>
-
+               
 
         </div>
+       
     </section>
   )
 }

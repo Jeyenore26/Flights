@@ -39,10 +39,11 @@ function Eyes() {
   }, []);
 
   return (
-    <div className="App  -mt-5">
+    <div className="App -mt-5">
       <img
         src="./3507796.png"
-        className="w-[10rem] h-[10rem] absolute z-0 brightness-100 xxs:hidden 2xl:block xl:blocl lg:block md:block xs:hidden"
+        className=" absolute z-0 brightness-100 "
+        id="face"
       />
 
       <div className="eyebrow_container">

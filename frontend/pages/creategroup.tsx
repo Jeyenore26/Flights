@@ -8,6 +8,7 @@ import { FcCameraIdentification } from 'react-icons/fc';
 import { BsCameraVideo } from 'react-icons/bs';
 import { IoCameraOutline } from 'react-icons/io5';
 import MultiStep from '../components/CreateGroup/MultiStep';
+import NavBar from '../components/CheckGroup/NavBar';
 export default function creategroup() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function creategroup() {
         <title className="cairo_black_title">انضم لنا</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+      <NavBar/>
       <MultiStep/>
       </>
   )
