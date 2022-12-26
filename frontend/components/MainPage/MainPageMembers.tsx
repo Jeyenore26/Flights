@@ -8,11 +8,8 @@ import Member from "./Member";
 function MainPageMembers(props: any) {
   return (
     <div className="grid grid-cols-1 h-full overflow-y-auto gap-2 cairo_regular_title">
-      <div>
-        <div
-          className="flex flex-col items-center justify-center mt-10"
-          id="animate31"
-        >
+      <div id="animate31">
+        <div className="flex flex-col items-center justify-center mt-10">
           <div
             className={`flex items-center ${
               props.darker ? "text-[#e2e2e2]" : ""
@@ -30,7 +27,10 @@ function MainPageMembers(props: any) {
                   : "bg-[#fff] border-2"
               }`}
             >
-              <Member name="محمد سامح الدياسطي" img="africa.jpg" />
+              <Member
+                name="التنين المجنح"
+                img="https://i.pinimg.com/736x/eb/e0/7f/ebe07f5cd329966effbbce521e99eb2b--garden-sculptures-garden-statues.jpg"
+              />
             </div>
           </div>
         </div>
@@ -53,9 +53,18 @@ function MainPageMembers(props: any) {
               }`}
             >
               <div className="flex flex-col items-center md:items-end w-full gap-9">
-                <Member name=" امير الظلام" />
-                <Member name="بحجابي ملكة" />
-                <Member name=" الطائر المجروح" />
+                <Member
+                  name=" امير الظلام"
+                  img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWDRvSoVI9Mv60gEpZCyufhpyHgBtf41CIHA&usqp=CAU"
+                />
+                <Member
+                  name="بحجابي ملكة"
+                  img="https://static.lahamag.com/attachments/79/1478334511.580670.original.jpg"
+                />
+                <Member
+                  name=" الطائر المجروح"
+                  img="https://www.vetogate.com/UploadCache/libfiles/8/5/600x338o/245.jpg"
+                />
               </div>
             </div>
           </div>

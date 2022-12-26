@@ -237,41 +237,41 @@
     pointer-events: none;
     transition: 0.5s;
   }
-  #face{
+  #face {
     height: 10rem;
     width: 10rem;
   }
-  .maintitle{
+  .maintitle {
     font-size: 1.5rem;
     line-height: 2rem;
   }
-  .secondarytext{
+  .secondarytext {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-  .profile{
+  .profile {
     margin-top: 0%;
   }
-  @media (max-height:600px ) and (max-width:767px) {
-    .profile{
+  @media (max-height: 600px) and (max-width: 767px) {
+    .profile {
       margin-top: 30%;
     }
   }
-  @media (max-width:767px ) and (min-height:590px) {
-    .profile{
+  @media (max-width: 767px) and (min-height: 590px) {
+    .profile {
       margin-top: 30%;
     }
   }
-  @media (max-height:600px) {
-    .secondarytext{
+  @media (max-height: 600px) {
+    .secondarytext {
       font-size: 0.875rem;
       line-height: 1.25rem;
     }
-    .maintitle{
+    .maintitle {
       font-size: 0.875rem;
-        line-height: 1.25rem;
+      line-height: 1.25rem;
     }
-    #face{
+    #face {
       height: 6rem;
       width: 6rem;
     }
@@ -325,9 +325,8 @@
       pointer-events: none;
       transition: 0.5s;
     }
-   
   }
-  
+
   .pageoff {
     display: inline-flex;
     align-items: center;
@@ -444,6 +443,10 @@ body {
   animation: Animate1 500ms ease-out;
   animation-fill-mode: backwards;
   animation-delay: 500ms;
+}
+#animate31 {
+  animation: Animate3 500ms ease-out;
+  animation-fill-mode: backwards;
 }
 #animate32 {
   animation: Animate3 500ms ease-out;
