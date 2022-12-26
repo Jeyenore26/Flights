@@ -14,7 +14,7 @@ export default function profile() {
     <>
       <NavBar />
 
-      <div className="bg-white justify-center h-full w-full flex items-center">
+      <div className="bg-white justify-center md:h-screen xxs:h-full w-full flex items-center">
         <Head>
           <title className="cairo_black_title">حسابك الشخصي</title>
           <meta
@@ -27,10 +27,10 @@ export default function profile() {
             <div className="profile flex justify-center">
               <div className="flex flex-col-reverse items-center">
                 <div className="flex xxs:flex-col md:flex-row  justify-center mt-5 md:mb-0 xxs:mb-4">
-                <button className="rounded-md w-80  cairo_regular_title shadow-lg lg:py-1 xxs:py-2 cursor-pointer md:px-4 hover:bg-[#2b7543] active:bg-[#1a4929] text-sm  bg-[#39A059] text-white hover:text-white/60 active:text-white/40">
+                <button className="rounded-md  xxs:w-80 md:w-32  cairo_regular_title shadow-lg lg:py-1 xxs:py-2 cursor-pointer md:px-4 hover:bg-[#2b7543] active:bg-[#1a4929] text-sm  bg-[#39A059] text-white hover:text-white/60 active:text-white/40">
                     غير الصورة
                   </button>
-                  <span className="flex justify-center cursor-pointer w-80 hover:text-slate-300 px-4 py-1 active:text-slate-400">
+                  <span className="flex justify-center cursor-pointer  xxs:w-80 md:w-32 hover:text-slate-300 px-4 py-1 active:text-slate-400">
                     <AiOutlineEdit className="mt-1" />
                     <button
                       dir="rtl"
@@ -48,7 +48,7 @@ export default function profile() {
               </div>
               
             </div>
-            <div className=" md:mr-10 mt-5 xxs:ml-[-5.5rem]">
+            <div className=" md:mr-10 md:ml-0 mt-5 xxs:ml-[-5.5rem]">
               <span className="flex justify-center">
                 <BInputOutline
                   value={"محمد اسامة"}
@@ -78,7 +78,7 @@ export default function profile() {
                   disabled
                 />
               </span>
-              <span className="flex justify-center xxs:ml-12 md:ml-0">
+              <span className="flex md:justify-start xxs:justify-center xxs:ml-12 md:ml-0">
                 <BInputOutline
                   value={"amakku123141@gmail.com"}
                   iclassName="w-[200%] xxs:mr-[-3rem] md:mr-0"
