@@ -1,7 +1,7 @@
 import React from "react";
 import { MdGroup } from "react-icons/md";
 
-import Member from "../MainPage/Member";
+import GroupCalls from "./GroupCalls";
 
 export default function Group(props: any) {
   return (
@@ -14,12 +14,14 @@ export default function Group(props: any) {
         </div>
         <div className="flex justify-center items-center w-full">
           <div className="rounded-lg flex flex-col md:items-end w-[90%] my-10 p-2 bg-[#fff] border-2">
-            <div>
-              <img
-                src="https://alwafd.news/images/thumbs/828/news/51623d659b28897f5846dd8b4b9993e3.jpg"
-                alt=""
-              />
-            </div>
+            <GroupCalls
+              name="الكتاكيت الارضية"
+              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
+            بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
+              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
+              members="50k عضو"
+              place="مصر - جنوب جنوب افريقيا"
+            />
           </div>
         </div>
       </div>
