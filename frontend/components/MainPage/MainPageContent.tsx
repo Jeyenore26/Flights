@@ -359,22 +359,45 @@ function MainPageContent() {
                     الاعضاء
                   </p>
                 </div>
-                <div
-                  className={`flex items-center min-[655px]:hidden ${
-                    dark
-                      ? "hover:bg-[#2a2a2a] hover:text-[#e2e2e2]"
-                      : "hover:bg-[#f0f0f0] hover:text-black"
-                  }`}
-                  style={{ transition: "ease 0.2s" }}
-                  onClick={() => {}}
-                >
-                  <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
-                    <BiPlus />
-                  </p>
-                  <p className="mr-1 text-sm md:text-lg hidden sm:block">
-                    اضافة
-                  </p>
-                </div>
+                  {page === 2 && (
+                     <div
+                     id="animate33"
+                     className={`flex items-center min-[655px]:hidden ${
+                       dark
+                         ? "hover:bg-[#2a2a2a] hover:text-[#e2e2e2]"
+                         : "hover:bg-[#f0f0f0] hover:text-black"
+                     }`}
+                     style={{ transition: "ease 0.2s" }}
+                     onClick={() => setopenschedule(true)}
+
+                   >
+                     <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
+                       <BiPlus />
+                     </p>
+                     <p className="mr-1 text-sm md:text-lg hidden sm:block">
+                       اضافة
+                     </p>
+                   </div>
+                  )}
+                  {page === 1 && (
+                     <div
+                     id="animate33"
+                     className={`flex items-center min-[655px]:hidden  ${
+                       dark
+                         ? "hover:bg-[#2a2a2a] hover:text-[#e2e2e2]"
+                         : "hover:bg-[#f0f0f0] hover:text-black"
+                     }`}
+                     style={{ transition: "ease 0.2s" }}
+                     onClick={() => setopenpost(true)}
+                   >
+                     <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
+                       <BiPlus />
+                     </p>
+                     <p className="mr-1 text-sm md:text-lg hidden sm:block">
+                       اضافة
+                     </p>
+                   </div>
+                  )}
               </div>
             </div>
           </div>
