@@ -26,6 +26,6 @@
     "components/3dEarth/Sphere.jsxhere.jsx",
     "components/Earthing.tsx",
     "components/Earthing.tsx"
-  ],
+, "components/MainPage/CreatePostModal.jsx"  ],
   "exclude": ["node_modules"]
 }
