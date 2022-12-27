@@ -1,14 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
 import Head from "next/head";
-import {GiRamProfile} from 'react-icons/gi'
-import Link from 'next/link'
-import GroupInput from '../components/Inputs/GroupInput';
-import { FcCameraIdentification } from 'react-icons/fc';
-import { BsCameraVideo } from 'react-icons/bs';
-import { IoCameraOutline } from 'react-icons/io5';
-import MultiStep from '../components/CreateGroup/MultiStep';
-import NavBar from '../components/CheckGroup/NavBar';
+import MultiStep from "../components/CreateGroup/MultiStep";
+import NavBar from "../components/CheckGroup/NavBar";
 export default function creategroup() {
   return (
     <>
@@ -16,11 +9,8 @@ export default function creategroup() {
         <title className="cairo_black_title">انضم لنا</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <NavBar/>
-      <MultiStep/>
-      </>
-  )
+      <NavBar />
+      <MultiStep />
+    </>
+  );
 }
-  
-
-  

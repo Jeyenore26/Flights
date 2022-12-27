@@ -5,14 +5,12 @@ import Eyes from "../components/Sign&Register/Eyes";
 import Link from "next/link";
 import Input from "../components/Inputs/Input";
 import { gql, useMutation } from "@apollo/client";
+import { loginMutation } from "../lib/mutationGql/AuthGql";
 
-const loginMutation = gql`
-  mutation Login($loginInput: LoginInput) {
-    login(loginInput: $loginInput) {
-      token
-    }
-  }
-`;
+function setToken(data) {
+  localStorage.removeItem("token");
+  localStorage.setItem("token", data.login.token);
+}
 
 export default function registermember() {
   const [email, setemail] = useState("");
@@ -30,9 +28,8 @@ export default function registermember() {
   if (error) console.log(error);
   if (loading) return "...loading";
   console.log(data);
-  if (data?.register?.token) {
-    localStorage.removeItem("token");
-    localStorage.setItem("token", data.register.token);
+  if (data?.login?.token) {
+    setToken(data);
   }
   return (
     <div className="w-full h-screen">
@@ -72,12 +69,11 @@ export default function registermember() {
           className="flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]"
         >
           <div className=" py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[10%]  overflow-x-auto bg-black/30 rounded-xl">
-          <div className="flex justify-center ">
+            <div className="flex justify-center ">
               <div className=" lg:block  z-10">
                 <Eyes />
               </div>
             </div>
-
 
             <div dir="rtl" className="mt-12 flex justify-center">
               <h1 className="text-white cairo_semibold_title text-2xl maintitle">

@@ -5,14 +5,12 @@ import Eyes from "../components/Sign&Register/Eyes";
 import Link from "next/link";
 import Input from "../components/Inputs/Input";
 import { gql, useMutation } from "@apollo/client";
+import { registerMutation } from "../lib/mutationGql/AuthGql";
 
-const registerMutation = gql`
-  mutation Register($registerInput: RegisterInput) {
-    register(registerInput: $registerInput) {
-      token
-    }
-  }
-`;
+function setToken(data) {
+  localStorage.removeItem("token");
+  localStorage.setItem("token", data.register.token);
+}
 
 export default function registermember() {
   const [name, setname] = useState("");
@@ -37,8 +35,7 @@ export default function registermember() {
   if (error) console.log(error);
   if (loading) return "...loading";
   if (data?.register?.token) {
-    localStorage.removeItem("token");
-    localStorage.setItem("token", data.register.token);
+    setToken(data);
   }
   return (
     <div className="w-full h-screen">
@@ -107,24 +104,24 @@ export default function registermember() {
               iclassName="2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 "
             />
 
-           <div className="md:flex flex-row-reverse">
-           <Input
-              onChange={(e) => setpassword(e.target.value)}
-              type={"password"}
-              required
-              lclassName="flex secondarytext  xl:mb-0 xxs:mb-[-10rem]   xs:justify-start mr-1 xxs:justify-center"
-              label="كلمة السر"
-              iclassName=" 2xl:w-[15rem] md:w-[15rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] md:mr-3 md:ml-1 xxs:mr-0 xxs:ml-0"
-            />
-            <Input
-              onChange={(e) => setconfirmpass(e.target.value)}
-              type={"password"}
-              required
-              lclassName="flex secondarytext  xl:mb-0 xxs:mb-[-10rem]   xs:justify-start xxs:justify-center"
-              label="تاكيد كلمة السر"
-              iclassName=" 2xl:w-[15rem] md:w-[15rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] md:ml-3 md:mr-1 xxs:mr-0 xxs:ml-0"
-            />
-           </div>
+            <div className="md:flex flex-row-reverse">
+              <Input
+                onChange={(e) => setpassword(e.target.value)}
+                type={"password"}
+                required
+                lclassName="flex secondarytext  xl:mb-0 xxs:mb-[-10rem]   xs:justify-start mr-1 xxs:justify-center"
+                label="كلمة السر"
+                iclassName=" 2xl:w-[15rem] md:w-[15rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] md:mr-3 md:ml-1 xxs:mr-0 xxs:ml-0"
+              />
+              <Input
+                onChange={(e) => setconfirmpass(e.target.value)}
+                type={"password"}
+                required
+                lclassName="flex secondarytext  xl:mb-0 xxs:mb-[-10rem]   xs:justify-start xxs:justify-center"
+                label="تاكيد كلمة السر"
+                iclassName=" 2xl:w-[15rem] md:w-[15rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] md:ml-3 md:mr-1 xxs:mr-0 xxs:ml-0"
+              />
+            </div>
 
             <div className="flex justify-center my-3">
               <button
