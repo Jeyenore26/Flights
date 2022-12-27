@@ -4,7 +4,7 @@ import { MdGroupAdd } from "react-icons/md";
 import Link from "next/link";
 import { gql, useMutation } from "@apollo/client";
 import { createGroupMutation } from "../../lib/mutationGql/CreateGql";
-
+import ImageInput from "../Inputs/ImageInput";
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -13,7 +13,7 @@ function getToken() {
 
 export default function () {
   /* page one*/
-
+  const [ grouppic , setgrouppic] = useState('')
   const [groupname, setgroupname] = useState("");
   const [groupnumber, setgroupnumber] = useState("");
   const [groupprovide, setgroupprovide] = useState("");
@@ -207,6 +207,10 @@ export default function () {
                           placeholder=" اسم حساب البايبال للتبرعات"
                           lclassName="text-black"
                         />
+                      </div>
+                      <div className="PageContent">
+                      <ImageInput required  value ={grouppic} onChange={(e) => {setgrouppic(e.target.value)}} label="صورة البوست" lclassName="text-black text-start  cairo_regular_title" type={'file'} />
+
                       </div>
                       <div className="flex justify-start">
                         <button

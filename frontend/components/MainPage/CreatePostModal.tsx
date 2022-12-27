@@ -36,7 +36,7 @@ const CreatePostModal = ({ setIsOpen }) => {
           <div className={'modalContent'}>
 
             <GroupInput required onChange={(e) => {setdescription(e.target.value)}} label="معلومات" lclassName="text-black text-start mb-[-20px]" type={'text'} />
-            <ImageInput required  value ={selectedCv} onChange={(e) => {setSelectedCv(e.target.value)}} label="صورة البوست" lclassName="text-black text-start mb-[-20px]" type={'text'} />
+            <ImageInput required  value ={selectedCv} onChange={(e) => {setSelectedCv(e.target.value)}} label="صورة البوست" lclassName="text-black text-start" type={'text'} />
 
           </div>
           <div className={'actionsContainer'}>
