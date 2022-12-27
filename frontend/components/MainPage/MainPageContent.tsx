@@ -13,20 +13,35 @@ import { BiArrowBack, BiChevronDown, BiLogOut, BiPlus } from "react-icons/bi";
 import MainPageComments from "./MainPageComments";
 import MainPageSchedules from "./MainPageSchedules";
 import MainPageMembers from "./MainPageMembers";
+import CreateShModal from "./CreateShModal";
+import CreatePostModal from './CreatePostModal'
 function MainPageContent() {
   const [page, setpage] = useState(0);
   const [show, setshow] = useState(false);
   const [dark, setdark] = useState(false);
+  const [openpost, setopenpost] = useState(false);
+  const [openschedule, setopenschedule] = useState(false);
+
+
 
   return (
+    
     <div className="h-screen overflow-hidden">
+    
       {/* nav */}
+        {openpost && (
+      <CreatePostModal setIsOpen={setopenpost} />
+    )}
+       {openschedule && (
+      <CreateShModal setIsOpen={setopenschedule} />
+    )}
       <div
         className={`w-full ${
           dark ? "bg-[#1d1d1d]" : "bg-white"
-        } absolute z-[1000] origin-right`}
+        } absolute z-[998] origin-right`}
         id="animate1"
       >
+      
         <div className="grid grid-cols-6" id="animate32">
           <div className=" p-1 flex items-center">
             <img
@@ -67,6 +82,7 @@ function MainPageContent() {
                   )}
                 </button>
               </div>
+              
               {show && (
                 <div
                   className={`absolute mt-7 h-[6rem] py-2 px-2 flex flex-col items-end rounded-xl space-y-2 overflow-hidden ${
@@ -199,22 +215,41 @@ function MainPageContent() {
             <MainPageMembers darker={dark} />
           </div>
         )}
-        {(page == 2 || page == 1) && (
+        {(page == 2) && (
           <div
             id="animate33"
             className="fixed bottom-0 left-0 my-[2rem] hidden min-[655px]:flex lg:mx-6 bg-[#39A059] active:brightness-[1.1] hover:brightness-90 p-2 ml-2 rounded-full items-center justify-center"
           >
             <BiPlus
+            onClick={() => setopenschedule(true)}
+              className={` text-4xl cursor-pointer text-white ${
+                dark ? "" : ""
+              }`}
+            />
+      
+          </div>
+         
+          
+        )}
+        
+         {(page == 1) && (
+          <div
+            id="animate33"
+            className="fixed bottom-0 left-0 my-[2rem] hidden min-[655px]:flex lg:mx-6 bg-[#39A059] active:brightness-[1.1] hover:brightness-90 p-2 ml-2 rounded-full items-center justify-center"
+          >
+            <BiPlus
+             onClick={() => setopenpost(true)}
               className={` text-4xl cursor-pointer text-white ${
                 dark ? "" : ""
               }`}
             />
           </div>
+          
         )}
         {/* side nav */}
         <div
           dir="rtl"
-          className={`h-full w-full p-2 z-[1000] origin-bottom ${
+          className={`h-full w-full  p-2 z-[999] origin-bottom ${
             dark
               ? "bg-[#1d1d1d] text-[#e2e2e2] border-white"
               : "bg-white border-black"
@@ -350,12 +385,19 @@ function MainPageContent() {
                     اضافة
                   </p>
                 </div>
+                
               </div>
+              
             </div>
+            
           </div>
+          
         </div>
+        
       </div>
+      
     </div>
+    
   );
 }
 
