@@ -22,7 +22,7 @@ const CreatePostModal = ({ setIsOpen }, props: any) => {
         onClick={() => setIsOpen(false)}
       />
       <div className={"centered"} id="animate31">
-        <div className={`modal ${props.darker ? "bg-white" : "bg-black"}`}>
+        <div className={`modal`}>
           <div className={"modalHeader"}>
             <h5 className={"heading cairo_semibold_title"}>انشاء بوست</h5>
           </div>

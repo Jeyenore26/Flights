@@ -153,6 +153,7 @@
     width: 500px;
     height: max-content;
     background: white;
+    color: white;
     z-index: 1001;
     border-radius: 16px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
@@ -162,6 +163,7 @@
       width: 300px;
       height: max-content;
       background: white;
+      color: white;
       z-index: 1001;
       border-radius: 0.5rem;
       box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);

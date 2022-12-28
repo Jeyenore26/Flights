@@ -1,7 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import { AiFillLike } from "react-icons/ai";
 
 function MainPageComments(props: any) {
+  const [liked, setLiked] = useState(false);
   return (
     <div>
       <div>
@@ -26,7 +28,14 @@ function MainPageComments(props: any) {
               }`}
             >
               <button>
-                <AiFillLike className="text-3xl" />
+                <AiFillLike
+                  className={`text-3xl ease-linear duration-75 ${
+                    liked ? "text-[#33ca47]" : "hover:text-[#696969]"
+                  }`}
+                  onClick={() => {
+                    setLiked(!liked);
+                  }}
+                />
               </button>
               <p className="ml-2 text-xl ">2</p>
             </div>
