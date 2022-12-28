@@ -58,19 +58,6 @@ const ProfileModal = ({ setIsOpen }, props: any) => {
                   type={"text"}
                 />
               </span>
-              <span className="flex">
-                <GroupInput
-                  required
-                  onChange={(e) => {
-                    setdescription(e.target.value);
-                  }}
-                  label="كلمة السر"
-                  value="idk1234"
-                  lclassName="text-black text-start mb-[-20px]"
-                  type={"text"}
-                />
-              </span>
-
               <GroupInput
                 onChange={(e) => {
                   setdescription(e.target.value);
@@ -80,6 +67,7 @@ const ProfileModal = ({ setIsOpen }, props: any) => {
                 lclassName="text-black text-start mb-[-20px]"
                 type={"text"}
               />
+
               <ImageInput
                 value={selectedCv}
                 onChange={(e) => {
@@ -87,6 +75,15 @@ const ProfileModal = ({ setIsOpen }, props: any) => {
                 }}
                 label="صورتك الشخصية"
                 lclassName="text-black text-start"
+                type={"text"}
+              />
+              <GroupInput
+                required
+                onChange={(e) => {
+                  setdescription(e.target.value);
+                }}
+                label="كلمة السر"
+                lclassName="text-black text-start mb-[-20px]"
                 type={"text"}
               />
             </div>
