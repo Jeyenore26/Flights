@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import Eyes from "../components/Sign&Register/Eyes";
@@ -8,11 +8,13 @@ import GroupInput from "../components/Inputs/GroupInput";
 import BInputOutline from "../components/Inputs/BInputOutline";
 import NavBar from "../components/CheckGroup/NavBar";
 import { AiOutlineEdit } from "react-icons/ai";
-
+import ProfileModal from "../components/Profile/ProfileModal";
 export default function profile() {
+  const [openpost, setopenpost] = useState(false);
   return (
     <>
       <NavBar />
+      {openpost && <ProfileModal setIsOpen={setopenpost} />}
 
       <div className="bg-white hidden xxs:block justify-center md:h-screen xxs:h-full w-full xxs:flex items-center">
         <Head>
@@ -27,26 +29,22 @@ export default function profile() {
             <div className="profile flex justify-center">
               <div className="flex flex-col-reverse items-center">
                 <div className="flex xxs:flex-col md:flex-row  justify-center mt-5 md:mb-0 xxs:mb-4">
-                <button className="rounded-md  xxs:w-80 md:w-32  cairo_regular_title shadow-lg lg:py-1 xxs:py-2 cursor-pointer md:px-4 hover:bg-[#2b7543] active:bg-[#1a4929] text-sm  bg-[#39A059] text-white hover:text-white/60 active:text-white/40">
-                    غير الصورة
-                  </button>
                   <span className="flex justify-center cursor-pointer  xxs:w-80 md:w-32 hover:text-slate-300 px-4 py-1 active:text-slate-400">
                     <AiOutlineEdit className="mt-1" />
                     <button
                       dir="rtl"
                       className="cairo_regular_title cursor-pointer "
+                      onClick={() => setopenpost(true)}
                     >
                       تعديل
                     </button>
                   </span>
-                 
                 </div>
                 <img
                   src="./avater2.png"
                   className="w-80 h-80 bg-cover rounded-md"
                 />
               </div>
-              
             </div>
             <div className=" md:mr-10 md:ml-0 mt-5 xxs:ml-[-5.5rem]">
               <span className="flex justify-center">
@@ -88,8 +86,6 @@ export default function profile() {
                 />
               </span>
             </div>
-
-          
           </div>
         </section>
       </div>
