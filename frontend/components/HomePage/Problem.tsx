@@ -13,7 +13,7 @@ const HomeExplanation = () => {
       />
       </div>
       <div dir="rtl" className="xxs:my-4 my-4  cairo_bold_title text-3xl mr-[1rem]">
-        <p className="float-right">        كيف نساعد الارض؟</p>
+        <p className="float-right">كيف نساعد الارض؟</p>
         <p  className="w-16  mt-[5rem] border-t-[3px] border-[#81c132] "></p>
         <p dir="rtl" className="cairo_regular_title text-right float-right mt-4 text-[18px] text-1 2xl:ml-[5rem] xl:ml-[5rem] lg:ml-[5rem] md:ml-[5rem]"> ولقد برزت هذه المشكلة نتيجة للتقدم التقني، والصناعي، والحضاري للإنسان  ولقد برزت هذه المشكلة نتيجة للتقدم التقني، والصناعي، والحضاري للإنسان،،</p>
       </div>
@@ -28,12 +28,12 @@ const HomeExplanation = () => {
 </div>
 <div dir="rtl" className="bg-[#F2F2F2] z-50 2xl:mr-[-120px] xl:mr-[-120px] lg:mr-[-120px]  mb-10 px-2 rounded-sm ">
   <span className="absolute mt-2   flex">
-  <p className=" text-2xl cairo_bold_title">          جمال الطبيعة الخلاب</p>
+  <p className=" text-2xl cairo_bold_title">جمال الطبيعة الخلاب</p>
   </span>
   <p  className="w-16  mt-[5rem] border-t-[3px] border-[#81c132] "></p>
 
   <span className=" flex">
-  <p className=" text-[18px] cairo_regular_title mt-10 overflow-hidden">           الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب  الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب</p>
+  <p className=" text-[18px] cairo_regular_title mt-10 overflow-hidden">الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب  الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب</p>
   </span>
 </div>
 <img
@@ -43,7 +43,7 @@ const HomeExplanation = () => {
   
   <div dir="rtl" className="z-50   mb-10  rounded-sm ">
   <span className=" flex">
-  <p className=" text-[22px] cairo_regular_title mt-20 mr-20 overflow-hidden ">           الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب  الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب</p>
+  <p className=" text-[22px] cairo_regular_title mt-20 mr-20 overflow-hidden ">الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب  الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب</p>
   </span>
 </div>
      </section>

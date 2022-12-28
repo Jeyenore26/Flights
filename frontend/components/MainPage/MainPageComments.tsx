@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillLike } from "react-icons/ai";
 
 function MainPageComments(props: any) {
   return (
@@ -18,13 +19,25 @@ function MainPageComments(props: any) {
           <div dir="rtl" className="p-4 break-all xs:break-normal lg:w-[80%]">
             {props.desc}
           </div>
-          <div className="flex space-x-2 m-2">
-            <p className="text-xs bg-[#11111b] text-[#e2e2e2] rounded p-1">
-              {props.time}
-            </p>
-            <p className="text-xs bg-[#11111b] text-[#e2e2e2] rounded p-1">
-              {props.role}
-            </p>
+          <div className="flex justify-between items-center w-full">
+            <div
+              className={`ml-2 flex items-center ${
+                props.darker ? "text-white" : "text-black"
+              }`}
+            >
+              <button>
+                <AiFillLike className="text-3xl" />
+              </button>
+              <p className="ml-2 text-xl ">2</p>
+            </div>
+            <div className="flex space-x-2 m-2">
+              <p className="text-xs bg-[#11111b] text-[#e2e2e2] rounded p-1">
+                {props.time}
+              </p>
+              <p className="text-xs bg-[#11111b] text-[#e2e2e2] rounded p-1">
+                {props.role}
+              </p>
+            </div>
           </div>
         </div>
         <div
