@@ -4,7 +4,6 @@ import { useEffect } from "react";
 const HomeExplanation = () => {
   useEffect(() => {
     let promblem1 = document.getElementById("problem1");
-    let promblem2 = document.getElementById("problem2");
 
     window.addEventListener("scroll", () => {
       let value = window.scrollY;
@@ -46,10 +45,7 @@ const HomeExplanation = () => {
       </div>
 
       {/* problem 2 */}
-      <section
-        id="problem2"
-        className="flex 2xl:flex-row xl:flex-row lg:flex-row justify-center md:flex-col sm:flex-col xxs:flex-col"
-      >
+      <section className="flex 2xl:flex-row xl:flex-row lg:flex-row justify-center md:flex-col sm:flex-col xxs:flex-col">
         <div></div>
         <div
           dir="rtl"
