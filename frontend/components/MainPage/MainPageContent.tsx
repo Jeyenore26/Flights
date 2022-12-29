@@ -109,13 +109,9 @@ function MainPageContent() {
             </div>
           </div>
           <div dir="rtl" className=" col-span-4 z-[1000]">
-            <input
-              placeholder="اضغط هنا للبحث..."
-              type="text"
-              className={`outline-none h-full w-[65%] sm:w-[90%] focus:border-2 p-1 ${
-                dark
-                  ? "bg-[#242424] border-[#393939] text-[#e2e2e2]"
-                  : "bg-white"
+            <div
+              className={` h-full w-[65%] sm:w-[90%] p-1 ${
+                dark ? "bg-[#1d1d1d]" : "bg-white"
               }`}
             />
           </div>
@@ -167,6 +163,18 @@ function MainPageContent() {
               desc="لماذالماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جي عمر جي"
               time="منذ القرن العشرين"
               role="ابن كلب"
+              profImg="europe.jpg"
+              postImg="africa.jpg"
+            />
+            <MainPageComments
+              darker={dark}
+              name="عمر زفارة"
+              desc="مكث النبي موسى في قومه يدعوهم إلى الله، ويبدو أن نفوسهم كانت ملتوية بشكل لا تخطئه عين الملاحظة، وتبدو لجاجتهم وعنادهم فيما يعرف بقصة البقرة، فإن الموضوع لم يكن يقتضي كل هذه المفاوضات بينهم وبين موسى، كما أنه لم يكن يستوجب كل هذا التعنت.
+              وأصل قصة البقرة أن قتيلًا ثريًا وجد يوما في بني إسرائيل، واختصم أهله ولم يعرفوا قاتله، وحين أعياهم الأمر لجئوا لموسى ليلجأ لربه، ولجأ موسى لربه فأمره أن يأمر قومه أن يذبحوا بقرة، وكان المفروض هنا أن يذبح القوم أول بقرة تصادفهم، غير أنهم بدءوا مفاوضتهم باللجاجة، واتهموا موسى بأنه يسخر منهم ويتخذهم هزوا، واستعاذ موسى بالله أن يكون من الجاهلين ويسخر منهم، وأفهمهم أن حل القضية يكمن في ذبح بقرة."
+              time="منذ القرن العشرين"
+              role="ابن كلب"
+              profImg="australia.jpg"
+              postImg="antarcatica.jpg"
             />
           </div>
         )}
@@ -212,7 +220,7 @@ function MainPageContent() {
         {page == 2 && (
           <div
             id="animate33"
-            className="fixed bottom-0 left-0 my-[2rem] hidden min-[655px]:flex lg:mx-6 bg-[#39A059] active:brightness-[1.1] hover:brightness-90 p-2 ml-2 rounded-full items-center justify-center"
+            className="fixed bottom-0 left-0 my-[2rem] hidden min-[655px]:flex lg:mx-6 bg-[#39A059] opacity-75 active:brightness-[1.1] hover:opacity-[1] ease-linear duration-200 p-2 ml-2 rounded-full items-center justify-center"
           >
             <BiPlus
               onClick={() => setopenschedule(true)}
@@ -226,7 +234,7 @@ function MainPageContent() {
         {page == 1 && (
           <div
             id="animate33"
-            className="fixed bottom-0 left-0 my-[2rem] hidden min-[655px]:flex lg:mx-6 bg-[#39A059] active:brightness-[1.1] hover:brightness-90 p-2 ml-2 rounded-full items-center justify-center"
+            className="fixed bottom-0 left-0 my-[2rem] hidden min-[655px]:flex lg:mx-6 bg-[#39A059] opacity-75 active:brightness-[1.1] hover:opacity-[1] ease-linear duration-200 p-2 ml-2 rounded-full items-center justify-center"
           >
             <BiPlus
               onClick={() => setopenpost(true)}
