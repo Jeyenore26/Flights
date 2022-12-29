@@ -16,3 +16,10 @@ export default function mainpage() {
     </>
   );
 }
+
+/* <MainNav />
+        <Groups />
+        <BottomPick />
+        <Leaf /> */
+
+/* <MainPageTopSection /> */

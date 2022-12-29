@@ -4,89 +4,86 @@ import { useEffect } from "react";
 const HomeExplanation = () => {
   useEffect(() => {
     let promblem1 = document.getElementById("midTo");
-    let promblem2 = document.getElementById("problem2");
-    let promblem3 = document.getElementById("problem3");
+    //let promblem2 = document.getElementById("problem2");
+    // let promblem3 = document.getElementById("problem3");
 
     window.addEventListener("scroll", () => {
       let value = window.scrollY;
       console.log(value);
-      if (value > 600) {
+      if (value > 300) {
         promblem1!.style.opacity = String(1);
       }
       if (value > 600) {
-        promblem2!.style.opacity = String(1);
+        //promblem2!.style.opacity = String(1);
       }
       if (value > 600) {
-        promblem3!.style.opacity = String(1);
+        //promblem3!.style.opacity = String(1);
       }
     });
   });
   return (
     <div id="midTo" className=" mt-[1rem] ">
-      <div className="flex md:flex-row-reverse flex-col-reverse mr-[10rem] text-left">
-        <div className="text-left">
+      <div className="flex md:flex-row-reverse flex-col-reverse xxs:mr-[0rem]  lg:mr-[10rem] text-left">
+        <div className="text-left md:mr-[7.4rem] sm:mr-0 lg:mr-0">
           <img
             src="https://s3-us-west-1.amazonaws.com/contentlab.studiod/getty/9453205e492449dc8a8bc4da86362dcd.jpg"
             alt=""
-            className=" shadow-lg shadow-black md:mt-[-40px] mx-auto lg:mr-0 md:mr-[-100px] sm:w-[80rem] lg:w-[50rem] h-[30rem]"
+            className=" shadow-lg shadow-black md:mt-[-40px] lg:mr-0 mx-auto  sm:w-[30rem] sm:h-[20rem] lg:w-[50rem] lg:h-[30rem]"
           />
         </div>
-        <div
-          dir="rtl"
-          className="my-4 cairo_bold_title text-3xl lg:mr-[1rem] md:mr-[-90px]"
-        >
-          <p className="float-right">كيف نساعد الارض؟</p>
+        <div dir="rtl" className="my-4 cairo_bold_title text-3xl mr-[1rem]">
+          <p className="float-right">الارض في خطر</p>
           <p className="w-16  mt-[5rem] border-t-[3px] border-[#81c132] "></p>
           <p
             dir="rtl"
-            className="cairo_regular_title text-right float-right mt-4 text-[18px] text-1  md:ml-[5rem]"
+            className="cairo_regular_title text-right float-right mt-4 text-[18px] text-1 md:ml-[8rem]  xl:ml-[5rem]"
           >
             {" "}
-            ولقد برزت هذه المشكلة نتيجة للتقدم التقني، والصناعي، والحضاري
-            للإنسان ولقد برزت هذه المشكلة نتيجة للتقدم التقني، والصناعي،
-            والحضاري للإنسان،،
+            ولقد برزت هذه المشكلة نتيجة للتقدم التقني، والصناعي، والحضاري لذا
+            علينا ان نساعد في عمليات تنظيف الارض من الفمامة و الغازات
           </p>
         </div>
       </div>
 
-      {/* problem 2 */}
-      <section
-        id="problem3"
-        className="flex 2xl:flex-row xl:flex-row lg:flex-row justify-center md:flex-col flex-col"
-      >
-        <div></div>
-        <div
-          dir="rtl"
-          className="bg-[#F2F2F2] z-50 2xl:mr-[-120px] xl:mr-[-120px] lg:mr-[-120px] mb-10 px-2 rounded-sm "
-        >
-          <span className="absolute mt-2   flex">
-            <p className=" text-2xl cairo_bold_title">جمال الطبيعة الخلاب</p>
-          </span>
-          <p className="w-16  mt-[5rem] border-t-[3px] border-[#81c132] "></p>
+      {
+        /* problem 2*/
+        <section className="flex lg:mt-0 xxs:mt-20 lg:flex-row justify-center md:flex-col flex-col">
+          <div></div>
+          <div
+            dir="rtl"
+            className="bg-[#F2F2F2] z-50 md:mx-[7rem] sm:mx-32 lg:ml-[50px] lg:mr-[-120px] mb-16 px-2 rounded-sm "
+          >
+            <span className=" mt-2   flex">
+              <p className=" text-2xl cairo_bold_title">جمال الطبيعة الخلاب</p>
+            </span>
+            <p className="w-16  mt-[1rem] border-t-[3px] border-[#81c132] "></p>
 
-          <span className=" flex">
-            <p className=" text-[18px] cairo_regular_title mt-10 overflow-hidden">
-              الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب
-              الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب
-            </p>
-          </span>
-        </div>
-        <img
-          src="https://s3-us-west-1.amazonaws.com/contentlab.studiod/getty/9453205e492449dc8a8bc4da86362dcd.jpg"
-          alt=""
-          className=" shadow-lg shadow-black mx-auto imagea z-10  rounded-md xxs:mt-[-30px] xxs:w-[50rem] xxs:h-[24rem] 2xl:w-[35rem]  2xl:h-[25rem] md:w-max sm:mt-[-80px] "
-        />
+            <span className=" flex">
+              <p className=" text-[18px] cairo_regular_title mt-7 overflow-hidden ">
+                الطبيعة هي هذا الكون العجيب المدهش الساحر الذي يشمل البحار،
+                والأشجار، والجبال وغيرها،
+              </p>
+            </span>
+          </div>
+          <img
+            src="./greenimg2.png"
+            alt=""
+            className=" shadow-lg shadow-black  z-10 mx-auto  rounded-md xxs:mt-[-30px] xxs:w-[50rem] sm:w-[30rem] xxs:h-[24rem] 2xl:w-[35rem]  2xl:h-[25rem] md:w-max sm:mt-[-80px] "
+          />
 
-        <div dir="rtl" className="z-50   mb-10  rounded-sm ">
-          <span className=" flex">
-            <p className=" text-[22px] cairo_regular_title mt-20 mr-20 overflow-hidden ">
-              الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب
-              الخلابالخلابالخلابالخلابالخلابالخلاب جمال الطبيعة الخلاب
-            </p>
-          </span>
-        </div>
-      </section>
-      {/*Problem 3  */}
+          <div
+            dir="rtl"
+            className="z-50 md:mx-[14rem] sm:mx-32 lg:mx-10   mb-10  rounded-sm "
+          >
+            <span className=" flex">
+              <p className=" text-[18px] cairo_regular_title mt-10 md:mt-8  overflow-hidden ">
+                لكي نساعد الارض يجب علينا ان ندرك اننا نحن سبب حدوث هذه المشاكل
+                الكبيرة في الارض و اننا من يجب عليه انا يصلحها
+              </p>
+            </span>
+          </div>
+        </section>
+        /* problem3(remove)
       <div
         id="problem2"
         dir="rtl"
@@ -124,6 +121,8 @@ const HomeExplanation = () => {
           </div>
         </div>
       </div>
+  */
+      }
     </div>
   );
 };

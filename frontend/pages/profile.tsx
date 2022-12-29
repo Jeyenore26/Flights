@@ -16,7 +16,7 @@ export default function profile() {
       <NavBar />
       {openpost && <ProfileModal setIsOpen={setopenpost} />}
 
-      <div className="bg-white hidden xxs:block justify-center md:h-screen xxs:h-full w-full xxs:flex items-center">
+      <div className="bg-white hidden  justify-center md:h-screen xxs:h-full w-full xxs:flex items-center">
         <Head>
           <title className="cairo_black_title">حسابك الشخصي</title>
           <meta
