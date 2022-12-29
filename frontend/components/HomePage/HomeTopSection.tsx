@@ -52,14 +52,11 @@ function HomeTopSection() {
           <div className="box1 w-20 h-20 absolute"></div>
 
           <div className=" flex-col items-center bg-[#74ae2d28] p-[4rem] shadow-2xl ">
-           <div className=" ">
-
-           </div>
-
+            <div className=" "></div>
 
             <p className="cairo_bold_title  ">
               لقد حان الوقت لحماية بيتنا مان الوقت لحماية بيتنا من التلوث إن
-              الاستخدام الصحيحان الوقت لحماية بيتنا من التلوث 
+              الاستخدام الصحيحان الوقت لحماية بيتنا من التلوث
             </p>
             <Lonk
               to="midTo"
@@ -73,12 +70,9 @@ function HomeTopSection() {
                 ماذا تقصد؟
               </p>
             </Lonk>
-
           </div>
           <div className="box2 w-20 h-20 aboslute -mt-20"></div>
-
         </div>
-        
       </div>
     </div>
   );
