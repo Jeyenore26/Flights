@@ -4,10 +4,16 @@ import { useEffect } from "react";
 const HomeExplanation = () => {
   useEffect(() => {
     let promblem1 = document.getElementById("problem1");
+    let promblem2 = document.getElementById("problem2");
+
     window.addEventListener("scroll", () => {
       let value = window.scrollY;
-      if (value > 500) {
+      console.log(value);
+      if (value < 800) {
         promblem1!.style.opacity = String(0.001 * value);
+      }
+      if (value < 700) {
+        promblem2!.style.opacity = String(0.1 * value);
       }
     });
   });
@@ -43,7 +49,10 @@ const HomeExplanation = () => {
       </div>
 
       {/* problem 2 */}
-      <section className="flex 2xl:flex-row xl:flex-row lg:flex-row justify-center md:flex-col sm:flex-col xxs:flex-col">
+      <section
+        id="problem2"
+        className="flex 2xl:flex-row xl:flex-row lg:flex-row justify-center md:flex-col sm:flex-col xxs:flex-col"
+      >
         <div></div>
         <div
           dir="rtl"

@@ -71,10 +71,12 @@
   transition: ease-in;
 }
 #problem2 {
-  visibility: hidden;
+  opacity: 0;
+  transition: ease-in;
 }
 #problem3 {
-  visibility: hidden;
+  opacity: 0;
+  transition: ease-in;
 }
 @layer components {
   .Havar:hover {
