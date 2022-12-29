@@ -26,6 +26,7 @@ export default function registermember() {
     },
   });
   if (error) console.log(error);
+  //ADD LOADING ANIMATIONS JEY OR MAKI MAKI
   if (loading) return "...loading";
   console.log(data);
   if (data?.login?.token) {

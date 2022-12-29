@@ -3,18 +3,43 @@ import { RiCloseLine } from "react-icons/ri";
 import Input from "../Inputs/Input";
 import { RiArticleLine } from "react-icons/ri";
 import GroupInput from "../Inputs/GroupInput";
-import ImageInput from "../Inputs/ImageInput";
+import { gql, useMutation } from "@apollo/client";
+import { createScheduleMutation } from "../../lib/mutationGql/CreateGql";
 
-const CreateShModal = ({ setIsOpen }) => {
-  function makepost() {
-    event?.preventDefault;
-    console.log(title);
-    setIsOpen(false);
-  }
+function getToken() {
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  return token;
+}
+
+const CreateShModal = ({ setIsOpen }, props: any) => {
   const [title, settitle] = useState("");
-  const [description, setdescription] = useState("");
+  const [body, setdescription] = useState("");
   const [place, setplace] = useState("");
   const [time, settime] = useState("");
+  const token = getToken();
+  const [CreateSH, { data, loading, error }] = useMutation(
+    createScheduleMutation,
+    {
+      context: {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      },
+      variables: {
+        createScheduleInput: {
+          title: title,
+          body: body,
+          selectedDate: time,
+          place: place,
+        },
+      },
+    }
+  );
+  console.log(error);
+  if (error) console.log(error);
+  //ADD LOADING ANIMATIONS JEY OR MAKI MAKI
+  if (loading) return "...loading";
 
   return (
     <>
@@ -35,12 +60,8 @@ const CreateShModal = ({ setIsOpen }) => {
           <form
             onSubmit={(e) => {
               event?.preventDefault;
-              console.log(title);
-              console.log(description);
-              console.log(place);
-              console.log(time);
-
               setIsOpen(false);
+              CreateSH();
             }}
           >
             <div className={"modalContent"}>

@@ -7,3 +7,11 @@ export const createGroupMutation = gql`
     }
   }
 `;
+
+export const createScheduleMutation = gql`
+  mutation Mutation($createScheduleInput: CreateScheduleInput) {
+    createSchedule(createScheduleInput: $createScheduleInput) {
+      ownerName
+    }
+  }
+`;
