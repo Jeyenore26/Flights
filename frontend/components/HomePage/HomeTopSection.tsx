@@ -60,7 +60,6 @@ function HomeTopSection() {
             </p>
             <Lonk
               to="midTo"
-              offset={-100}
               smooth={true}
               className="flex justify-center -mb-8 mt-2"
               duration={2000}

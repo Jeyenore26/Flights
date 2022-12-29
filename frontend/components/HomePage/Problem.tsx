@@ -3,11 +3,12 @@ import { useEffect } from "react";
 
 const HomeExplanation = () => {
   useEffect(() => {
-    let promblem1 = document.getElementById("problem1");
+    let problem1 = document.getElementById("problem1");
     window.addEventListener("scroll", () => {
       let value = window.scrollY;
-      if (value > 500) {
-        promblem1!.style.opacity = String(0.001 * value);
+      console.log(value + " and " + problem1!.style.opacity);
+      if (value > 100) {
+        problem1!.style.opacity = String(0.002 * value);
       }
     });
   });
@@ -15,26 +16,25 @@ const HomeExplanation = () => {
     <div id="midTo" className=" mt-[1rem] ">
       <div
         id="problem1"
-        className=" flex  2xl:flex-row-reverse  xl:flex-row-reverse lg:flex-row-reverse md:flex-row-reverse sm:flex-col-reverse xs:flex-col=reverse xxs:flex-col-reverse 2xl:mr-[10rem] xl:mr-[10rem] lg:mr-[10rem] md:mr-[10rem] text-left"
+        className=" flex 2xl:flex-row-reverse xl:flex-row-reverse lg:flex-row-reverse md:flex-row-reverse sm:flex-col-reverse xs:flex-col=reverse xxs:flex-col-reverse 2xl:mr-[10rem] xl:mr-[10rem] lg:mr-[10rem] md:mr-[10rem] text-left"
       >
         <div className="text-left">
           <img
             src="https://s3-us-west-1.amazonaws.com/contentlab.studiod/getty/9453205e492449dc8a8bc4da86362dcd.jpg"
             alt=""
-            className=" shadow-lg shadow-black md:mt-[-40px]  mx-auto lg:mr-0 md:mr-[-100px]  sm:w-[80rem] lg:w-[50rem] h-[30rem]"
+            className="shadow-lg shadow-black md:mt-[-40px] mx-auto lg:mr-0 md:mr-[-100px] sm:w-[80rem] lg:w-[50rem] h-[30rem]"
           />
         </div>
         <div
           dir="rtl"
-          className="xxs:my-4 my-4  cairo_bold_title text-3xl lg:mr-[1rem] md:mr-[-90px]"
+          className="xxs:my-4 my-4 cairo_bold_title text-3xl lg:mr-[1rem] md:mr-[-90px]"
         >
           <p className="float-right">كيف نساعد الارض؟</p>
           <p className="w-16  mt-[5rem] border-t-[3px] border-[#81c132] "></p>
           <p
             dir="rtl"
-            className="cairo_regular_title text-right float-right mt-4 text-[18px] text-1  md:ml-[5rem]"
+            className="cairo_regular_title text-right float-right mt-4 text-[18px] text-1 md:ml-[5rem]"
           >
-            {" "}
             ولقد برزت هذه المشكلة نتيجة للتقدم التقني، والصناعي، والحضاري
             للإنسان ولقد برزت هذه المشكلة نتيجة للتقدم التقني، والصناعي،
             والحضاري للإنسان،،
@@ -64,7 +64,7 @@ const HomeExplanation = () => {
         <img
           src="https://s3-us-west-1.amazonaws.com/contentlab.studiod/getty/9453205e492449dc8a8bc4da86362dcd.jpg"
           alt=""
-          className=" shadow-lg shadow-black mx-auto imagea z-10  rounded-md xxs:mt-[-30px] xxs:w-[50rem] xxs:h-[24rem] 2xl:w-[35rem]  2xl:h-[25rem] md:w-max sm:mt-[-80px] "
+          className=" shadow-lg shadow-black mx-auto imagea z-10 rounded-md xxs:mt-[-30px] xxs:w-[50rem] xxs:h-[24rem] 2xl:w-[35rem] 2xl:h-[25rem] md:w-max sm:mt-[-80px] "
         />
 
         <div dir="rtl" className="z-50   mb-10  rounded-sm ">
@@ -108,7 +108,7 @@ const HomeExplanation = () => {
             <img
               src="https://www.iisd.org/sites/default/files/styles/og_image/public/2020-12/plastic-in-ocean.jpg?itok=LrjpIznP"
               alt=""
-              className="  imagea  absolute 2xl:w-[30rem] xl:w-[25rem] md:mt-[10rem] xxs:mx-auto sm:mr-[-40px]  xl:h-[15rem] lg:w-[25rem] lg:mt-[30rem] lg:h-[15rem] lg:mr-[-30rem]  2xl:mr-[-40rem] xl:mr-[-40rem]  mt-[24rem]  md:w-[30rem] z-10 opacity-90 2xl:h-[20rem]"
+              className="object-cover imagea absolute 2xl:w-[30rem] xl:w-[25rem] md:mt-[10rem] xxs:mx-auto sm:mr-[-40px]  xl:h-[15rem] lg:w-[25rem] lg:mt-[30rem] lg:h-[15rem] lg:mr-[-30rem]  2xl:mr-[-40rem] xl:mr-[-40rem]  mt-[24rem]  md:w-[30rem] z-10 opacity-90 2xl:h-[20rem]"
             />
           </div>
         </div>
