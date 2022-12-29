@@ -9,11 +9,8 @@ const HomeExplanation = () => {
     window.addEventListener("scroll", () => {
       let value = window.scrollY;
       console.log(value);
-      if (value < 800) {
-        promblem1!.style.opacity = String(0.001 * value);
-      }
-      if (value < 700) {
-        promblem2!.style.opacity = String(0.1 * value);
+      if (value > 100) {
+        promblem1!.style.opacity = String(0.002 * value);
       }
     });
   });
