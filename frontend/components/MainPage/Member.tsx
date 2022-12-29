@@ -72,7 +72,7 @@ function Member(props: any) {
           </p>
           <img
             src={props.img}
-            className="h-20 w-20 bg-slate-400 rounded-[40px] m-2 "
+            className="h-20 w-20 bg-slate-400 rounded-[40px] m-2 object-cover"
           ></img>
         </div>
       </div>
