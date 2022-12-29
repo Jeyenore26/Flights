@@ -39,7 +39,7 @@ export default function registermember() {
       </Head>
       <div className="overflow-y-hidden">
         <img
-          src="./greenhills3.png"
+          src="greenRectangles.png"
           className="w-screen h-full fixed z-[-1] brightness-75 cover"
         />
         <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
