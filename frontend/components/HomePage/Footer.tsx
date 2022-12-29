@@ -16,17 +16,17 @@ function Footer() {
           className=" mt-[-3rem] "
           duration={2000}
         >
-          <p className="p-3  cairo_regular_title hover:brightness-90 active:brightness-75 cursor-pointer">
+          <p className="py-3 mx-2  cairo_regular_title hover:brightness-90 active:brightness-75 cursor-pointer">
             حلول لمساعدة الارض
           </p>
         </Lonk>
         <Link href={"/register"}>
-          <p className="p-3 mt-[-3rem]  cairo_regular_title hover:brightness-90 active:brightness-75 cursor-pointer">
+          <p className="py-3 mt-[-3rem] mx-2  cairo_regular_title hover:brightness-90 active:brightness-75 cursor-pointer">
             انشاء حساب
           </p>
         </Link>
         <Link href={"/signin"}>
-          <p className="p-3 mt-[-3rem]  cairo_regular_title hover:brightness-90 active:brightness-75 cursor-pointer">
+          <p className="py-3 mt-[-3rem] mx-2  cairo_regular_title hover:brightness-90 active:brightness-75 cursor-pointer">
             تسجيل الدخول
           </p>
         </Link>
@@ -37,8 +37,8 @@ function Footer() {
           className=" mt-[-3rem] mr-8"
           duration={2000}
         >
-          <p className="p-3  cairo_regular_title hover:brightness-90 active:brightness-75 cursor-pointer">
-            مشاكل الارض
+          <p className="py-3 mx-2  cairo_regular_title hover:brightness-90 active:brightness-75 cursor-pointer">
+            الارض في خطر
           </p>
         </Lonk>
       </div>
