@@ -3,40 +3,37 @@ import { useEffect } from "react";
 
 const HomeExplanation = () => {
   useEffect(() => {
-    let promblem1 = document.getElementById("problem1");
+    let promblem1 = document.getElementById("midTo");
+    let promblem2 = document.getElementById("problem2");
     let promblem3 = document.getElementById("problem3");
-    let promblem4 = document.getElementById("problem2");
 
     window.addEventListener("scroll", () => {
       let value = window.scrollY;
       console.log(value);
-      if (value > 100) {
-        promblem1!.style.opacity = String(0.002 * value);
-      }
-      if (value > 100) {
-        promblem3!.style.opacity = String(0.0009 * value);
+      if (value > 600) {
+        promblem1!.style.opacity = String(1);
       }
       if (value > 600) {
-        promblem4!.style.opacity = String(0.00052 * value);
+        promblem2!.style.opacity = String(1);
+      }
+      if (value > 600) {
+        promblem3!.style.opacity = String(1);
       }
     });
   });
   return (
     <div id="midTo" className=" mt-[1rem] ">
-      <div
-        id="problem1"
-        className=" flex  2xl:flex-row-reverse  xl:flex-row-reverse lg:flex-row-reverse md:flex-row-reverse sm:flex-col-reverse xs:flex-col=reverse xxs:flex-col-reverse 2xl:mr-[10rem] xl:mr-[10rem] lg:mr-[10rem] md:mr-[10rem] text-left"
-      >
+      <div className="flex md:flex-row-reverse flex-col-reverse mr-[10rem] text-left">
         <div className="text-left">
           <img
             src="https://s3-us-west-1.amazonaws.com/contentlab.studiod/getty/9453205e492449dc8a8bc4da86362dcd.jpg"
             alt=""
-            className=" shadow-lg shadow-black md:mt-[-40px]  mx-auto lg:mr-0 md:mr-[-100px]  sm:w-[80rem] lg:w-[50rem] h-[30rem]"
+            className=" shadow-lg shadow-black md:mt-[-40px] mx-auto lg:mr-0 md:mr-[-100px] sm:w-[80rem] lg:w-[50rem] h-[30rem]"
           />
         </div>
         <div
           dir="rtl"
-          className="xxs:my-4 my-4  cairo_bold_title text-3xl lg:mr-[1rem] md:mr-[-90px]"
+          className="my-4 cairo_bold_title text-3xl lg:mr-[1rem] md:mr-[-90px]"
         >
           <p className="float-right">كيف نساعد الارض؟</p>
           <p className="w-16  mt-[5rem] border-t-[3px] border-[#81c132] "></p>
@@ -55,12 +52,12 @@ const HomeExplanation = () => {
       {/* problem 2 */}
       <section
         id="problem3"
-        className="flex 2xl:flex-row xl:flex-row lg:flex-row justify-center md:flex-col sm:flex-col xxs:flex-col"
+        className="flex 2xl:flex-row xl:flex-row lg:flex-row justify-center md:flex-col flex-col"
       >
         <div></div>
         <div
           dir="rtl"
-          className="bg-[#F2F2F2] z-50 2xl:mr-[-120px] xl:mr-[-120px] lg:mr-[-120px]  mb-10 px-2 rounded-sm "
+          className="bg-[#F2F2F2] z-50 2xl:mr-[-120px] xl:mr-[-120px] lg:mr-[-120px] mb-10 px-2 rounded-sm "
         >
           <span className="absolute mt-2   flex">
             <p className=" text-2xl cairo_bold_title">جمال الطبيعة الخلاب</p>

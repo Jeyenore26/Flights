@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @font-face {
   font-family: "CairoBold";
   src: local("CairoBold"),
@@ -66,17 +65,12 @@
 .cairo_regular_title {
   font-family: "CairoRegular", sans-serif;
 }
-#problem1 {
-  opacity: 0;
-}
-#problem2 {
-  opacity: 0;
-  transition: ease-in;
-}
 
+#midTo,
+#problem2,
 #problem3 {
   opacity: 0;
-  transition: ease-in;
+  transition: ease-in 500ms;
 }
 @layer components {
   .Havar:hover {
@@ -88,7 +82,7 @@
   }
 
   .topImg {
-    background-image: linear-gradient(#0000003e, #0000003e),
+    background-image: linear-gradient(#00000078, #0000007e),
       url("../public/leaf2.png");
   }
   #helpEarth {
@@ -264,15 +258,13 @@
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     transform: translate(-4px, 4px);
   }
-
   .box1 {
-    border-top: 3px solid #fff;
-    border-right: 3px solid #fff;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
   }
   .box2 {
-    border-bottom: 3px solid #fff;
-    border-left: 3px solid #fff;
-    margin: -26px auto 0 0;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
   }
   .pageon {
     display: inline-flex;
@@ -531,6 +523,16 @@ body {
     width: 10rem;
   }
 }
+@keyframes Animate22 {
+  from {
+    width: 0rem;
+    height: 0rem;
+  }
+  to {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 @keyframes Animate3 {
   from {
     opacity: 0;
@@ -555,6 +557,11 @@ body {
 #animate2 {
   animation: Animate2 1000ms ease-out;
   animation-fill-mode: backwards;
+}
+#animate22 {
+  animation: Animate22 1000ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 1000ms;
 }
 #animate3 {
   animation: Animate3 2000ms ease-out;
@@ -588,4 +595,14 @@ body {
   animation: Animate3 500ms ease-out;
   animation-fill-mode: backwards;
   animation-delay: 200ms;
+}
+#animate34 {
+  animation: Animate3 500ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 700ms;
+}
+#animate35 {
+  animation: Animate3 500ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 1000ms;
 }
