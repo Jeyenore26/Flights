@@ -36,7 +36,7 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
       },
     }
   );
-  console.log(error);
+  console.log(data);
   if (error) console.log(error);
   //ADD LOADING ANIMATIONS JEY OR MAKI MAKI
   if (loading) return "...loading";

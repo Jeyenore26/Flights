@@ -15,12 +15,32 @@ import MainPageSchedules from "./MainPageSchedules";
 import MainPageMembers from "./MainPageMembers";
 import CreateShModal from "./CreateShModal";
 import CreatePostModal from "./CreatePostModal";
+import { scheduleQuery } from "../../lib/queryGql/scheduleQuery";
+import { useLazyQuery } from "@apollo/client";
+
+function getToken() {
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  return token;
+}
+
 function MainPageContent() {
   const [page, setpage] = useState(0);
   const [show, setshow] = useState(false);
   const [dark, setdark] = useState(false);
   const [openpost, setopenpost] = useState(false);
   const [openschedule, setopenschedule] = useState(false);
+  const token = getToken();
+  const [loadSchedule, { loading, error, data }] = useLazyQuery(scheduleQuery, {
+    context: {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    },
+  });
+  console.log(error);
+  if (loading) return "loading...";
+  if (data) console.log(data);
 
   return (
     <div
@@ -29,6 +49,7 @@ function MainPageContent() {
     >
       {/* nav */}
       {openpost && <CreatePostModal setIsOpen={setopenpost} />}
+      {/* @ts-ignore */}
       {openschedule && <CreateShModal setIsOpen={setopenschedule} />}
       <div
         className={`w-full ${
@@ -139,7 +160,7 @@ function MainPageContent() {
                     dark ? "text-[#e2e2e2]" : "text-black"
                   }`}
                 >
-                  اسم الجروب
+                  sddd
                 </p>
                 <div className="flex justify-center text-lg mt-2 text-[#adb1b5]">
                   <p className=" border-r-2 border-[#adb1b5] pr-2 mr-2">
@@ -328,6 +349,7 @@ function MainPageContent() {
                       : ""
                   } rounded my-6 sm:my-4 cursor-pointer`}
                   onClick={() => {
+                    loadSchedule();
                     setpage(2);
                   }}
                   style={{ transition: "ease 0.2s" }}
