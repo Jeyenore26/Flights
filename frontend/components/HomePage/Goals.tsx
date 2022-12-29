@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Goals() {
+  useEffect(() => {
+    let gaols = document.getElementById("gaolsanimation");
+
+    window.addEventListener("scroll", () => {
+      let value = window.scrollY;
+
+      if (value > 1000) {
+        gaols!.style.opacity = String(0.00029 * value);
+      }
+    });
+  });
   return (
-    <section className="goalssection py-40 translate-y-[30rem]" id="helpEarth">
+    <section
+      id="gaolsanimation"
+      className="goalssection py-40 translate-y-[30rem]"
+    >
       <div className="relative wsection mx-auto">
         <div className="w-[100%] griid">
           {/* Up three from left to right */}

@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaSearchLocation } from "react-icons/fa";
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { GrUserWorker } from "react-icons/gr";
 import { RiEye2Line } from "react-icons/ri";
 export default function SaveWorld() {
+  useEffect(() => {
+    let helphere = document.getElementById("helphere");
+
+    window.addEventListener("scroll", () => {
+      let value = window.scrollY;
+
+      if (value > 1000) {
+        helphere!.style.opacity = String(0.00024 * value);
+      }
+    });
+  });
   return (
     <>
-      <section className="w-full h-full mt-[40rem] text-center" id="helpEarth">
+      <section id="helphere" className="w-full h-full mt-[40rem] text-center">
         <div className="flex justify-center cairo_semibold_title text-[2rem]  text-black">
           كيف تساعد الارض هنا؟؟
         </div>

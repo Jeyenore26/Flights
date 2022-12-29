@@ -16,8 +16,8 @@ const HomeExplanation = () => {
       if (value > 100) {
         promblem3!.style.opacity = String(0.0009 * value);
       }
-      if (value > 300) {
-        promblem4!.style.opacity = String(0.00091 * value);
+      if (value > 600) {
+        promblem4!.style.opacity = String(0.00052 * value);
       }
     });
   });

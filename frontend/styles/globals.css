@@ -71,7 +71,9 @@
 }
 #problem2 {
   opacity: 0;
+  transition: ease-in;
 }
+
 #problem3 {
   opacity: 0;
   transition: ease-in;

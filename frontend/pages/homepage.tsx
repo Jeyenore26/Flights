@@ -4,7 +4,6 @@ import Image from "next/image";
 import SideText from "../components/HomePage/SideText";
 import Goals from "../components/HomePage/Goals";
 import Footer from "../components/HomePage/Footer";
-import Earthing from "../components/HomePage/Earthing";
 import HomeTopSection from "../components/HomePage/HomeTopSection";
 import Problem from "../components/HomePage/Problem";
 import SaveWorld from "../components/HomePage/SaveWorld";
