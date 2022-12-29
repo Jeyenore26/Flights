@@ -1,11 +1,10 @@
 import React, { useState } from "react";
+import Activity from "../components/CheckGroup/Activity";
+import Donate from "../components/CheckGroup/Donate";
+import Group from "../components/CheckGroup/Group";
+import Members from "../components/CheckGroup/Members";
 import NavBar from "../components/CheckGroup/NavBar";
-import dynamic from "next/dynamic";
-const Members = dynamic(() => import("../components/CheckGroup/Members"));
-const Proves = dynamic(() => import("../components/CheckGroup/Proves"));
-const Group = dynamic(() => import("../components/CheckGroup/Group"));
-const Activity = dynamic(() => import("../components/CheckGroup/Activity"));
-const Donate = dynamic(() => import("../components/CheckGroup/Donate"));
+import Proves from "../components/CheckGroup/Proves";
 
 export default function checkgroup() {
   const [page, setpage] = useState(1);
@@ -44,9 +43,6 @@ export default function checkgroup() {
                   انضم للمجموعة
                 </button>
               </div>
-            </div>
-            <div className="flex justify-center">
-              <p className="lg:w-full xxs:w-10 mx-[2rem]  my-[1rem] border-t-[1px] border-[#fff] "></p>
             </div>
           </section>
           <section className="md:mx-[31rem] ">
