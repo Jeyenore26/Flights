@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import NavBar from "../components/CheckGroup/NavBar";
 import dynamic from "next/dynamic";
-const Members = dynamic(()=>import("../components/CheckGroup/Members"))
-const Proves = dynamic(()=>import("../components/CheckGroup/Proves"))
-const Group = dynamic(()=>import("../components/CheckGroup/Group"))
-const Activity = dynamic(()=>import("../components/CheckGroup/Activity"))
-const Donate = dynamic(()=>import("../components/CheckGroup/Donate"))
+const Members = dynamic(() => import("../components/CheckGroup/Members"));
+const Proves = dynamic(() => import("../components/CheckGroup/Proves"));
+const Group = dynamic(() => import("../components/CheckGroup/Group"));
+const Activity = dynamic(() => import("../components/CheckGroup/Activity"));
+const Donate = dynamic(() => import("../components/CheckGroup/Donate"));
 
 export default function checkgroup() {
   const [page, setpage] = useState(1);
   return (
     <>
-      <section className="bg-white h-full w-full" >
+      <section className="bg-white h-full w-full">
         <NavBar />
-        <div className=" bg-gradient-to-b from-[#b5b7b9] to-white w-full h-max">
+        <div className=" w-full h-max">
           <section className="xl:mx-[20rem]">
             <img src="./asia.jpg" className="h-[22.8rem] w-full" />
             <div className="bg-[#39A059] w-full h-10 rounded-b-lg flex justify-end ">
@@ -22,7 +22,7 @@ export default function checkgroup() {
                 إدارتها بواسطة
               </span>
             </div>
-            <div className="mx-[2rem] mt-4" >
+            <div className="mx-[2rem] mt-4">
               <div dir="rtl" className="flex justify-between ">
                 <div>
                   <h1 className="text-black cairo_bold_title text-[20px]">

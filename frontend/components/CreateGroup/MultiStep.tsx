@@ -13,14 +13,13 @@ function getToken() {
 
 export default function () {
   /* page one*/
-  const [ grouppic , setgrouppic] = useState('')
-  const [ provepic1 , setprovepic1] = useState('')
-  const [ provepic2 , setprovepic2] = useState('')
-  const [ provepic3 , setprovepic3] = useState('')
-  const [ provepic4 , setprovepic4] = useState('')
-  const [ provepic5 , setprovepic5] = useState('')
-  const [ provepic6 , setprovepic6] = useState('')
-
+  const [grouppic, setgrouppic] = useState("");
+  const [provepic1, setprovepic1] = useState("");
+  const [provepic2, setprovepic2] = useState("");
+  const [provepic3, setprovepic3] = useState("");
+  const [provepic4, setprovepic4] = useState("");
+  const [provepic5, setprovepic5] = useState("");
+  const [provepic6, setprovepic6] = useState("");
 
   const [groupname, setgroupname] = useState("");
   const [groupnumber, setgroupnumber] = useState("");
@@ -61,24 +60,23 @@ export default function () {
   }
   function pagetwo() {
     event?.preventDefault();
-    setpage(page+1);
+    setpage(page + 1);
   }
-    //groupInput();
+  //groupInput();
 
   function pagethree() {
     event?.preventDefault();
-    setpage(page+1);
-
+    setpage(page + 1);
   }
   const [page, setpage] = useState(1);
   const [disable, setdis] = useState(false);
   //useEffect(() => {
   //  if (page == 3) {
- //     setdis(true);
+  //     setdis(true);
   //  } else {
   //    setdis(false);
   //  }
- // });
+  // });
   const pagecolor = { color: "blue" };
   return (
     <>
@@ -90,7 +88,7 @@ export default function () {
           <div className="flex flex-col md:flex-row">
             <div className="h-32 xxs:h-10 xxs:mt-0 md:mt-0  object-cover md:h-auto md:w-1/2">
               <img
-                className="object-cover xxs:h-0  md:block w-full md:h-full brightness-90"
+                className="object-cover h-0 md:block w-full md:h-full brightness-90"
                 src="./group1.jpg"
                 alt="img"
               />
@@ -200,11 +198,11 @@ export default function () {
                 </form>
                 {/* Second Page*/}
 
-                {page === 2&& (
+                {page === 2 && (
                   <>
                     <form
                       onSubmit={pagetwo}
-                      style={{ width: page === 2? "100%" : "35%" }}
+                      style={{ width: page === 2 ? "100%" : "35%" }}
                       className="PageContent"
                     >
                       <div className="PageContent">
@@ -228,8 +226,17 @@ export default function () {
                         />
                       </div>
                       <div className="PageContent rounded-xl px-[1px]  py-[10px] text-[16px] text-[#2c3e50]">
-                      <ImageInput required image={grouppic}  value ={grouppic} onChange={(e) => {setgrouppic(e.target.value)}} label="صورة البوست" lclassName="text-black text-start cairo_regular_title" type={'text'} />
-
+                        <ImageInput
+                          required
+                          image={grouppic}
+                          value={grouppic}
+                          onChange={(e) => {
+                            setgrouppic(e.target.value);
+                          }}
+                          label="صورة البوست"
+                          lclassName="text-black text-start cairo_regular_title"
+                          type={"text"}
+                        />
                       </div>
                       <div className="flex justify-start">
                         <button
@@ -255,23 +262,83 @@ export default function () {
                       style={{ width: page === 3 ? "100%" : "35%" }}
                       className="PageContent"
                     >
-                      <div className="flex justify-start text-[1rem] mt-5 cairo_bold_title text-black ">شهادات</div>
+                      <div className="flex justify-start text-[1rem] mt-5 cairo_bold_title text-black ">
+                        شهادات
+                      </div>
                       <div className="PageContent flex rounded-xl px-[1px]  py-[10px] text-[16px] text-[#2c3e50] ">
-                      <ImageInput required image={provepic1}  value ={provepic1} onChange={(e) => {setprovepic1(e.target.value)}} label="(اجباري) " iclassName="w-[90%]" lclassName="text-black text-center cairo_regular_title text-[14px]"  type={'text'} />
-                      <ImageInput required image={provepic2}  value ={provepic2} onChange={(e) => {setprovepic2(e.target.value)}} label="(اجباري) " lclassName="text-black text-center cairo_regular_title text-[14px]"  type={'text'} />
-
+                        <ImageInput
+                          required
+                          image={provepic1}
+                          value={provepic1}
+                          onChange={(e) => {
+                            setprovepic1(e.target.value);
+                          }}
+                          label="(اجباري) "
+                          iclassName="w-[90%]"
+                          lclassName="text-black text-center cairo_regular_title text-[14px]"
+                          type={"text"}
+                        />
+                        <ImageInput
+                          required
+                          image={provepic2}
+                          value={provepic2}
+                          onChange={(e) => {
+                            setprovepic2(e.target.value);
+                          }}
+                          label="(اجباري) "
+                          lclassName="text-black text-center cairo_regular_title text-[14px]"
+                          type={"text"}
+                        />
                       </div>
                       <div className="PageContent flex rounded-xl px-[1px]  py-[10px] text-[16px] text-[#2c3e50]">
-                      <ImageInput required image={provepic3}   value ={provepic3} onChange={(e) => {setprovepic3(e.target.value)}} label="(اجباري) " iclassName="w-[90%]" lclassName="text-black text-center cairo_regular_title text-[14px]"  type={'text'} />
-                      <ImageInput required image={provepic4}  value ={provepic4} onChange={(e) => {setprovepic4(e.target.value)}} label="(اجباري) " lclassName="text-black text-center cairo_regular_title text-[14px]"  type={'text'} />
-
+                        <ImageInput
+                          required
+                          image={provepic3}
+                          value={provepic3}
+                          onChange={(e) => {
+                            setprovepic3(e.target.value);
+                          }}
+                          label="(اجباري) "
+                          iclassName="w-[90%]"
+                          lclassName="text-black text-center cairo_regular_title text-[14px]"
+                          type={"text"}
+                        />
+                        <ImageInput
+                          required
+                          image={provepic4}
+                          value={provepic4}
+                          onChange={(e) => {
+                            setprovepic4(e.target.value);
+                          }}
+                          label="(اجباري) "
+                          lclassName="text-black text-center cairo_regular_title text-[14px]"
+                          type={"text"}
+                        />
                       </div>
                       <div className="PageContent flex rounded-xl px-[1px]  py-[10px] text-[16px] text-[#2c3e50]">
-                      <ImageInput  image={provepic5}  value ={provepic5} onChange={(e) => {setprovepic5(e.target.value)}} label="(اختياري) " iclassName="w-[90%]" lclassName="text-black text-center cairo_regular_title text-[14px]"  type={'text'} />
-                      <ImageInput  image={provepic6}  value ={provepic6} onChange={(e) => {setprovepic6(e.target.value)}} label="(اختياري) " lclassName="text-black text-center cairo_regular_title text-[14px]"  type={'text'} />
-
+                        <ImageInput
+                          image={provepic5}
+                          value={provepic5}
+                          onChange={(e) => {
+                            setprovepic5(e.target.value);
+                          }}
+                          label="(اختياري) "
+                          iclassName="w-[90%]"
+                          lclassName="text-black text-center cairo_regular_title text-[14px]"
+                          type={"text"}
+                        />
+                        <ImageInput
+                          image={provepic6}
+                          value={provepic6}
+                          onChange={(e) => {
+                            setprovepic6(e.target.value);
+                          }}
+                          label="(اختياري) "
+                          lclassName="text-black text-center cairo_regular_title text-[14px]"
+                          type={"text"}
+                        />
                       </div>
-                      
+
                       <div className="flex justify-start">
                         <button
                           type="submit"
