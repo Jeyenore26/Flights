@@ -7,10 +7,13 @@ function SideText() {
   return (
     <div
       dir="rtl"
-      className="font-2xl text-[15px] md:text-[20px] lg:text-2xl text-white w-[20rem] md:w-[48rem] mt-[130px] sm:mt-[170px] xl:mt-[200px] relative z-[1] mx-auto"
+      className="font-2xl text-[15px] md:text-[20px] lg:text-2xl text-white xxs:w-full md:w-[48rem] mt-[130px] sm:mt-[170px] xl:mt-[200px] relative z-[1] xxs:mx-0 md:mx-auto"
     >
-      <div className=" flex-col items-center">
-        <p className=" cairo_bold_title  hover:border-r-[4px] hover:pr-3 hover:pb-[6px] sidetext border-[#000]">
+      <div className=" flex-col items-right">
+        <p
+          dir="rtl"
+          className="text-right cairo_bold_title break-words  xxs:mx-0  sidetext border-[#000]"
+        >
           لقد حان الوقت لحماية بيتنا مان الوقت لحماية بيتنا من التلوث إن
           الاستخدام الصحيحان الوقت لحماية بيتنا من التلوث إن الصحيحان الوقت
           لحماية بيتنا من التلوث إن الاستخدام الصحيحن التلوث إن الاستخدام
