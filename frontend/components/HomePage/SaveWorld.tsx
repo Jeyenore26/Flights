@@ -6,7 +6,7 @@ import { RiEye2Line } from "react-icons/ri";
 export default function SaveWorld() {
   return (
     <>
-      <section className="w-full h-full mt-[40rem] text-center">
+      <section className="w-full h-full mt-[40rem] text-center" id="helpEarth">
         <div className="flex justify-center cairo_semibold_title text-[2rem]  text-black">
           كيف تساعد الارض هنا؟؟
         </div>
