@@ -41,7 +41,7 @@ function MainPageContent() {
             <img
               src="africa.jpg"
               alt=""
-              className="h-12 w-12 rounded-[40px] ml-2"
+              className="h-12 w-12 rounded-[40px] ml-2 object-cover"
             />
             <div className="flex flex-col items-center">
               <div className="flex">
@@ -259,7 +259,7 @@ function MainPageContent() {
               <img
                 src="africa.jpg"
                 alt=""
-                className="md:h-[5rem] md:w-[5rem] h-[4rem] w-[4rem] rounded-[40px] mx-auto"
+                className="md:h-[5rem] md:w-[5rem] h-[4rem] w-[4rem] rounded-[40px] mx-auto object-cover"
               />
               <div className="text-center text-[12px] sm:text-sm md:text-lg mt-3 cairo_regular_title">
                 <p>مرحبا بك,</p>
