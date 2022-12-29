@@ -2,9 +2,21 @@ import React from "react";
 import { useEffect } from "react";
 
 const HomeExplanation = () => {
+  useEffect(() => {
+    let promblem1 = document.getElementById("problem1");
+    window.addEventListener("scroll", () => {
+      let value = window.scrollY;
+      if (value > 500) {
+        promblem1!.style.opacity = String(0.001 * value);
+      }
+    });
+  });
   return (
     <div id="midTo" className=" mt-[1rem] ">
-      <div className=" flex  2xl:flex-row-reverse xl:flex-row-reverse lg:flex-row-reverse md:flex-row-reverse sm:flex-col-reverse xs:flex-col=reverse xxs:flex-col-reverse 2xl:mr-[10rem] xl:mr-[10rem] lg:mr-[10rem] md:mr-[10rem] text-left">
+      <div
+        id="problem1"
+        className=" flex  2xl:flex-row-reverse  xl:flex-row-reverse lg:flex-row-reverse md:flex-row-reverse sm:flex-col-reverse xs:flex-col=reverse xxs:flex-col-reverse 2xl:mr-[10rem] xl:mr-[10rem] lg:mr-[10rem] md:mr-[10rem] text-left"
+      >
         <div className="text-left">
           <img
             src="https://s3-us-west-1.amazonaws.com/contentlab.studiod/getty/9453205e492449dc8a8bc4da86362dcd.jpg"

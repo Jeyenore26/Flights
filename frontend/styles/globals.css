@@ -66,7 +66,16 @@
 .cairo_regular_title {
   font-family: "CairoRegular", sans-serif;
 }
-
+#problem1 {
+  opacity: 0;
+  transition: ease-in;
+}
+#problem2 {
+  visibility: hidden;
+}
+#problem3 {
+  visibility: hidden;
+}
 @layer components {
   .Havar:hover {
     color: #04ac04;
@@ -81,7 +90,7 @@
       url("../public/leaf2.png");
   }
   #helpEarth {
-    margin-top: 100rem;
+    margin-top: 1;
   }
   .text-right {
     text-align: right;
