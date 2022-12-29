@@ -13,7 +13,7 @@ function Member(props: any) {
         <div className="flex space-x-2">
           <button className="ml-1 cursor-default">
             <TbLayoutSidebarLeftExpand
-              className={`text-xl cursor-pointer  ${
+              className={`text-xl   ${
                 props.darker
                   ? "text-[#e2e2e2] hover:text-[#bdbdbd]"
                   : "hover:text-[#5b5b5b]"
@@ -29,7 +29,7 @@ function Member(props: any) {
             >
               <div
                 id="animate1"
-                className="flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
+                className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
               >
                 <GiArmorUpgrade className="md:ml-2 text-2xl md:text-xl" />
                 <p className="hidden md:block ">ترقية</p>
@@ -37,7 +37,7 @@ function Member(props: any) {
               </div>
               <div
                 id="animate1"
-                className="flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
+                className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
               >
                 <GiBootKick className="md:ml-2 text-2xl md:text-xl" />
                 <p className="hidden md:block ">طرد</p>
@@ -45,18 +45,18 @@ function Member(props: any) {
               </div>
               <div
                 id="animate1"
-                className="flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
+                className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
               >
                 <GiArmorDowngrade className="md:ml-2 text-2xl md:text-xl" />
-                <p className="hidden md:block ">خفض</p>
+                <p className="hidden md:block cursor-pointer">خفض</p>
                 {/* when admin, only leader */}
               </div>
               <div
                 id="animate1"
-                className="flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
+                className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
               >
                 <BiCrown className="md:ml-2 text-2xl md:text-xl" />
-                <p className="text-sm hidden md:block">اعطاء قائد</p>
+                <p className="text-sm hidden md:block ">اعطاء قائد</p>
                 {/* when admin, only leader */}
               </div>
             </div>
