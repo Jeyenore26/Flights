@@ -57,6 +57,7 @@ function MainPageContent() {
     });
 
   console.log(error1);
+  if (memberload) return <div>loading...</div>;
   const Saviors = guys?.getGroup;
   console.log(Saviors);
   if (memberload) return "loading...";
