@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import SideText from "../components/HomePage/SideText";
 import Goals from "../components/HomePage/Goals";
 import Footer from "../components/HomePage/Footer";
 import HomeTopSection from "../components/HomePage/HomeTopSection";

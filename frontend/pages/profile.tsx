@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import Image from "next/image";
+
 import Head from "next/head";
-import Eyes from "../components/Sign&Register/Eyes";
-import Link from "next/link";
-import Input from "../components/Inputs/Input";
-import GroupInput from "../components/Inputs/GroupInput";
+
 import BInputOutline from "../components/Inputs/BInputOutline";
 import NavBar from "../components/CheckGroup/NavBar";
 import { AiOutlineEdit } from "react-icons/ai";
@@ -29,7 +26,7 @@ export default function profile() {
             <div className="profile flex justify-center">
               <div className="flex flex-col-reverse items-center">
                 <div className="flex xxs:flex-col md:flex-row  justify-center mt-5 md:mb-0 xxs:mb-4">
-                  <span className="flex justify-center cursor-pointer  xxs:w-80 md:w-32 hover:text-slate-300 px-4 py-1 active:text-slate-400">
+                  <span className="flex justify-center cursor-pointer xxs:w-80 md:w-32 hover:text-slate-300 px-4 py-1 active:text-slate-400">
                     <AiOutlineEdit className="mt-1" />
                     <button
                       dir="rtl"

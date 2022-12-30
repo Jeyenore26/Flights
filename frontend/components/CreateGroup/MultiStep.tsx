@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import GroupInput from "../Inputs/GroupInput";
 import { MdGroupAdd } from "react-icons/md";
-import Link from "next/link";
+
 import { gql, useMutation } from "@apollo/client";
 import { createGroupMutation } from "../../lib/mutationGql/CreateGql";
 import ImageInput from "../Inputs/ImageInput";
@@ -86,7 +86,7 @@ export default function () {
       >
         <div className="flex-1 h-full mt-20 max-w-5xl mx-auto bg-white rounded-lg shadow-xl">
           <div className="flex flex-col md:flex-row">
-            <div className="h-32 xxs:h-10 xxs:mt-0 md:mt-0  object-cover md:h-auto md:w-1/2">
+            <div className="h-32 xxs:h-10 xxs:mt-0 md:mt-0 object-cover md:h-auto md:w-1/2">
               <img
                 className="object-cover h-0 md:block w-full md:h-full brightness-90"
                 src="./group1.jpg"
@@ -225,7 +225,7 @@ export default function () {
                           lclassName="text-black"
                         />
                       </div>
-                      <div className="PageContent rounded-xl px-[1px]  py-[10px] text-[16px] text-[#2c3e50]">
+                      <div className="PageContent rounded-xl px-[1px] py-[10px] text-[16px] text-[#2c3e50]">
                         <ImageInput
                           required
                           image={grouppic}
@@ -265,7 +265,7 @@ export default function () {
                       <div className="flex justify-start text-[1rem] mt-5 cairo_bold_title text-black ">
                         شهادات
                       </div>
-                      <div className="PageContent flex rounded-xl px-[1px]  py-[10px] text-[16px] text-[#2c3e50] ">
+                      <div className="PageContent flex rounded-xl px-[1px] py-[10px] text-[16px] text-[#2c3e50] ">
                         <ImageInput
                           required
                           image={provepic1}
@@ -290,7 +290,7 @@ export default function () {
                           type={"text"}
                         />
                       </div>
-                      <div className="PageContent flex rounded-xl px-[1px]  py-[10px] text-[16px] text-[#2c3e50]">
+                      <div className="PageContent flex rounded-xl px-[1px] py-[10px] text-[16px] text-[#2c3e50]">
                         <ImageInput
                           required
                           image={provepic3}
@@ -315,7 +315,7 @@ export default function () {
                           type={"text"}
                         />
                       </div>
-                      <div className="PageContent flex rounded-xl px-[1px]  py-[10px] text-[16px] text-[#2c3e50]">
+                      <div className="PageContent flex rounded-xl px-[1px] py-[10px] text-[16px] text-[#2c3e50]">
                         <ImageInput
                           image={provepic5}
                           value={provepic5}
@@ -355,8 +355,6 @@ export default function () {
                     </form>
                   </>
                 )}
-
-                {/* get back ztn*/}
               </div>
             </div>
           </div>

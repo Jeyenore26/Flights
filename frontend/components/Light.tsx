@@ -1,11 +1,11 @@
 import React from "react";
 
-function Light(props : any) {
+function Light(props: any) {
   return (
-    <mesh {...props} >
+    <mesh {...props}>
       <pointLight castShadow />
       <sphereBufferGeometry args={[0.2, 30, 10]} />
-      <meshPhongMaterial emissive={"yellow"}  />
+      <meshPhongMaterial emissive={"yellow"} />
     </mesh>
   );
 }

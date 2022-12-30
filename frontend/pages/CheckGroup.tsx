@@ -39,7 +39,7 @@ export default function checkgroup() {
                     </h1>
                   </div>
                 </div>
-                <button className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-2 py-2 xxs:px-4  md:text-[17px] mb-10 text-white rounded-lg">
+                <button className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-2 py-2 xxs:px-4 md:text-[17px] mb-10 text-white rounded-lg">
                   انضم للمجموعة
                 </button>
               </div>
@@ -53,7 +53,7 @@ export default function checkgroup() {
                 }}
                 className={
                   page === 1
-                    ? "text-[#754b5a] transition-1  cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2"
+                    ? "text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2"
                     : "text-black hover:text-black/40 active:text-black/80 cairo_regular_title border-b-2 border-white cursor-pointer text-[15px] py-1 mr-5 mb-2"
                 }
               >

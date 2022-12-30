@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { RiCloseLine } from "react-icons/ri";
-import Input from "../Inputs/Input";
-import { RiArticleLine } from "react-icons/ri";
 import GroupInput from "../Inputs/GroupInput";
 import ImageInput from "../Inputs/ImageInput";
 

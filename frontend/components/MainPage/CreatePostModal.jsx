@@ -4,7 +4,7 @@ import Input from "../Inputs/Input";
 import { RiArticleLine } from "react-icons/ri";
 import GroupInput from "../Inputs/GroupInput";
 import ImageInput from "../Inputs/ImageInput";
-import axios from "axios";
+// import axios from "axios";
 const CreatePostModal = ({ setIsOpen }) => {
   function makepost() {
     event?.preventDefault;

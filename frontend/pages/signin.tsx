@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import Head from "next/head";
 import Eyes from "../components/Sign&Register/Eyes";
 import Link from "next/link";
@@ -26,7 +25,7 @@ export default function registermember() {
     },
   });
   if (error) console.log(error);
-  //ADD LOADING ANIMATIONS JEY OR MAKI MAKI
+
   if (loading) return "...loading";
   console.log(data);
   if (data?.login?.token) {

@@ -1,15 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import { RiArticleLine } from "react-icons/ri";
-import {
-  BsChatDots,
-  BsPersonCircle,
-  BsFillMoonFill,
-  BsSunFill,
-} from "react-icons/bs";
+import { BsPersonCircle, BsFillMoonFill, BsSunFill } from "react-icons/bs";
 import { SlCalender } from "react-icons/sl";
 import { HiUserGroup } from "react-icons/hi";
-import { BiArrowBack, BiChevronDown, BiLogOut, BiPlus } from "react-icons/bi";
+import { BiChevronDown, BiLogOut, BiPlus } from "react-icons/bi";
 import MainPageComments from "./MainPageComments";
 import MainPageSchedules from "./MainPageSchedules";
 import MainPageMembers from "./MainPageMembers";
@@ -45,7 +40,7 @@ function MainPageContent() {
   console.log(Schedules?.getScheduleInGroup);
 
   console.log(error);
-  if (loading) return "loading...";
+  // if (loading) return "loading...";
   if (Schedules) console.log(Schedules);
 
   return (
@@ -432,14 +427,3 @@ function MainPageContent() {
 }
 
 export default MainPageContent;
-
-{
-  /*
-  
-
-            {page === 2 && <p>2</p>}
-            {page === 3 && <p>3</p>}
-            {page === 4 && <p>4</p>} */
-}
-
-//         <div className=" h-full w-full col-span-5 p-2 bg-[#f6f7fc]"></div> the default body div
