@@ -19,6 +19,7 @@ export default function () {
 
   const [groupplace, setgroupplace] = useState("");
   const [paypal, setpaypal] = useState("");
+
   /* page three*/
 
   const createInput = {

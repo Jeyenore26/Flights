@@ -1,56 +1,114 @@
 import React, { useState } from "react";
-import Activity from "../components/CheckGroup/Activity";
 import Donate from "../components/CheckGroup/Donate";
 import Group from "../components/CheckGroup/Group";
-import Members from "../components/CheckGroup/Members";
 import NavBar from "../components/CheckGroup/NavBar";
-import Proves from "../components/CheckGroup/Proves";
 import axios from "axios";
-export default function checkgroup() {
-  if (typeof window !== "undefined") {
-    const token = localStorage.getItem("token") as string;
-    console.log("this", token);
-    axios({
+import { useMutation } from "@apollo/client";
+import { joinGroupMutation } from "../lib/mutationGql/CreateGql";
+function load(url, token, groupName) {
+  return new Promise(async function (resolve, reject) {
+    const res = await axios({
       method: "GET",
-      url: `http://localhost:5000/check/group`,
+      url: url,
       headers: {
         authorization: `Bearer ${token}`,
       },
-    }).then((res) => console.log(res));
+    });
+
+    // resolve
+    resolve(res); // see note below!
+  });
+}
+function getToken() {
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  return token;
+}
+export default function checkgroup() {
+  const token = getToken();
+
+  let [data, setdata] = useState<string[]>([]);
+  let [owner, setowner] = useState("");
+
+  if (typeof window !== "undefined" && (!data || data.length == 0)) {
+    const token = localStorage.getItem("token") as string;
+    const groupName = localStorage.getItem("groupname") as string;
+    load(
+      `http://localhost:5000/check/group/${groupName}`,
+      token,
+      groupName
+    ).then((res: any) => {
+      setdata(res.data.onegroup);
+      setowner(res.data.owner);
+      // setmembers(res.data.owner.members);
+      // setadmin(res.data.owner.admin);
+
+      localStorage.removeItem("groupName");
+    });
+    //@ts-ignore
+    console.log(data.members);
   }
+  const [JoinGroup, { loading, error, data: Schedules }] = useMutation(
+    joinGroupMutation,
+    {
+      context: {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      },
+      variables: {
+        //@ts-ignore
+        groupName: data.name,
+      },
+    }
+  );
+  console.log(data);
   const [page, setpage] = useState(1);
+
   return (
     <>
-      <section className="bg-white h-full w-full">
+      <section className="bg-white h-screen w-full">
         <NavBar />
         <div className=" w-full h-max">
           <section className="xl:mx-[20rem]">
             <img src="./asia.jpg" className="h-[22.8rem] w-full" />
             <div className="bg-[#39A059] w-full h-10 rounded-b-lg flex justify-end ">
               <span className="cairo_regular_title flex mt-1 mr-5 text-white justify-center">
-                <span className="text-white/80 mx-1">The Tree </span> مجموعة تتم
-                إدارتها بواسطة
+                {/*@ts-ignore*/}
+                <span className="text-white/80 mx-1">{owner.name}</span> مجموعة
+                تتم إدارتها بواسطة
               </span>
             </div>
             <div className="mx-[2rem] mt-4">
               <div dir="rtl" className="flex justify-between ">
                 <div>
                   <h1 className="text-black cairo_bold_title text-[20px]">
-                    ذا كوك
+                    {/*@ts-ignore*/}
+
+                    {data.name}
                   </h1>
                   <div dir="rtl" className="flex justify-start mt-1">
                     <h1 className="text-black/60 cairo_bold_title text-[15px] ml-3 ">
-                      المكان مصر
+                      {/*@ts-ignore*/}
+
+                      {data.workplace}
                     </h1>
                     <h1 className="text-black cairo_bold_title text-[15px]">
                       .
                     </h1>
                     <h1 className="text-black/60 cairo_bold_title text-[13px] mt-1 mr-2">
-                      4444 عضو
+                      {/*@ts-ignore*/}
+
+                      {data.phone}
                     </h1>
                   </div>
                 </div>
-                <button className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-2 py-2 xxs:px-4 md:text-[17px] mb-10 text-white rounded-lg">
+                <button
+                  onClick={() => {
+                    JoinGroup();
+                  }}
+                  className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-2 py-2 xxs:px-4 md:text-[17px] mb-10 text-white rounded-lg"
+                >
                   انضم للمجموعة
                 </button>
               </div>
@@ -73,18 +131,6 @@ export default function checkgroup() {
 
               <span
                 onClick={() => {
-                  setpage(3);
-                }}
-                className={
-                  page === 3
-                    ? "text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2"
-                    : "text-black hover:text-black/40 active:text-black/80 cairo_regular_title border-b-2 border-white cursor-pointer text-[15px] py-1 mr-5 mb-2"
-                }
-              >
-                الوسائط
-              </span>
-              <span
-                onClick={() => {
                   setpage(2);
                 }}
                 className={
@@ -98,20 +144,21 @@ export default function checkgroup() {
             </div>
           </section>
         </div>
+        0
         {page === 1 && (
           <>
-            <Group />
-            <Members />
-            <Activity />
+            {/*@ts-ignore*/}
+
+            <Group workplace={data.workplace} description={data.description} />
           </>
         )}
         {page === 2 && (
           <>
-            <Donate />
+            {/*@ts-ignore*/}
+
+            <Donate paypal={data.paypalName} />
           </>
         )}
-
-        {page === 3 && <Proves />}
       </section>
     </>
   );

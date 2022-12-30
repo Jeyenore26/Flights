@@ -2,7 +2,7 @@ import React from "react";
 import { GiEarthAfricaEurope } from "react-icons/gi";
 import { AiFillClockCircle } from "react-icons/ai";
 import { TbHeartHandshake } from "react-icons/tb";
-export default function Group() {
+const Group = (props: any) => {
   return (
     <section className="flex justify-center mt-5" id="animate33">
       <div className="w-[40rem] bg-[#eaebec] h-full rounded-lg">
@@ -16,10 +16,7 @@ export default function Group() {
           <div
             dir="rtl"
             className="text-black/80 w-full  text-sm flex justify-start cairo_regular_title my-2"
-          >
-            الجروب الجروب الجروبالجروبالجروبالجروبالجروب
-            الجروبالجروبالجروبالجروبالجروب عن الجروب
-          </div>
+          ></div>
         </div>
 
         <section dir="rtl" className="mx-[2rem] flex">
@@ -30,7 +27,7 @@ export default function Group() {
         </section>
         <section dir="rtl" className="mx-[2rem] flex">
           <div className="text-black/70 w-full text-sm flex justify-start cairo_regular_title mt-1">
-            مصر - شمال سيناء
+            {props.workplace}
           </div>
         </section>
         <section dir="rtl" className="mx-[2rem] flex">
@@ -52,10 +49,11 @@ export default function Group() {
         </section>
         <section dir="rtl" className="mx-[2rem] flex">
           <div className="text-black/70 w-full  text-sm flex justify-start cairo_regular_title mt-1 mb-20">
-            نحن ننظف المحيط القذر من خرا البشر لكي نحمي البطاطس
+            {props.description}
           </div>
         </section>
       </div>
     </section>
   );
-}
+};
+export default Group;

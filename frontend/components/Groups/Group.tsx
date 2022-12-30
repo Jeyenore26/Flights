@@ -26,13 +26,15 @@ function load(url, token) {
 export default function Group(groups) {
   let [data, setdata] = useState<string[]>([]);
   console.log(data);
-  if (typeof window !== "undefined" && !data) {
+  if (typeof window !== "undefined" && (!data || data.length == 0)) {
     const token = localStorage.getItem("token") as string;
 
     load("http://localhost:5000/check/Allgroups", token).then((res: any) => {
       setdata(res.data);
     });
   }
+  console.log(!data);
+
   return (
     <div className="h-screen cairo_regular_title">
       <div className="flex flex-col items-center justify-center mt-10">
@@ -57,7 +59,6 @@ export default function Group(groups) {
                 />
               );
             })}
-            ;
           </div>
         </div>
       </div>

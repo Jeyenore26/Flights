@@ -6,6 +6,9 @@ import { GiArmorDowngrade, GiArmorUpgrade, GiBootKick } from "react-icons/gi";
 import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
 
 function Member(props: any) {
+  function Promote() {}
+  function Kick() {}
+  function Demote() {}
   const [show, setshow] = useState(false);
   return (
     <>
@@ -33,6 +36,9 @@ function Member(props: any) {
             >
               {props.role !== "admins" && (
                 <div
+                  onClick={() => {
+                    Promote();
+                  }}
                   id="animate1"
                   className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
                 >
@@ -42,6 +48,9 @@ function Member(props: any) {
                 </div>
               )}
               <div
+                onClick={() => {
+                  Kick();
+                }}
                 id="animate1"
                 className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
               >
@@ -50,6 +59,9 @@ function Member(props: any) {
                 {/* when member, leader and admin */}
               </div>
               <div
+                onClick={() => {
+                  Demote();
+                }}
                 id="animate1"
                 className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
               >
