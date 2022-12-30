@@ -6,6 +6,7 @@ import GroupInput from "../Inputs/GroupInput";
 import ImageInput from "../Inputs/ImageInput";
 import { gql, useMutation } from "@apollo/client";
 import { createPostMutation } from "../../lib/mutationGql/CreateGql";
+import styles from "../../styles/Modals.module.css";
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -30,22 +31,23 @@ const CreatePostModal = ({ setIsOpen }) => {
   );
   console.log(data);
   if (error) console.log(error);
-  //ADD LOADING ANIMATIONS JEY OR MAKI MAKI
-  if (loading) return "...loading";
+  if (loading) return <div>fff</div>;
 
   return (
     <>
       <div
-        className={"darkBG"}
+        className={styles.darkBG}
         id="animate31"
         onClick={() => setIsOpen(false)}
       />
-      <div className={"centered"} id="animate31">
-        <div className={`modal`}>
-          <div className={"modalHeader"}>
-            <h5 className={"heading cairo_semibold_title"}>انشاء بوست</h5>
+      <div className={styles.centered} id="animate31">
+        <div className={styles.modal}>
+          <div className={styles.modalHeader}>
+            <h5 className={`${styles.heading} cairo_semibold_title`}>
+              انشاء بوست
+            </h5>
           </div>
-          <button className={"closeBtn"} onClick={() => setIsOpen(false)}>
+          <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
             <RiCloseLine className="mb-[-2px]" />
           </button>
 
@@ -55,7 +57,7 @@ const CreatePostModal = ({ setIsOpen }) => {
               setIsOpen(false);
             }}
           >
-            <div className={"modalContent"}>
+            <div className={styles.modalContent}>
               <GroupInput
                 required
                 onChange={(e) => {
@@ -72,7 +74,7 @@ const CreatePostModal = ({ setIsOpen }) => {
                   window.location.reload();
                 }}
                 type="submit"
-                className={"confirmbtn cairo_regular_title"}
+                className={`${styles.confirmbtn} cairo_regular_title`}
               >
                 تاكيد
               </button>
