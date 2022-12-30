@@ -13,6 +13,17 @@ function getToken() {
   return token;
 }
 export default function profile() {
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem("token") as string;
+    console.log("this", token);
+    axios({
+      method: "GET",
+      url: `http://localhost:5000/user/profile`,
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    }).then((res) => console.log(res));
+  }
   const [openpost, setopenpost] = useState(false);
   return (
     <>
@@ -100,13 +111,7 @@ export function getServerSideProps(context) {
   const gay = "";
   const token = getToken();
   console.log(token);
-  axios({
-    method: "GET",
-    url: `http://localhost:5000/user/profile`,
-    headers: {
-      authorization: `Bearer ${token}`,
-    },
-  }).then((res) => console.log(res));
+
   return {
     props: {
       gay,
