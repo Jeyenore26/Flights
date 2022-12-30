@@ -39,6 +39,9 @@ export const getGroup = gql`
         name
         role
       }
+      user {
+        role
+      }
     }
   }
 `;
