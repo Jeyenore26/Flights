@@ -37,7 +37,7 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
       },
     }
   );
-  console.log(data);
+  if (data) console.log(data);
   if (error) console.log(error);
   //ADD LOADING ANIMATIONS JEY OR MAKI MAKI
   if (loading) return "...loading";
@@ -60,8 +60,8 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
 
           <form
             onSubmit={(e) => {
-              setIsOpen(false);
               CreateSH();
+              setIsOpen(false);
             }}
           >
             <div className={"modalContent"}>
@@ -102,9 +102,6 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
             </div>
             <div className={"actionsContainer"}>
               <button
-                onClick={() => {
-                  window.location.reload();
-                }}
                 type="submit"
                 className={"confirmbtn cairo_regular_title"}
               >

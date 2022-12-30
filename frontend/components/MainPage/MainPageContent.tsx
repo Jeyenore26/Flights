@@ -38,6 +38,7 @@ function MainPageContent() {
       },
     }
   );
+  console.log(Schedules);
   const [showpost, { loading: loading1, error: error1, data: Posts }] =
     useLazyQuery(postQuery, {
       context: {
@@ -46,7 +47,7 @@ function MainPageContent() {
         },
       },
     });
-  const [Members, { loading: memberload, error: membererror, data: guys }] =
+  const [showmember, { loading: memberload, error: membererror, data: guys }] =
     useLazyQuery(getGroup, {
       context: {
         headers: {
@@ -56,8 +57,7 @@ function MainPageContent() {
     });
 
   console.log(error1);
-  // if (loading) return "loading...";
-  if (guys) console.log(guys);
+  if (memberload) return "loading...";
   const Saviors = guys?.getGroup;
   console.log(Saviors);
   return (
@@ -239,8 +239,8 @@ function MainPageContent() {
             }`}
           >
             <MainPageMembers
-              owner={Saviors.owner}
-              staff={Saviors.admins}
+              owners={Saviors.owner}
+              staffs={Saviors.admins}
               members={Saviors.members}
             />
           </div>
@@ -329,8 +329,8 @@ function MainPageContent() {
                   } rounded my-6 sm:my-4 cursor-pointer`}
                   style={{ transition: "ease 0.2s" }}
                   onClick={() => {
-                    setpage(1);
                     showpost();
+                    setpage(1);
                   }}
                 >
                   <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
@@ -386,8 +386,8 @@ function MainPageContent() {
                       : ""
                   } rounded my-6 sm:my-4 cursor-pointer`}
                   style={{ transition: "ease 0.2s" }}
-                  onClick={() => {
-                    Members();
+                  onClick={(e) => {
+                    showmember();
                     setpage(3);
                   }}
                 >
