@@ -4,14 +4,35 @@ import Input from "../Inputs/Input";
 import { RiArticleLine } from "react-icons/ri";
 import GroupInput from "../Inputs/GroupInput";
 import ImageInput from "../Inputs/ImageInput";
-
-const CreatePostModal = ({ setIsOpen }, props: any) => {
+import axios from "axios";
+const CreatePostModal = ({ setIsOpen }) => {
   function makepost() {
     event?.preventDefault;
-    console.log(selectedCv);
     setIsOpen(false);
   }
-  const [selectedCv, setSelectedCv] = useState("");
+  const [file, setFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setFile(event.target.files[0]);
+    console.log(file);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(description);
+    const data = new FormData();
+    data.append("file", file);
+    const res = await axios({
+      url: "http://localhost:5000/create/post",
+      data: {
+        body: description,
+      },
+      file: {
+        data,
+      },
+    });
+    setIsOpen(false);
+  };
   const [description, setdescription] = useState("");
 
   return (
@@ -30,13 +51,7 @@ const CreatePostModal = ({ setIsOpen }, props: any) => {
             <RiCloseLine className="mb-[-2px]" />
           </button>
 
-          <form
-            onSubmit={(e) => {
-              event?.preventDefault;
-              console.log(selectedCv);
-              setIsOpen(false);
-            }}
-          >
+          <form onSubmit={handleSubmit}>
             <div className={"modalContent"}>
               <GroupInput
                 required
@@ -49,10 +64,7 @@ const CreatePostModal = ({ setIsOpen }, props: any) => {
               />
               <ImageInput
                 required
-                value={selectedCv}
-                onChange={(e) => {
-                  setSelectedCv(e.target.value);
-                }}
+                onChange={handleFileChange}
                 label="صورة البوست"
                 lclassName="text-black text-start"
                 type={"text"}

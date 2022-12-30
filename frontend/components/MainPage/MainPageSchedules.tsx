@@ -4,6 +4,7 @@ import { BsInfo } from "react-icons/bs";
 import { IoIosPeople } from "react-icons/io";
 const MainPageSchedules = (props: any) => {
   const [accordian, setaccordian] = useState(false);
+  console.log(props);
   return (
     <div>
       <div className="flex flex-col cairo_regular_title" id="animate1">
@@ -47,7 +48,7 @@ const MainPageSchedules = (props: any) => {
               <div
                 className={`${
                   props.darker ? "bg-[#1c1c1c]" : "bg-white"
-                } h-[10rem] w-full flex items-center justify-center`}
+                } h-[10rem] w-full flex items-center justify-start`}
               >
                 <p className="m-2">{props.details}</p>
               </div>

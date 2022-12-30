@@ -5,7 +5,8 @@ import { RiArticleLine } from "react-icons/ri";
 import GroupInput from "../Inputs/GroupInput";
 import { gql, useMutation } from "@apollo/client";
 import { createScheduleMutation } from "../../lib/mutationGql/CreateGql";
-
+import Link from "next/link";
+import { NextResponse } from "next/server";
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -59,7 +60,6 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
 
           <form
             onSubmit={(e) => {
-              event?.preventDefault;
               setIsOpen(false);
               CreateSH();
             }}
@@ -69,6 +69,8 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
                 onChange={(e) => settitle(e.target.value)}
                 required
                 label="العنوان"
+                min={10}
+                max={40}
                 lclassName="text-black text-start mb-[-20px]"
                 type={"text"}
               />
@@ -76,6 +78,8 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
                 onChange={(e) => setdescription(e.target.value)}
                 required
                 label="معلومات"
+                min={10}
+                max={100}
                 lclassName="text-black text-start mb-[-20px]"
                 type={"text"}
               />
@@ -83,6 +87,8 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
                 onChange={(e) => setplace(e.target.value)}
                 required
                 label="المكان"
+                min={10}
+                max={30}
                 lclassName="text-black text-start mb-[-20px]"
                 type={"text"}
               />
@@ -91,11 +97,14 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
                 required
                 label="الزمن"
                 lclassName="text-black text-start mb-[-20px]"
-                type={"text"}
+                type={"datetime-local"}
               />
             </div>
             <div className={"actionsContainer"}>
               <button
+                onClick={() => {
+                  window.location.reload();
+                }}
                 type="submit"
                 className={"confirmbtn cairo_regular_title"}
               >

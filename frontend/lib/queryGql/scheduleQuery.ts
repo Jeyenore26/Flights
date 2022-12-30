@@ -2,7 +2,8 @@ import { gql } from "@apollo/client";
 
 export const scheduleQuery = gql`
   query scheduleQuery {
-    getScheduleInGroup   {
+    getScheduleInGroup {
+      title
       attendCount
       place
       selectedDate

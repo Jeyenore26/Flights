@@ -31,16 +31,22 @@ function MainPageContent() {
   const [openpost, setopenpost] = useState(false);
   const [openschedule, setopenschedule] = useState(false);
   const token = getToken();
-  const [loadSchedule, { loading, error, data }] = useLazyQuery(scheduleQuery, {
-    context: {
-      headers: {
-        authorization: `Bearer ${token}`,
+  const [loadSchedule, { loading, error, data: Schedules }] = useLazyQuery(
+    scheduleQuery,
+    {
+      context: {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
       },
-    },
-  });
+    }
+  );
+  //@ts-ignore
+  console.log(Schedules?.getScheduleInGroup);
+
   console.log(error);
   if (loading) return "loading...";
-  if (data) console.log(data);
+  if (Schedules) console.log(Schedules);
 
   return (
     <div
@@ -205,28 +211,17 @@ function MainPageContent() {
               dark ? "bg-[#161616]" : "bg-[#f6f7fc]"
             }`}
           >
-            <MainPageSchedules
-              darker={dark}
-              title="تنظيف  تنظيف من عمر تنظيف من اشكال عمر
-              ssssالارض من  عمر"
-              details="جسم عمر رشيق وقوي ومغطى بالشعر وذلك مكنه من إيجاد طعامه بسهولة
-              على الأرض وحتى في تسلقه الشجيرات لأكل الأوراق والبراعم. ويسمى
-               عمر التيس او انثى المعزة"
-              place="بين جبلين"
-              time="2020/12/2 2:00pm"
-              participants="5 مشاركين"
-            />
-            <MainPageSchedules
-              darker={dark}
-              title="2 تنظيف ssssssssssssssss تنظيف من اشكال عمر تنظيف من اشكال عمر
-              ssssالارض من اشكال عمر"
-              details="2جسم عمر رشيق وقوي ومغطى بالشعر وذلك مكنه من إيجاد طعامه بسهولة
-              على الأرض وحتى في تسلقه الشجيرات لأكل الأوراق والبراعم. ويسمى
-              ذكر عمر التيس والأنثى معزة"
-              place="2بين جبلين"
-              time="22020/12/2 2:00pm"
-              participants="2 5 مشاركين"
-            />
+            {Schedules?.getScheduleInGroup.map((schedule) => {
+              return (
+                <MainPageSchedules
+                  title={schedule.title}
+                  details={schedule.body}
+                  place={schedule.place}
+                  time={schedule.selectedDate}
+                  participants={schedule.attendCount}
+                />
+              );
+            })}
           </div>
         )}
         {page == 3 && (
