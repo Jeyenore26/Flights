@@ -22,3 +22,11 @@ export const createPostMutation = gql`
     }
   }
 `;
+
+export const joinGroupMutation = gql`
+  mutation joinGroup($groupName: String) {
+    joinGroup(groupName: $groupName) {
+      name
+    }
+  }
+`;

@@ -44,7 +44,7 @@ export default function Group(groups) {
           </a>
         </div>
         <div className="flex justify-center items-center w-full">
-          <div className="rounded-lg flex flex-col gap-[5rem] md:gap-10 md:items-center w-full md:w-[90%] lg:w-[80%] 2xl:w-[60%] my-10 p-3 bg-[#fff]">
+          <div className="rounded-lg flex flex-col gap-[5rem] md:gap-10  w-full md:w-[90%] lg:w-[80%] 2xl:w-[60%] my-10 p-3 bg-[#fff]">
             {data.map((group: any) => {
               return (
                 <GroupCalls
