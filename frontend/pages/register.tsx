@@ -5,6 +5,7 @@ import Link from "next/link";
 import Input from "../components/Inputs/Input";
 import { gql, useMutation } from "@apollo/client";
 import { registerMutation } from "../lib/mutationGql/AuthGql";
+import { useRouter } from "next/router";
 
 function setToken(data) {
   localStorage.removeItem("token");

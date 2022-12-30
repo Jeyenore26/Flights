@@ -14,7 +14,7 @@ import { scheduleQuery } from "../../lib/queryGql/scheduleQuery";
 import { postQuery } from "../../lib/queryGql/scheduleQuery";
 import { getGroup } from "../../lib/queryGql/scheduleQuery";
 import { useLazyQuery } from "@apollo/client";
-
+import Link from "next/link";
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -60,7 +60,6 @@ function MainPageContent() {
   if (memberload) return <div>loading...</div>;
   const Saviors = guys?.getGroup;
   console.log(Saviors);
-  if (memberload) return "loading...";
 
   return (
     <div
@@ -126,13 +125,14 @@ function MainPageContent() {
                   }`}
                   id={show ? "animate4" : ""}
                 >
-                  <button
-                    dir="rtl"
-                    className="hover:text-[#929292] active:text-[#bababa] cursor-pointer w-full text-sm cairo_regular_title flex items-center"
-                  >
-                    <BsPersonCircle className="ml-1" /> الملف الشخصي
-                  </button>
-
+                  <Link href="/profile">
+                    <button
+                      dir="rtl"
+                      className="hover:text-[#929292] active:text-[#bababa] cursor-pointer w-full text-sm cairo_regular_title flex items-center"
+                    >
+                      <BsPersonCircle className="ml-1" /> الملف الشخصي
+                    </button>
+                  </Link>
                   <button
                     dir="rtl"
                     className="hover:text-[#929292] active:text-[#bababa] cursor-pointer w-full text-sm cairo_regular_title flex items-center"
