@@ -6,6 +6,7 @@ import BInputOutline from "../components/Inputs/BInputOutline";
 import NavBar from "../components/CheckGroup/NavBar";
 import { AiOutlineEdit } from "react-icons/ai";
 import axios from "axios";
+import ProfileModal from "../components/Profile/ProfileModal";
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -38,11 +39,54 @@ export default function profile() {
     });
     console.log(data);
   }
-  const [openpost, setopenpost] = useState(false);
-  const [name, setname] = useState(data.name);
-  const [number, setnumber] = useState(data.phone);
-  const [email, setemail] = useState(data.email);
+  //cuz typescript sucks
+  //@ts-ignore
+  let Iname = data.name;
+  //@ts-ignore
+  let Iemail = data.email;
+  //@ts-ignore
+  //@ts-ignore
 
+  let Inumber = data.phone;
+  //@ts-ignore
+
+  let IgroupName = data.memberOf;
+  //@ts-ignore
+
+  let Irole = data.role;
+
+  //@ts-ignore
+  const [name, setname] = useState(data.name);
+  //@ts-ignore
+
+  const [number, setnumber] = useState(data.phone);
+  //@ts-ignore
+
+  const [email, setemail] = useState(data.email);
+  //@ts-ignore
+
+  const [password, setpassword] = useState(data.password);
+  const [open, setopen] = useState(false);
+  const createInput = {
+    name: name,
+    email: email,
+    number: number,
+    password: password,
+  };
+  const token = getToken();
+  // const [groupInput, { data, loading, error }] = useMutation(
+  //   createGroupMutation,
+  //   {
+  //     context: {
+  //       headers: {
+  //         authorization: `Bearer ${token}`,
+  //       },
+  //     },
+  //     variables: {
+  //       createGroupInput: createInput,
+  //     },
+  //   }
+  // );
   return (
     <>
       <NavBar />
@@ -60,6 +104,19 @@ export default function profile() {
             <div className="profile flex justify-center">
               <div className="flex flex-col-reverse items-center">
                 <div className="flex xxs:flex-col md:flex-row justify-center mt-5 md:mb-0 xxs:mb-4">
+                  <span className="flex justify-center cursor-pointer ml-5 text-white xxs:w-80 md:w-32 hover:text-white/80 hover:border-gray-400 active:border-gray-300 px-4 py-1 active:text-white/60 border-[1px] border-white bg-gray-500 rounded">
+                    <AiOutlineEdit className="mt-1" />
+                    <button
+                      dir="rtl"
+                      className="cairo_regular_title cursor-pointer "
+                      onClick={() => {
+                        setopen(true);
+                      }}
+                    >
+                      غير الصورة
+                    </button>
+                    {open && <ProfileModal setIsOpen={setopen} />}
+                  </span>
                   {disabled && (
                     <span
                       className="flex justify-center cursor-pointer xxs:w-80 md:w-32 hover:text-slate-300 hover:border-slate-400 active:border-slate-300 px-4 py-1 active:text-slate-400 border-[1px] border-black rounded"
@@ -76,7 +133,7 @@ export default function profile() {
                   )}
                   {!disabled && (
                     <span
-                      className="flex justify-center cursor-pointer xxs:w-80 md:w-32 hover:text-slate-300 hover:border-slate-400 active:border-slate-300 px-4 py-1 active:text-slate-400 border-[1px] border-black rounded"
+                      className="flex justify-center cursor-pointer text-white xxs:w-80 md:w-32 hover:text-white/80 hover:border-green-400 active:border-green-300 px-4 py-1 active:text-white/60 border-[1px] border-white bg-green-500 rounded"
                       onClick={() => setdisabled(false)}
                     >
                       <AiOutlineEdit className="mt-1" />
@@ -98,7 +155,7 @@ export default function profile() {
             <div className=" md:mr-10 md:ml-0 mt-5 xxs:ml-[-5.5rem]">
               <span className="flex justify-center">
                 <BInputOutline
-                  value={data.name}
+                  value={Iname}
                   onChange={(e) => {
                     setname(e.target.value);
                   }}
@@ -112,7 +169,7 @@ export default function profile() {
                   }
                 />
                 <BInputOutline
-                  value={data.phone}
+                  value={Inumber}
                   onChange={(e) => {
                     setnumber(e.target.value);
                   }}
@@ -127,24 +184,9 @@ export default function profile() {
                   }
                 />
               </span>
-              <span className="flex justify-center mr-[-11px]">
-                <BInputOutline
-                  value={data.memberOf}
-                  label="اسم المجموعة"
-                  type={"text"}
-                  disabled
-                />
-                <BInputOutline
-                  value={data.role}
-                  iclassName="w-[200%]"
-                  label="الرتبة"
-                  type={"text"}
-                  disabled
-                />
-              </span>
               <span className="flex md:justify-start xxs:justify-center xxs:ml-12 md:ml-0">
                 <BInputOutline
-                  value={data.email}
+                  value={Iemail}
                   onChange={(e) => {
                     setemail(e.target.value);
                   }}
@@ -153,9 +195,40 @@ export default function profile() {
                   disabled={disabled}
                   iclassName={
                     disabled
-                      ? "border-none w-[200%] xxs:mr-[-3rem] md:mr-0 mt-1"
-                      : "border-dotted border-2 border-blue-600 w-[200%] xxs:mr-[-3rem] md:mr-0 mt-1"
+                      ? "border-none ml-3 mt-1"
+                      : "border-dotted border-2 border-blue-600 ml-3 mt-1"
                   }
+                />
+                <BInputOutline
+                  value={"كلمة السر"}
+                  onChange={(e) => {
+                    setemail(e.target.value);
+                  }}
+                  label="كلمة السر"
+                  type={"text"}
+                  disabled={disabled}
+                  iclassName={
+                    disabled
+                      ? "border-none  mt-1"
+                      : "border-dotted border-2 border-blue-600  mt-1"
+                  }
+                />
+              </span>
+              <span className="flex justify-center mr-[-11px]">
+                <BInputOutline
+                  value={IgroupName}
+                  label="اسم المجموعة"
+                  iclassName="ml-2 mr-3"
+                  lclassName="mr-3"
+                  type={"text"}
+                  disabled
+                />
+                <BInputOutline
+                  value={Irole}
+                  iclassName="w-[200%]"
+                  label="الرتبة"
+                  type={"text"}
+                  disabled
                 />
               </span>
             </div>
