@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Head from "next/head";
-
+import { GetServerSideProps } from "next";
+import axios from "axios";
 import BInputOutline from "../components/Inputs/BInputOutline";
 import NavBar from "../components/CheckGroup/NavBar";
 import { AiOutlineEdit } from "react-icons/ai";
 import ProfileModal from "../components/Profile/ProfileModal";
+function getToken() {
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  return token;
+}
 export default function profile() {
   const [openpost, setopenpost] = useState(false);
   return (
@@ -88,4 +94,22 @@ export default function profile() {
       </div>
     </>
   );
+}
+
+export function getServerSideProps(context) {
+  const gay = "";
+  const token = getToken();
+  console.log(token);
+  axios({
+    method: "GET",
+    url: `http://localhost:5000/user/profile`,
+    headers: {
+      authorization: `Bearer ${token}`,
+    },
+  }).then((res) => console.log(res));
+  return {
+    props: {
+      gay,
+    },
+  };
 }

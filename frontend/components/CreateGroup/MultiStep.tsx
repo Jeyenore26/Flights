@@ -12,15 +12,6 @@ function getToken() {
 }
 
 export default function () {
-  /* page one*/
-  const [grouppic, setgrouppic] = useState("");
-  const [provepic1, setprovepic1] = useState("");
-  const [provepic2, setprovepic2] = useState("");
-  const [provepic3, setprovepic3] = useState("");
-  const [provepic4, setprovepic4] = useState("");
-  const [provepic5, setprovepic5] = useState("");
-  const [provepic6, setprovepic6] = useState("");
-
   const [groupname, setgroupname] = useState("");
   const [groupnumber, setgroupnumber] = useState("");
   const [groupprovide, setgroupprovide] = useState("");
@@ -52,6 +43,8 @@ export default function () {
     }
   );
 
+  console.log(error);
+  console.log(data);
   if (error) console.log(error);
   if (data) console.log(data);
   function pageone() {
@@ -59,7 +52,6 @@ export default function () {
     setpage(2);
   }
   function pagetwo() {
-    event?.preventDefault();
     setpage(page + 1);
   }
   //groupInput();
@@ -70,13 +62,7 @@ export default function () {
   }
   const [page, setpage] = useState(1);
   const [disable, setdis] = useState(false);
-  //useEffect(() => {
-  //  if (page == 3) {
-  //     setdis(true);
-  //  } else {
-  //    setdis(false);
-  //  }
-  // });
+
   const pagecolor = { color: "blue" };
   return (
     <>
@@ -122,15 +108,6 @@ export default function () {
                     }
                   >
                     الخطوة الثانية
-                  </a>
-                  <a
-                    className={
-                      page === 3
-                        ? "pageon sm:px-6 sm:w-auto sm:justify-start cairo_regular_title"
-                        : "pageoff sm:px-6 sm:w-auto sm:justify-start hover:text-gray-900 cairo_regular_title"
-                    }
-                  >
-                    الخطوة الاخيرة
                   </a>
                 </div>
                 {/* First Page*/}
@@ -201,7 +178,10 @@ export default function () {
                 {page === 2 && (
                   <>
                     <form
-                      onSubmit={pagetwo}
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        groupInput();
+                      }}
                       style={{ width: page === 2 ? "100%" : "35%" }}
                       className="PageContent"
                     >
@@ -225,124 +205,11 @@ export default function () {
                           lclassName="text-black"
                         />
                       </div>
-                      <div className="PageContent rounded-xl px-[1px] py-[10px] text-[16px] text-[#2c3e50]">
-                        <ImageInput
-                          required
-                          image={grouppic}
-                          value={grouppic}
-                          onChange={(e) => {
-                            setgrouppic(e.target.value);
-                          }}
-                          label="صورة البوست"
-                          lclassName="text-black text-start cairo_regular_title"
-                          type={"text"}
-                        />
-                      </div>
-                      <div className="flex justify-start">
-                        <button
-                          type="submit"
-                          style={{ display: page === 2 ? "block" : "none" }}
-                          className={
-                            disable
-                              ? "px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-black transition-colors duration-150 bg-gray-300 border border-transparent rounded-lg focus:outline-none cairo_regular_title"
-                              : "px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] border border-transparent rounded-lg focus:outline-none cairo_regular_title"
-                          }
-                        >
-                          الخطوة القادمة
-                        </button>
-                      </div>
-                    </form>
-                  </>
-                )}
-                {/*Last Page */}
-                {page === 3 && (
-                  <>
-                    <form
-                      onSubmit={pagethree}
-                      style={{ width: page === 3 ? "100%" : "35%" }}
-                      className="PageContent"
-                    >
-                      <div className="flex justify-start text-[1rem] mt-5 cairo_bold_title text-black ">
-                        شهادات
-                      </div>
-                      <div className="PageContent flex rounded-xl px-[1px] py-[10px] text-[16px] text-[#2c3e50] ">
-                        <ImageInput
-                          required
-                          image={provepic1}
-                          value={provepic1}
-                          onChange={(e) => {
-                            setprovepic1(e.target.value);
-                          }}
-                          label="(اجباري) "
-                          iclassName="w-[90%]"
-                          lclassName="text-black text-center cairo_regular_title text-[14px]"
-                          type={"text"}
-                        />
-                        <ImageInput
-                          required
-                          image={provepic2}
-                          value={provepic2}
-                          onChange={(e) => {
-                            setprovepic2(e.target.value);
-                          }}
-                          label="(اجباري) "
-                          lclassName="text-black text-center cairo_regular_title text-[14px]"
-                          type={"text"}
-                        />
-                      </div>
-                      <div className="PageContent flex rounded-xl px-[1px] py-[10px] text-[16px] text-[#2c3e50]">
-                        <ImageInput
-                          required
-                          image={provepic3}
-                          value={provepic3}
-                          onChange={(e) => {
-                            setprovepic3(e.target.value);
-                          }}
-                          label="(اجباري) "
-                          iclassName="w-[90%]"
-                          lclassName="text-black text-center cairo_regular_title text-[14px]"
-                          type={"text"}
-                        />
-                        <ImageInput
-                          required
-                          image={provepic4}
-                          value={provepic4}
-                          onChange={(e) => {
-                            setprovepic4(e.target.value);
-                          }}
-                          label="(اجباري) "
-                          lclassName="text-black text-center cairo_regular_title text-[14px]"
-                          type={"text"}
-                        />
-                      </div>
-                      <div className="PageContent flex rounded-xl px-[1px] py-[10px] text-[16px] text-[#2c3e50]">
-                        <ImageInput
-                          image={provepic5}
-                          value={provepic5}
-                          onChange={(e) => {
-                            setprovepic5(e.target.value);
-                          }}
-                          label="(اختياري) "
-                          iclassName="w-[90%]"
-                          lclassName="text-black text-center cairo_regular_title text-[14px]"
-                          type={"text"}
-                        />
-                        <ImageInput
-                          image={provepic6}
-                          value={provepic6}
-                          onChange={(e) => {
-                            setprovepic6(e.target.value);
-                          }}
-                          label="(اختياري) "
-                          lclassName="text-black text-center cairo_regular_title text-[14px]"
-                          type={"text"}
-                        />
-                      </div>
 
                       <div className="flex justify-start">
                         <button
                           type="submit"
-                          style={{ display: page === 3 ? "block" : "none" }}
+                          style={{ display: page === 2 ? "block" : "none" }}
                           className={
                             disable
                               ? "px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-black transition-colors duration-150 bg-gray-300 border border-transparent rounded-lg focus:outline-none cairo_regular_title"

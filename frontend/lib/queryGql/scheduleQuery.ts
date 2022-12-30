@@ -11,3 +11,13 @@ export const scheduleQuery = gql`
     }
   }
 `;
+export const postQuery = gql`
+  query postQuery {
+    getPostsInGroup {
+      body
+      createdAt
+      username
+      likeCount
+    }
+  }
+`;

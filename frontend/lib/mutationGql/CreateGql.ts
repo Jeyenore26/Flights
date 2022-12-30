@@ -15,3 +15,10 @@ export const createScheduleMutation = gql`
     }
   }
 `;
+export const createPostMutation = gql`
+  mutation Mutation($body: String) {
+    createPost(body: $body) {
+      groupName
+    }
+  }
+`;

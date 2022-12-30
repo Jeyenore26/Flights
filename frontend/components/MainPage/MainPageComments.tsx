@@ -27,27 +27,12 @@ function MainPageComments(props: any) {
             {props.desc}
           </div>
 
-          <img
-            src={props.postImg}
-            alt="s"
-            className={` ${
-              pic ? "opacity-1 max-h-full max-w-full" : "opacity-0 w-0 h-0"
-            }  object-cover ease-linear duration-200 `}
-          />
           <div className="flex justify-between items-center w-full">
             <div
               className={`ml-2 flex items-center ${
                 props.darker ? "text-white" : "text-black"
               }`}
             >
-              <ImImage
-                className={`text-3xl mr-2 cursor-pointer ${
-                  pic ? "text-[#33ca47]" : "hover:text-[#696969]"
-                }`}
-                onClick={() => {
-                  setPic(!pic);
-                }}
-              />
               <button>
                 <AiFillLike
                   className={`text-3xl ease-linear duration-75 ${

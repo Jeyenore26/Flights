@@ -11,6 +11,7 @@ import MainPageMembers from "./MainPageMembers";
 import CreateShModal from "./CreateShModal";
 import CreatePostModal from "./CreatePostModal";
 import { scheduleQuery } from "../../lib/queryGql/scheduleQuery";
+import { postQuery } from "../../lib/queryGql/scheduleQuery";
 import { useLazyQuery } from "@apollo/client";
 
 function getToken() {
@@ -36,12 +37,19 @@ function MainPageContent() {
       },
     }
   );
+  const [showpost, { loading: loading1, error: error1, data: Posts }] =
+    useLazyQuery(postQuery, {
+      context: {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      },
+    });
   //@ts-ignore
-  console.log(Schedules?.getScheduleInGroup);
 
-  console.log(error);
+  console.log(error1);
   // if (loading) return "loading...";
-  if (Schedules) console.log(Schedules);
+  if (Posts) console.log(Posts);
 
   return (
     <div
@@ -49,6 +57,7 @@ function MainPageContent() {
       style={dark ? { colorScheme: "dark" } : {}}
     >
       {/* nav */}
+      {/* @ts-ignore */}
       {openpost && <CreatePostModal setIsOpen={setopenpost} />}
       {/* @ts-ignore */}
       {openschedule && <CreateShModal setIsOpen={setopenschedule} />}
@@ -179,25 +188,19 @@ function MainPageContent() {
               dark ? "bg-[#161616]" : "bg-[#f6f7fc]"
             }`}
           >
-            <MainPageComments
-              darker={dark}
-              name="عمر زفارة"
-              desc="لماذالماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جيلماذا عمر جي عمر جي"
-              time="منذ القرن العشرين"
-              role="ابن كلب"
-              profImg="europe.jpg"
-              postImg="africa.jpg"
-            />
-            <MainPageComments
-              darker={dark}
-              name="عمر زفارة"
-              desc="مكث النبي موسى في قومه يدعوهم إلى الله، ويبدو أن نفوسهم كانت ملتوية بشكل لا تخطئه عين الملاحظة، وتبدو لجاجتهم وعنادهم فيما يعرف بقصة البقرة، فإن الموضوع لم يكن يقتضي كل هذه المفاوضات بينهم وبين موسى، كما أنه لم يكن يستوجب كل هذا التعنت.
-              وأصل قصة البقرة أن قتيلًا ثريًا وجد يوما في بني إسرائيل، واختصم أهله ولم يعرفوا قاتله، وحين أعياهم الأمر لجئوا لموسى ليلجأ لربه، ولجأ موسى لربه فأمره أن يأمر قومه أن يذبحوا بقرة، وكان المفروض هنا أن يذبح القوم أول بقرة تصادفهم، غير أنهم بدءوا مفاوضتهم باللجاجة، واتهموا موسى بأنه يسخر منهم ويتخذهم هزوا، واستعاذ موسى بالله أن يكون من الجاهلين ويسخر منهم، وأفهمهم أن حل القضية يكمن في ذبح بقرة."
-              time="منذ القرن العشرين"
-              role="ابن كلب"
-              profImg="australia.jpg"
-              postImg="antarcatica.jpg"
-            />
+            {Posts?.getPostsInGroup.map((post) => {
+              return (
+                <MainPageComments
+                  darker={dark}
+                  name={post.username}
+                  desc={post.body}
+                  time={post.createdAt}
+                  role="ابن كلب"
+                  profImg="europe.jpg"
+                  postImg="africa.jpg"
+                />
+              );
+            })}
           </div>
         )}
         {page === 2 && (
@@ -313,6 +316,7 @@ function MainPageContent() {
                   style={{ transition: "ease 0.2s" }}
                   onClick={() => {
                     setpage(1);
+                    showpost();
                   }}
                 >
                   <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
