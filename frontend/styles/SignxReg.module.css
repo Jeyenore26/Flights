@@ -1,0 +1,148 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.eyebrow_container {
+  display: flex;
+  gap: 550px;
+}
+
+.left {
+  rotate: -20deg;
+  border-bottom-left-radius: 90px;
+  border-top-left-radius: 90px;
+}
+.right {
+  rotate: 20deg;
+  border-bottom-right-radius: 90px;
+  border-top-right-radius: 90px;
+}
+
+#eye {
+  position: relative;
+  border: 1px solid #000;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background: #000;
+  box-shadow: inset 0 0 0.4px rgb(0, 0, 0);
+  transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+}
+#eye::after {
+  content: " ";
+  position: absolute;
+  bottom: 5%;
+  right: 20%;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 0.5s;
+}
+#eye2 {
+  position: relative;
+  border: 1px solid #000;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline-block;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background: #000;
+  box-shadow: inset 0 0 0.4px rgb(0, 0, 0);
+  transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+}
+#eye2::after {
+  content: " ";
+  position: absolute;
+  bottom: 5%;
+  right: 20%;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 0.5s;
+}
+#face {
+  height: 10rem;
+  width: 10rem;
+}
+.maintitle {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.secondarytext {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+@media (max-height: 600px) {
+  .secondarytext {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .maintitle {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  #face {
+    height: 6rem;
+    width: 6rem;
+  }
+  #eye {
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    height: 8.5px;
+    width: 8.5px;
+    background: #000;
+    box-shadow: inset 0 0 0.4px rgb(0, 0, 0);
+    transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+  }
+  #eye::after {
+    content: " ";
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  #eye2 {
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 50%;
+    height: 8.5px;
+    width: 8.5px;
+    background: #000;
+    box-shadow: inset 0 0 0.4px rgb(0, 0, 0);
+    transition: scale 0.5s, background-color 0.5s, box-shadow 0.5s;
+  }
+  #eye2::after {
+    content: " ";
+    position: absolute;
+    bottom: 5%;
+    right: 20%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+}
