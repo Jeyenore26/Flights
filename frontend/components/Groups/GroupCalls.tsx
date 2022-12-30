@@ -31,7 +31,7 @@ const GroupCalls = (props: any) => {
         <img
           src={props.img}
           alt=""
-          className="w-full md:w-[18rem] h-[20rem] mb-8 md:mb-0 md:h-[16rem] rounded"
+          className="w-full md:w-[18rem] h-[20rem] mb-8 md:mb-0 md:h-[16rem] mr-2 rounded"
         />
         <div className="flex flex-col w-[100%] space-y-8 mr-5">
           <p className="text-2xl"> {props.name}</p>
