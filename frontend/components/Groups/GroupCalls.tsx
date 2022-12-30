@@ -25,7 +25,7 @@ const GroupCalls = (props: any) => {
             </div>
             <div className="">
               <button className="bg-green-400 confirmbtn p-2 px-4 rounded ml-5 mt-3 text-white">
-                المزيد
+                المزيد 
               </button>
             </div>
           </div>
