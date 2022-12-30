@@ -57,7 +57,7 @@ function BInputOutline({
         disabled={disabled}
         className={` bg-transparent	text-start w-[full] h-12 focus:outline-none ${
           error ? "border-red-600 focus:border-red-600" : ""
-        }  ease-in-out text-green text-black/30 focus:text-white focus:border-blue-600 focus:outline-none focus:border-primary focus:border-dashed rounded-md transition ${iclassName}`}
+        }  ease-in-out text-green text-black/30 focus:text-black focus:border-blue-600 focus:outline-none focus:border-primary focus:border-dashed rounded-md transition ${iclassName}`}
       />
     </div>
   );
