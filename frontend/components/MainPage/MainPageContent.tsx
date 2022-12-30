@@ -57,9 +57,10 @@ function MainPageContent() {
     });
 
   console.log(error1);
-  if (memberload) return "loading...";
   const Saviors = guys?.getGroup;
   console.log(Saviors);
+  if (memberload) return "loading...";
+
   return (
     <div
       className="h-screen overflow-hidden"
@@ -370,7 +371,7 @@ function MainPageContent() {
                   </p>
                 </div>
 
-                {Saviors.role !== "staff" && (
+                {guys?.getGroup.owner.role == "owner" && (
                   <div
                     className={`flex items-center ${
                       dark
