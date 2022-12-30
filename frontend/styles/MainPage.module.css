@@ -1,6 +1,0 @@
-#selected2 {
-  border-right: 2px solid;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  @apply sm:pr-[1rem] pr-[2px];
-}
