@@ -93,7 +93,7 @@ export default function checkgroup() {
 
                       {data.workplace}
                     </h1>
-                    <h1 className="text-black cairo_bold_title text-[15px]">
+                    <h1 className=" cairo_bold_title text-[15px] text-white">
                       .
                     </h1>
                     <h1 className="text-black/60 cairo_bold_title text-[13px] mt-1 mr-2">
@@ -114,7 +114,7 @@ export default function checkgroup() {
               </div>
             </div>
           </section>
-          <section className="md:mx-[31rem] ">
+          <section>
             <div dir="rtl" className="flex justify-center ">
               <span
                 onClick={() => {
@@ -144,7 +144,6 @@ export default function checkgroup() {
             </div>
           </section>
         </div>
-        0
         {page === 1 && (
           <>
             {/*@ts-ignore*/}

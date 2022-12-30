@@ -35,10 +35,11 @@ const Donate = (props: any) => {
           </div>
         </div>
 
-        <div className="flex justify-center">
-          <div className="text-black flex justify-end cairo_semibold_title mt-10 mb-3 mr-8">
-            <GiCrownedHeart className="mt-1 h-5 w-5" /> شكرا لكم لمساعدة
-            المجموعة <GiCrownedHeart className="mt-1 h-5 w-5" />
+        <div className="flex justify-center mt-20">
+          <div className="text-black flex justify-around cairo_semibold_title mb-3 ">
+            <GiCrownedHeart className="mt-1 h-5 w-5" />
+            <p>شكرا لكم لمساعدة المجموعة</p>
+            <GiCrownedHeart className="mt-1 h-5 w-5" />
           </div>
         </div>
       </div>

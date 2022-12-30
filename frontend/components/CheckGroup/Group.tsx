@@ -18,40 +18,41 @@ const Group = (props: any) => {
             className="text-black/80 w-full  text-sm flex justify-start cairo_regular_title my-2"
           ></div>
         </div>
-
-        <section dir="rtl" className="mx-[2rem] flex">
-          <GiEarthAfricaEurope className="w-6 h-6 mt-4 text-black" />
-          <div className="text-black w-full text-sm flex justify-start cairo_regular_title mt-4 mr-2">
-            المكان
-          </div>
-        </section>
-        <section dir="rtl" className="mx-[2rem] flex">
-          <div className="text-black/70 w-full text-sm flex justify-start cairo_regular_title mt-1">
-            {props.workplace}
-          </div>
-        </section>
-        <section dir="rtl" className="mx-[2rem] flex">
-          <AiFillClockCircle className="w-6 h-6 mt-4 text-black" />
-          <div className="text-black w-full text-sm flex justify-start cairo_regular_title mt-4 mr-2">
-            السجل
-          </div>
-        </section>
-        <section dir="rtl" className="mx-[2rem] flex">
-          <div className="text-black/70 w-full text-sm flex justify-start cairo_regular_title mt-1">
-            تم انشاء هاذا الجروب يوم 2/2/2010
-          </div>
-        </section>
-        <section dir="rtl" className="mx-[2rem] flex">
-          <TbHeartHandshake className="w-6 h-6 mt-4 text-black" />
-          <div className="text-black w-full  text-sm flex justify-start cairo_regular_title mt-4 mr-2">
-            ماذا ننقذ
-          </div>
-        </section>
-        <section dir="rtl" className="mx-[2rem] flex">
-          <div className="text-black/70 w-full  text-sm flex justify-start cairo_regular_title mt-1 mb-20">
-            {props.description}
-          </div>
-        </section>
+        <div className="flex flex-col items-end gap-2">
+          <section dir="rtl" className="mx-[2rem] flex">
+            <GiEarthAfricaEurope className="w-6 h-6 mt-4 text-black" />
+            <div className="text-black w-full text-sm flex justify-start cairo_regular_title mt-4 mr-2">
+              المكان
+            </div>
+          </section>
+          <section dir="rtl" className="mx-[2rem] flex">
+            <div className="text-black/70 w-full text-sm flex justify-start cairo_regular_title mt-1">
+              {props.workplace}
+            </div>
+          </section>
+          <section dir="rtl" className="mx-[2rem] flex">
+            <AiFillClockCircle className="w-6 h-6 mt-4 text-black" />
+            <div className="text-black w-full text-sm flex justify-start cairo_regular_title mt-4 mr-2">
+              السجل
+            </div>
+          </section>
+          <section dir="rtl" className="mx-[2rem] flex">
+            <div className="text-black/70 w-full text-sm flex justify-start cairo_regular_title mt-1">
+              تم انشاء هذا الجروب يوم 2/2/2010
+            </div>
+          </section>
+          <section dir="rtl" className="mx-[2rem] flex">
+            <TbHeartHandshake className="w-6 h-6 mt-4 text-black" />
+            <div className="text-black w-full  text-sm flex justify-start cairo_regular_title mt-4 mr-2">
+              ماذا ننقذ
+            </div>
+          </section>
+          <section dir="rtl" className="mx-[2rem] flex">
+            <div className="text-black/70 w-full  text-sm flex justify-start cairo_regular_title mt-1 mb-20">
+              {props.description}
+            </div>
+          </section>
+        </div>
       </div>
     </section>
   );

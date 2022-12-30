@@ -71,9 +71,9 @@ export default function () {
         className="flex items-center min-h-screen bg-gray-50 "
         id="animate32"
       >
-        <div className="flex-1 h-full mt-20 max-w-5xl mx-auto bg-white rounded-lg shadow-xl">
+        <div className="flex-1 h-full mt-[-1rem] sm:mt-[1rem] w-[80%] md:max-w-5xl mx-auto bg-white rounded-lg shadow-xl">
           <div className="flex flex-col md:flex-row">
-            <div className="h-32 xxs:h-10 xxs:mt-0 md:mt-0 object-cover md:h-auto md:w-1/2">
+            <div className="h-32 xxs:h-10 mt-0 object-cover md:h-auto md:w-1/2">
               <img
                 className="object-cover h-0 md:block w-full md:h-full brightness-90"
                 src="./group1.jpg"
