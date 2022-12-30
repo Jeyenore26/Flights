@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import React from "react";
+import React, { useState } from "react";
 import { BiArrowToLeft } from "react-icons/bi";
 import { BsArrow90DegLeft } from "react-icons/bs";
 import { MdGroup } from "react-icons/md";
@@ -8,9 +8,30 @@ import GroupCalls from "./GroupCalls";
 import axios from "axios";
 import { GetServerSideProps } from "next";
 
-export default function Group(props: any) {
-  const { data, error, loading } = useQuery(groupsQuery);
-  console.log(data);
+function load(url, token) {
+  return new Promise(async function (resolve, reject) {
+    const res = await axios({
+      method: "GET",
+      url: url,
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+
+    // resolve
+    resolve(res); // see note below!
+  });
+}
+
+export default function Group(groups) {
+  let [data, setdata] = useState<string[]>([]);
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem("token") as string;
+
+    load("http://localhost:5000/check/Allgroups", token).then((res: any) => {
+      setdata(res.data);
+    });
+  }
   return (
     <div className="h-screen cairo_regular_title">
       <div className="flex flex-col items-center justify-center mt-10">
@@ -24,78 +45,18 @@ export default function Group(props: any) {
         </div>
         <div className="flex justify-center items-center w-full">
           <div className="rounded-lg flex flex-col gap-[5rem] md:gap-10 md:items-center w-full md:w-[90%] lg:w-[80%] 2xl:w-[60%] my-10 p-3 bg-[#fff]">
-            <GroupCalls
-              name="الكتاكيت الارضية"
-              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
-            بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
-              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
-              members="50k عضو"
-              place="مصر - جنوب جنوب افريقيا"
-            />
-            <GroupCalls
-              name="الكتاكيت الارضية"
-              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
-          بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
-              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
-              members="50k عضو"
-              place="مصر - جنوب جنوب افريقيا"
-            />
-            <GroupCalls
-              name="الكتاكيت الارضية"
-              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
-        بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
-              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
-              members="50k عضو"
-              place="مصر - جنوب جنوب افريقيا"
-            />
-            <GroupCalls
-              name="الكتاكيت الارضية"
-              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
-      بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
-              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
-              members="50k عضو"
-              place="مصر - جنوب جنوب افريقيا"
-            />
-            <GroupCalls
-              name="الكتاكيت الارضية"
-              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
-    بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
-              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
-              members="50k عضو"
-              place="مصر - جنوب جنوب افريقيا"
-            />
-            <GroupCalls
-              name="الكتاكيت الارضية"
-              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
-  بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
-              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
-              members="50k عضو"
-              place="مصر - جنوب جنوب افريقيا"
-            />
-            <GroupCalls
-              name="الكتاكيت الارضية"
-              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
-بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
-              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
-              members="50k عضو"
-              place="مصر - جنوب جنوب افريقيا"
-            />
-            <GroupCalls
-              name="الكتاكيت الارضية"
-              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
-            بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
-              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
-              members="50k عضو"
-              place="مصر - جنوب جنوب افريقيا"
-            />
-            <GroupCalls
-              name="الكتاكيت الارضية"
-              desc="عبارات و كلام عن الدجاجة من اقتباسات و كلمات المشاهير و الحكماء قمنا
-          بجمعها بعناية . تحتوي الصفحة على 36 حكمة و قول مأثور عن الدجاجة..."
-              img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
-              members="50k عضو"
-              place="مصر - جنوب جنوب افريقيا"
-            />
+            {data.map((group: any) => {
+              return (
+                <GroupCalls
+                  name={group.name}
+                  desc={group.description}
+                  img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
+                  members={group.members.length}
+                  place={group.workplace}
+                />
+              );
+            })}
+            ;
           </div>
         </div>
       </div>
