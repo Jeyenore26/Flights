@@ -27,7 +27,7 @@ function MainPageMembers(props: any) {
                   : "bg-[#fff] border-2"
               }`}
             >
-              <Member name={props.owners.name} />
+              <Member name={props.owners.name} role={props.owners.role} />
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ function MainPageMembers(props: any) {
                   {
                     staff && (
                       <>
-                        <Member name={staff.name} />;
+                        <Member name={staff.name} roke={staff.role} />;
                       </>
                     );
                   }
@@ -92,7 +92,7 @@ function MainPageMembers(props: any) {
               <div className="grid w-full gap-y-[3rem] gap-x-4 justify-items-center h-[40rem] overflow-auto">
                 {props.members.map((member) => {
                   {
-                    <Member name={member.name} />;
+                    <Member name={member.name} role={member.role} />;
                   }
                 })}
                 {!props.member && (

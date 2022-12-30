@@ -370,34 +370,36 @@ function MainPageContent() {
                   </p>
                 </div>
 
-                <div
-                  className={`flex items-center ${
-                    dark
-                      ? "hover:bg-[#2a2a2a] hover:text-[#e2e2e2]"
-                      : "hover:bg-[#f0f0f0] hover:text-black"
-                  }
-               ${
-                 dark && page === 3
-                   ? "border-r-2 text-[#e2e2e2] rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#2a2a2a]"
-                   : ""
-               } ${
-                    !dark && page === 3
-                      ? "border-r-2 text-black border-black rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#f0f0f0]"
-                      : ""
-                  } rounded my-6 sm:my-4 cursor-pointer`}
-                  style={{ transition: "ease 0.2s" }}
-                  onClick={(e) => {
-                    showmember();
-                    setpage(3);
-                  }}
-                >
-                  <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
-                    <BsPersonCircle />
-                  </p>
-                  <p className="mr-1 text-sm md:text-lg hidden sm:block">
-                    الاعضاء
-                  </p>
-                </div>
+                {Saviors.role !== "staff" && (
+                  <div
+                    className={`flex items-center ${
+                      dark
+                        ? "hover:bg-[#2a2a2a] hover:text-[#e2e2e2]"
+                        : "hover:bg-[#f0f0f0] hover:text-black"
+                    }
+              ${
+                dark && page === 3
+                  ? "border-r-2 text-[#e2e2e2] rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#2a2a2a]"
+                  : ""
+              } ${
+                      !dark && page === 3
+                        ? "border-r-2 text-black border-black rounded-br-none rounded-tr-none sm:pr-[0.5rem] pr-[2px] sm:bg-[#f0f0f0]"
+                        : ""
+                    } rounded my-6 sm:my-4 cursor-pointer`}
+                    style={{ transition: "ease 0.2s" }}
+                    onClick={(e) => {
+                      showmember();
+                      setpage(3);
+                    }}
+                  >
+                    <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
+                      <BsPersonCircle />
+                    </p>
+                    <p className="mr-1 text-sm md:text-lg hidden sm:block">
+                      الاعضاء
+                    </p>
+                  </div>
+                )}
                 {page === 2 && (
                   <div
                     id="animate33"
