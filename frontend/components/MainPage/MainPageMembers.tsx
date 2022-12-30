@@ -27,7 +27,7 @@ function MainPageMembers(props: any) {
                   : "bg-[#fff] border-2"
               }`}
             >
-              <Member name={props.owner} img={props.owenerimg} />
+              <Member name={props.owners.name} role={props.owners.role} />
             </div>
           </div>
         </div>
@@ -50,7 +50,22 @@ function MainPageMembers(props: any) {
               }`}
             >
               <div className="flex flex-col items-center md:items-end w-full gap-9">
-                <Member name={props.staff} img={props.staffimg} />
+                {props.staffs.map((staff) => {
+                  {
+                    staff && (
+                      <>
+                        <Member name={staff.name} roke={staff.role} />;
+                      </>
+                    );
+                  }
+                })}
+                {!props.staff && (
+                  <>
+                    <div className=" text-black py-10  cairo_bold_title mx-auto">
+                      لا يوجد
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
@@ -75,7 +90,18 @@ function MainPageMembers(props: any) {
               }`}
             >
               <div className="grid w-full gap-y-[3rem] gap-x-4 justify-items-center h-[40rem] overflow-auto">
-                <Member name={props.members} img={props.memberimg} />
+                {props.members.map((member) => {
+                  {
+                    <Member name={member.name} role={member.role} />;
+                  }
+                })}
+                {!props.member && (
+                  <>
+                    <div className=" text-black py-[-10rem]  cairo_bold_title">
+                      لا يوجد
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

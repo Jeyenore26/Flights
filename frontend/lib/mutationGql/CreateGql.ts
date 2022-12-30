@@ -9,7 +9,7 @@ export const createGroupMutation = gql`
 `;
 
 export const createScheduleMutation = gql`
-  mutation Mutation($createScheduleInput: CreateScheduleInput) {
+  mutation createSchedule($createScheduleInput: CreateScheduleInput) {
     createSchedule(createScheduleInput: $createScheduleInput) {
       ownerName
     }

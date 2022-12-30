@@ -11,30 +11,36 @@ function Member(props: any) {
     <>
       <div className="flex justify-between items-center w-[100%]">
         <div className="flex space-x-2">
-          <button className="ml-1 cursor-default">
-            <TbLayoutSidebarLeftExpand
-              className={`text-xl   ${
-                props.darker
-                  ? "text-[#e2e2e2] hover:text-[#bdbdbd]"
-                  : "hover:text-[#5b5b5b]"
-              } ${show ? "rotate-180" : ""} ease-linear duration-200`}
-              onClick={() => {
-                setshow(!show);
-              }}
-            />
-          </button>
+          {props.role !== "owner" && (
+            <>
+              <button className="ml-1 cursor-default">
+                <TbLayoutSidebarLeftExpand
+                  className={`text-xl   ${
+                    props.darker
+                      ? "text-[#e2e2e2] hover:text-[#bdbdbd]"
+                      : "hover:text-[#5b5b5b]"
+                  } ${show ? "rotate-180" : ""} ease-linear duration-200`}
+                  onClick={() => {
+                    setshow(!show);
+                  }}
+                />
+              </button>
+            </>
+          )}
           {show && (
             <div
               className={`h-auto p-2 w-auto rounded flex flex-col items-end justify-center space-y-3 md:space-y-2`}
             >
-              <div
-                id="animate1"
-                className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
-              >
-                <GiArmorUpgrade className="md:ml-2 text-2xl md:text-xl" />
-                <p className="hidden md:block ">ترقية</p>
-                {/* when member, only leader */}
-              </div>
+              {props.role !== "admins" && (
+                <div
+                  id="animate1"
+                  className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
+                >
+                  <GiArmorUpgrade className="md:ml-2 text-2xl md:text-xl" />
+                  <p className="hidden md:block ">ترقية</p>
+                  {/* when member, only leader */}
+                </div>
+              )}
               <div
                 id="animate1"
                 className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
@@ -49,14 +55,6 @@ function Member(props: any) {
               >
                 <GiArmorDowngrade className="md:ml-2 text-2xl md:text-xl" />
                 <p className="hidden md:block cursor-pointer">خفض</p>
-                {/* when admin, only leader */}
-              </div>
-              <div
-                id="animate1"
-                className=" cursor-pointer flex flex-row-reverse items-center hover:opacity-50 active:text-[#464646] md:active:opacity-[1] ease-linear duration-75"
-              >
-                <BiCrown className="md:ml-2 text-2xl md:text-xl" />
-                <p className="text-sm hidden md:block ">اعطاء قائد</p>
                 {/* when admin, only leader */}
               </div>
             </div>

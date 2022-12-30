@@ -29,12 +29,15 @@ export const getGroup = gql`
     getGroup {
       owner {
         name
+        role
       }
       members {
         name
+        role
       }
       admins {
         name
+        role
       }
     }
   }
