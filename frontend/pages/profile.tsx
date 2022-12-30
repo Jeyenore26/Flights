@@ -30,7 +30,7 @@ export default function profile() {
       <NavBar />
       {openpost && <ProfileModal setIsOpen={setopenpost} />}
 
-      <div className="bg-white hidden  justify-center md:h-screen xxs:h-full w-full xxs:flex items-center">
+      <div className="bg-white hidden justify-center md:h-screen xxs:h-screen w-full xxs:flex items-center">
         <Head>
           <title className="cairo_black_title">حسابك الشخصي</title>
           <meta
@@ -42,13 +42,15 @@ export default function profile() {
           <div className="flex md:flex-row xxs:flex-col justify-items-center">
             <div className="profile flex justify-center">
               <div className="flex flex-col-reverse items-center">
-                <div className="flex xxs:flex-col md:flex-row  justify-center mt-5 md:mb-0 xxs:mb-4">
-                  <span className="flex justify-center cursor-pointer xxs:w-80 md:w-32 hover:text-slate-300 px-4 py-1 active:text-slate-400">
+                <div className="flex xxs:flex-col md:flex-row justify-center mt-5 md:mb-0 xxs:mb-4">
+                  <span
+                    className="flex justify-center cursor-pointer xxs:w-80 md:w-32 hover:text-slate-300 hover:border-slate-400 active:border-slate-300 px-4 py-1 active:text-slate-400 border-[1px] border-black rounded"
+                    onClick={() => setopenpost(true)}
+                  >
                     <AiOutlineEdit className="mt-1" />
                     <button
                       dir="rtl"
                       className="cairo_regular_title cursor-pointer "
-                      onClick={() => setopenpost(true)}
                     >
                       تعديل
                     </button>

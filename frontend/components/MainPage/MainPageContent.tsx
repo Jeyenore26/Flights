@@ -87,7 +87,7 @@ function MainPageContent() {
               <div className="flex">
                 <button className="ml-1">
                   <BiChevronDown
-                    className={`text-xl  ${
+                    className={`text-2xl sm:text-xl z-[1000] relative  ${
                       dark
                         ? "text-[#e2e2e2] hover:text-[#bdbdbd]"
                         : "hover:text-[#5b5b5b]"
@@ -149,7 +149,7 @@ function MainPageContent() {
               )}
             </div>
           </div>
-          <div dir="rtl" className=" col-span-4 z-[1000]">
+          <div dir="rtl" className=" col-span-4">
             <div
               className={` h-full w-[65%] sm:w-[90%] p-1 ${
                 dark ? "bg-[#1d1d1d]" : "bg-white"
