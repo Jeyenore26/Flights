@@ -43,7 +43,7 @@ function MainPageComments(props: any) {
                   }}
                 />
               </button>
-              <p className="ml-2 text-xl mt-1">2</p>
+              <p className="ml-2 text-xl mt-1">{props.like}</p>
             </div>
             <div className="flex space-x-2 m-2">
               <p className="text-xs bg-[#39A059] text-[#e2e2e2] rounded p-1">

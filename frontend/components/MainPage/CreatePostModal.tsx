@@ -52,6 +52,7 @@ const CreatePostModal = ({ setIsOpen }) => {
           <form
             onSubmit={(e) => {
               handleSubmit();
+              setIsOpen(false);
             }}
           >
             <div className={"modalContent"}>
@@ -67,6 +68,9 @@ const CreatePostModal = ({ setIsOpen }) => {
             </div>
             <div className={"actionsContainer"}>
               <button
+                onClick={() => {
+                  window.location.reload();
+                }}
                 type="submit"
                 className={"confirmbtn cairo_regular_title"}
               >

@@ -27,10 +27,7 @@ function MainPageMembers(props: any) {
                   : "bg-[#fff] border-2"
               }`}
             >
-              <Member
-                name="التنين المجنح"
-                img="https://i.pinimg.com/736x/eb/e0/7f/ebe07f5cd329966effbbce521e99eb2b--garden-sculptures-garden-statues.jpg"
-              />
+              <Member name={props.owner} img={props.owenerimg} />
             </div>
           </div>
         </div>
@@ -53,18 +50,7 @@ function MainPageMembers(props: any) {
               }`}
             >
               <div className="flex flex-col items-center md:items-end w-full gap-9">
-                <Member
-                  name=" امير الظلام"
-                  img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWDRvSoVI9Mv60gEpZCyufhpyHgBtf41CIHA&usqp=CAU"
-                />
-                <Member
-                  name="بحجابي ملكة"
-                  img="https://static.lahamag.com/attachments/79/1478334511.580670.original.jpg"
-                />
-                <Member
-                  name=" الطائر المجروح"
-                  img="https://www.vetogate.com/UploadCache/libfiles/8/5/600x338o/245.jpg"
-                />
+                <Member name={props.staff} img={props.staffimg} />
               </div>
             </div>
           </div>
@@ -89,56 +75,7 @@ function MainPageMembers(props: any) {
               }`}
             >
               <div className="grid w-full gap-y-[3rem] gap-x-4 justify-items-center h-[40rem] overflow-auto">
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
-                <Member name="محمد سامح الدياسطي" img="africa.jpg" />
+                <Member name={props.members} img={props.memberimg} />
               </div>
             </div>
           </div>

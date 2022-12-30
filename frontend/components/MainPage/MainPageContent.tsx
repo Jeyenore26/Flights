@@ -12,6 +12,7 @@ import CreateShModal from "./CreateShModal";
 import CreatePostModal from "./CreatePostModal";
 import { scheduleQuery } from "../../lib/queryGql/scheduleQuery";
 import { postQuery } from "../../lib/queryGql/scheduleQuery";
+import { getGroup } from "../../lib/queryGql/scheduleQuery";
 import { useLazyQuery } from "@apollo/client";
 
 function getToken() {
@@ -45,12 +46,20 @@ function MainPageContent() {
         },
       },
     });
-  //@ts-ignore
+  const [Members, { loading: memberload, error: membererror, data: guys }] =
+    useLazyQuery(getGroup, {
+      context: {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      },
+    });
 
   console.log(error1);
   // if (loading) return "loading...";
-  if (Posts) console.log(Posts);
-
+  if (guys) console.log(guys);
+  const Saviors = guys?.getGroup;
+  console.log(Saviors);
   return (
     <div
       className="h-screen overflow-hidden"
@@ -195,7 +204,8 @@ function MainPageContent() {
                   name={post.username}
                   desc={post.body}
                   time={post.createdAt}
-                  role="ابن كلب"
+                  role={post.user.role}
+                  like={post.likeCount}
                   profImg="europe.jpg"
                   postImg="africa.jpg"
                 />
@@ -228,7 +238,11 @@ function MainPageContent() {
               dark ? "bg-[#161616]" : "bg-[#f6f7fc]"
             }`}
           >
-            <MainPageMembers darker={dark} />
+            <MainPageMembers
+              owner={Saviors.owner}
+              staff={Saviors.admins}
+              members={Saviors.members}
+            />
           </div>
         )}
         {page == 2 && (
@@ -373,6 +387,7 @@ function MainPageContent() {
                   } rounded my-6 sm:my-4 cursor-pointer`}
                   style={{ transition: "ease 0.2s" }}
                   onClick={() => {
+                    Members();
                     setpage(3);
                   }}
                 >

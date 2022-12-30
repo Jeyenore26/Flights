@@ -18,6 +18,24 @@ export const postQuery = gql`
       createdAt
       username
       likeCount
+      user {
+        role
+      }
+    }
+  }
+`;
+export const getGroup = gql`
+  query getGroup {
+    getGroup {
+      owner {
+        name
+      }
+      members {
+        name
+      }
+      admins {
+        name
+      }
     }
   }
 `;
