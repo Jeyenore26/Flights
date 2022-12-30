@@ -5,8 +5,19 @@ import Group from "../components/CheckGroup/Group";
 import Members from "../components/CheckGroup/Members";
 import NavBar from "../components/CheckGroup/NavBar";
 import Proves from "../components/CheckGroup/Proves";
-
+import axios from "axios";
 export default function checkgroup() {
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem("token") as string;
+    console.log("this", token);
+    axios({
+      method: "GET",
+      url: `http://localhost:5000/check/group`,
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    }).then((res) => console.log(res));
+  }
   const [page, setpage] = useState(1);
   return (
     <>

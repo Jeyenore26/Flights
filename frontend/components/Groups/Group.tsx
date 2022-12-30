@@ -25,7 +25,8 @@ function load(url, token) {
 
 export default function Group(groups) {
   let [data, setdata] = useState<string[]>([]);
-  if (typeof window !== "undefined") {
+  console.log(data);
+  if (typeof window !== "undefined" && !data) {
     const token = localStorage.getItem("token") as string;
 
     load("http://localhost:5000/check/Allgroups", token).then((res: any) => {

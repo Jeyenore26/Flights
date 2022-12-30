@@ -7,7 +7,10 @@ import { Link as Lonk } from "react-scroll";
 function HomeTopSection() {
   return (
     <div className="w-full">
-      <div className="topImg bg-cover h-[100vh] mb-[20rem]" id="animate32">
+      <div
+        className="topImg bg-cover 2xl:h-[95vh] h-[100vh] mb-[20rem]"
+        id="animate32"
+      >
         {/* nav */}
         <div className="mx-[1rem] sm:mx-[4rem]">
           <div
