@@ -38,7 +38,7 @@ const ProfileModal = ({ setIsOpen }) => {
         },
       },
       variables: {
-        photoLink: img,
+        imageLink: img,
       },
     }
   );
