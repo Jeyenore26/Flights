@@ -25,7 +25,6 @@ export default function registermember() {
     },
   });
   if (error) console.log(error);
-
   if (loading) return "...loading";
   console.log(data);
   if (data?.login?.token) {
@@ -42,7 +41,7 @@ export default function registermember() {
           src="greenRectangles.png"
           className="w-screen h-full fixed z-[-1] brightness-75 cover"
         />
-        <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
+        <div className="py-4 flex sm:mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
           <div>
             <Link href={"/register"}>
               <button className="text-white border-[1px] border-dashed border-white cairo_semibold_title py-1 px-3 text-md bg-transperant hover:text-white/90 hover:bg-black/20 active:text-white/100 active:bg-black/40 rounded-xl">
@@ -66,11 +65,11 @@ export default function registermember() {
             e.preventDefault;
             loginInput();
           }}
-          className="flex  justify-center mt-[2%] 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem]"
+          className="flex justify-center 2xl:mx-[12rem] md:mx-[2rem] my-[1rem] mx-[1rem] xs:mt-10 mt-14 "
         >
-          <div className=" py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[10%]  overflow-x-auto bg-black/30 rounded-xl">
+          <div className=" py-4 sm:px-[2%] px-[10%] overflow-x-auto bg-black/30 rounded-xl">
             <div className="flex justify-center ">
-              <div className=" lg:block  z-10">
+              <div className=" z-10">
                 <Eyes />
               </div>
             </div>
@@ -85,7 +84,7 @@ export default function registermember() {
               onChange={(e) => setemail(e.target.value)}
               type={"text"}
               required
-              lclassName="flex secondarytext xs:justify-start lg:mx-1 xxs:mx-0 xxs:justify-center"
+              lclassName="flex secondarytext xs:justify-start lg:mx-1 xxs:mx-0 "
               label="الاسم او الايميل"
               iclassName=" 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xxs:w-full"
             />
@@ -94,7 +93,7 @@ export default function registermember() {
               onChange={(e) => setpassword(e.target.value)}
               type={"password"}
               required
-              lclassName="flex secondarytext xs:justify-start lg:mx-1 xxs:mx-0 xxs:justify-center"
+              lclassName="flex secondarytext xs:justify-start lg:mx-1 xxs:mx-0 "
               label="كلمة السر"
               iclassName=" 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem]  xxs:w-full"
             />
