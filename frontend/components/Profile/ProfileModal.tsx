@@ -14,15 +14,15 @@ function getToken() {
 }
 const ProfileModal = ({ setIsOpen }) => {
   const images = [
-    "./avater2.png",
-
-    "./avater4.png",
-
-    "./avater3.png",
     "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
 
-    "./avater6.png",
-    "./hegab.png",
+    "https://th.bing.com/th/id/R.1ffbff14c120b1a9f5e399aafb274c60?rik=W8wv6qitunQd1g&pid=ImgRaw&r=0",
+
+    "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
+    "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
+
+    "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
+    "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
   ];
   const [description, setdescription] = useState("");
   const token = getToken();
@@ -61,7 +61,13 @@ const ProfileModal = ({ setIsOpen }) => {
             <RiCloseLine className="mb-[-2px] mr-10 text-black" />
           </button>
 
-          <div>
+          <form
+            onSubmit={() => {
+              console.log(img);
+
+              changeimg();
+            }}
+          >
             <section
               id="gaolsanimation"
               className="flex justify-center cursor-default"
@@ -73,9 +79,6 @@ const ProfileModal = ({ setIsOpen }) => {
                       <button
                         onClick={() => {
                           setimg(image);
-                          console.log(img);
-
-                          changeimg();
                         }}
                         className="mx-auto mb-4 rounded-full hover:border-black border-2 active:border-blue-400   "
                       >
@@ -86,7 +89,7 @@ const ProfileModal = ({ setIsOpen }) => {
                 })}
               </div>
             </section>
-          </div>
+          </form>
         </div>
       </div>
     </>

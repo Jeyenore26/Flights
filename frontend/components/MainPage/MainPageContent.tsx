@@ -57,6 +57,7 @@ function MainPageContent() {
       .catch((e) => {
         console.log("here");
       });
+    console.log(data);
   }
   const [loadSchedule, { loading, error, data: Schedules }] = useLazyQuery(
     scheduleQuery,
@@ -89,6 +90,8 @@ function MainPageContent() {
 
   const Saviors = guys?.getGroup;
   if (memberload) return <div>dal;sdk'law;daw</div>;
+  //@ts-ignore
+  let photo = data?.photoLink;
 
   return (
     <div
@@ -109,7 +112,7 @@ function MainPageContent() {
         <div className="grid grid-cols-6" id="animate32">
           <div className=" p-1 flex items-center">
             <img
-              src="africa.jpg"
+              src={photo}
               alt=""
               className="h-12 w-12 rounded-[40px] ml-2 object-cover"
             />
@@ -323,7 +326,7 @@ function MainPageContent() {
           <div className="flex flex-col mt-4 " id="animate32">
             <div className="hidden sm:block">
               <img
-                src="africa.jpg"
+                src={photo}
                 alt=""
                 className="md:h-[5rem] md:w-[5rem] h-[4rem] w-[4rem] rounded-[40px] mx-auto object-cover"
               />
