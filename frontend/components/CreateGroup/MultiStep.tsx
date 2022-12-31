@@ -12,6 +12,18 @@ function getToken() {
   return token;
 }
 
+const photos = [
+  "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
+
+  "https://th.bing.com/th/id/R.1ffbff14c120b1a9f5e399aafb274c60?rik=W8wv6qitunQd1g&pid=ImgRaw&r=0",
+
+  "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
+  "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
+
+  "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
+  "https://th.bing.com/th/id/OIP.28fWEEaVP8gJEszigjqGOwHaHT?pid=ImgDet&w=887&h=874&rs=1",
+];
+
 export default function () {
   const [groupname, setgroupname] = useState("");
   const [groupnumber, setgroupnumber] = useState("");
@@ -20,6 +32,8 @@ export default function () {
 
   const [groupplace, setgroupplace] = useState("");
   const [paypal, setpaypal] = useState("");
+
+  const photoLink = Math.floor(Math.random() * photos.length);
 
   /* page three*/
   const createInput = {
@@ -209,23 +223,6 @@ export default function () {
                           placeholder=" اسم حساب البايبال للتبرعات"
                           lclassName="text-black"
                         />
-                      </div>
-                      <div className="PageContent">
-                        <button
-                          dir="rtl"
-                          className="cairo_semibold_title cursor-pointer text-black border-black border-2 px-3 rounded-xl hover:border-black/30 active:border-black/50 hover:text-black/30 active:text-black/50  mt-5 mr-1  "
-                          onClick={() => {
-                            setopen(true);
-                          }}
-                        >
-                          صورة الجروب
-                        </button>
-                        {open && (
-                          <CreateProfile
-                            groupname={groupname}
-                            setIsOpen={setopen}
-                          />
-                        )}
                       </div>
 
                       <div className="flex justify-start">
