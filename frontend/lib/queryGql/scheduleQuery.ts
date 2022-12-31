@@ -19,6 +19,7 @@ export const postQuery = gql`
       createdAt
       username
       likeCount
+      liked
       user {
         role
       }
