@@ -32,8 +32,8 @@ export const joinGroupMutation = gql`
 `;
 
 export const addLikeMutation = gql`
-  mutation addLike($postid: String) {
-    likePost(postid: $postid) {
+  mutation likePost($postId: String!) {
+    likePost(postId: $postId) {
       likeCount
     }
   }
@@ -58,6 +58,15 @@ export const DemoteMutation = gql`
 `;
 
 export const kickMutation = gql`
+  mutation kickMember($memberName: String) {
+    kickMember(memberName: $memberName) {
+      members {
+        name
+      }
+    }
+  }
+`;
+export const GroupProfileMutation = gql`
   mutation kickMember($memberName: String) {
     kickMember(memberName: $memberName) {
       members {

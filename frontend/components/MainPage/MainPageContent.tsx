@@ -16,6 +16,7 @@ import { getGroup } from "../../lib/queryGql/scheduleQuery";
 import { useLazyQuery } from "@apollo/client";
 import Link from "next/link";
 import axios from "axios";
+import Router from "next/router";
 
 function getToken() {
   const token =
@@ -34,6 +35,7 @@ function load(url, token) {
 
     // resolve
     resolve(res); // see note below!
+    console.log(res);
   });
 }
 
@@ -160,6 +162,10 @@ function MainPageContent() {
                   </Link>
                   <button
                     dir="rtl"
+                    onClick={() => {
+                      localStorage.removeItem("token");
+                      Router.push("/homepage");
+                    }}
                     className="hover:text-[#929292] active:text-[#bababa] cursor-pointer w-full text-sm cairo_regular_title flex items-center"
                   >
                     <BiLogOut className="ml-1" /> تسجيل الخروج
