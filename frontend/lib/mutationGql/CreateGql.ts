@@ -67,15 +67,15 @@ export const kickMutation = gql`
   }
 `;
 export const addGroupImageMutation = gql`
-  mutation addGroupImage($addGroupImageInput: AddGroupImageInput) {
+  mutation Mutation($addGroupImageInput: AddGroupImageInput) {
     addGroupImage(addGroupImageInput: $addGroupImageInput) {
       name
     }
   }
 `;
 export const addProfileImageMutation = gql`
-  mutation uploadPhoto($photoLink: String) {
-    uploadPhoto(photoLink: $photoLink) {
+  mutation Mutation($imageLink: String!) {
+    uploadPhoto(imageLink: $imageLink) {
       name
     }
   }
