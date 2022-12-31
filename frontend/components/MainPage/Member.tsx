@@ -2,13 +2,56 @@ import React from "react";
 import { useState } from "react";
 import { BiCrown } from "react-icons/bi";
 import { GiArmorDowngrade, GiArmorUpgrade, GiBootKick } from "react-icons/gi";
+import { gql, useMutation } from "@apollo/client";
 
 import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
+import { addLikeMutation } from "../../lib/mutationGql/CreateGql";
 
+function getToken() {
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  return token;
+}
 function Member(props: any) {
-  function Promote() {}
-  function Kick() {}
-  function Demote() {}
+  const token = getToken();
+
+  const [
+    Promote,
+    { data: datapromote, loading: loadpromote, error: errorpromote },
+  ] = useMutation(addLikeMutation, {
+    context: {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    },
+    variables: {
+      postId: props.id,
+    },
+  });
+  const [Kick, { data: datakick, loading: loadkick, error: errorkick }] =
+    useMutation(addLikeMutation, {
+      context: {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      },
+      variables: {
+        postId: props.id,
+      },
+    });
+  const [
+    Demote,
+    { data: datademote, loading: loaddemote, error: errordemote },
+  ] = useMutation(addLikeMutation, {
+    context: {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    },
+    variables: {
+      postId: props.id,
+    },
+  });
   const [show, setshow] = useState(false);
   return (
     <>
