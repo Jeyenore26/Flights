@@ -28,10 +28,6 @@ const CreateProfile = (props: any, { setIsOpen }) => {
   const token = getToken();
 
   const [img, setimg] = useState("");
-  const groupImageInput = {
-    group: props.groupname,
-    imageLink: img,
-  };
   const [changeimg, { data, loading, error }] = useMutation(
     addGroupImageMutation,
     {

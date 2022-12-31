@@ -30,7 +30,7 @@ function MainPageMembers(props: any) {
               <Member
                 name={props.owners.name}
                 role={props.owners.role}
-                img={props.owners.photoLink}
+                img={props.owners.photoLink }
               />
             </div>
           </div>

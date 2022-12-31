@@ -54,9 +54,9 @@ function MainPageComments(props: any) {
             >
               <button>
                 <AiFillLike
-                  className={`text-3xl ease-linear duration-75 ${
-                    liked ? "text-[#33ca47]" : "hover:text-[#696969]"
-                  }`}
+                  className={`text-3xl ease-linear duration-75
+                    hover:text-[#696969]
+                  `}
                   onClick={() => {
                     AddLike();
                     setLiked(!liked);
@@ -66,9 +66,6 @@ function MainPageComments(props: any) {
               <p className="ml-2 text-xl mt-1">{props.like}</p>
             </div>
             <div className="flex space-x-2 m-2">
-              <p className="text-xs bg-[#39A059] text-[#e2e2e2] rounded p-1">
-                {props.time}
-              </p>
               <p className="text-xs bg-[#39A059] text-[#e2e2e2] rounded p-1">
                 {props.role}
               </p>

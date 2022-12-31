@@ -25,7 +25,8 @@
     "components/3dEarth/Scene.jsxcene.jsx",
     "components/3dEarth/Sphere.jsxhere.jsx",
     "components/Earthing.tsx",
-    "components/Earthing.tsx"
-, "components/MainPage/CreatePostModal.jsx"  ],
+    "components/Earthing.tsx",
+    "components/MainPage/CreatePostModal.tsx"
+  ],
   "exclude": ["node_modules"]
 }
