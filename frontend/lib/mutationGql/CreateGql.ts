@@ -67,8 +67,8 @@ export const kickMutation = gql`
   }
 `;
 export const addGroupImageMutation = gql`
-  mutation Mutation($addGroupImageInput: AddGroupImageInput) {
-    addGroupImage(addGroupImageInput: $addGroupImageInput) {
+  mutation Mutation($addImageInput: AddGroupImageInput) {
+    addGroupImage(addImageInput: $addImageInput) {
       name
     }
   }
