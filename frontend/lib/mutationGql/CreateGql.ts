@@ -32,7 +32,7 @@ export const joinGroupMutation = gql`
 `;
 
 export const addLikeMutation = gql`
-  mutation likePost($postId: String) {
+  mutation likePost($postId: String!) {
     likePost(postId: $postId) {
       likeCount
     }

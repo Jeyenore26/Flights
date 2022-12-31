@@ -13,7 +13,8 @@ function getToken() {
 function MainPageComments(props: any) {
   const [liked, setLiked] = useState(false);
   const token = getToken();
-  console.log(props.id);
+  const postId = props.id;
+  console.log(postId);
   const [AddLike, { data, loading, error }] = useMutation(addLikeMutation, {
     context: {
       headers: {
@@ -21,7 +22,7 @@ function MainPageComments(props: any) {
       },
     },
     variables: {
-      postId: props.id,
+      postId: postId,
     },
   });
   return (
