@@ -84,7 +84,7 @@ export default function checkgroup() {
                 <div>
                   <h1 className="text-black cairo_bold_title text-[20px]">
                     {/*@ts-ignore*/}
-                    {data.name}asdasdas
+                    {data.name}
                   </h1>
                   <div
                     dir="rtl"
@@ -92,13 +92,12 @@ export default function checkgroup() {
                   >
                     <h1 className="text-black/60 cairo_bold_title text-[15px] ml-3 ">
                       {/*@ts-ignore*/}
-                      {data.workplace}sadasdsad
+                      {data.workplace}
                     </h1>
                     <h1 className=" cairo_bold_title text-[15px] ">.</h1>
                     <h1 className="text-black/60 cairo_bold_title text-[15px] mr-2">
                       {/*@ts-ignore*/}
                       {data.phone}
-                      101010101010
                     </h1>
                   </div>
                 </div>
