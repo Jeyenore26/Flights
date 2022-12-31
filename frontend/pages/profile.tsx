@@ -143,11 +143,7 @@ export default function profile() {
                   {!disabled && (
                     <span
                       className="flex justify-center cursor-pointer text-white xxs:w-80 md:w-32 hover:text-white/80 hover:border-green-400 active:border-green-300 px-4 py-1 active:text-white/60 border-[1px] border-white bg-green-500 rounded"
-<<<<<<< Updated upstream
-                      onClick={() => {}}
-=======
                       onClick={() => groupInput()}
->>>>>>> Stashed changes
                     >
                       <AiOutlineEdit className="mt-1" />
                       <button
