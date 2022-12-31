@@ -29,7 +29,7 @@ export default function registermember() {
   console.log(data);
   if (data?.login?.token) {
     setToken(data);
-  } 
+  }
   return (
     <div className="w-full h-screen">
       <Head>
@@ -39,7 +39,7 @@ export default function registermember() {
       <div className="overflow-y-hidden">
         <img
           src="greenRectangles.png"
-          className="w-screen h-full fixed z-[-1] brightness-75 cover"
+          className="w-screen h-full fixed z-[-1] brightness-75 cover md:block  hidden"
         />
         <div className="py-4 flex sm:mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
           <div>
@@ -69,7 +69,7 @@ export default function registermember() {
         >
           <div className=" py-4 sm:px-[2%] px-[10%] overflow-x-auto bg-black/30 rounded-xl">
             <div className="flex justify-center ">
-              <div className=" z-10">
+              <div className=" z-10 md:block  hidden">
                 <Eyes />
               </div>
             </div>

@@ -47,8 +47,8 @@ function MainPageContent() {
   const [openschedule, setopenschedule] = useState(false);
   const [data, setdata] = useState();
   const token = getToken();
-
-  if (typeof window !== "undefined") {
+  console.log(!data, data);
+  if (typeof window !== "undefined" && data == undefined) {
     const token = localStorage.getItem("token") as string;
     load(`http://localhost:5000/auth/user`, token)
       .then((res: any) => {
@@ -212,7 +212,8 @@ function MainPageContent() {
                     dark ? "text-[#e2e2e2]" : "text-black"
                   }`}
                 >
-                  sddd
+                  {/*//@ts-ignore */}
+                  {data?.memberOf}
                 </p>
                 <div className="flex justify-center text-lg mt-2 text-[#adb1b5]">
                   <p className=" border-r-2 border-[#adb1b5] pr-2 mr-2">

@@ -47,7 +47,7 @@ export default function registermember() {
         <div className="w-screen h-full fixed z-[-1]"></div>
         <img
           src="greenRectangles.png"
-          className="w-screen h-full fixed z-[-1] brightness-75 object-cover"
+          className="w-screen h-full fixed z-[-1] brightness-75 object-cover hidden md:block"
         />
         <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
           <div>
@@ -77,7 +77,7 @@ export default function registermember() {
         >
           <div className=" p-4 w-[20rem] md:w-[30rem] overflow-x-auto bg-black/30 rounded-xl mt-14 sm:mt-10 xl:mt-1 mb-1">
             <div className="flex justify-center ">
-              <div className=" lg:block z-10">
+              <div className=" md:block z-10 hidden">
                 <Eyes />
               </div>
             </div>
