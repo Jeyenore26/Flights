@@ -12,8 +12,16 @@ import { updateProfileMutation } from "../lib/mutationGql/AuthGql";
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  console.log(token);
   return token;
 }
+
+function setToken(token) {
+  console.log(token);
+  localStorage.removeItem("token");
+  localStorage.setItem("token", token);
+}
+
 function load(url, token) {
   return new Promise(async function (resolve, reject) {
     const res = await axios({
@@ -95,7 +103,9 @@ export default function profile() {
       },
     }
   );
-  console.log(data);
+  if (updateData?.updateProfile.token) {
+    setToken(updateData?.updateProfile.token);
+  }
   return (
     <>
       <NavBar />
