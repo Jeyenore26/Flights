@@ -77,13 +77,13 @@ export default function registermember() {
         >
           <div className=" p-4 w-[20rem] md:w-[30rem] overflow-x-auto bg-black/30 rounded-xl mt-14 sm:mt-10 xl:mt-1 mb-1">
             <div className="flex justify-center ">
-              <div className=" lg:block z-10 hidden">
+              <div className=" md:block z-10 hidden">
                 <Eyes />
               </div>
             </div>
 
-            <div dir="rtl" className="lg:mt-14 xxs:mt-5 flex justify-center">
-              <h1 className="text-white cairo_semibold_title maintitle">
+            <div dir="rtl" className=" mt-5 md:mt-14 flex justify-center">
+              <h1 className="text-white cairo_semibold_title maintitle text-xl">
                 انشاء حساب
               </h1>
             </div>

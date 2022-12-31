@@ -74,9 +74,9 @@ export default function registermember() {
               </div>
             </div>
 
-            <div dir="rtl" className="mt-12 flex justify-center">
-              <h1 className="text-white cairo_semibold_title text-2xl maintitle">
-                انشاء حساب
+            <div dir="rtl" className=" mt-5 md:mt-14 flex justify-center">
+              <h1 className="text-white cairo_semibold_title maintitle text-xl">
+                تسجيل الدخول
               </h1>
             </div>
 
