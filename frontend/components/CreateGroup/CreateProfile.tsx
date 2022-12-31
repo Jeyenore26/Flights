@@ -12,7 +12,7 @@ function getToken() {
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
   return token;
 }
-const ProfileModal = ({ setIsOpen }) => {
+const CreateProfile = ({ setIsOpen }) => {
   const images = [
     "./avater2.png",
 
@@ -24,10 +24,8 @@ const ProfileModal = ({ setIsOpen }) => {
     "./avater6.png",
     "./hegab.png",
   ];
-  const [description, setdescription] = useState("");
   const token = getToken();
 
-  console.log(description);
   const [img, setimg] = useState("");
   const [changeimg, { data, loading, error }] = useMutation(
     createPostMutation,
@@ -37,9 +35,7 @@ const ProfileModal = ({ setIsOpen }) => {
           authorization: `Bearer ${token}`,
         },
       },
-      variables: {
-        body: description,
-      },
+      variables: {},
     }
   );
   console.log(data);
@@ -93,4 +89,4 @@ const ProfileModal = ({ setIsOpen }) => {
   );
 };
 
-export default ProfileModal;
+export default CreateProfile;
