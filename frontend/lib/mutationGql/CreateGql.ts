@@ -66,3 +66,12 @@ export const kickMutation = gql`
     }
   }
 `;
+export const GroupProfileMutation = gql`
+  mutation kickMember($memberName: String) {
+    kickMember(memberName: $memberName) {
+      members {
+        name
+      }
+    }
+  }
+`;
