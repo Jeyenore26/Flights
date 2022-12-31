@@ -113,7 +113,7 @@ export default function profile() {
     <>
       <NavBar />
 
-      <div className="bg-white hidden justify-center md:h-screen xxs:h-screen w-full xxs:flex items-center">
+      <div className="bg-white hidden justify-center md:h-screen xxs:h-full w-full xxs:flex items-center">
         <Head>
           <title className="cairo_black_title">حسابك الشخصي</title>
           <meta
@@ -125,7 +125,7 @@ export default function profile() {
           <div className="flex md:flex-row xxs:flex-col justify-items-center">
             <div className="profile flex justify-center">
               <div className="flex flex-col-reverse items-center">
-                <div className="flex xxs:flex-col md:flex-row justify-center mt-5 md:mb-0 xxs:mb-4">
+                <div className="flex xxs:flex-col md:flex-row justify-center mt-5 md:mb-0 xxs:mb-4 xxs:mr-5">
                   <span className="flex justify-center cursor-pointer ml-5 text-white xxs:w-80 md:w-32 hover:text-white/80 hover:border-gray-400 active:border-gray-300 px-4 py-1 active:text-white/60 border-[1px] border-white bg-gray-500 rounded">
                     <AiOutlineEdit className="mt-1" />
                     <button
@@ -171,7 +171,7 @@ export default function profile() {
                 <img src={img} className="w-80 h-80 bg-cover rounded-md" />
               </div>
             </div>
-            <div className=" md:mr-10 md:ml-0 mt-5 xxs:ml-[-5.5rem]">
+            <div className=" md:mr-10 md:ml-0 mt-5 xxs:ml-[-7.5rem]">
               <span className="flex justify-center">
                 <BInputOutline
                   placeholder={Iname}
@@ -195,15 +195,14 @@ export default function profile() {
                   label="الرقم"
                   type={"text"}
                   disabled={disabled}
-                  lclassName="mr-4"
                   iclassName={
                     disabled
-                      ? "border-none mr-4 mt-1"
-                      : "border-dotted border-2 border-blue-600 mr-4 mt-1"
+                      ? "border-none mt-1"
+                      : "border-dotted border-2 border-blue-600 mt-1"
                   }
                 />
               </span>
-              <span className="flex md:justify-start xxs:justify-center xxs:ml-12 md:ml-0">
+              <span className="flex md:justify-start xxs:justify-center ">
                 <BInputOutline
                   placeholder={Iemail}
                   onChange={(e) => {
@@ -214,8 +213,8 @@ export default function profile() {
                   disabled={disabled}
                   iclassName={
                     disabled
-                      ? "border-none ml-3 mt-1"
-                      : "border-dotted border-2 border-blue-600 ml-3 mt-1"
+                      ? "border-none mt-1"
+                      : "border-dotted border-2 border-blue-600 mt-1"
                   }
                 />
                 <BInputOutline
@@ -228,8 +227,8 @@ export default function profile() {
                   disabled={disabled}
                   iclassName={
                     disabled
-                      ? "border-none  mt-1"
-                      : "border-dotted border-2 border-blue-600  mt-1"
+                      ? "border-none mt-1"
+                      : "border-dotted border-2 border-blue-600 mt-1"
                   }
                 />
               </span>
