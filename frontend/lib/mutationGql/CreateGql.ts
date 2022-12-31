@@ -74,7 +74,7 @@ export const addGroupImageMutation = gql`
   }
 `;
 export const addProfileImageMutation = gql`
-  mutation uploadPhoto($photoLink: String!) {
+  mutation uploadPhoto($photoLink: String) {
     uploadPhoto(photoLink: $photoLink) {
       name
     }
