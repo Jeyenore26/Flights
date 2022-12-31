@@ -38,7 +38,7 @@ function MainPageComments(props: any) {
             <p className="text-xl font-semibold mb-1">{props.name} </p>
 
             <img
-              src={props.profImg}
+              src={props.photoLink}
               className="h-20 object-cover w-20 bg-slate-400 rounded-[40px] m-2 "
             ></img>
           </div>
