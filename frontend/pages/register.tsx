@@ -73,9 +73,9 @@ export default function registermember() {
             e.preventDefault();
             regiserInput();
           }}
-          className="flex justify-center 2xl:mx-[12rem] md:mx-[2rem] sm:mx-[1rem] xs:mx-[1rem] xxs:mx-[1rem] h-fill"
+          className="flex justify-center "
         >
-          <div className=" py-4 2xl:px-[2%] md:px-[2%] sm:px-[2%] xs:px-[10%] xxs:px-[5%] overflow-x-auto bg-black/30 rounded-xl">
+          <div className=" p-4 w-[20rem] md:w-[30rem] overflow-x-auto bg-black/30 rounded-xl mt-14 sm:mt-10 xl:mt-1 mb-1">
             <div className="flex justify-center ">
               <div className=" lg:block z-10">
                 <Eyes />
@@ -91,17 +91,17 @@ export default function registermember() {
               onChange={(e) => setname(e.target.value)}
               type={"text"}
               required
-              lclassName="flex secondarytext xl:mb-0 xxs:mb-[-10rem] xs:justify-start mx-1 xxs:justify-center"
+              lclassName="flex secondarytext xl:mb-0 mb-[-10rem] justify-start mx-1 my-2 "
               label="الاسم "
-              iclassName=" 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 "
+              iclassName=" w-full  "
             />
             <Input
               onChange={(e) => setemail(e.target.value)}
               type={"email"}
               required
-              lclassName="flex secondarytext xl:mb-0 xxs:mb-[-10rem] xs:justify-start xxs:justify-center"
+              lclassName="flex secondarytext xl:mb-0 xxs:mb-[-10rem] justify-start mx-1 my-2 "
               label="الايميل"
-              iclassName="2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] lg:mx-4 "
+              iclassName="w-full  "
             />
 
             <div className="md:flex flex-row-reverse">
@@ -109,24 +109,24 @@ export default function registermember() {
                 onChange={(e) => setpassword(e.target.value)}
                 type={"password"}
                 required
-                lclassName="flex secondarytext xl:mb-0 xxs:mb-[-10rem] xs:justify-start mr-1 xxs:justify-center"
+                lclassName="flex secondarytext xl:mb-0 xxs:mb-[-10rem] justify-start mx-1 my-2"
                 label="كلمة السر"
-                iclassName=" 2xl:w-[15rem] md:w-[15rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] md:mr-3 md:ml-1 xxs:mr-0 xxs:ml-0"
+                iclassName=" w-full md:w-[98%] "
               />
               <Input
                 onChange={(e) => setconfirmpass(e.target.value)}
                 type={"password"}
                 required
-                lclassName="flex secondarytext xl:mb-0 xxs:mb-[-10rem] xs:justify-start xxs:justify-center"
+                lclassName="flex secondarytext xl:mb-0 xxs:mb-[-10rem] justify-start mx-1 my-2 "
                 label="تاكيد كلمة السر"
-                iclassName=" 2xl:w-[15rem] md:w-[15rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[25rem] md:ml-3 md:mr-1 xxs:mr-0 xxs:ml-0"
+                iclassName=" w-full md:w-[98%] "
               />
             </div>
 
             <div className="flex justify-center my-3">
               <button
                 value={"submit"}
-                className="text-black cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] xxs:text-md md:text-lg bg-green-400 md:py-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl"
+                className="text-black p-1 cairo_semibold_title w-full text-lg bg-green-400 mt-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl"
               >
                 نورتنا
               </button>
