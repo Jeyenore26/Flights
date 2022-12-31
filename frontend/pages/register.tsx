@@ -5,7 +5,7 @@ import Link from "next/link";
 import Input from "../components/Inputs/Input";
 import { gql, useMutation } from "@apollo/client";
 import { registerMutation } from "../lib/mutationGql/AuthGql";
-import { useRouter } from "next/router";
+import Router from "next/router";
 
 function setToken(data) {
   localStorage.removeItem("token");
@@ -125,6 +125,9 @@ export default function registermember() {
 
             <div className="flex justify-center my-3">
               <button
+                onClick={() => {
+                  Router.push("/mainpage");
+                }}
                 value={"submit"}
                 className="text-black cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] xxs:text-md md:text-lg bg-green-400 md:py-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl"
               >
