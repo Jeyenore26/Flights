@@ -34,7 +34,7 @@ export default function checkgroup() {
     const token = localStorage.getItem("token") as string;
     const groupName = localStorage.getItem("groupname") as string;
     load(
-      `http://localhost:5000/check/group/${groupName}`,
+      `https://earthbackend.onrender.com/check/group/${groupName}`,
       token,
       groupName
     ).then((res: any) => {

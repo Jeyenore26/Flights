@@ -50,7 +50,7 @@ function MainPageContent() {
   console.log(!data, data);
   if (typeof window !== "undefined" && data == undefined) {
     const token = localStorage.getItem("token") as string;
-    load(`http://localhost:5000/auth/user`, token)
+    load(`https://earthbackend.onrender.com/auth/user`, token)
       .then((res: any) => {
         setdata(res.data);
       })

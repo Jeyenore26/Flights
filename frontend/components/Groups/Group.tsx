@@ -29,9 +29,11 @@ export default function Group(groups) {
   if (typeof window !== "undefined" && (!data || data.length == 0)) {
     const token = localStorage.getItem("token") as string;
 
-    load("http://localhost:5000/check/Allgroups", token).then((res: any) => {
-      setdata(res.data);
-    });
+    load("https://earthbackend.onrender.com/check/Allgroups", token).then(
+      (res: any) => {
+        setdata(res.data);
+      }
+    );
   }
   console.log(!data);
 

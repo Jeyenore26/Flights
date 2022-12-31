@@ -42,12 +42,14 @@ export default function profile() {
   const [disabled, setdisabled] = useState(true);
   if (typeof window !== "undefined" && (!data || data.length == 0)) {
     const token = localStorage.getItem("token") as string;
-    load(`http://localhost:5000/user/profile`, token).then((res: any) => {
-      console.log(res.data);
-      setdata(res.data);
+    load(`https://earthbackend.onrender.com/user/profile`, token).then(
+      (res: any) => {
+        console.log(res.data);
+        setdata(res.data);
 
-      localStorage.removeItem("groupName");
-    });
+        localStorage.removeItem("groupName");
+      }
+    );
     console.log(data);
   }
   //cuz typescript sucks
