@@ -67,7 +67,7 @@ export default function checkgroup() {
 
   return (
     <>
-      <section className="bg-white h-screen w-full">
+      <section className=" h-screen w-full">
         <NavBar />
         <div className=" w-full h-max">
           <section className="xl:mx-[20rem]">
@@ -79,27 +79,26 @@ export default function checkgroup() {
                 تتم إدارتها بواسطة
               </span>
             </div>
-            <div className="mx-[2rem] mt-4">
-              <div dir="rtl" className="flex justify-between ">
+            <div className="mt-4 mx-2 sm:mx-[2rem]">
+              <div dir="rtl" className="flex justify-between gap-3">
                 <div>
                   <h1 className="text-black cairo_bold_title text-[20px]">
                     {/*@ts-ignore*/}
-
-                    {data.name}
+                    {data.name}asdasdas
                   </h1>
-                  <div dir="rtl" className="flex justify-start mt-1">
+                  <div
+                    dir="rtl"
+                    className="flex justify-start items-center  mt-1"
+                  >
                     <h1 className="text-black/60 cairo_bold_title text-[15px] ml-3 ">
                       {/*@ts-ignore*/}
-
-                      {data.workplace}
+                      {data.workplace}sadasdsad
                     </h1>
-                    <h1 className=" cairo_bold_title text-[15px] text-white">
-                      .
-                    </h1>
-                    <h1 className="text-black/60 cairo_bold_title text-[13px] mt-1 mr-2">
+                    <h1 className=" cairo_bold_title text-[15px] ">.</h1>
+                    <h1 className="text-black/60 cairo_bold_title text-[15px] mr-2">
                       {/*@ts-ignore*/}
-
                       {data.phone}
+                      101010101010
                     </h1>
                   </div>
                 </div>
@@ -107,7 +106,7 @@ export default function checkgroup() {
                   onClick={() => {
                     JoinGroup();
                   }}
-                  className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 md:px-8 xxs:py-2 py-2 xxs:px-4 md:text-[17px] mb-10 text-white rounded-lg"
+                  className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 p-2 md:text-[17px] mb-10 text-white rounded-lg"
                 >
                   انضم للمجموعة
                 </button>
@@ -115,15 +114,15 @@ export default function checkgroup() {
             </div>
           </section>
           <section>
-            <div dir="rtl" className="flex justify-center ">
+            <div dir="rtl" className="flex justify-center items-center ">
               <span
                 onClick={() => {
                   setpage(1);
                 }}
                 className={
                   page === 1
-                    ? "text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2"
-                    : "text-black hover:text-black/40 active:text-black/80 cairo_regular_title border-b-2 border-white cursor-pointer text-[15px] py-1 mr-5 mb-2"
+                    ? "text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] ml-3 py-1 mb-2"
+                    : "text-black hover:text-black/40 active:text-black/80 cairo_regular_title border-b-2  cursor-pointer text-[15px] ml-3 py-1 mb-2"
                 }
               >
                 المجموعة
@@ -135,8 +134,8 @@ export default function checkgroup() {
                 }}
                 className={
                   page === 2
-                    ? "text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1 mr-5 mb-2"
-                    : "text-black hover:text-black/40 active:text-black/80 cairo_regular_title border-b-2 border-white cursor-pointer text-[15px] py-1 mr-5 mb-2"
+                    ? "text-[#754b5a] transition-1 cairo_regular_title cursor-pointer text-[15px] border-b-2 border-[#754b5a] py-1  mb-2"
+                    : "text-black hover:text-black/40 active:text-black/80 cairo_regular_title border-b-2  cursor-pointer text-[15px] py-1  mb-2"
                 }
               >
                 ساعدنا
