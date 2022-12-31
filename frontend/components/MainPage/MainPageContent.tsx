@@ -43,13 +43,14 @@ function MainPageContent() {
   const [dark, setdark] = useState(false);
   const [openpost, setopenpost] = useState(false);
   const [openschedule, setopenschedule] = useState(false);
+  const [data, setdata] = useState();
   const token = getToken();
 
   if (typeof window !== "undefined") {
     const token = localStorage.getItem("token") as string;
     load(`http://localhost:5000/auth/user`, token)
       .then((res: any) => {
-        console.log(res.data);
+        setdata(res.data);
       })
       .catch((e) => {
         console.log("here");
@@ -83,7 +84,6 @@ function MainPageContent() {
     });
 
   const Saviors = guys?.getGroup;
-  console.log(Saviors);
   if (memberload) return <div>dal;sdk'law;daw</div>;
 
   return (
@@ -212,7 +212,8 @@ function MainPageContent() {
                   <p className=" border-r-2 border-[#adb1b5] pr-2 mr-2">
                     50k عضو
                   </p>
-                  <p>مش عارف</p>
+                  {/*//@ts-ignore */}
+                  <p>{data?.role}</p>
                 </div>
               </div>
             </div>
@@ -319,7 +320,8 @@ function MainPageContent() {
               />
               <div className="text-center text-[12px] sm:text-sm md:text-lg mt-3 cairo_regular_title">
                 <p>مرحبا بك,</p>
-                <p className="font-bold">محمد سامح الدياسطي.</p>
+                {/*//@ts-ignore*/}
+                <p className="font-bold">{data?.name}</p>
               </div>
             </div>
             <div className="mt-[1rem] sm:mt-[3rem] xl:mt-[5rem] lg:mr-4">

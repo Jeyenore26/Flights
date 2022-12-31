@@ -34,6 +34,7 @@ function load(url, token) {
 
     // resolve
     resolve(res); // see note below!
+    console.log(res);
   });
 }
 export default function profile() {
@@ -64,6 +65,8 @@ export default function profile() {
   //@ts-ignore
 
   let Irole = data.role;
+  //@ts-ignore
+  let img = data.photoLink;
 
   //@ts-ignore
   const [name, setname] = useState("");
@@ -165,10 +168,7 @@ export default function profile() {
                     </span>
                   )}
                 </div>
-                <img
-                  src="./avater2.png"
-                  className="w-80 h-80 bg-cover rounded-md"
-                />
+                <img src={img} className="w-80 h-80 bg-cover rounded-md" />
               </div>
             </div>
             <div className=" md:mr-10 md:ml-0 mt-5 xxs:ml-[-5.5rem]">

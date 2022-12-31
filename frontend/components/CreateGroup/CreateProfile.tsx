@@ -5,7 +5,7 @@ import { RiArticleLine } from "react-icons/ri";
 import GroupInput from "../Inputs/GroupInput";
 import ImageInput from "../Inputs/ImageInput";
 import { gql, useMutation } from "@apollo/client";
-import { createPostMutation } from "../../lib/mutationGql/CreateGql";
+import { addGroupImageMutation } from "../../lib/mutationGql/CreateGql";
 
 function getToken() {
   const token =
@@ -29,14 +29,19 @@ const CreateProfile = (props: any, { setIsOpen }) => {
 
   const [img, setimg] = useState("");
   const [changeimg, { data, loading, error }] = useMutation(
-    createPostMutation,
+    addGroupImageMutation,
     {
       context: {
         headers: {
           authorization: `Bearer ${token}`,
         },
       },
-      variables: {},
+      variables: {
+        addGroupImageInput: {
+          groupName: props.groupname,
+          photoLink: img,
+        },
+      },
     }
   );
   console.log(data);

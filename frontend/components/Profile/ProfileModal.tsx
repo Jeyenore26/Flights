@@ -5,7 +5,7 @@ import { RiArticleLine } from "react-icons/ri";
 import GroupInput from "../Inputs/GroupInput";
 import ImageInput from "../Inputs/ImageInput";
 import { gql, useMutation } from "@apollo/client";
-import { createPostMutation } from "../../lib/mutationGql/CreateGql";
+import { addProfileImageMutation } from "../../lib/mutationGql/CreateGql";
 
 function getToken() {
   const token =
@@ -30,7 +30,7 @@ const ProfileModal = ({ setIsOpen }) => {
   console.log(description);
   const [img, setimg] = useState("");
   const [changeimg, { data, loading, error }] = useMutation(
-    createPostMutation,
+    addProfileImageMutation,
     {
       context: {
         headers: {
@@ -38,13 +38,12 @@ const ProfileModal = ({ setIsOpen }) => {
         },
       },
       variables: {
-        body: description,
+        photoLink: img,
       },
     }
   );
   console.log(data);
-  if (error) console.log(error);
-  if (loading) return <div>fff</div>;
+  if (error) console.log("gay");
 
   return (
     <>
@@ -62,7 +61,7 @@ const ProfileModal = ({ setIsOpen }) => {
             <RiCloseLine className="mb-[-2px] mr-10 text-black" />
           </button>
 
-          <form>
+          <div>
             <section
               id="gaolsanimation"
               className="flex justify-center cursor-default"
@@ -74,7 +73,7 @@ const ProfileModal = ({ setIsOpen }) => {
                       <button
                         onClick={() => {
                           setimg(image);
-
+                          changeimg();
                           console.log(img);
                         }}
                         className="mx-auto mb-4 rounded-full hover:border-black border-2 active:border-blue-400   "
@@ -86,7 +85,7 @@ const ProfileModal = ({ setIsOpen }) => {
                 })}
               </div>
             </section>
-          </form>
+          </div>
         </div>
       </div>
     </>
