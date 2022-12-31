@@ -7,6 +7,8 @@ import NavBar from "../components/CheckGroup/NavBar";
 import { AiOutlineEdit } from "react-icons/ai";
 import axios from "axios";
 import ProfileModal from "../components/Profile/ProfileModal";
+import { useMutation } from "@apollo/client";
+import { updateProfileMutation } from "../lib/mutationGql/AuthGql";
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -56,37 +58,44 @@ export default function profile() {
   let Irole = data.role;
 
   //@ts-ignore
-  const [name, setname] = useState(data.name);
+  const [name, setname] = useState("");
   //@ts-ignore
 
-  const [number, setnumber] = useState(data.phone);
+  const [number, setnumber] = useState("");
   //@ts-ignore
 
-  const [email, setemail] = useState(data.email);
+  const [email, setemail] = useState("");
   //@ts-ignore
 
-  const [password, setpassword] = useState(data.password);
+  const [password, setpassword] = useState("");
   const [open, setopen] = useState(false);
-  const createInput = {
+  const updateInput = {
     name: name,
     email: email,
     number: number,
     password: password,
   };
   const token = getToken();
-  // const [groupInput, { data, loading, error }] = useMutation(
-  //   createGroupMutation,
-  //   {
-  //     context: {
-  //       headers: {
-  //         authorization: `Bearer ${token}`,
-  //       },
-  //     },
-  //     variables: {
-  //       createGroupInput: createInput,
-  //     },
-  //   }
-  // );
+  console.log(email, name, password, number);
+  const [groupInput, { data: updateData, loading, error }] = useMutation(
+    updateProfileMutation,
+    {
+      context: {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      },
+      variables: {
+        updateProfileInput: {
+          name: name,
+          email: email,
+          password: password,
+          phone: number,
+        },
+      },
+    }
+  );
+  console.log(data);
   return (
     <>
       <NavBar />
@@ -134,7 +143,11 @@ export default function profile() {
                   {!disabled && (
                     <span
                       className="flex justify-center cursor-pointer text-white xxs:w-80 md:w-32 hover:text-white/80 hover:border-green-400 active:border-green-300 px-4 py-1 active:text-white/60 border-[1px] border-white bg-green-500 rounded"
+<<<<<<< Updated upstream
                       onClick={() => {}}
+=======
+                      onClick={() => groupInput()}
+>>>>>>> Stashed changes
                     >
                       <AiOutlineEdit className="mt-1" />
                       <button
@@ -155,7 +168,7 @@ export default function profile() {
             <div className=" md:mr-10 md:ml-0 mt-5 xxs:ml-[-5.5rem]">
               <span className="flex justify-center">
                 <BInputOutline
-                  value={Iname}
+                  placeholder={Iname}
                   onChange={(e) => {
                     setname(e.target.value);
                   }}
@@ -169,7 +182,7 @@ export default function profile() {
                   }
                 />
                 <BInputOutline
-                  value={Inumber}
+                  placeholder={Inumber}
                   onChange={(e) => {
                     setnumber(e.target.value);
                   }}
@@ -186,7 +199,7 @@ export default function profile() {
               </span>
               <span className="flex md:justify-start xxs:justify-center xxs:ml-12 md:ml-0">
                 <BInputOutline
-                  value={Iemail}
+                  placeholder={Iemail}
                   onChange={(e) => {
                     setemail(e.target.value);
                   }}
@@ -200,9 +213,9 @@ export default function profile() {
                   }
                 />
                 <BInputOutline
-                  value={"كلمة السر"}
+                  placeholder={"كلمة السر"}
                   onChange={(e) => {
-                    setemail(e.target.value);
+                    setpassword(e.target.value);
                   }}
                   label="كلمة السر"
                   type={"text"}
@@ -216,7 +229,7 @@ export default function profile() {
               </span>
               <span className="flex justify-center mr-[-11px]">
                 <BInputOutline
-                  value={IgroupName}
+                  placeholder={IgroupName}
                   label="اسم المجموعة"
                   iclassName="ml-2 mr-3"
                   lclassName="mr-3"
@@ -224,7 +237,7 @@ export default function profile() {
                   disabled
                 />
                 <BInputOutline
-                  value={Irole}
+                  placeholder={Irole}
                   iclassName="w-[200%]"
                   label="الرتبة"
                   type={"text"}
