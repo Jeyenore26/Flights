@@ -15,10 +15,26 @@ import { postQuery } from "../../lib/queryGql/scheduleQuery";
 import { getGroup } from "../../lib/queryGql/scheduleQuery";
 import { useLazyQuery } from "@apollo/client";
 import Link from "next/link";
+import axios from "axios";
+
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
   return token;
+}
+function load(url, token) {
+  return new Promise(async function (resolve, reject) {
+    const res = await axios({
+      method: "GET",
+      url: url,
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+
+    // resolve
+    resolve(res); // see note below!
+  });
 }
 
 function MainPageContent() {
@@ -28,6 +44,17 @@ function MainPageContent() {
   const [openpost, setopenpost] = useState(false);
   const [openschedule, setopenschedule] = useState(false);
   const token = getToken();
+
+  if (typeof window !== "undefined") {
+    const token = localStorage.getItem("token") as string;
+    load(`http://localhost:5000/auth/user`, token)
+      .then((res: any) => {
+        console.log(res.data);
+      })
+      .catch((e) => {
+        console.log("here");
+      });
+  }
   const [loadSchedule, { loading, error, data: Schedules }] = useLazyQuery(
     scheduleQuery,
     {
@@ -55,7 +82,6 @@ function MainPageContent() {
       },
     });
 
-  console.log(error1);
   const Saviors = guys?.getGroup;
   console.log(Saviors);
   if (memberload) return <div>dal;sdk'law;daw</div>;
