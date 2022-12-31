@@ -73,8 +73,9 @@ const ProfileModal = ({ setIsOpen }) => {
                       <button
                         onClick={() => {
                           setimg(image);
-                          changeimg();
                           console.log(img);
+
+                          changeimg();
                         }}
                         className="mx-auto mb-4 rounded-full hover:border-black border-2 active:border-blue-400   "
                       >
