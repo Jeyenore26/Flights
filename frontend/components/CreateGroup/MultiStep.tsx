@@ -5,6 +5,7 @@ import { MdGroupAdd } from "react-icons/md";
 import { gql, useMutation } from "@apollo/client";
 import { createGroupMutation } from "../../lib/mutationGql/CreateGql";
 import ImageInput from "../Inputs/ImageInput";
+import CreateProfile from "./CreateProfile";
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -63,7 +64,7 @@ export default function () {
   }
   const [page, setpage] = useState(1);
   const [disable, setdis] = useState(false);
-
+  const [open, setopen] = useState(false);
   const pagecolor = { color: "blue" };
   return (
     <>
@@ -140,6 +141,7 @@ export default function () {
                       label="رقم المجموعة"
                       required
                       type={"number"}
+                      max={11}
                       placeholder="رقم المجموعة"
                       lclassName="text-black"
                     />
@@ -180,7 +182,7 @@ export default function () {
                   <>
                     <form
                       onSubmit={(e) => {
-                        e.preventDefault();
+                        event?.preventDefault();
                         groupInput();
                       }}
                       style={{ width: page === 2 ? "100%" : "35%" }}
@@ -192,6 +194,8 @@ export default function () {
                           label="موقع العمل"
                           required
                           type={"text"}
+                          min={8}
+                          max={10}
                           placeholder="مثال: مصر -شمال سيناء"
                           lclassName="text-black focus:text-black"
                         />
@@ -206,6 +210,23 @@ export default function () {
                           lclassName="text-black"
                         />
                       </div>
+                      <div className="PageContent">
+                        <button
+                          dir="rtl"
+                          className="cairo_semibold_title cursor-pointer text-black border-black border-2 px-3 rounded-xl hover:border-black/30 active:border-black/50 hover:text-black/30 active:text-black/50  mt-5 mr-1  "
+                          onClick={() => {
+                            setopen(true);
+                          }}
+                        >
+                          صورة الجروب
+                        </button>
+                        {open && (
+                          <CreateProfile
+                            groupname={groupname}
+                            setIsOpen={setopen}
+                          />
+                        )}
+                      </div>
 
                       <div className="flex justify-start">
                         <button
@@ -217,7 +238,7 @@ export default function () {
                               : "px-6 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] border border-transparent rounded-lg focus:outline-none cairo_regular_title"
                           }
                         >
-                          الخطوة القادمة
+                          انتهيا
                         </button>
                       </div>
                     </form>
