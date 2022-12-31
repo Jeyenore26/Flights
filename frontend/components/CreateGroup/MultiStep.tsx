@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GroupInput from "../Inputs/GroupInput";
 import { MdGroupAdd } from "react-icons/md";
-
+import Router from "next/router";
 import { gql, useMutation } from "@apollo/client";
 import { createGroupMutation } from "../../lib/mutationGql/CreateGql";
 import ImageInput from "../Inputs/ImageInput";
@@ -22,7 +22,6 @@ export default function () {
   const [paypal, setpaypal] = useState("");
 
   /* page three*/
-
   const createInput = {
     name: groupname,
     description: groupprovide,
@@ -184,6 +183,7 @@ export default function () {
                       onSubmit={(e) => {
                         event?.preventDefault();
                         groupInput();
+                        Router.push("/mainpage");
                       }}
                       style={{ width: page === 2 ? "100%" : "35%" }}
                       className="PageContent"

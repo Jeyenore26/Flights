@@ -30,7 +30,7 @@ export default function registermember() {
   console.log(data);
   if (data?.login?.token) {
     setToken(data);
-  }
+  } 
   return (
     <div className="w-full h-screen">
       <Head>
