@@ -66,12 +66,17 @@ export const kickMutation = gql`
     }
   }
 `;
-export const GroupProfileMutation = gql`
-  mutation kickMember($memberName: String) {
-    kickMember(memberName: $memberName) {
-      members {
-        name
-      }
+export const addGroupImageMutation = gql`
+  mutation addGroupImage($addGroupImageInput: AddGroupImageInput) {
+    addGroupImage(addGroupImageInput: $addGroupImageInput) {
+      name
+    }
+  }
+`;
+export const addProfileImageMutation = gql`
+  mutation uploadPhoto($photoLink: String) {
+    uploadPhoto(photoLink: $photoLink) {
+      name
     }
   }
 `;
