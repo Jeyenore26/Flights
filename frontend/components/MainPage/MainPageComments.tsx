@@ -1,11 +1,29 @@
 import React from "react";
 import { useState } from "react";
 import { AiFillLike } from "react-icons/ai";
+import { gql, useMutation } from "@apollo/client";
 import { ImImage } from "react-icons/im";
+import { addLikeMutation } from "../../lib/mutationGql/CreateGql";
 
+function getToken() {
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("token") : null;
+  return token;
+}
 function MainPageComments(props: any) {
   const [liked, setLiked] = useState(false);
-  const [pic, setPic] = useState(false);
+  const token = getToken();
+  console.log(props.id);
+  const [AddLike, { data, loading, error }] = useMutation(addLikeMutation, {
+    context: {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    },
+    variables: {
+      postId: props.id,
+    },
+  });
   return (
     <div>
       <div>
@@ -39,6 +57,7 @@ function MainPageComments(props: any) {
                     liked ? "text-[#33ca47]" : "hover:text-[#696969]"
                   }`}
                   onClick={() => {
+                    AddLike();
                     setLiked(!liked);
                   }}
                 />

@@ -14,6 +14,7 @@ export const scheduleQuery = gql`
 export const postQuery = gql`
   query postQuery {
     getPostsInGroup {
+      id
       body
       createdAt
       username

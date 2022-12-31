@@ -30,3 +30,11 @@ export const joinGroupMutation = gql`
     }
   }
 `;
+
+export const addLikeMutation = gql`
+  mutation addLike($postid: String) {
+    likePost(postid: $postid) {
+      likeCount
+    }
+  }
+`;

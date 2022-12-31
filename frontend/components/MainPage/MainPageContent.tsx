@@ -59,6 +59,7 @@ function MainPageContent() {
   console.log(error1);
   const Saviors = guys?.getGroup;
   console.log(Saviors);
+  if (memberload) return <>...loading</>;
 
   return (
     <div
@@ -207,6 +208,7 @@ function MainPageContent() {
                   time={post.createdAt}
                   role={post.user.role}
                   like={post.likeCount}
+                  id={post.id}
                   profImg="europe.jpg"
                   postImg="africa.jpg"
                 />
