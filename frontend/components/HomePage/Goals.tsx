@@ -1,22 +1,8 @@
 import React, { useEffect } from "react";
 
 function Goals() {
-  useEffect(() => {
-    let gaols = document.getElementById("gaolsanimation");
-
-    window.addEventListener("scroll", () => {
-      let value = window.scrollY;
-
-      if (value > 1000) {
-        gaols!.style.opacity = String(0.00029 * value);
-      }
-    });
-  });
   return (
-    <section
-      id="gaolsanimation"
-      className="goalssection py-40 translate-y-[30rem]"
-    >
+    <section id="gaolsanimation" className="goalssection py-40">
       <div className="relative wsection mx-auto">
         <div className="w-[100%] griid">
           {/* Up three from left to right */}
@@ -53,6 +39,7 @@ function Goals() {
               </p>
             </div>
           </div>
+
           <div
             dir="rtl"
             className="relative text-right opacity-60 mx-2 my-2 py-16 bg-white"
