@@ -31,16 +31,7 @@ function HomeTopSection() {
                   كيف تساعد الارض
                 </li>
               </Link>
-              <Link href={"/"} className="flex items-center">
-                <div className="flex mx-1 space-x-1 ">
-                  <p className="text-lg sm:text-2xl mt-[27%] sm:mt-[3%] text-white">
-                    <AiOutlineQuestionCircle />
-                  </p>
-                  <li className="Havar hidden md:block cairo_semibold_title text-white">
-                    الاستفسارات
-                  </li>
-                </div>
-              </Link>
+
               <Link href={"/homepage"} className="cursor-default">
                 <div className=" flex items-center space-x-1">
                   <p className="cairo_semibold_title text-white"> ساعد الارض</p>
