@@ -89,6 +89,7 @@ function MainPageContent() {
     });
 
   const Saviors = guys?.getGroup;
+  console.log(Saviors);
   if (memberload) return <div>dal;sdk'law;daw</div>;
   //@ts-ignore
   let photo = data?.photoLink;
@@ -177,6 +178,7 @@ function MainPageContent() {
                   </button>
 
                   <button
+                    onClick={() => {}}
                     dir="rtl"
                     className="hover:text-[#929292] active:text-[#bababa] cursor-pointer w-full text-sm cairo_regular_title flex items-center"
                   >

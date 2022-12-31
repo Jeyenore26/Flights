@@ -27,7 +27,11 @@ function MainPageMembers(props: any) {
                   : "bg-[#fff] border-2"
               }`}
             >
-              <Member name={props.owners.name} role={props.owners.role} />
+              <Member
+                name={props.owners.name}
+                role={props.owners.role}
+                img={props.owners.photoLink}
+              />
             </div>
           </div>
         </div>

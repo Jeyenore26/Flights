@@ -31,13 +31,16 @@ export const getGroup = gql`
     getGroup {
       admins {
         name
+        photoLink
       }
       members {
         name
+        photoLink
       }
       owner {
         name
         role
+        photoLink
       }
       registerduser {
         name
