@@ -76,6 +76,8 @@ function MainPageContent() {
         },
       },
     });
+
+  console.log(Posts);
   const [showmember, { loading: memberload, error: membererror, data: guys }] =
     useLazyQuery(getGroup, {
       context: {
@@ -175,7 +177,7 @@ function MainPageContent() {
                     dir="rtl"
                     className="hover:text-[#929292] active:text-[#bababa] cursor-pointer w-full text-sm cairo_regular_title flex items-center"
                   >
-                    <HiUserGroup className="ml-1" /> الجروبات
+                    <HiUserGroup className="ml-1" /> اترك الجروب
                   </button>
                 </div>
               )}
