@@ -5,7 +5,9 @@ import { GiArmorDowngrade, GiArmorUpgrade, GiBootKick } from "react-icons/gi";
 import { gql, useMutation } from "@apollo/client";
 
 import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
-import { addLikeMutation } from "../../lib/mutationGql/CreateGql";
+import { PromoteMutation } from "../../lib/mutationGql/CreateGql";
+import { DemoteMutation } from "../../lib/mutationGql/CreateGql";
+import { kickMutation } from "../../lib/mutationGql/CreateGql";
 
 function getToken() {
   const token =
@@ -18,40 +20,43 @@ function Member(props: any) {
   const [
     Promote,
     { data: datapromote, loading: loadpromote, error: errorpromote },
-  ] = useMutation(addLikeMutation, {
+  ] = useMutation(PromoteMutation, {
     context: {
       headers: {
         authorization: `Bearer ${token}`,
       },
     },
     variables: {
-      postId: props.id,
+      adminName: props.name,
     },
   });
+  const [
+    Demote,
+    { data: datademote, loading: loaddemote, error: errordemote },
+  ] = useMutation(DemoteMutation, {
+    context: {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    },
+    variables: {
+      adminName: props.name,
+    },
+  });
+  console.log(loaddemote);
   const [Kick, { data: datakick, loading: loadkick, error: errorkick }] =
-    useMutation(addLikeMutation, {
+    useMutation(kickMutation, {
       context: {
         headers: {
           authorization: `Bearer ${token}`,
         },
       },
       variables: {
-        postId: props.id,
+        memberName: props.name,
       },
     });
-  const [
-    Demote,
-    { data: datademote, loading: loaddemote, error: errordemote },
-  ] = useMutation(addLikeMutation, {
-    context: {
-      headers: {
-        authorization: `Bearer ${token}`,
-      },
-    },
-    variables: {
-      postId: props.id,
-    },
-  });
+  console.log(errordemote);
+  console.log(datademote);
   const [show, setshow] = useState(false);
   return (
     <>

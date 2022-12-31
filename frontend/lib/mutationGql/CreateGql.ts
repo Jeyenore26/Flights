@@ -38,3 +38,31 @@ export const addLikeMutation = gql`
     }
   }
 `;
+export const PromoteMutation = gql`
+  mutation addadmin($adminName: String) {
+    addAdmin(adminName: $adminName) {
+      members {
+        name
+      }
+    }
+  }
+`;
+export const DemoteMutation = gql`
+  mutation removeAdmin($adminName: String) {
+    removeAdmin(adminName: $adminName) {
+      admins {
+        name
+      }
+    }
+  }
+`;
+
+export const kickMutation = gql`
+  mutation kickMember($memberName: String) {
+    kickMember(memberName: $memberName) {
+      members {
+        name
+      }
+    }
+  }
+`;

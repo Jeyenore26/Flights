@@ -28,15 +28,17 @@ export const postQuery = gql`
 export const getGroup = gql`
   query getGroup {
     getGroup {
+      admins {
+        name
+      }
+      members {
+        name
+      }
       owner {
         name
         role
       }
-      members {
-        name
-        role
-      }
-      admins {
+      registerduser {
         name
         role
       }

@@ -38,7 +38,6 @@ function MainPageContent() {
       },
     }
   );
-  console.log(Schedules);
   const [showpost, { loading: loading1, error: error1, data: Posts }] =
     useLazyQuery(postQuery, {
       context: {
@@ -59,7 +58,7 @@ function MainPageContent() {
   console.log(error1);
   const Saviors = guys?.getGroup;
   console.log(Saviors);
-  if (memberload) return <>...loading</>;
+  if (memberload) return <div>dal;sdk'law;daw</div>;
 
   return (
     <div

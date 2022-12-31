@@ -51,15 +51,13 @@ function MainPageMembers(props: any) {
             >
               <div className="flex flex-col items-center md:items-end w-full gap-9">
                 {props.staffs.map((staff) => {
-                  {
-                    staff && (
-                      <>
-                        <Member name={staff.name} roke={staff.role} />;
-                      </>
-                    );
-                  }
+                  return (
+                    <>
+                      <Member name={staff.name} roke={staff.role} />
+                    </>
+                  );
                 })}
-                {!props.staff && (
+                {!props.staffs && (
                   <>
                     <div className=" text-black py-10  cairo_bold_title mx-auto">
                       لا يوجد
@@ -92,7 +90,11 @@ function MainPageMembers(props: any) {
               <div className="grid w-full gap-y-[3rem] gap-x-4 justify-items-center h-[40rem] overflow-auto">
                 {props.members.map((member) => {
                   {
-                    <Member name={member.name} role={member.role} />;
+                    return (
+                      <>
+                        <Member name={member.name} role={member.role} />;
+                      </>
+                    );
                   }
                 })}
                 {!props.member && (
