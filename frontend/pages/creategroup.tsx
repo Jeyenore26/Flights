@@ -9,7 +9,6 @@ export default function creategroup() {
         <title className="cairo_black_title">انضم لنا</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <NavBar />
       <MultiStep />
     </>
   );
