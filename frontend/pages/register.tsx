@@ -58,7 +58,7 @@ export default function registermember() {
             </Link>
           </div>
           <div className="flex">
-            <Link href={"/group"} className="cursor-default">
+            <Link href={"/homepage"} className="cursor-default">
               <div className=" flex items-center space-x-1">
                 <button className="cairo_semibold_title text-white hover:text-white/50 active:text-white/20 mt-1 mr-1 text-lg">
                   ساعد الارض
@@ -126,7 +126,7 @@ export default function registermember() {
             <div className="flex justify-center my-3">
               <button
                 onClick={() => {
-                  Router.push("/mainpage");
+                  Router.push("/group");
                 }}
                 value={"submit"}
                 className="text-black p-1 cairo_semibold_title w-full text-lg bg-green-400 mt-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl"

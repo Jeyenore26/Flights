@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import React, { useState } from "react";
-import { BiArrowToLeft } from "react-icons/bi";
+import { BiArrowToLeft, BiPlus } from "react-icons/bi";
 import { BsArrow90DegLeft } from "react-icons/bs";
 import { MdGroup } from "react-icons/md";
 import { groupsQuery } from "../../lib/queryGql/groupsQuery";
@@ -44,8 +44,12 @@ export default function Group(groups) {
           <MdGroup className="text-3xl mr-2" />
 
           <p className="text-2xl"> المجموعات</p>
-          <a href="/mainpage" className="absolute top-0 left-0 m-5 text-2xl">
-            <BiArrowToLeft className=" hover:text-[#535353] active:hover:text-[#979797]" />
+
+          <a
+            href="/creategroup"
+            className="absolute top-0 right-0 m-5  text-2xl"
+          >
+            <BiPlus className=" hover:text-[#535353] active:hover:text-[#979797]" />
           </a>
         </div>
         <div className="flex justify-center items-center w-full">
@@ -55,7 +59,7 @@ export default function Group(groups) {
                 <GroupCalls
                   name={group.name}
                   desc={group.description}
-                  img="https://media.discordapp.net/attachments/540003423106367492/1057110864995569774/941947bfabcdbcc2.jpg"
+                  img="https://pm1.narvii.com/7310/6c61aaa5af8946126b8da5eb29720b76b1cca6d0r1-1080-1042v2_00.jpg"
                   members={group.members.length}
                   place={group.workplace}
                 />

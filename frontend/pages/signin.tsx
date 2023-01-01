@@ -5,6 +5,7 @@ import Link from "next/link";
 import Input from "../components/Inputs/Input";
 import { gql, useMutation } from "@apollo/client";
 import { loginMutation } from "../lib/mutationGql/AuthGql";
+import Router from "next/router";
 
 function setToken(data) {
   localStorage.removeItem("token");
@@ -64,6 +65,7 @@ export default function registermember() {
           onSubmit={(e) => {
             e.preventDefault;
             loginInput();
+            Router.push("/mainpage");
           }}
           className="flex justify-center 2xl:mx-[12rem] md:mx-[2rem] my-[1rem] mx-[1rem] xs:mt-10 mt-14 "
         >
