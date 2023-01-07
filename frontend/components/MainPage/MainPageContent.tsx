@@ -17,6 +17,7 @@ import { useLazyQuery } from "@apollo/client";
 import Link from "next/link";
 import axios from "axios";
 import Router from "next/router";
+import BACKENDURL from "../../lib/rest";
 
 function getToken() {
   const token =
@@ -50,7 +51,7 @@ function MainPageContent() {
   console.log(!data, data);
   if (typeof window !== "undefined" && data == undefined) {
     const token = localStorage.getItem("token") as string;
-    load(`https://earthbackend.onrender.com/auth/user`, token)
+    load(`${BACKENDURL}/auth/user`, token)
       .then((res: any) => {
         setdata(res.data);
       })

@@ -28,10 +28,10 @@ function Input({
   onChange?: (e: any) => any;
 }) {
   return (
-    <div dir="rtl" className="space-y-5 flex-grow">
+    <div dir="rtl" className="space-y-2 md:space-y-5 flex-grow">
       <div className="flex flex-col">
         {label && (
-          <label className={`font-semibold mt-4 text-white ${lclassName}`}>
+          <label className={`font-semibold  text-white ${lclassName}`}>
             {label}
           </label>
         )}
@@ -51,9 +51,9 @@ function Input({
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
-        className={` bg-transparent	border-b-2 text-right w-[100%] pt-8 focus:outline-none ${
+        className={` bg-transparent rounded-3xl	border-[1.1px] text-right w-[100%] py-2 focus:outline-none ${
           error ? "border-red-600 focus:border-red-600" : ""
-        }  ease-in-out text-green text-white/70 focus:text-white focus:border-green-400 focus:outline-none focus:border-primary focus:border-dashed py-1 px-2 transition ${iclassName}`}
+        }  ease-in-out text-green text-white/70 focus:text-white focus:border-[#819FAC] focus:outline-none focus:border-primary focus:border-dashed  px-2 transition ${iclassName}`}
       />
     </div>
   );

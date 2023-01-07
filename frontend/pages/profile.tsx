@@ -9,6 +9,7 @@ import axios from "axios";
 import ProfileModal from "../components/Profile/ProfileModal";
 import { useMutation } from "@apollo/client";
 import { updateProfileMutation } from "../lib/mutationGql/AuthGql";
+import BACKENDURL from "../lib/rest";
 function getToken() {
   const token =
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
@@ -33,7 +34,8 @@ function load(url, token) {
     });
 
     // resolve
-    resolve(res); // see note below!
+    resolve(res);
+
     console.log(res);
   });
 }
@@ -42,14 +44,12 @@ export default function profile() {
   const [disabled, setdisabled] = useState(true);
   if (typeof window !== "undefined" && (!data || data.length == 0)) {
     const token = localStorage.getItem("token") as string;
-    load(`https://earthbackend.onrender.com/user/profile`, token).then(
-      (res: any) => {
-        console.log(res.data);
-        setdata(res.data);
+    load(`${BACKENDURL}/user/profile`, token).then((res: any) => {
+      console.log(res.data);
+      setdata(res.data);
 
-        localStorage.removeItem("groupName");
-      }
-    );
+      localStorage.removeItem("groupName");
+    });
     console.log(data);
   }
   //cuz typescript sucks
@@ -90,6 +90,7 @@ export default function profile() {
   };
   const token = getToken();
   console.log(email, name, password, number);
+
   const [groupInput, { data: updateData, loading, error }] = useMutation(
     updateProfileMutation,
     {
@@ -158,7 +159,11 @@ export default function profile() {
                   {!disabled && (
                     <span
                       className="flex justify-center cursor-pointer text-white xxs:w-80 md:w-32 hover:text-white/80 hover:border-green-400 active:border-green-300 px-4 py-1 active:text-white/60 border-[1px] border-white bg-green-500 rounded"
-                      onClick={() => groupInput()}
+                      onClick={() => {
+                        groupInput();
+
+                        window.location.reload();
+                      }}
                     >
                       <AiOutlineEdit className="mt-1" />
                       <button

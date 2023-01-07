@@ -32,16 +32,12 @@ export default function registermember() {
     setToken(data);
   }
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen bg-[#214A5A] overflow-auto">
       <Head>
         <title className="cairo_black_title">انضم لنا</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="overflow-y-hidden">
-        <img
-          src="greenRectangles.png"
-          className="w-screen h-full fixed z-[-1] brightness-75 cover "
-        />
         <div className="py-4 flex sm:mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
           <div>
             <Link href={"/register"}>
@@ -69,15 +65,9 @@ export default function registermember() {
           }}
           className="flex justify-center 2xl:mx-[12rem] md:mx-[2rem] my-[1rem] mx-[1rem] xs:mt-10 mt-14 "
         >
-          <div className=" py-4 sm:px-[2%] px-[10%] overflow-x-auto bg-black/30 rounded-xl">
-            <div className="flex justify-center ">
-              <div className=" z-10 lg:block  hidden">
-                <Eyes />
-              </div>
-            </div>
-
+          <div className="z-50 py-4 sm:px-[2%] px-[10%] overflow-x-auto bg-transparent rounded-xl">
             <div dir="rtl" className=" mt-5 md:mt-14 flex justify-center">
-              <h1 className="text-white cairo_semibold_title maintitle text-xl">
+              <h1 className="text-white cairo_semibold_title  text-xl md:text-2xl">
                 تسجيل الدخول
               </h1>
             </div>
@@ -101,13 +91,16 @@ export default function registermember() {
             />
 
             <div className="flex secondarytext justify-center my-5">
-              <button className="text-black cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] text-lg bg-green-400 py-2 hover:text-black hover:bg-green-500 active:text-black/100 active:bg-green-600 rounded-xl">
+              <button className="text-white cairo_semibold_title 2xl:w-[30rem] md:w-[30rem] sm:w-[30rem] xs:w-[25rem] xxs:w-[20rem] text-lg bg-green-500 py-2 hover:text-white hover:bg-green-600 active:text-white/100 active:bg-green-700 rounded-xl">
                 اهلا بك
               </button>
             </div>
           </div>
         </form>
       </div>
+      <div className="ocean wave1 z-0"></div>
+      <div className="ocean wave2 z-0"></div>
+      <div className="ocean wave3 z-0"></div>
     </div>
   );
 }

@@ -26,7 +26,9 @@
     "components/3dEarth/Sphere.jsxhere.jsx",
     "components/Earthing.tsx",
     "components/Earthing.tsx",
-    "components/MainPage/CreatePostModal.tsx"
+    "components/MainPage/CreatePostModal.tsx",
+    "components/HomePage/Parallax.jsx",
+    "components/HomePage/Parallax.jsx"
   ],
   "exclude": ["node_modules"]
 }

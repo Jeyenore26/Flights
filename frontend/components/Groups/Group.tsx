@@ -7,6 +7,7 @@ import { groupsQuery } from "../../lib/queryGql/groupsQuery";
 import GroupCalls from "./GroupCalls";
 import axios from "axios";
 import { GetServerSideProps } from "next";
+import BACKENDURL from "../../lib/rest";
 
 function load(url, token) {
   return new Promise(async function (resolve, reject) {
@@ -29,11 +30,9 @@ export default function Group(groups) {
   if (typeof window !== "undefined" && (!data || data.length == 0)) {
     const token = localStorage.getItem("token") as string;
 
-    load("https://earthbackend.onrender.com/check/Allgroups", token).then(
-      (res: any) => {
-        setdata(res.data);
-      }
-    );
+    load(`${BACKENDURL}/check/Allgroups`, token).then((res: any) => {
+      setdata(res.data);
+    });
   }
   console.log(!data);
 

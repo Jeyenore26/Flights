@@ -173,7 +173,19 @@
       box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     }
   }
-
+  .register {
+    margin-top: 0;
+  }
+  @media (max-height: 600px) and (min-width: 620px) {
+    .register {
+      margin-top: -60px;
+    }
+  }
+  @media (max-height: 600px) and (max-width: 619px) {
+    .register {
+      margin-top: -20px;
+    }
+  }
   .confirmbtn {
     margin-bottom: 10px;
     cursor: pointer;
@@ -482,6 +494,78 @@ body {
   @apply sm:pr-[1rem] pr-[2px];
 }
 
+/*Waves*/
+.ocean {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 198px;
+  z-index: 0;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg);
+  background-size: 1000px 200px;
+  animation: waveanimate 30s linear infinite;
+}
+.wave1 {
+  animation: waveanimate 30s linear infinite;
+  z-index: 0;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+.wave2 {
+  animation: waveanimate2 15s linear infinite;
+  z-index: 0;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 0px;
+}
+.wave3 {
+  animation: waveanimate3 10s linear infinite;
+  z-index: 0;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 0px;
+}
+.wave4 {
+  animation: waveanimate4 5s linear infinite;
+  z-index: 0;
+  opacity: 0.7;
+  animation-delay: -2s;
+  bottom: 20px;
+}
+@keyframes waveanimate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 2000px;
+  }
+}
+@keyframes waveanimate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -2000px;
+  }
+}
+@keyframes waveanimate3 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+@keyframes waveanimate4 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
 @keyframes Animate1 {
   from {
     transform: scale(0);

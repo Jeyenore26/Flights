@@ -42,7 +42,7 @@ function Eyes() {
     <div className="App -mt-5">
       <img
         src="./3507796.png"
-        className=" absolute z-0 brightness-100 "
+        className=" absolute z-0 brightness-100"
         id="face"
       />
 

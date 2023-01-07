@@ -5,6 +5,8 @@ import NavBar from "../components/CheckGroup/NavBar";
 import axios from "axios";
 import { useMutation } from "@apollo/client";
 import { joinGroupMutation } from "../lib/mutationGql/CreateGql";
+import BACKENDURL from "../lib/rest";
+
 function load(url, token, groupName) {
   return new Promise(async function (resolve, reject) {
     const res = await axios({
@@ -33,18 +35,16 @@ export default function checkgroup() {
   if (typeof window !== "undefined" && (!data || data.length == 0)) {
     const token = localStorage.getItem("token") as string;
     const groupName = localStorage.getItem("groupname") as string;
-    load(
-      `https://earthbackend.onrender.com/check/group/${groupName}`,
-      token,
-      groupName
-    ).then((res: any) => {
-      setdata(res.data.onegroup);
-      setowner(res.data.owner);
-      // setmembers(res.data.owner.members);
-      // setadmin(res.data.owner.admin);
+    load(`${BACKENDURL}/check/group/${groupName}`, token, groupName).then(
+      (res: any) => {
+        setdata(res.data.onegroup);
+        setowner(res.data.owner);
+        // setmembers(res.data.owner.members);
+        // setadmin(res.data.owner.admin);
 
-      localStorage.removeItem("groupName");
-    });
+        localStorage.removeItem("groupName");
+      }
+    );
     //@ts-ignore
     console.log(data.members);
   }
