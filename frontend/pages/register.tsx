@@ -125,10 +125,10 @@ export default function registermember() {
             </div>
           </div>
         </form>
+        <div className="ocean wave1 z-0"></div>
+        <div className="ocean wave2 z-0"></div>
+        <div className="ocean wave3 z-0"></div>
       </div>
-      <div className="ocean wave1 z-0"></div>
-      <div className="ocean wave2 z-0"></div>
-      <div className="ocean wave3 z-0"></div>
     </div>
   );
 }
