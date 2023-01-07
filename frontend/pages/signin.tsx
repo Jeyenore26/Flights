@@ -32,7 +32,7 @@ export default function registermember() {
     setToken(data);
   }
   return (
-    <div className="w-full h-[120vh] md:h-screen bg-[#214A5A] overflow-y-hidden overflow-hidden md:overflow-auto">
+    <div className="w-full h-[90vh] md:h-screen bg-[#214A5A] overflow-y-hidden overflow-hidden md:overflow-auto">
       <div className="ocean wave1 z-0 h-full  bg-[#214A5A]"></div>
       <div className="ocean wave2 z-0 h-full  bg-[#214A5A]"></div>
       <div className="ocean wave3 z-0 h-full  bg-[#214A5A]"></div>
