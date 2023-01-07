@@ -38,7 +38,7 @@ export default function registermember() {
     setToken(data);
   }
   return (
-    <div className="w-full h-screen bg-[#214A5A] overflow-auto">
+    <div className="w-full h-screen bg-[#214A5A] overflow-hidden md:overflow-auto">
       <Head>
         <title className="cairo_black_title">انضم لنا</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
