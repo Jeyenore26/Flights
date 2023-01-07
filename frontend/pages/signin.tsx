@@ -32,13 +32,16 @@ export default function registermember() {
     setToken(data);
   }
   return (
-    <div className="w-full h-full md:h-screen bg-[#214A5A] overflow-hidden md:overflow-auto">
+    <div className="w-full h-[120vh] md:h-screen bg-[#214A5A] overflow-y-hidden overflow-hidden md:overflow-auto">
+      <div className="ocean wave1 z-0 h-full  bg-[#214A5A]"></div>
+      <div className="ocean wave2 z-0 h-full  bg-[#214A5A]"></div>
+      <div className="ocean wave3 z-0 h-full  bg-[#214A5A]"></div>
       <Head>
         <title className="cairo_black_title">انضم لنا</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="overflow-y-hidden">
-        <div className="py-4 flex sm:mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] sm:mx-[2rem] xs:mx-[2rem] xxs:mx-[2rem]">
+        <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] mx-0">
           <div>
             <Link href={"/register"}>
               <button className="text-white border-[1px] border-dashed border-white cairo_semibold_title py-1 px-3 text-md bg-transperant hover:text-white/90 hover:bg-black/20 active:text-white/100 active:bg-black/40 rounded-xl">
@@ -97,9 +100,6 @@ export default function registermember() {
             </div>
           </div>
         </form>
-        <div className="ocean wave1 z-0 h-full  bg-[#214A5A]"></div>
-        <div className="ocean wave2 z-0 h-full  bg-[#214A5A]"></div>
-        <div className="ocean wave3 z-0 h-full  bg-[#214A5A]"></div>
       </div>
     </div>
   );

@@ -38,7 +38,10 @@ export default function registermember() {
     setToken(data);
   }
   return (
-    <div className="w-full h-full md:h-screen bg-[#214A5A] overflow-hidden md:overflow-auto">
+    <div className="w-full h-screen md:h-screen bg-[#214A5A] overflow-y-hidden overflow-hidden md:overflow-auto">
+      <div className="ocean wave1 z-0"></div>
+      <div className="ocean wave2 z-0"></div>
+      <div className="ocean wave3 z-0"></div>
       <Head>
         <title className="cairo_black_title">انضم لنا</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -125,9 +128,6 @@ export default function registermember() {
             </div>
           </div>
         </form>
-        <div className="ocean wave1 z-0 h-full  bg-[#214A5A]"></div>
-        <div className="ocean wave2 z-0 h-full  bg-[#214A5A]"></div>
-        <div className="ocean wave3 z-0 h-full  bg-[#214A5A]"></div>
       </div>
     </div>
   );
