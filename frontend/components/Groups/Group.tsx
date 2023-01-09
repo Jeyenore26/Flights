@@ -49,9 +49,9 @@ export default function Group(groups) {
 
           <a
             href="/creategroup"
-            className="absolute top-0 right-0 m-5  text-2xl"
+            className="fixed bottom-0 left-0 m-5  text-2xl"
           >
-            <BiPlus className=" hover:text-[#535353] active:hover:text-[#979797]" />
+            <BiPlus className="rounded-full w-12 h-8 p-1 bg-lime-500 hover:text-[#535353] active:hover:text-[#979797]" />
           </a>
         </div>
         <div className="flex justify-center items-center w-full">
@@ -59,11 +59,11 @@ export default function Group(groups) {
             {data.map((group: any) => {
               return (
                 <GroupCalls
-                  name={group.name}
-                  desc={group.description}
+                  name={group.name || "لا يوجد اسم"}
+                  desc={group.description || "لا يوجد شرح"}
                   img="https://pm1.narvii.com/7310/6c61aaa5af8946126b8da5eb29720b76b1cca6d0r1-1080-1042v2_00.jpg"
                   members={group.members.length}
-                  place={group.workplace}
+                  place={group.workplace || "لا يوجد مكان عمل"}
                 />
               );
             })}
