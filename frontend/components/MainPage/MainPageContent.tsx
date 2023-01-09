@@ -18,10 +18,11 @@ import Link from "next/link";
 import axios from "axios";
 import Router from "next/router";
 import BACKENDURL from "../../lib/rest";
-
+import { useMutation } from "@apollo/client";
+import { leaveGroupMutation } from "../../lib/mutationGql/CreateGql";
 function getToken() {
   const token =
-    typeof window !== "undefined" ? localStorage.getItem("token") : null;
+    typeof window !== "undefined" ? localStorage.getItem("token") : "";
   return token;
 }
 function load(url, token) {
@@ -54,12 +55,28 @@ function MainPageContent() {
     load(`${BACKENDURL}/auth/user`, token)
       .then((res: any) => {
         setdata(res.data);
+        console.log(res.data);
+        if (res.data.memberOf == null) {
+          Router.push("/group");
+        }
       })
       .catch((e) => {
-        console.log("here");
+        console.log("error here", e);
       });
-    console.log(data);
   }
+  console.log("here is the data so stop being stopid", data);
+
+  const [
+    leaveGroup,
+    { data: leavedata, loading: leaveloading, error: leaveerror },
+  ] = useMutation(leaveGroupMutation, {
+    context: {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    },
+  });
+  console.log(leavedata);
   const [loadSchedule, { loading, error, data: Schedules }] = useLazyQuery(
     scheduleQuery,
     {
@@ -179,7 +196,10 @@ function MainPageContent() {
                   </button>
 
                   <button
-                    onClick={() => {}}
+                    onClick={() => {
+                      leaveGroup();
+                      Router.push("/group");
+                    }}
                     dir="rtl"
                     className="hover:text-[#929292] active:text-[#bababa] cursor-pointer w-full text-sm cairo_regular_title flex items-center"
                   >

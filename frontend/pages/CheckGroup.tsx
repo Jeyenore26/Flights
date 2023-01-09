@@ -6,6 +6,7 @@ import axios from "axios";
 import { useMutation } from "@apollo/client";
 import { joinGroupMutation } from "../lib/mutationGql/CreateGql";
 import BACKENDURL from "../lib/rest";
+import Router from "next/router";
 
 function load(url, token, groupName) {
   return new Promise(async function (resolve, reject) {
@@ -31,7 +32,7 @@ export default function checkgroup() {
 
   let [data, setdata] = useState<string[]>([]);
   let [owner, setowner] = useState("");
-
+  const [dis, setdis] = useState(false);
   if (typeof window !== "undefined" && (!data || data.length == 0)) {
     const token = localStorage.getItem("token") as string;
     const groupName = localStorage.getItem("groupname") as string;
@@ -39,16 +40,17 @@ export default function checkgroup() {
       (res: any) => {
         setdata(res.data.onegroup);
         setowner(res.data.owner);
-        // setmembers(res.data.owner.members);
-        // setadmin(res.data.owner.admin);
-
+        if (res.data.user.memberOf != null) {
+          setdis(false);
+          Router.push("/mainpage");
+        }
         localStorage.removeItem("groupName");
       }
     );
     //@ts-ignore
     console.log(data.members);
   }
-  const [JoinGroup, { loading, error, data: Schedules }] = useMutation(
+  const [JoinGroup, { loading, error, data: joinData }] = useMutation(
     joinGroupMutation,
     {
       context: {
@@ -62,13 +64,14 @@ export default function checkgroup() {
       },
     }
   );
-  console.log(data);
+
   const [page, setpage] = useState(1);
 
   return (
     <>
       <section className=" h-screen w-full">
         <NavBar />
+
         <div className=" w-full h-max">
           <section className="xl:mx-[20rem]">
             <img src="./asia.jpg" className="h-[22.8rem] w-full" />
@@ -102,8 +105,10 @@ export default function checkgroup() {
                   </div>
                 </div>
                 <button
+                  disabled={dis}
                   onClick={() => {
                     JoinGroup();
+                    Router.push("/mainpage");
                   }}
                   className="bg-[#39A059] hover:bg-[#277941] active:bg-[#235e35] hover:text-white/40 active:text-white/70 p-2 md:text-[17px] mb-10 text-white rounded-lg"
                 >

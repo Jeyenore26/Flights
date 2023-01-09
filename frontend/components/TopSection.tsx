@@ -16,7 +16,7 @@ export default function TopSection() {
           المشاكل التي تسبب تدهور صحة الارض
         </h4>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-5">
           <Link href={"/homepage"}>
             <button className={styles.glow_button}>
               <h4 className={styles.button_text_title}>ساعد الارض</h4>

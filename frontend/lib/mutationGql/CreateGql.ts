@@ -80,3 +80,10 @@ export const addProfileImageMutation = gql`
     }
   }
 `;
+export const leaveGroupMutation = gql`
+  mutation Mutation {
+    leaveGroup {
+      name
+    }
+  }
+`;

@@ -6,6 +6,7 @@ import Input from "../components/Inputs/Input";
 import { gql, useMutation } from "@apollo/client";
 import { loginMutation } from "../lib/mutationGql/AuthGql";
 import Router from "next/router";
+import css from "../styles/Home.module.css";
 
 function setToken(data) {
   localStorage.removeItem("token");
@@ -26,10 +27,21 @@ export default function registermember() {
     },
   });
   if (error) console.log(error);
-  if (loading) return "...loading";
+  if (loading)
+    return (
+      <>
+        <div className="absolute inset-x-0 z-50 w-full top-14 bottom-0 grid place-items-center">
+          <div className={css.loader}>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </>
+    );
   console.log(data);
   if (data?.login?.token) {
     setToken(data);
+    Router.push("/mainpage");
   }
   return (
     <div className="w-full h-[90vh] md:h-screen bg-[#214A5A] overflow-y-hidden overflow-hidden md:overflow-auto">
@@ -41,7 +53,7 @@ export default function registermember() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="overflow-y-hidden">
-        <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] mx-0">
+        <div className="py-4 flex mt-1 items-center justify-between 2xl:mx-[4rem] md:mx-[2rem] mx-[2rem]">
           <div>
             <Link href={"/register"}>
               <button className="text-white border-[1px] border-dashed border-white cairo_semibold_title py-1 px-3 text-md bg-transperant hover:text-white/90 hover:bg-black/20 active:text-white/100 active:bg-black/40 rounded-xl">
@@ -64,9 +76,8 @@ export default function registermember() {
           onSubmit={(e) => {
             e.preventDefault;
             loginInput();
-            Router.push("/mainpage");
           }}
-          className="flex justify-center 2xl:mx-[12rem] md:mx-[2rem] my-[1rem] mx-[1rem] xs:mt-10 mt-14 "
+          className="flex justify-center 2xl:mx-[12rem] md:mx-[2rem] my-[1rem] mx-[1rem]  xs:mt-10 mt-20 "
         >
           <div className="z-50 py-4 sm:px-[2%] px-[10%] overflow-x-auto bg-transparent rounded-xl">
             <div dir="rtl" className=" mt-5 md:mt-14 flex justify-center">

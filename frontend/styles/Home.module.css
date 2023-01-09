@@ -67,8 +67,8 @@
 .glow_button {
   width: 220px;
   height: 50px;
-  margin: 2rem;
   border: none;
+
   outline: none;
   color: #fff;
   display: flex;

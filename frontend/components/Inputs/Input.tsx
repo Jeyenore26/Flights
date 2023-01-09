@@ -51,7 +51,7 @@ function Input({
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
-        className={` bg-transparent rounded-3xl	border-[1.1px] text-right w-[100%] py-2 focus:outline-none ${
+        className={` bg-transparent rounded-xl	border-[1.1px] text-right w-[100%] py-1 mb-2 focus:outline-none ${
           error ? "border-red-600 focus:border-red-600" : ""
         }  ease-in-out text-green text-white/70 focus:text-white focus:border-[#819FAC] focus:outline-none focus:border-primary focus:border-dashed  px-2 transition ${iclassName}`}
       />

@@ -8,7 +8,7 @@ import GroupCalls from "./GroupCalls";
 import axios from "axios";
 import { GetServerSideProps } from "next";
 import BACKENDURL from "../../lib/rest";
-
+import Router from "next/router";
 function load(url, token) {
   return new Promise(async function (resolve, reject) {
     const res = await axios({
@@ -21,6 +21,9 @@ function load(url, token) {
 
     // resolve
     resolve(res); // see note below!
+    if (res.data.memberOf != null) {
+      Router.push("/mainpage");
+    }
   });
 }
 
