@@ -3,6 +3,7 @@ import { GiEarthAfricaEurope } from "react-icons/gi";
 import { AiFillClockCircle } from "react-icons/ai";
 import { TbHeartHandshake } from "react-icons/tb";
 const Group = (props: any) => {
+  console.log(props);
   return (
     <section className="flex justify-center mt-5" id="animate33">
       <div className="w-[40rem] bg-[#eaebec] h-full rounded-lg mb-5">
@@ -38,7 +39,7 @@ const Group = (props: any) => {
           </section>
           <section dir="rtl" className="mx-[2rem] flex">
             <div className="text-black/70 w-full text-sm flex justify-start cairo_regular_title mt-1">
-              تم انشاء هذا الجروب يوم 2/2/2010
+              تم انشاء هذا الجروب يوم {props?.createdAt?.split("T")[0]}
             </div>
           </section>
           <section dir="rtl" className="mx-[2rem] flex">

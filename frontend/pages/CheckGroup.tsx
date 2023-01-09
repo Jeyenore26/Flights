@@ -40,10 +40,6 @@ export default function checkgroup() {
       (res: any) => {
         setdata(res.data.onegroup);
         setowner(res.data.owner);
-        if (res.data.user.memberOf != null) {
-          setdis(false);
-          Router.push("/mainpage");
-        }
         localStorage.removeItem("groupName");
       }
     );
@@ -151,7 +147,11 @@ export default function checkgroup() {
           <>
             {/*@ts-ignore*/}
 
-            <Group workplace={data.workplace} description={data.description} />
+            <Group
+              workplace={data.workplace}
+              description={data.description}
+              createdAt={data.createdAt}
+            />
           </>
         )}
         {page === 2 && (
