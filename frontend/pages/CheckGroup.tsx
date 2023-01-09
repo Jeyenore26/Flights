@@ -27,24 +27,26 @@ function getToken() {
     typeof window !== "undefined" ? localStorage.getItem("token") : null;
   return token;
 }
+
 export default function checkgroup() {
   const token = getToken();
 
-  let [data, setdata] = useState<string[]>([]);
+  let [data, setdata] = useState<object>({});
   let [owner, setowner] = useState("");
   const [dis, setdis] = useState(false);
-  if (typeof window !== "undefined" && (!data || data.length == 0)) {
+  if (typeof window !== "undefined" && Object.keys(data).length == 0) {
     const token = localStorage.getItem("token") as string;
     const groupName = localStorage.getItem("groupname") as string;
     load(`${BACKENDURL}/check/group/${groupName}`, token, groupName).then(
       (res: any) => {
+        console.log(res.data);
         setdata(res.data.onegroup);
         setowner(res.data.owner);
         localStorage.removeItem("groupName");
       }
     );
     //@ts-ignore
-    console.log(data.members);
+    console.log(data);
   }
   const [JoinGroup, { loading, error, data: joinData }] = useMutation(
     joinGroupMutation,
@@ -148,8 +150,11 @@ export default function checkgroup() {
             {/*@ts-ignore*/}
 
             <Group
+              /*@ts-ignore*/
               workplace={data.workplace}
+              /*@ts-ignore*/
               description={data.description}
+              /*@ts-ignore*/
               createdAt={data.createdAt}
             />
           </>
