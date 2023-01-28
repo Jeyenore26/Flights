@@ -163,14 +163,33 @@ export default function () {
                     style={{ display: page === 1 ? "block" : "none" }}
                     className="PageContent"
                   >
-                    <GroupInput
-                      onChange={(e) => setgroupprovide(e.target.value)}
-                      label="ماذا تقدم المجموعة"
-                      required
-                      type={"text"}
-                      placeholder="ماذا تقدم المجموعة"
-                      lclassName="text-black"
-                    />
+                    <div dir="rtl" className="space-y-5 flex-grow">
+                      <div className="flex flex-col">
+                        <label
+                          className={`font-semibold cairo_regular_title mt-4 text-lg text-black`}
+                        >
+                          اختر احد المجالات
+                        </label>
+                      </div>
+                    </div>
+                    <input
+                      list="works"
+                      name="work"
+                      placeholder="اختر احد المجالات"
+                      className={` bg-transparent	border-2 rounded-md	text-right w-[100%] h-12 focus:outline-none  ease-in-out text-green text-black/80 focus:text-black focus:border-blue-600  focus:border-primary focus:border-dashed py-1 px-2  transition`}
+                    ></input>
+                    <datalist id="works">
+                      <option value="فريق تطهير المجاري المائية">
+                        فريق تطهير المجاري المائية
+                      </option>
+                      <option value="فريق قياس نسبة تلوث المصانع">
+                        فريق قياس نسبة تلوث المصانع
+                      </option>
+                      <option value="فريق متطوعين للحمياية المدنية">
+                        فريق متطوعين للحمياية المدنية
+                      </option>
+                      <option value="فريق زراعة اشجار">فريق زراعة اشجار</option>
+                    </datalist>
                   </div>
                   <div className="flex justify-start">
                     <button
