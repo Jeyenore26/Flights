@@ -173,6 +173,7 @@ export default function () {
                       </div>
                     </div>
                     <input
+                      onChange={(e) => setgroupprovide(e.target.value)}
                       list="works"
                       name="work"
                       placeholder="اختر احد المجالات"
