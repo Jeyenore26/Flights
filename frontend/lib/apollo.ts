@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const apolloClient = new ApolloClient({
   ssrMode: true,
-  uri: "http://localhost:5000/graphql",
+  uri: "https://earthbackend.onrender.com/graphql",
   cache: new InMemoryCache(),
 });
 

@@ -1,2 +1,2 @@
-const BACKENDURL = "http://localhost:5000";
+const BACKENDURL = "https://earthbackend.onrender.com";
 export default BACKENDURL;
