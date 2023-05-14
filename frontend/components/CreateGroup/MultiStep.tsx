@@ -217,7 +217,9 @@ export default function () {
                       onSubmit={(e) => {
                         event?.preventDefault();
                         groupInput();
-                        Router.push("/mainpage");
+                        setTimeout(() => {
+                          Router.push("/mainpage");
+                        }, 300);
                       }}
                       style={{ width: page === 2 ? "100%" : "35%" }}
                       className="PageContent"

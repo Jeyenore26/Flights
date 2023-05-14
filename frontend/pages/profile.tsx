@@ -24,6 +24,7 @@ function setToken(token) {
 }
 
 function load(url, token) {
+  console.log(url);
   return new Promise(async function (resolve, reject) {
     const res = await axios({
       method: "GET",

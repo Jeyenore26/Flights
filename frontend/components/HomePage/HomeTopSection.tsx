@@ -23,15 +23,6 @@ function HomeTopSection() {
               </button>
             </Link>
             <ul className=" space-x-3 sm:space-x-10  flex items-center font-light text-md md:text-lg">
-              <Link href={"/"} className="space-x-[0.35rem]  flex items-center">
-                <p className="text-lg sm:text-xl mt-[27%] sm:mt-[3%] text-white ">
-                  <ImEarth />
-                </p>
-                <li className="Havar hidden md:block cairo_semibold_title text-white">
-                  كيف تساعد الارض
-                </li>
-              </Link>
-
               <Link href={"/homepage"} className="cursor-default">
                 <div className=" flex items-center space-x-1">
                   <p className="cairo_semibold_title text-white"> ساعد الارض</p>

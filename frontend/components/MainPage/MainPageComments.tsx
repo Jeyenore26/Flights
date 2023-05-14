@@ -60,6 +60,9 @@ function MainPageComments(props: any) {
                   onClick={() => {
                     AddLike();
                     setLiked(!liked);
+                    setTimeout(() => {
+                      window.location.reload();
+                    }, 800);
                   }}
                 />
               </button>

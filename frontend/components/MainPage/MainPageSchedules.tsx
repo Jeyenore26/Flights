@@ -85,29 +85,6 @@ const MainPageSchedules = (props: any) => {
                 <p className="m-2 ">{props.time}</p>
               </div>
             </div>
-            <div className="flex sm:flex-row flex-col sm:border-b-2 border-transparent">
-              <div
-                className={`${
-                  props.darker ? "bg-[#171717]" : "bg-white"
-                } h-[3rem] sm:h-[6rem] w-full sm:w-[6rem] flex items-center justify-center`}
-              >
-                <IoIosPeople className="text-3xl" />
-              </div>
-              <div
-                className={`${
-                  props.darker ? "bg-[#1c1c1c]" : "bg-white"
-                } h-[6rem] w-full flex items-center justify-between`}
-              >
-                <p className="m-2 ">{props.participants}</p>
-                <button
-                  className={`${
-                    props.darker ? "bg-[#171717]" : "bg-[#e1e1e1]"
-                  } ml-2 sm:ml-10 p-2 rounded hover:brightness-90 active:brightness-75`}
-                >
-                  اضغط للاشتراك
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -1,18 +1,29 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Goals from "../components/HomePage/Goals";
+import Footer from "../components/HomePage/Footer";
+import HomeTopSection from "../components/HomePage/HomeTopSection";
+import Problem from "../components/HomePage/Problem";
+import SaveWorld from "../components/HomePage/SaveWorld";
 
-import Scene from "../components/Scene";
-
-const Home: NextPage = () => {
+const homepage: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
-        <title className="cairo_black_title"> انقذ الارض</title>
+        <title className="cairo_black_title">الصفحة الرئيسية</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Scene></Scene>
-    </div>
+      <HomeTopSection />
+      <Problem />
+      <Goals />
+      <div>
+        <SaveWorld />
+      </div>
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 };
 
-export default Home;
+export default homepage;

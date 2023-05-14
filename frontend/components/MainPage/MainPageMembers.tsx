@@ -12,7 +12,7 @@ function MainPageMembers(props: any) {
         <div className="flex flex-col items-center justify-center mt-10">
           <div
             className={`flex items-center ${
-              props.darker ? "text-[#e2e2e2]" : ""
+              props.darker ? "text-gray-500" : "text-gray-500"
             }`}
           >
             <RiVipCrownFill className="text-2xl mr-2" />
@@ -30,53 +30,17 @@ function MainPageMembers(props: any) {
               <Member
                 name={props.owners.name}
                 role={props.owners.role}
-                img={props.owners.photoLink }
+                img={props.owners.photoLink}
               />
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center mt-10">
-          <div
-            className={`flex items-center ${
-              props.darker ? "text-[#e2e2e2]" : ""
-            }`}
-          >
-            <MdAdminPanelSettings className="text-3xl mr-2" />
 
-            <p className="text-2xl"> المشرفون</p>
-          </div>
-          <div className="flex justify-center items-center w-full">
-            <div
-              className={`rounded-lg flex flex-col md:items-end w-[99%] sm:w-[80%] md:w-[40rem] my-10 p-2 ${
-                props.darker
-                  ? "bg-[#242424] text-[#e2e2e2]"
-                  : "bg-[#fff] border-2"
-              }`}
-            >
-              <div className="flex flex-col items-center md:items-end w-full gap-9">
-                {props.staffs.map((staff) => {
-                  return (
-                    <>
-                      <Member name={staff.name} roke={staff.role} />
-                    </>
-                  );
-                })}
-                {!props.staffs && (
-                  <>
-                    <div className=" text-black py-10  cairo_bold_title mx-auto">
-                      لا يوجد
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
         {/* start */}
         <div className="flex flex-col items-center justify-center mt-10">
           <div
             className={`flex items-center ${
-              props.darker ? "text-[#e2e2e2]" : ""
+              props.darker ? "text-gray-500" : "text-gray-500"
             }`}
           >
             <IoIosPeople className="text-3xl mr-2" />
@@ -85,29 +49,24 @@ function MainPageMembers(props: any) {
           </div>
           <div className="flex justify-center items-center w-full">
             <div
-              className={`rounded-lg flex flex-col md:items-end w-[99%] sm:w-[80%] md:w-[40rem] my-10 p-2 ${
-                props.darker
-                  ? "bg-[#242424] text-[#e2e2e2]"
-                  : "bg-[#fff] border-2"
+              className={`rounded-lg flex flex-col md:items-end w-[99%] sm:w-[80%] md:w-[40rem] my-10 p-2${
+                props.darker ? "bg-[#fff] text-gray-500" : "bg-[#fff] border-2"
               }`}
             >
-              <div className="grid w-full gap-y-[3rem] gap-x-4 justify-items-center h-[40rem] overflow-auto">
+              <div className="grid w-full gap-y-[2rem] text-gray-500 gap-x-4 justify-items-center h-[10rem] overflow-auto">
                 {props.members.map((member) => {
                   {
                     return (
                       <>
-                        <Member name={member.name} role={member.role} />;
+                        <Member
+                          name={member.name}
+                          role={member.role}
+                          img={member.photoLink}
+                        />
                       </>
                     );
                   }
                 })}
-                {!props.member && (
-                  <>
-                    <div className=" text-black py-[-10rem]  cairo_bold_title">
-                      لا يوجد
-                    </div>
-                  </>
-                )}
               </div>
             </div>
           </div>

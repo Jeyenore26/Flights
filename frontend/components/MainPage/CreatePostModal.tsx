@@ -6,6 +6,7 @@ import GroupInput from "../Inputs/GroupInput";
 import ImageInput from "../Inputs/ImageInput";
 import { gql, useMutation } from "@apollo/client";
 import { createPostMutation } from "../../lib/mutationGql/CreateGql";
+import { setInterval } from "timers/promises";
 
 function getToken() {
   const token =
@@ -15,7 +16,7 @@ function getToken() {
 const CreatePostModal = ({ setIsOpen }) => {
   const [description, setdescription] = useState("");
   const token = getToken();
-  console.log(description);
+  console.log(token);
   const [handleSubmit, { data, loading, error }] = useMutation(
     createPostMutation,
     {
@@ -30,6 +31,8 @@ const CreatePostModal = ({ setIsOpen }) => {
     }
   );
   console.log(data);
+  console.log(error);
+  console.log(loading);
   if (error) console.log(error);
   if (loading) return <div>fff</div>;
 
@@ -65,7 +68,9 @@ const CreatePostModal = ({ setIsOpen }) => {
             <div className="actionsContainer">
               <button
                 onClick={() => {
-                  window.location.reload();
+                  setTimeout(() => {
+                    window.location.reload();
+                  }, 1000);
                 }}
                 type="submit"
                 className={`confirmbtn cairo_regular_title`}

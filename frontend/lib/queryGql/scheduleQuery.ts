@@ -22,6 +22,7 @@ export const postQuery = gql`
       liked
       user {
         role
+        photoLink
       }
     }
   }

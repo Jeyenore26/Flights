@@ -82,7 +82,10 @@ const HomeExplanation = () => {
           className="z-50 md:mx-[14rem] sm:mx-20 lg:mx-10 mb-10 rounded-sm "
         >
           <span className=" flex">
-            <p className="text-[18px] cairo_regular_title mt-10 md:mt-20 mx-2 overflow-hidden lg:break-all">
+            <p
+              dir="rtl"
+              className="text-[18px] cairo_bold_title mt-10 md:mt-20 mx-2 overflow-hidden lg:break-all"
+            >
               يقدر أن هذه الظاهرة قد سببت ارتفاع في درجة الحرارة بمقدار 0.02 °س
               منذ عام 1900.
             </p>

@@ -62,7 +62,7 @@ export default function registermember() {
             </Link>
           </div>
           <div className="flex">
-            <Link href={"/homepage"} className="cursor-default">
+            <Link href={"/"} className="cursor-default">
               <div className=" flex items-center space-x-1">
                 <button className="cairo_semibold_title text-white hover:text-white/50 active:text-white/20 mt-1 text-lg mr-1">
                   ساعد الارض

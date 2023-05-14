@@ -52,7 +52,7 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
       <div className={"centered"} id="animate31">
         <div className={"modal"}>
           <div className={"modalHeader"}>
-            <h5 className={"heading cairo_semibold_title"}>انشاء بوست</h5>
+            <h5 className={"heading cairo_semibold_title"}>انشاء معاد</h5>
           </div>
           <button className={"closeBtn"} onClick={() => setIsOpen(false)}>
             <RiCloseLine className="mb-[-2px]" />
@@ -60,8 +60,11 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
 
           <form
             onSubmit={(e) => {
+              setTimeout(() => {
+                window.location.reload();
+                setIsOpen(false);
+              }, 10000);
               CreateSH();
-              setIsOpen(false);
             }}
           >
             <div className={"modalContent"}>
@@ -108,6 +111,9 @@ const CreateShModal = ({ setIsOpen }, props: any) => {
                 تاكيد
               </button>
             </div>
+            <h6 className={"heading cairo_semibold_title text-red-600"}>
+              الاعضاء العاديين لا يستطيعون انشاء مواعيد
+            </h6>
           </form>
         </div>
       </div>

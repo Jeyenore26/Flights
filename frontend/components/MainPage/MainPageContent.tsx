@@ -57,7 +57,7 @@ function MainPageContent() {
         setdata(res.data);
         console.log(res.data);
         if (res.data.memberOf == null) {
-          Router.push("/group");
+          //Router.push("/group");
         }
       })
       .catch((e) => {
@@ -108,7 +108,7 @@ function MainPageContent() {
 
   const Saviors = guys?.getGroup;
   console.log(Saviors);
-  if (memberload) return <div>dal;sdk'law;daw</div>;
+  if (memberload) return <div>Loading.....</div>;
   //@ts-ignore
   let photo = data?.photoLink;
 
@@ -188,7 +188,7 @@ function MainPageContent() {
                     dir="rtl"
                     onClick={() => {
                       localStorage.removeItem("token");
-                      Router.push("/homepage");
+                      Router.push("/");
                     }}
                     className="hover:text-[#929292] active:text-[#bababa] cursor-pointer w-full text-sm cairo_regular_title flex items-center"
                   >
@@ -198,7 +198,9 @@ function MainPageContent() {
                   <button
                     onClick={() => {
                       leaveGroup();
-                      Router.push("/group");
+                      setTimeout(() => {
+                        Router.push("/group");
+                      }, 300);
                     }}
                     dir="rtl"
                     className="hover:text-[#929292] active:text-[#bababa] cursor-pointer w-full text-sm cairo_regular_title flex items-center"
@@ -240,16 +242,13 @@ function MainPageContent() {
                     dark ? "text-[#e2e2e2]" : "text-black"
                   }`}
                 >
+                  <h2 className="my-4">اسم الجروب</h2>
                   {/*//@ts-ignore */}
-                  {data?.memberOf}
+                  <h4 className="my-4 text-gray-700">{data?.memberOf}</h4>
+                  <h2 className="my-4">رتبة العضو</h2>
+                  {/*//@ts-ignore */}
+                  <h4 className="my-4 text-gray-700">{data?.role}</h4>
                 </p>
-                <div className="flex justify-center text-lg mt-2 text-[#adb1b5]">
-                  <p className=" border-r-2 border-[#adb1b5] pr-2 mr-2">
-                    50k عضو
-                  </p>
-                  {/*//@ts-ignore */}
-                  <p>{data?.role}</p>
-                </div>
               </div>
             </div>
           </div>
@@ -262,17 +261,18 @@ function MainPageContent() {
           >
             {Posts?.getPostsInGroup.map((post) => {
               return (
-                <MainPageComments
-                  darker={dark}
-                  name={post.username}
-                  desc={post.body}
-                  time={post.createdAt}
-                  role={post.user.role}
-                  like={post.likeCount}
-                  id={post.id}
-                  profImg="europe.jpg"
-                  postImg="africa.jpg"
-                />
+                <>
+                  <MainPageComments
+                    darker={dark}
+                    name={post.username}
+                    desc={post.body}
+                    time={post.createdAt}
+                    role={post.user.role}
+                    like={post.likeCount}
+                    id={post.id}
+                    photoLink={post.user.photoLink}
+                  />
+                </>
               );
             })}
           </div>
@@ -302,11 +302,7 @@ function MainPageContent() {
               dark ? "bg-[#161616]" : "bg-[#f6f7fc]"
             }`}
           >
-            <MainPageMembers
-              owners={Saviors.owner}
-              staffs={Saviors.admins}
-              members={Saviors.members}
-            />
+            <MainPageMembers owners={Saviors.owner} members={Saviors.members} />
           </div>
         )}
         {page == 2 && (
@@ -475,12 +471,16 @@ function MainPageContent() {
                     style={{ transition: "ease 0.2s" }}
                     onClick={() => setopenschedule(true)}
                   >
-                    <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
-                      <BiPlus />
-                    </p>
-                    <p className="mr-1 text-sm md:text-lg hidden sm:block">
-                      اضافة
-                    </p>
+                    {data == "owner" && (
+                      <>
+                        <p className="text-2xl sm:text-xl mx-auto sm:mx-0">
+                          <BiPlus />
+                        </p>
+                        <p className="mr-1 text-sm md:text-lg hidden sm:block">
+                          اضافة
+                        </p>
+                      </>
+                    )}
                   </div>
                 )}
                 {page === 1 && (

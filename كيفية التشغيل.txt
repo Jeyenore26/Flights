@@ -1,0 +1,31 @@
+السلام عليكم ورحمة الله وبركاته
+
+اولا تحميل ملفين العمل من 
+
+ملف الfrontend:
+https://1drv.ms/u/s!Ak6jXMf5E81Tj0IWiR57AWewE9La?e=UCIBNQ
+
+ملف الbackend:
+https://1drv.ms/f/s!Ak6jXMf5E81ThRJUe6_BoCzvfB-x?e=ut9Cdk
+
+
+vscode فتح كل ملف في شاشة 
+
+شاشة ملف الفرونت اند
+
+1-cd frontend
+2-npm run dev
+
+شاشة ملف الباك اند
+
+1-npm run dev
+
+---------------------------------------------------
+
+الخاص بشاشة الفرونت اند terminal سيظهر لينك في ال   
+
+يشبه هذا 
+
+http://localhost:3000
+
+-----------------
